@@ -10,7 +10,7 @@ target 'HoloDex' do
   pod 'Katana'
   pod 'RxSwift'
   pod 'RxCocoa'
-  pod 'Tempura'
+  pod 'Tempura', :inhibit_warnings => true
   pod 'PinLayout'
   pod 'FlexLayout'
 end
