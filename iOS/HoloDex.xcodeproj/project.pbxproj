@@ -10,7 +10,6 @@
 		A7D3B55E1C3FF6E8FD6E4232 /* Pods_HoloDex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE1630955B03B456FEC2E91 /* Pods_HoloDex.framework */; };
 		D75A341121093428003A4C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75A341021093428003A4C6D /* AppDelegate.swift */; };
 		D75A341321093428003A4C6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75A341221093428003A4C6D /* ViewController.swift */; };
-		D75A341621093428003A4C6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75A341421093428003A4C6D /* Main.storyboard */; };
 		D75A341821093429003A4C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D75A341721093429003A4C6D /* Assets.xcassets */; };
 		D75A341B21093429003A4C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75A341921093429003A4C6D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -21,7 +20,6 @@
 		D75A340D21093428003A4C6D /* HoloDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoloDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75A341021093428003A4C6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D75A341221093428003A4C6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D75A341521093428003A4C6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D75A341721093429003A4C6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D75A341A21093429003A4C6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D75A341C21093429003A4C6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +46,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D72D3FFC210945CF0095BEE0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D75A341921093429003A4C6D /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D72D3FFD210945E80095BEE0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D75A341221093428003A4C6D /* ViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		D75A340421093428003A4C6D = {
 			isa = PBXGroup;
 			children = (
@@ -69,11 +83,10 @@
 		D75A340F21093428003A4C6D /* HoloDex */ = {
 			isa = PBXGroup;
 			children = (
+				D72D3FFD210945E80095BEE0 /* Core */,
+				D72D3FFC210945CF0095BEE0 /* UI */,
 				D75A341021093428003A4C6D /* AppDelegate.swift */,
-				D75A341221093428003A4C6D /* ViewController.swift */,
-				D75A341421093428003A4C6D /* Main.storyboard */,
 				D75A341721093429003A4C6D /* Assets.xcassets */,
-				D75A341921093429003A4C6D /* LaunchScreen.storyboard */,
 				D75A341C21093429003A4C6D /* Info.plist */,
 			);
 			path = HoloDex;
@@ -151,7 +164,6 @@
 			files = (
 				D75A341B21093429003A4C6D /* LaunchScreen.storyboard in Resources */,
 				D75A341821093429003A4C6D /* Assets.xcassets in Resources */,
-				D75A341621093428003A4C6D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,14 +247,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D75A341421093428003A4C6D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D75A341521093428003A4C6D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D75A341921093429003A4C6D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
