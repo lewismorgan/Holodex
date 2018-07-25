@@ -1,0 +1,42 @@
+PODS:
+  - Alamofire (4.7.3)
+  - FlexLayout (1.3.10)
+  - Katana (1.0.0)
+  - PinLayout (1.7.10)
+  - RxCocoa (4.2.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.2.0)
+  - Tempura (1.12.0):
+    - Katana (< 1.1, >= 1.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - FlexLayout
+  - Katana
+  - PinLayout
+  - RxCocoa
+  - RxSwift
+  - Tempura
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - FlexLayout
+    - Katana
+    - PinLayout
+    - RxCocoa
+    - RxSwift
+    - Tempura
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  FlexLayout: f250e6ba1ab1101c3d6729b2d9c0e089bb1d52c9
+  Katana: f45caad244d2f375d41068d94a7758b576940fd2
+  PinLayout: e8e74faf770501bd6c29cad14db52acd8b2994e6
+  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
+  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
+  Tempura: 8337335c58f82bb9adf41370ef6eb41f86ef8f5d
+
+PODFILE CHECKSUM: 87b3f358042c984d85ca7a96f3225543c178ad30
+
+COCOAPODS: 1.5.3
