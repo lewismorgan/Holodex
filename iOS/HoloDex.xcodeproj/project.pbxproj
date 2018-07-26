@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A7D3B55E1C3FF6E8FD6E4232 /* Pods_HoloDex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE1630955B03B456FEC2E91 /* Pods_HoloDex.framework */; };
+		D72D4001210946F40095BEE0 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72D4000210946F40095BEE0 /* AppState.swift */; };
+		D730D08721094BD50092EB4C /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D730D08621094BD50092EB4C /* Screen.swift */; };
+		D730D08A21094DCC0092EB4C /* DependenciesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D730D08921094DCC0092EB4C /* DependenciesContainer.swift */; };
 		D75A341121093428003A4C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75A341021093428003A4C6D /* AppDelegate.swift */; };
 		D75A341321093428003A4C6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75A341221093428003A4C6D /* ViewController.swift */; };
 		D75A341821093429003A4C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D75A341721093429003A4C6D /* Assets.xcassets */; };
@@ -17,6 +20,9 @@
 /* Begin PBXFileReference section */
 		34CB417C9F0CB3ED421D7DDF /* Pods-HoloDex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDex.release.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex.release.xcconfig"; sourceTree = "<group>"; };
 		9725803AAA5D91577D8D9F36 /* Pods-HoloDex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex.debug.xcconfig"; sourceTree = "<group>"; };
+		D72D4000210946F40095BEE0 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		D730D08621094BD50092EB4C /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		D730D08921094DCC0092EB4C /* DependenciesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesContainer.swift; sourceTree = "<group>"; };
 		D75A340D21093428003A4C6D /* HoloDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoloDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75A341021093428003A4C6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D75A341221093428003A4C6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +68,32 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		D72D40022109473F0095BEE0 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Actions;
+			sourceTree = "<group>";
+		};
+		D730D08521094A300092EB4C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D730D08821094CD10092EB4C /* Navigation */,
+				D75A341021093428003A4C6D /* AppDelegate.swift */,
+				D72D4000210946F40095BEE0 /* AppState.swift */,
+				D730D08921094DCC0092EB4C /* DependenciesContainer.swift */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		D730D08821094CD10092EB4C /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				D730D08621094BD50092EB4C /* Screen.swift */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
 		D75A340421093428003A4C6D = {
 			isa = PBXGroup;
 			children = (
@@ -83,9 +115,10 @@
 		D75A340F21093428003A4C6D /* HoloDex */ = {
 			isa = PBXGroup;
 			children = (
+				D730D08521094A300092EB4C /* App */,
+				D72D40022109473F0095BEE0 /* Actions */,
 				D72D3FFD210945E80095BEE0 /* Core */,
 				D72D3FFC210945CF0095BEE0 /* UI */,
-				D75A341021093428003A4C6D /* AppDelegate.swift */,
 				D75A341721093429003A4C6D /* Assets.xcassets */,
 				D75A341C21093429003A4C6D /* Info.plist */,
 			);
@@ -239,8 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D72D4001210946F40095BEE0 /* AppState.swift in Sources */,
 				D75A341321093428003A4C6D /* ViewController.swift in Sources */,
 				D75A341121093428003A4C6D /* AppDelegate.swift in Sources */,
+				D730D08721094BD50092EB4C /* Screen.swift in Sources */,
+				D730D08A21094DCC0092EB4C /* DependenciesContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

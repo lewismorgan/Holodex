@@ -7,15 +7,28 @@
 //
 
 import UIKit
+import Katana
+import Tempura
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, RootInstaller {
   var window: UIWindow?
+  var store: Store<AppState>!
+
+  // MARK: - App Delegate Methods
 
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+    self.store = Store<AppState>(middleware: [], dependencies: DependenciesContainer.self)
+    self.window = UIWindow(frame: UIScreen.main.bounds)
+
+    /// setup the root of the navigation
+    /// this is done by invoking this method (and not in the init of the navigator)
+    /// because the navigator is instantiated by the Store.
+    /// this in turn will invoke the `installRootMethod` of the rootInstaller (self)
+    let navigator: Navigator! = (self.store!.dependencies as! DependenciesContainer).navigator
+    navigator.start(using: self, in: self.window!, at: Screen.first)
+
     return true
   }
 
@@ -50,4 +63,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // See also applicationDidEnterBackground:.
   }
 
+  // MARK: - Routing
+
+  /// install the root of the app
+  /// this method is called by the navigator when needed
+  func installRoot(identifier: RouteElementIdentifier, context: Any?, completion: () -> Void) {
+    if identifier == Screen.first.rawValue {
+      let rootController = UIViewController()
+      rootController.view = UIView()
+      rootController.view.backgroundColor = .green
+      self.window?.rootViewController = rootController
+      completion()
+    }
+  }
 }
