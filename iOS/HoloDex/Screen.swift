@@ -7,5 +7,5 @@
 //
 
 enum Screen: String {
-  case first
+  case people
 }

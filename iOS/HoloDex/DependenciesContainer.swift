@@ -21,7 +21,6 @@ final class DependenciesContainer: NavigationProvider {
   required init(dispatch: @escaping StoreDispatch, getAppState: @escaping () -> AppState) {
     self.dispatch = dispatch
     self.getAppState = getAppState
-    debugPrint("setup called")
   }
 }
 

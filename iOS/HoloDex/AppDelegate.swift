@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RootInstaller {
     /// because the navigator is instantiated by the Store.
     /// this in turn will invoke the `installRootMethod` of the rootInstaller (self)
     let navigator: Navigator! = (self.store!.dependencies as! DependenciesContainer).navigator
-    navigator.start(using: self, in: self.window!, at: Screen.first)
+    navigator.start(using: self, in: self.window!, at: Screen.people)
 
     return true
   }
@@ -68,10 +68,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RootInstaller {
   /// install the root of the app
   /// this method is called by the navigator when needed
   func installRoot(identifier: RouteElementIdentifier, context: Any?, completion: () -> Void) {
-    if identifier == Screen.first.rawValue {
-      let rootController = UIViewController()
-      rootController.view = UIView()
-      rootController.view.backgroundColor = .green
+    if identifier == Screen.people.rawValue {
+      let rootController = PeopleViewController(store: self.store)
       self.window?.rootViewController = rootController
       completion()
     }

@@ -15,6 +15,12 @@
 		D75A341321093428003A4C6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75A341221093428003A4C6D /* ViewController.swift */; };
 		D75A341821093429003A4C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D75A341721093429003A4C6D /* Assets.xcassets */; };
 		D75A341B21093429003A4C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75A341921093429003A4C6D /* LaunchScreen.storyboard */; };
+		D7FE7513210955A900DE1E28 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7512210955A900DE1E28 /* PeopleView.swift */; };
+		D7FE7515210955C500DE1E28 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7514210955C500DE1E28 /* PeopleViewController.swift */; };
+		D7FE7517210955F000DE1E28 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7516210955F000DE1E28 /* PeopleViewModel.swift */; };
+		D7FE751B21095C4700DE1E28 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE751A21095C4700DE1E28 /* Person.swift */; };
+		D7FE751E21095E1B00DE1E28 /* HDFlexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE751D21095E1B00DE1E28 /* HDFlexView.swift */; };
+		D7FE75202109624500DE1E28 /* FlexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE751F2109624500DE1E28 /* FlexView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +35,12 @@
 		D75A341721093429003A4C6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D75A341A21093429003A4C6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D75A341C21093429003A4C6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7FE7512210955A900DE1E28 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
+		D7FE7514210955C500DE1E28 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		D7FE7516210955F000DE1E28 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
+		D7FE751A21095C4700DE1E28 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		D7FE751D21095E1B00DE1E28 /* HDFlexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDFlexView.swift; sourceTree = "<group>"; };
+		D7FE751F2109624500DE1E28 /* FlexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexView.swift; sourceTree = "<group>"; };
 		ECE1630955B03B456FEC2E91 /* Pods_HoloDex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloDex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -52,12 +64,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D72D3FFC210945CF0095BEE0 /* UI */ = {
+		D72AB0A3210954E000D4CE76 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				D75A341921093429003A4C6D /* LaunchScreen.storyboard */,
+				D7FE75112109555400DE1E28 /* People */,
 			);
-			path = UI;
+			path = Features;
 			sourceTree = "<group>";
 		};
 		D72D3FFD210945E80095BEE0 /* Core */ = {
@@ -68,13 +80,6 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		D72D40022109473F0095BEE0 /* Actions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Actions;
-			sourceTree = "<group>";
-		};
 		D730D08521094A300092EB4C /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +87,7 @@
 				D75A341021093428003A4C6D /* AppDelegate.swift */,
 				D72D4000210946F40095BEE0 /* AppState.swift */,
 				D730D08921094DCC0092EB4C /* DependenciesContainer.swift */,
+				D75A341921093429003A4C6D /* LaunchScreen.storyboard */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -115,14 +121,34 @@
 		D75A340F21093428003A4C6D /* HoloDex */ = {
 			isa = PBXGroup;
 			children = (
-				D730D08521094A300092EB4C /* App */,
-				D72D40022109473F0095BEE0 /* Actions */,
 				D72D3FFD210945E80095BEE0 /* Core */,
-				D72D3FFC210945CF0095BEE0 /* UI */,
+				D7FE751C21095DD500DE1E28 /* UI */,
+				D72AB0A3210954E000D4CE76 /* Features */,
+				D730D08521094A300092EB4C /* App */,
 				D75A341721093429003A4C6D /* Assets.xcassets */,
 				D75A341C21093429003A4C6D /* Info.plist */,
 			);
 			path = HoloDex;
+			sourceTree = "<group>";
+		};
+		D7FE75112109555400DE1E28 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				D7FE7512210955A900DE1E28 /* PeopleView.swift */,
+				D7FE7514210955C500DE1E28 /* PeopleViewController.swift */,
+				D7FE7516210955F000DE1E28 /* PeopleViewModel.swift */,
+				D7FE751A21095C4700DE1E28 /* Person.swift */,
+			);
+			name = People;
+			sourceTree = "<group>";
+		};
+		D7FE751C21095DD500DE1E28 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D7FE751F2109624500DE1E28 /* FlexView.swift */,
+				D7FE751D21095E1B00DE1E28 /* HDFlexView.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		F2219EED61AB3983B5FBC7DA /* Pods */ = {
@@ -273,10 +299,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D72D4001210946F40095BEE0 /* AppState.swift in Sources */,
+				D7FE7517210955F000DE1E28 /* PeopleViewModel.swift in Sources */,
+				D7FE7515210955C500DE1E28 /* PeopleViewController.swift in Sources */,
 				D75A341321093428003A4C6D /* ViewController.swift in Sources */,
+				D7FE751B21095C4700DE1E28 /* Person.swift in Sources */,
 				D75A341121093428003A4C6D /* AppDelegate.swift in Sources */,
+				D7FE75202109624500DE1E28 /* FlexView.swift in Sources */,
 				D730D08721094BD50092EB4C /* Screen.swift in Sources */,
+				D7FE751E21095E1B00DE1E28 /* HDFlexView.swift in Sources */,
 				D730D08A21094DCC0092EB4C /* DependenciesContainer.swift in Sources */,
+				D7FE7513210955A900DE1E28 /* PeopleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
