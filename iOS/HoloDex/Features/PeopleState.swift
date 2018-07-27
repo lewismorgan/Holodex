@@ -8,6 +8,6 @@
 
 import ReSwift
 
-struct PeopleState: StateType {
+public struct PeopleState: StateType {
   var people: [Person]?
 }
