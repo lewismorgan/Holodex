@@ -6,8 +6,11 @@
 //  Copyright © 2018 Lewis J Morgan. All rights reserved.
 //
 
-import Katana
+import ReSwift
+import ReSwiftRouter
 
-struct AppState: State {
+struct AppState: StateType {
+  // other application state
+  var navigationState: NavigationState
 
 }

@@ -7,10 +7,9 @@ target 'HoloDex' do
 
   # Pods for HoloDex
   pod 'Alamofire'
-  pod 'Katana'
   pod 'RxSwift'
-  pod 'RxCocoa'
-  pod 'Tempura', :inhibit_warnings => true
+  pod 'ReSwift'
+  pod 'ReSwiftRouter'
   pod 'PinLayout'
   pod 'FlexLayout'
 end

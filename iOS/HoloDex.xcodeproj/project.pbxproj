@@ -10,14 +10,20 @@
 		A7D3B55E1C3FF6E8FD6E4232 /* Pods_HoloDex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE1630955B03B456FEC2E91 /* Pods_HoloDex.framework */; };
 		D72D4001210946F40095BEE0 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72D4000210946F40095BEE0 /* AppState.swift */; };
 		D730D08721094BD50092EB4C /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D730D08621094BD50092EB4C /* Screen.swift */; };
-		D730D08A21094DCC0092EB4C /* DependenciesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D730D08921094DCC0092EB4C /* DependenciesContainer.swift */; };
 		D75A341121093428003A4C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75A341021093428003A4C6D /* AppDelegate.swift */; };
-		D75A341321093428003A4C6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75A341221093428003A4C6D /* ViewController.swift */; };
 		D75A341821093429003A4C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D75A341721093429003A4C6D /* Assets.xcassets */; };
 		D75A341B21093429003A4C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75A341921093429003A4C6D /* LaunchScreen.storyboard */; };
+		D7DD0A16210A77C30072A896 /* HDBaseAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A15210A77C30072A896 /* HDBaseAppView.swift */; };
+		D7DD0A18210A7A350072A896 /* HDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A17210A7A350072A896 /* HDViewController.swift */; };
+		D7DD0A1C210A7CCA0072A896 /* PeopleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A1B210A7CCA0072A896 /* PeopleState.swift */; };
+		D7DD0A1E210A7EEF0072A896 /* HDStatefulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A1D210A7EEF0072A896 /* HDStatefulViewController.swift */; };
+		D7DD0A20210A88FB0072A896 /* RootRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A1F210A88FB0072A896 /* RootRoutable.swift */; };
+		D7DD0A22210A8B560072A896 /* AppTabBarViewRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A21210A8B560072A896 /* AppTabBarViewRoutable.swift */; };
+		D7DD0A24210A8BA80072A896 /* ViewControllerRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A23210A8BA80072A896 /* ViewControllerRoutable.swift */; };
+		D7DD0A26210A8D930072A896 /* AppTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A25210A8D930072A896 /* AppTabBarViewController.swift */; };
+		D7DD0A28210A90C20072A896 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A27210A90C20072A896 /* AppReducer.swift */; };
 		D7FE7513210955A900DE1E28 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7512210955A900DE1E28 /* PeopleView.swift */; };
 		D7FE7515210955C500DE1E28 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7514210955C500DE1E28 /* PeopleViewController.swift */; };
-		D7FE7517210955F000DE1E28 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7516210955F000DE1E28 /* PeopleViewModel.swift */; };
 		D7FE751B21095C4700DE1E28 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE751A21095C4700DE1E28 /* Person.swift */; };
 		D7FE751E21095E1B00DE1E28 /* HDFlexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE751D21095E1B00DE1E28 /* HDFlexView.swift */; };
 		D7FE75202109624500DE1E28 /* FlexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE751F2109624500DE1E28 /* FlexView.swift */; };
@@ -28,16 +34,22 @@
 		9725803AAA5D91577D8D9F36 /* Pods-HoloDex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex.debug.xcconfig"; sourceTree = "<group>"; };
 		D72D4000210946F40095BEE0 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		D730D08621094BD50092EB4C /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
-		D730D08921094DCC0092EB4C /* DependenciesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesContainer.swift; sourceTree = "<group>"; };
 		D75A340D21093428003A4C6D /* HoloDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoloDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75A341021093428003A4C6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D75A341221093428003A4C6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D75A341721093429003A4C6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D75A341A21093429003A4C6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D75A341C21093429003A4C6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7DD0A15210A77C30072A896 /* HDBaseAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDBaseAppView.swift; sourceTree = "<group>"; };
+		D7DD0A17210A7A350072A896 /* HDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDViewController.swift; sourceTree = "<group>"; };
+		D7DD0A1B210A7CCA0072A896 /* PeopleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleState.swift; sourceTree = "<group>"; };
+		D7DD0A1D210A7EEF0072A896 /* HDStatefulViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDStatefulViewController.swift; sourceTree = "<group>"; };
+		D7DD0A1F210A88FB0072A896 /* RootRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRoutable.swift; sourceTree = "<group>"; };
+		D7DD0A21210A8B560072A896 /* AppTabBarViewRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarViewRoutable.swift; sourceTree = "<group>"; };
+		D7DD0A23210A8BA80072A896 /* ViewControllerRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRoutable.swift; sourceTree = "<group>"; };
+		D7DD0A25210A8D930072A896 /* AppTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarViewController.swift; sourceTree = "<group>"; };
+		D7DD0A27210A90C20072A896 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		D7FE7512210955A900DE1E28 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		D7FE7514210955C500DE1E28 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
-		D7FE7516210955F000DE1E28 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
 		D7FE751A21095C4700DE1E28 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		D7FE751D21095E1B00DE1E28 /* HDFlexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDFlexView.swift; sourceTree = "<group>"; };
 		D7FE751F2109624500DE1E28 /* FlexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexView.swift; sourceTree = "<group>"; };
@@ -75,7 +87,6 @@
 		D72D3FFD210945E80095BEE0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				D75A341221093428003A4C6D /* ViewController.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -83,21 +94,26 @@
 		D730D08521094A300092EB4C /* App */ = {
 			isa = PBXGroup;
 			children = (
-				D730D08821094CD10092EB4C /* Navigation */,
+				D7DD0A14210A77650072A896 /* Reducers */,
+				D730D08821094CD10092EB4C /* Routing */,
 				D75A341021093428003A4C6D /* AppDelegate.swift */,
 				D72D4000210946F40095BEE0 /* AppState.swift */,
-				D730D08921094DCC0092EB4C /* DependenciesContainer.swift */,
 				D75A341921093429003A4C6D /* LaunchScreen.storyboard */,
+				D7DD0A25210A8D930072A896 /* AppTabBarViewController.swift */,
+				D7DD0A27210A90C20072A896 /* AppReducer.swift */,
 			);
 			name = App;
 			sourceTree = "<group>";
 		};
-		D730D08821094CD10092EB4C /* Navigation */ = {
+		D730D08821094CD10092EB4C /* Routing */ = {
 			isa = PBXGroup;
 			children = (
 				D730D08621094BD50092EB4C /* Screen.swift */,
+				D7DD0A1F210A88FB0072A896 /* RootRoutable.swift */,
+				D7DD0A21210A8B560072A896 /* AppTabBarViewRoutable.swift */,
+				D7DD0A23210A8BA80072A896 /* ViewControllerRoutable.swift */,
 			);
-			name = Navigation;
+			name = Routing;
 			sourceTree = "<group>";
 		};
 		D75A340421093428003A4C6D = {
@@ -131,13 +147,28 @@
 			path = HoloDex;
 			sourceTree = "<group>";
 		};
+		D7DD0A13210A77390072A896 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Actions;
+			sourceTree = "<group>";
+		};
+		D7DD0A14210A77650072A896 /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Reducers;
+			sourceTree = "<group>";
+		};
 		D7FE75112109555400DE1E28 /* People */ = {
 			isa = PBXGroup;
 			children = (
+				D7DD0A13210A77390072A896 /* Actions */,
 				D7FE7512210955A900DE1E28 /* PeopleView.swift */,
 				D7FE7514210955C500DE1E28 /* PeopleViewController.swift */,
-				D7FE7516210955F000DE1E28 /* PeopleViewModel.swift */,
 				D7FE751A21095C4700DE1E28 /* Person.swift */,
+				D7DD0A1B210A7CCA0072A896 /* PeopleState.swift */,
 			);
 			name = People;
 			sourceTree = "<group>";
@@ -147,6 +178,9 @@
 			children = (
 				D7FE751F2109624500DE1E28 /* FlexView.swift */,
 				D7FE751D21095E1B00DE1E28 /* HDFlexView.swift */,
+				D7DD0A15210A77C30072A896 /* HDBaseAppView.swift */,
+				D7DD0A17210A7A350072A896 /* HDViewController.swift */,
+				D7DD0A1D210A7EEF0072A896 /* HDStatefulViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -167,8 +201,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D75A341F21093429003A4C6D /* Build configuration list for PBXNativeTarget "HoloDex" */;
 			buildPhases = (
-				D72D3FFA210943E50095BEE0 /* SwiftLint */,
 				C725367676E80D2D12B339E8 /* [CP] Check Pods Manifest.lock */,
+				D72D3FFA210943E50095BEE0 /* SwiftLint */,
 				D75A340921093428003A4C6D /* Sources */,
 				D75A340A21093428003A4C6D /* Frameworks */,
 				D75A340B21093428003A4C6D /* Resources */,
@@ -238,21 +272,19 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/Katana/Katana.framework",
 				"${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ReSwiftRouter/ReSwiftRouter.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Tempura/Tempura.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Katana.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwiftRouter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tempura.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -299,16 +331,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				D72D4001210946F40095BEE0 /* AppState.swift in Sources */,
-				D7FE7517210955F000DE1E28 /* PeopleViewModel.swift in Sources */,
 				D7FE7515210955C500DE1E28 /* PeopleViewController.swift in Sources */,
-				D75A341321093428003A4C6D /* ViewController.swift in Sources */,
+				D7DD0A28210A90C20072A896 /* AppReducer.swift in Sources */,
 				D7FE751B21095C4700DE1E28 /* Person.swift in Sources */,
 				D75A341121093428003A4C6D /* AppDelegate.swift in Sources */,
+				D7DD0A26210A8D930072A896 /* AppTabBarViewController.swift in Sources */,
 				D7FE75202109624500DE1E28 /* FlexView.swift in Sources */,
 				D730D08721094BD50092EB4C /* Screen.swift in Sources */,
+				D7DD0A24210A8BA80072A896 /* ViewControllerRoutable.swift in Sources */,
+				D7DD0A20210A88FB0072A896 /* RootRoutable.swift in Sources */,
+				D7DD0A22210A8B560072A896 /* AppTabBarViewRoutable.swift in Sources */,
+				D7DD0A16210A77C30072A896 /* HDBaseAppView.swift in Sources */,
+				D7DD0A18210A7A350072A896 /* HDViewController.swift in Sources */,
+				D7DD0A1E210A7EEF0072A896 /* HDStatefulViewController.swift in Sources */,
 				D7FE751E21095E1B00DE1E28 /* HDFlexView.swift in Sources */,
-				D730D08A21094DCC0092EB4C /* DependenciesContainer.swift in Sources */,
 				D7FE7513210955A900DE1E28 /* PeopleView.swift in Sources */,
+				D7DD0A1C210A7CCA0072A896 /* PeopleState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

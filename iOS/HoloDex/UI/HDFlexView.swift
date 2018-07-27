@@ -10,8 +10,9 @@ import UIKit
 import PinLayout
 import FlexLayout
 
-/// A view that can easily use flex
+/// A view that has a container dedicated with pure flex items.
 class HDFlexView: UIView, FlexView {
+  /// Contains the items that should be flexed. Added as a subview after layoutFlexContent.
   internal let rootFlexContainer = UIView()
 
   override init(frame: CGRect) {
@@ -24,6 +25,7 @@ class HDFlexView: UIView, FlexView {
     fatalError("init(coder:) has not been implemented")
   }
 
+  /// Lays out children into the flex container.
   func layoutFlexContent(_ flexContainer: UIView) {
     fatalError("layoutFlexContent(flexContainer:) has not been implemented")
   }
@@ -32,7 +34,7 @@ class HDFlexView: UIView, FlexView {
     // Sizes the subviews but we're using Yoga/Flex so it's not needed.
     // super.layoutSubviews()
     // Pin the flex container to the parent views size
-    rootFlexContainer.pin.all(self.safeAreaInsets)
+    rootFlexContainer.pin.all()
     // Layout all the children
     rootFlexContainer.flex.layout()
   }

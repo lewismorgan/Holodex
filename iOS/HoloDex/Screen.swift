@@ -6,6 +6,9 @@
 //  Copyright © 2018 Lewis J Morgan. All rights reserved.
 //
 
-enum Screen: String {
+import ReSwiftRouter
+
+enum AppRoutes: RouteElementIdentifier {
+  case entryPoint
   case people
 }

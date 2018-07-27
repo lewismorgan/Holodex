@@ -7,13 +7,8 @@
 //
 
 import UIKit
-import Katana
-import Tempura
+import ReSwift
 
-class PeopleViewController: ViewControllerWithLocalState<PeopleView> {
+class PeopleViewController<StoreStateType: StateType>: HDViewController<PeopleView, StoreStateType> {
 
-}
-
-struct PeopleLocalState: LocalState {
-  var people: [Person]?
 }

@@ -7,26 +7,15 @@
 //
 
 import UIKit
-import Tempura
 
-class PeopleView: HDFlexView, ViewControllerModellableView {
+class PeopleView: HDBaseAppView {
   var searchField: UITextField = UITextField()
   var scrollView: UIView = UIView()
 
-  func setup() {
-  }
-
-  func style() {
-    searchField.backgroundColor = .yellow
-    scrollView.backgroundColor = .blue
-  }
-
-  func update(oldModel: PeopleViewModel?) {
-    guard let model = self.model else { return }
-    // TODO: Update UI collection of people to model.people
-  }
-
   override func layoutFlexContent(_ flexContainer: UIView) {
+    searchField.backgroundColor = .white
+    scrollView.backgroundColor = .blue
+
     flexContainer.flex.define { (flex) in
       flex.addItem().direction(.row).margin(10).define { (flex) in
         flex.addItem(searchField).grow(1)

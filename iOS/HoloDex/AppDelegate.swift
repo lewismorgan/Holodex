@@ -7,27 +7,38 @@
 //
 
 import UIKit
-import Katana
-import Tempura
+import ReSwift
+import ReSwiftRouter
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, RootInstaller {
+class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   var store: Store<AppState>!
+  var router: Router<AppState>!
 
   // MARK: - App Delegate Methods
 
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    self.store = Store<AppState>(middleware: [], dependencies: DependenciesContainer.self)
     self.window = UIWindow(frame: UIScreen.main.bounds)
+    self.store = Store<AppState>(reducer: appReducer, state: nil)
 
-    /// setup the root of the navigation
-    /// this is done by invoking this method (and not in the init of the navigator)
-    /// because the navigator is instantiated by the Store.
-    /// this in turn will invoke the `installRootMethod` of the rootInstaller (self)
-    let navigator: Navigator! = (self.store!.dependencies as! DependenciesContainer).navigator
-    navigator.start(using: self, in: self.window!, at: Screen.people)
+    // Set a dummy view controller to satisfy UIKit
+    window?.rootViewController = UIViewController()
+
+    let rootRoutable = RootAppRoutable(store: store, window: window!)
+
+    // Set Router
+    router = Router<AppState>(store: store, rootRoutable: rootRoutable) {
+      $0.select {
+        $0.navigationState
+      }
+    }
+
+    // Start with splash screen (a.k.a Login screen)
+    store.dispatch(SetRouteAction([AppRoutes.entryPoint.rawValue]))
+
+    window?.makeKeyAndVisible()
 
     return true
   }
@@ -61,17 +72,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RootInstaller {
   func applicationWillTerminate(_ application: UIApplication) {
     // Called when the application is about to terminate. Save data if appropriate.
     // See also applicationDidEnterBackground:.
-  }
-
-  // MARK: - Routing
-
-  /// install the root of the app
-  /// this method is called by the navigator when needed
-  func installRoot(identifier: RouteElementIdentifier, context: Any?, completion: () -> Void) {
-    if identifier == Screen.people.rawValue {
-      let rootController = PeopleViewController(store: self.store)
-      self.window?.rootViewController = rootController
-      completion()
-    }
   }
 }

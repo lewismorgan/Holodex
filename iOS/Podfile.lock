@@ -1,42 +1,37 @@
 PODS:
   - Alamofire (4.7.3)
   - FlexLayout (1.3.10)
-  - Katana (1.0.0)
   - PinLayout (1.7.10)
-  - RxCocoa (4.2.0):
-    - RxSwift (~> 4.0)
+  - ReSwift (4.0.1)
+  - ReSwiftRouter (0.6.0):
+    - ReSwift (~> 4.0.0)
   - RxSwift (4.2.0)
-  - Tempura (1.12.0):
-    - Katana (< 1.1, >= 1.0)
 
 DEPENDENCIES:
   - Alamofire
   - FlexLayout
-  - Katana
   - PinLayout
-  - RxCocoa
+  - ReSwift
+  - ReSwiftRouter
   - RxSwift
-  - Tempura
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - FlexLayout
-    - Katana
     - PinLayout
-    - RxCocoa
+    - ReSwift
+    - ReSwiftRouter
     - RxSwift
-    - Tempura
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   FlexLayout: f250e6ba1ab1101c3d6729b2d9c0e089bb1d52c9
-  Katana: f45caad244d2f375d41068d94a7758b576940fd2
   PinLayout: e8e74faf770501bd6c29cad14db52acd8b2994e6
-  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
+  ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
+  ReSwiftRouter: 81f41b37a5dd1c88e1d3d10a660ff2dcc939ba7c
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
-  Tempura: 8337335c58f82bb9adf41370ef6eb41f86ef8f5d
 
-PODFILE CHECKSUM: 930c66cc895455202d7892bb129fee745b999416
+PODFILE CHECKSUM: be8b26c6ab6a7c496f58158834edbe1ae28e68f8
 
 COCOAPODS: 1.5.3
