@@ -84,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				D7DD0A2D210AAE290072A896 /* People */,
-				D7FE75112109555400DE1E28 /* People */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -146,13 +145,6 @@
 		D7DD0A2D210AAE290072A896 /* People */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = People;
-			sourceTree = "<group>";
-		};
-		D7FE75112109555400DE1E28 /* People */ = {
-			isa = PBXGroup;
-			children = (
 				D7FE751A21095C4700DE1E28 /* Person.swift */,
 				D7DD0A1B210A7CCA0072A896 /* PeopleState.swift */,
 				D7DD0A2B210AAB8E0072A896 /* PeopleActions.swift */,
@@ -160,7 +152,7 @@
 				D7FE7512210955A900DE1E28 /* PeopleView.swift */,
 				D7FE7514210955C500DE1E28 /* PeopleViewController.swift */,
 			);
-			name = People;
+			path = People;
 			sourceTree = "<group>";
 		};
 		D7FE751C21095DD500DE1E28 /* UI */ = {
