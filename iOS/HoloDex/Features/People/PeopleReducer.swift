@@ -15,17 +15,26 @@ public struct PeopleReducer {
     switch action {
     case _ as ReSwiftInit:
       break
-    case let action as PeopleActions.LoadPeople:
-      state.people = action.results
+
+    case let action as PeopleActions.SetPeople:
+      onSetPeople(action, &state)
     default:
-      debugPrint("Can't handle action \(action)")
+      break
     }
 
     return state
   }
 
+  private static func onSetPeople(_ action: PeopleActions.SetPeople, _ state: inout PeopleState) {
+    switch action.result {
+    case .success(let people):
+      state.people = people
+    case .failure(let error):
+      fatalError("Failure trying to obtain people: \(error)")
+    }
+  }
+
   private static func initPeopleState() -> PeopleState {
-    // TODO Init People State
     return PeopleState()
   }
 }

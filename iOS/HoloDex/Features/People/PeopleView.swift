@@ -9,15 +9,18 @@
 import UIKit
 import PinLayout
 import FlexLayout
+import ListKit
 
 class PeopleView: UIView, FlexView, BaseAppView {
   var searchField: UITextField = UITextField()
-  var scrollView: UIView = UIView()
+  var tableView: UITableView
   var root = UIView()
 
-  override init(frame: CGRect) {
-    super.init(frame: frame)
+  init(peopleTable: UITableView) {
+    self.tableView = peopleTable
+    super.init(frame: CGRect.zero)
     setup()
+    style()
   }
 
   required init?(coder aDecoder: NSCoder) {
@@ -30,17 +33,16 @@ class PeopleView: UIView, FlexView, BaseAppView {
   }
 
   func style() {
+    searchField.backgroundColor = .white
+    tableView.backgroundColor = .white
   }
 
   func layoutFlexContent(_ flexContainer: UIView) {
-    searchField.backgroundColor = .white
-    scrollView.backgroundColor = .blue
-
     flexContainer.flex.define { (flex) in
       flex.addItem().direction(.row).margin(10).define { (flex) in
         flex.addItem(searchField).grow(1)
       }
-      flex.addItem(scrollView).grow(1)
+      flex.addItem(tableView).grow(1)
     }
   }
 

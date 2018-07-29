@@ -24,6 +24,9 @@
 		D7DD0A28210A90C20072A896 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A27210A90C20072A896 /* AppReducer.swift */; };
 		D7DD0A2A210AAA6C0072A896 /* PeopleReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A29210AAA6C0072A896 /* PeopleReducer.swift */; };
 		D7DD0A2C210AAB8E0072A896 /* PeopleActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A2B210AAB8E0072A896 /* PeopleActions.swift */; };
+		D7EE6AD3210E13AE006BF44C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EE6AD2210E13AE006BF44C /* Result.swift */; };
+		D7EE6AD5210E190C006BF44C /* PeopleActionCreators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EE6AD4210E190C006BF44C /* PeopleActionCreators.swift */; };
+		D7EE6AD7210E1DCB006BF44C /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EE6AD6210E1DCB006BF44C /* PersonTableViewCell.swift */; };
 		D7FE7513210955A900DE1E28 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7512210955A900DE1E28 /* PeopleView.swift */; };
 		D7FE7515210955C500DE1E28 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7514210955C500DE1E28 /* PeopleViewController.swift */; };
 		D7FE751B21095C4700DE1E28 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE751A21095C4700DE1E28 /* Person.swift */; };
@@ -51,6 +54,9 @@
 		D7DD0A27210A90C20072A896 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		D7DD0A29210AAA6C0072A896 /* PeopleReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleReducer.swift; sourceTree = "<group>"; };
 		D7DD0A2B210AAB8E0072A896 /* PeopleActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleActions.swift; sourceTree = "<group>"; };
+		D7EE6AD2210E13AE006BF44C /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		D7EE6AD4210E190C006BF44C /* PeopleActionCreators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleActionCreators.swift; sourceTree = "<group>"; };
+		D7EE6AD6210E1DCB006BF44C /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		D7FE7512210955A900DE1E28 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		D7FE7514210955C500DE1E28 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		D7FE751A21095C4700DE1E28 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -131,6 +137,7 @@
 		D75A340F21093428003A4C6D /* HoloDex */ = {
 			isa = PBXGroup;
 			children = (
+				D7EE6AD1210E1399006BF44C /* Core */,
 				D7FE751C21095DD500DE1E28 /* UI */,
 				D72AB0A3210954E000D4CE76 /* Features */,
 				D730D08521094A300092EB4C /* App */,
@@ -145,12 +152,22 @@
 			children = (
 				D7FE751A21095C4700DE1E28 /* Person.swift */,
 				D7DD0A1B210A7CCA0072A896 /* PeopleState.swift */,
+				D7EE6AD4210E190C006BF44C /* PeopleActionCreators.swift */,
 				D7DD0A2B210AAB8E0072A896 /* PeopleActions.swift */,
 				D7DD0A29210AAA6C0072A896 /* PeopleReducer.swift */,
+				D7EE6AD6210E1DCB006BF44C /* PersonTableViewCell.swift */,
 				D7FE7512210955A900DE1E28 /* PeopleView.swift */,
 				D7FE7514210955C500DE1E28 /* PeopleViewController.swift */,
 			);
 			path = People;
+			sourceTree = "<group>";
+		};
+		D7EE6AD1210E1399006BF44C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D7EE6AD2210E13AE006BF44C /* Result.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		D7FE751C21095DD500DE1E28 /* UI */ = {
@@ -251,6 +268,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/ListKit/ListKit.framework",
 				"${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwiftRouter/ReSwiftRouter.framework",
@@ -260,6 +278,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ListKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwiftRouter.framework",
@@ -311,12 +330,14 @@
 			files = (
 				D72D4001210946F40095BEE0 /* AppState.swift in Sources */,
 				D7FE7515210955C500DE1E28 /* PeopleViewController.swift in Sources */,
+				D7EE6AD3210E13AE006BF44C /* Result.swift in Sources */,
 				D7DD0A28210A90C20072A896 /* AppReducer.swift in Sources */,
 				D7FE751B21095C4700DE1E28 /* Person.swift in Sources */,
 				D75A341121093428003A4C6D /* AppDelegate.swift in Sources */,
 				D7DD0A26210A8D930072A896 /* AppTabBarViewController.swift in Sources */,
 				D7FE75202109624500DE1E28 /* FlexView.swift in Sources */,
 				D7DD0A2C210AAB8E0072A896 /* PeopleActions.swift in Sources */,
+				D7EE6AD5210E190C006BF44C /* PeopleActionCreators.swift in Sources */,
 				D730D08721094BD50092EB4C /* Screen.swift in Sources */,
 				D7DD0A24210A8BA80072A896 /* ViewControllerRoutable.swift in Sources */,
 				D7DD0A2A210AAA6C0072A896 /* PeopleReducer.swift in Sources */,
@@ -327,6 +348,7 @@
 				D7DD0A1E210A7EEF0072A896 /* HDStatefulViewController.swift in Sources */,
 				D7FE7513210955A900DE1E28 /* PeopleView.swift in Sources */,
 				D7DD0A1C210A7CCA0072A896 /* PeopleState.swift in Sources */,
+				D7EE6AD7210E1DCB006BF44C /* PersonTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
