@@ -11,3 +11,7 @@ import ReSwift
 public struct PeopleState: StateType {
   var people: [Person]?
 }
+
+protocol PeopleStateStore {
+  var peopleState: PeopleState { get set }
+}

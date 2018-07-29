@@ -9,7 +9,7 @@
 import ReSwift
 
 public struct PeopleReducer {
-  public static func handleAction(action: Action, state: PeopleState?) -> PeopleState {
+  public static func handleAction(_ action: Action, state: PeopleState?) -> PeopleState {
     var state = state ?? initPeopleState()
 
     switch action {

@@ -10,7 +10,7 @@ import UIKit
 import ReSwift
 
 class AppTabBarViewController: UITabBarController {
-  let store: Store<AppState>
+  fileprivate let store: Store<AppState>
 
   init(_ store: Store<AppState>) {
     self.store = store

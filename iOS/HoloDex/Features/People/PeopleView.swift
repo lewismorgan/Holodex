@@ -7,12 +7,32 @@
 //
 
 import UIKit
+import PinLayout
+import FlexLayout
 
-class PeopleView: HDBaseAppView {
+class PeopleView: UIView, FlexView, BaseAppView {
   var searchField: UITextField = UITextField()
   var scrollView: UIView = UIView()
+  var root = UIView()
 
-  override func layoutFlexContent(_ flexContainer: UIView) {
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    setup()
+  }
+
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("required init(coder:) not implemented")
+  }
+
+  func setup() {
+    layoutFlexContent(root)
+    addSubview(root)
+  }
+
+  func style() {
+  }
+
+  func layoutFlexContent(_ flexContainer: UIView) {
     searchField.backgroundColor = .white
     scrollView.backgroundColor = .blue
 
@@ -22,5 +42,10 @@ class PeopleView: HDBaseAppView {
       }
       flex.addItem(scrollView).grow(1)
     }
+  }
+
+  override func layoutSubviews() {
+    root.pin.all(self.safeAreaInsets)
+    root.flex.layout()
   }
 }

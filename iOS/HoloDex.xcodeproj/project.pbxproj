@@ -27,7 +27,6 @@
 		D7FE7513210955A900DE1E28 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7512210955A900DE1E28 /* PeopleView.swift */; };
 		D7FE7515210955C500DE1E28 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7514210955C500DE1E28 /* PeopleViewController.swift */; };
 		D7FE751B21095C4700DE1E28 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE751A21095C4700DE1E28 /* Person.swift */; };
-		D7FE751E21095E1B00DE1E28 /* HDFlexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE751D21095E1B00DE1E28 /* HDFlexView.swift */; };
 		D7FE75202109624500DE1E28 /* FlexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE751F2109624500DE1E28 /* FlexView.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +54,6 @@
 		D7FE7512210955A900DE1E28 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		D7FE7514210955C500DE1E28 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		D7FE751A21095C4700DE1E28 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		D7FE751D21095E1B00DE1E28 /* HDFlexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDFlexView.swift; sourceTree = "<group>"; };
 		D7FE751F2109624500DE1E28 /* FlexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexView.swift; sourceTree = "<group>"; };
 		ECE1630955B03B456FEC2E91 /* Pods_HoloDex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloDex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -159,7 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				D7FE751F2109624500DE1E28 /* FlexView.swift */,
-				D7FE751D21095E1B00DE1E28 /* HDFlexView.swift */,
 				D7DD0A15210A77C30072A896 /* HDBaseAppView.swift */,
 				D7DD0A17210A7A350072A896 /* HDViewController.swift */,
 				D7DD0A1D210A7EEF0072A896 /* HDStatefulViewController.swift */,
@@ -328,7 +325,6 @@
 				D7DD0A16210A77C30072A896 /* HDBaseAppView.swift in Sources */,
 				D7DD0A18210A7A350072A896 /* HDViewController.swift in Sources */,
 				D7DD0A1E210A7EEF0072A896 /* HDStatefulViewController.swift in Sources */,
-				D7FE751E21095E1B00DE1E28 /* HDFlexView.swift in Sources */,
 				D7FE7513210955A900DE1E28 /* PeopleView.swift in Sources */,
 				D7DD0A1C210A7CCA0072A896 /* PeopleState.swift in Sources */,
 			);

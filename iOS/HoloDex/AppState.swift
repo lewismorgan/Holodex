@@ -9,8 +9,8 @@
 import ReSwift
 import ReSwiftRouter
 
-struct AppState: StateType {
+struct AppState: StateType, PeopleStateStore {
   // other application state
   var navigationState: NavigationState
-
+  var peopleState: PeopleState
 }

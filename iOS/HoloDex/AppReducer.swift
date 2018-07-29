@@ -11,6 +11,7 @@ import ReSwiftRouter
 
 func appReducer(action: Action, state: AppState?) -> AppState {
   return AppState(
-    navigationState: NavigationReducer.handleAction(action, state: state?.navigationState)
+    navigationState: NavigationReducer.handleAction(action, state: state?.navigationState),
+    peopleState: PeopleReducer.handleAction(action, state: state?.peopleState)
   )
 }
