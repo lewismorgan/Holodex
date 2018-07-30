@@ -11,6 +11,7 @@ import ReSwift
 
 class PeopleViewController<StoredAppState: PeopleStateStore & StateType>:
         UIViewController, AppViewController {
+  // TODO: UI Search Controller -> Save search in state?
   let store: Store<StoredAppState>
   var mainView: PeopleView {
     return self.view as! PeopleView
