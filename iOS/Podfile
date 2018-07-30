@@ -12,5 +12,4 @@ target 'HoloDex' do
   pod 'ReSwiftRouter'
   pod 'PinLayout'
   pod 'FlexLayout'
-  pod 'ListKit', :inhibit_warnings => true
 end

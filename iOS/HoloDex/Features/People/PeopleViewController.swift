@@ -8,7 +8,6 @@
 
 import UIKit
 import ReSwift
-import ListKit
 
 class PeopleViewController<StoredAppState: PeopleStateStore & StateType>:
         UIViewController, AppViewController {
@@ -16,8 +15,6 @@ class PeopleViewController<StoredAppState: PeopleStateStore & StateType>:
   var mainView: PeopleView {
     return self.view as! PeopleView
   }
-  var peopleTableView: UITableView = UITableView()
-  var dataSource: ArrayDataSource<PersonTableViewCell, Person>?
 
   // MARK: - Initialization
   init(store: Store<StoredAppState>) {
@@ -34,16 +31,12 @@ class PeopleViewController<StoredAppState: PeopleStateStore & StateType>:
   }
 
   override func loadView() {
-    initViewItem(viewItem: PeopleView(peopleTable: peopleTableView))
+    initViewItem(viewItem: PeopleView(people: [Person()]))
   }
 
   // MARK: - View Controller Overrides
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-
-    self.dataSource = ArrayDataSource(array: [], cellType: PersonTableViewCell.self)
-    peopleTableView.dataSource = dataSource
-//    peopleTableView.delegate = self
 
     store.subscribe(self) {
       $0.select { state in state.peopleState }
@@ -61,8 +54,7 @@ class PeopleViewController<StoredAppState: PeopleStateStore & StateType>:
 extension PeopleViewController: StoreSubscriber {
   func newState(state: PeopleState) {
     if let people = state.people {
-      dataSource?.array = people
-      peopleTableView.reloadData()
+      mainView.configureTableData(people: people)
     }
   }
 }

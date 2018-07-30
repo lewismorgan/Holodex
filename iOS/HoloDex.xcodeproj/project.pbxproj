@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A7D3B55E1C3FF6E8FD6E4232 /* Pods_HoloDex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE1630955B03B456FEC2E91 /* Pods_HoloDex.framework */; };
+		D700E4E2210E9C050054AFD0 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700E4E1210E9C050054AFD0 /* PersonTableViewCell.swift */; };
 		D72D4001210946F40095BEE0 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72D4000210946F40095BEE0 /* AppState.swift */; };
 		D730D08721094BD50092EB4C /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D730D08621094BD50092EB4C /* Screen.swift */; };
 		D75A341121093428003A4C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75A341021093428003A4C6D /* AppDelegate.swift */; };
@@ -26,7 +27,6 @@
 		D7DD0A2C210AAB8E0072A896 /* PeopleActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A2B210AAB8E0072A896 /* PeopleActions.swift */; };
 		D7EE6AD3210E13AE006BF44C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EE6AD2210E13AE006BF44C /* Result.swift */; };
 		D7EE6AD5210E190C006BF44C /* PeopleActionCreators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EE6AD4210E190C006BF44C /* PeopleActionCreators.swift */; };
-		D7EE6AD7210E1DCB006BF44C /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EE6AD6210E1DCB006BF44C /* PersonTableViewCell.swift */; };
 		D7FE7513210955A900DE1E28 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7512210955A900DE1E28 /* PeopleView.swift */; };
 		D7FE7515210955C500DE1E28 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7514210955C500DE1E28 /* PeopleViewController.swift */; };
 		D7FE751B21095C4700DE1E28 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE751A21095C4700DE1E28 /* Person.swift */; };
@@ -36,6 +36,7 @@
 /* Begin PBXFileReference section */
 		34CB417C9F0CB3ED421D7DDF /* Pods-HoloDex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDex.release.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex.release.xcconfig"; sourceTree = "<group>"; };
 		9725803AAA5D91577D8D9F36 /* Pods-HoloDex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex.debug.xcconfig"; sourceTree = "<group>"; };
+		D700E4E1210E9C050054AFD0 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		D72D4000210946F40095BEE0 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		D730D08621094BD50092EB4C /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		D75A340D21093428003A4C6D /* HoloDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoloDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,7 +57,6 @@
 		D7DD0A2B210AAB8E0072A896 /* PeopleActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleActions.swift; sourceTree = "<group>"; };
 		D7EE6AD2210E13AE006BF44C /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		D7EE6AD4210E190C006BF44C /* PeopleActionCreators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleActionCreators.swift; sourceTree = "<group>"; };
-		D7EE6AD6210E1DCB006BF44C /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		D7FE7512210955A900DE1E28 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		D7FE7514210955C500DE1E28 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		D7FE751A21095C4700DE1E28 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -155,9 +155,9 @@
 				D7EE6AD4210E190C006BF44C /* PeopleActionCreators.swift */,
 				D7DD0A2B210AAB8E0072A896 /* PeopleActions.swift */,
 				D7DD0A29210AAA6C0072A896 /* PeopleReducer.swift */,
-				D7EE6AD6210E1DCB006BF44C /* PersonTableViewCell.swift */,
 				D7FE7512210955A900DE1E28 /* PeopleView.swift */,
 				D7FE7514210955C500DE1E28 /* PeopleViewController.swift */,
+				D700E4E1210E9C050054AFD0 /* PersonTableViewCell.swift */,
 			);
 			path = People;
 			sourceTree = "<group>";
@@ -268,7 +268,6 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/ListKit/ListKit.framework",
 				"${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwiftRouter/ReSwiftRouter.framework",
@@ -278,7 +277,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ListKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwiftRouter.framework",
@@ -346,9 +344,9 @@
 				D7DD0A16210A77C30072A896 /* HDBaseAppView.swift in Sources */,
 				D7DD0A18210A7A350072A896 /* HDViewController.swift in Sources */,
 				D7DD0A1E210A7EEF0072A896 /* HDStatefulViewController.swift in Sources */,
+				D700E4E2210E9C050054AFD0 /* PersonTableViewCell.swift in Sources */,
 				D7FE7513210955A900DE1E28 /* PeopleView.swift in Sources */,
 				D7DD0A1C210A7CCA0072A896 /* PeopleState.swift in Sources */,
-				D7EE6AD7210E1DCB006BF44C /* PersonTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

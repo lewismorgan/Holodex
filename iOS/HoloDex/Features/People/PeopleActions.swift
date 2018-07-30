@@ -16,7 +16,7 @@ public struct PeopleActions {
     let result: Result<[Person]>
   }
 
-  public static func fetchPeople<T: StateType>(store: Store<T>) -> Action? {
+  public static func fetchPeople<T: StateType>(store: Store<T>) -> Action {
     // TODO: Make a request to the Star Wars API for the list of people
     var people = [Person]()
     var jyn = Person()
@@ -24,9 +24,9 @@ public struct PeopleActions {
     jyn.gender = "Female"
     people.append(jyn)
     DispatchQueue.main.async {
-      store.dispatch(PeopleActions.SetPeople(result: Result.success([jyn])))
+      store.dispatch(PeopleActions.SetPeople(result: Result.success([jyn, jyn, jyn, jyn, jyn, jyn, jyn, jyn])))
     }
 
-    return nil
+    return StandardAction(type: "PEOPLE_FETCHING")
   }
 }
