@@ -6,14 +6,14 @@
 //  Copyright © 2018 Lewis J Morgan. All rights reserved.
 //
 
-import PromiseKit
+import Promises
 
 protocol NetworkService {
-  func fetchResponseJson(_ url: String) -> Promise<(json: Any, response: PMKAlamofireDataResponse)>
+  func fetchResponseJson(_ url: String) -> Promise<Any>
 }
 
 class StarWarsAPI: NetworkService {
-  func fetchResponseJson(_ url: String) -> Promise<(json: Any, response: PMKAlamofireDataResponse)> {
-    return Alamofire.request(url, method: .get).responseJSON()
+  func fetchResponseJson(_ url: String) -> Promise<Any> {
+    return Promise("nil")
   }
 }

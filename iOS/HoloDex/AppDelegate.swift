@@ -20,8 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    let middleware = createMiddlewareChain(items: [fetchPeople(peopleService: NetworkPeopleService())])
     self.window = UIWindow(frame: UIScreen.main.bounds)
-    self.store = Store<AppState>(reducer: appReducer, state: nil)
+    self.store = Store<AppState>(reducer: appReducer, state: nil, middleware: [middleware])
 
     // Set a dummy view controller to satisfy UIKit
     window?.rootViewController = UIViewController()

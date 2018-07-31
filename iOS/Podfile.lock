@@ -2,18 +2,9 @@ PODS:
   - Alamofire (4.7.3)
   - FlexLayout (1.3.10)
   - PinLayout (1.7.10)
-  - PromiseKit (6.3.4):
-    - PromiseKit/CorePromise (= 6.3.4)
-    - PromiseKit/Foundation (= 6.3.4)
-    - PromiseKit/UIKit (= 6.3.4)
-  - PromiseKit/Alamofire (6.3.4):
-    - Alamofire (~> 4.0)
-    - PromiseKit/CorePromise
-  - PromiseKit/CorePromise (6.3.4)
-  - PromiseKit/Foundation (6.3.4):
-    - PromiseKit/CorePromise
-  - PromiseKit/UIKit (6.3.4):
-    - PromiseKit/CorePromise
+  - PromisesObjC (1.2.3)
+  - PromisesSwift (1.2.3):
+    - PromisesObjC (= 1.2.3)
   - ReSwift (4.0.1)
   - ReSwiftRouter (0.6.0):
     - ReSwift (~> 4.0.0)
@@ -22,8 +13,7 @@ DEPENDENCIES:
   - Alamofire
   - FlexLayout
   - PinLayout
-  - PromiseKit
-  - PromiseKit/Alamofire
+  - PromisesSwift
   - ReSwift
   - ReSwiftRouter
 
@@ -32,7 +22,8 @@ SPEC REPOS:
     - Alamofire
     - FlexLayout
     - PinLayout
-    - PromiseKit
+    - PromisesObjC
+    - PromisesSwift
     - ReSwift
     - ReSwiftRouter
 
@@ -40,10 +31,11 @@ SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   FlexLayout: f250e6ba1ab1101c3d6729b2d9c0e089bb1d52c9
   PinLayout: e8e74faf770501bd6c29cad14db52acd8b2994e6
-  PromiseKit: e1425568123ec844a944c93f2bcb29d511d39cf5
+  PromisesObjC: a3a4263d8a9260214267e0b3788d0f83466ad449
+  PromisesSwift: f7f45c21986419e85f7c5b645ed8c6a2c10c04b4
   ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
   ReSwiftRouter: 81f41b37a5dd1c88e1d3d10a660ff2dcc939ba7c
 
-PODFILE CHECKSUM: 2ae41dfef39c1b9a863e4a872d0b841079857c5a
+PODFILE CHECKSUM: e502376f13265b858315b41061796f81d59d340f
 
 COCOAPODS: 1.5.3

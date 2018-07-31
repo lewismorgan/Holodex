@@ -7,8 +7,7 @@ target 'HoloDex' do
 
   # Pods for HoloDex
   pod 'Alamofire'
-  pod 'PromiseKit'
-  pod 'PromiseKit/Alamofire'
+  pod 'PromisesSwift'
   pod 'ReSwift'
   pod 'ReSwiftRouter'
   pod 'PinLayout'

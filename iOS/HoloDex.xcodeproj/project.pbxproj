@@ -102,7 +102,6 @@
 				D730D08821094CD10092EB4C /* Routing */,
 				D72D4000210946F40095BEE0 /* AppState.swift */,
 				D7DFBFF1210FCD9E00A6A0D1 /* Middleware.swift */,
-				D7DD0A25210A8D930072A896 /* AppTabBarViewController.swift */,
 				D7DD0A27210A90C20072A896 /* AppReducer.swift */,
 				D75A341021093428003A4C6D /* AppDelegate.swift */,
 				D75A341921093429003A4C6D /* LaunchScreen.storyboard */,
@@ -117,6 +116,7 @@
 				D7DD0A1F210A88FB0072A896 /* RootRoutable.swift */,
 				D7DD0A21210A8B560072A896 /* AppTabBarViewRoutable.swift */,
 				D7DD0A23210A8BA80072A896 /* ViewControllerRoutable.swift */,
+				D7DD0A25210A8D930072A896 /* AppTabBarViewController.swift */,
 			);
 			name = Routing;
 			sourceTree = "<group>";
@@ -299,7 +299,8 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesSwift/Promises.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwiftRouter/ReSwiftRouter.framework",
 			);
@@ -308,7 +309,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Promises.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwiftRouter.framework",
 			);

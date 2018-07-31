@@ -28,7 +28,6 @@ public struct PeopleReducer {
   private static func onFetchPeople(_ action: PeopleActions.FetchPeople, _ state: inout PeopleState) {
     switch action {
     case .request:
-      // TODO: Loading indicator for a People Request
       debugPrint("Requesting People")
     case .success(let people):
       state.people = people

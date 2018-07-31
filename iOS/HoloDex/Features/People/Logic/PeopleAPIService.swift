@@ -9,7 +9,8 @@
 // Disucssion on Network/Async calls https://github.com/ReSwift/ReSwift/issues/214
 // and https://github.com/timojaask/ReSwiftAsyncMiddlewarePattern
 
-import PromiseKit
+import Alamofire
+import Promises
 import Foundation
 
 protocol PeopleService {
@@ -18,22 +19,22 @@ protocol PeopleService {
 
 /// A PeopleService that is connected to a network
 class NetworkPeopleService: PeopleService {
-  let networkService: NetworkService
-
-  init(_ networkService: NetworkService) {
-    self.networkService = networkService
-  }
-
   func fetchPeople() -> Promise<[Person]> {
-    // TODO Create API Calls to SWAPI
-    return nil
-  }
-  
-  func convertToPersonArray() -> [Person] {
-    var jyn = Person()
-    jyn.name = "Jyn Arson"
-    var anakin = Person()
-    anakin.name = "Anakin Skywailer"
-    return [jyn, anakin]
+    let promise = Promise<[Person]> { fullfill, reject in
+      Alamofire.request("https://httpbin.org/get").responseJSON { response in
+        switch response.result {
+        case .success(let value):
+          debugPrint("Response value: \(value)")
+          var jyn = Person()
+          jyn.name = "Jyn Arson"
+          var anakin = Person()
+          anakin.name = "Anakin Skywailer"
+          fullfill([jyn, anakin])
+        case .failure(let error):
+          reject(error)
+        }
+      }
+    }
+    return promise
   }
 }

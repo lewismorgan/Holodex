@@ -7,8 +7,6 @@
 //
 
 import Foundation
-
-import PromiseKit
 import ReSwift
 
 func fetchPeople(peopleService: PeopleService) -> MiddlewareItem {
