@@ -6,5 +6,14 @@
 //  Copyright © 2018 Lewis J Morgan. All rights reserved.
 //
 
-class StarWarsAPI {
+import PromiseKit
+
+protocol NetworkService {
+  func fetchResponseJson(_ url: String) -> Promise<(json: Any, response: PMKAlamofireDataResponse)>
+}
+
+class StarWarsAPI: NetworkService {
+  func fetchResponseJson(_ url: String) -> Promise<(json: Any, response: PMKAlamofireDataResponse)> {
+    return Alamofire.request(url, method: .get).responseJSON()
+  }
 }

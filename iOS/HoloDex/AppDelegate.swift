@@ -35,13 +35,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       }
     }
 
-    // Start with splash screen (a.k.a Login screen)
     store.dispatch(SetRouteAction([AppRoutes.entryPoint.rawValue]))
-    store.dispatch { (_, store) -> Action? in
-      PeopleActions.fetchPeople(store: store)
-    }
-    window?.makeKeyAndVisible()
+    store.dispatch(PeopleActions.FetchPeople.request)
 
+    window?.makeKeyAndVisible()
     return true
   }
 

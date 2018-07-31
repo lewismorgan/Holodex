@@ -2,36 +2,48 @@ PODS:
   - Alamofire (4.7.3)
   - FlexLayout (1.3.10)
   - PinLayout (1.7.10)
+  - PromiseKit (6.3.4):
+    - PromiseKit/CorePromise (= 6.3.4)
+    - PromiseKit/Foundation (= 6.3.4)
+    - PromiseKit/UIKit (= 6.3.4)
+  - PromiseKit/Alamofire (6.3.4):
+    - Alamofire (~> 4.0)
+    - PromiseKit/CorePromise
+  - PromiseKit/CorePromise (6.3.4)
+  - PromiseKit/Foundation (6.3.4):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.3.4):
+    - PromiseKit/CorePromise
   - ReSwift (4.0.1)
   - ReSwiftRouter (0.6.0):
     - ReSwift (~> 4.0.0)
-  - RxSwift (4.2.0)
 
 DEPENDENCIES:
   - Alamofire
   - FlexLayout
   - PinLayout
+  - PromiseKit
+  - PromiseKit/Alamofire
   - ReSwift
   - ReSwiftRouter
-  - RxSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - FlexLayout
     - PinLayout
+    - PromiseKit
     - ReSwift
     - ReSwiftRouter
-    - RxSwift
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   FlexLayout: f250e6ba1ab1101c3d6729b2d9c0e089bb1d52c9
   PinLayout: e8e74faf770501bd6c29cad14db52acd8b2994e6
+  PromiseKit: e1425568123ec844a944c93f2bcb29d511d39cf5
   ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
   ReSwiftRouter: 81f41b37a5dd1c88e1d3d10a660ff2dcc939ba7c
-  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
 
-PODFILE CHECKSUM: be8b26c6ab6a7c496f58158834edbe1ae28e68f8
+PODFILE CHECKSUM: 2ae41dfef39c1b9a863e4a872d0b841079857c5a
 
 COCOAPODS: 1.5.3

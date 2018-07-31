@@ -27,7 +27,8 @@
 		D7DD0A28210A90C20072A896 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A27210A90C20072A896 /* AppReducer.swift */; };
 		D7DD0A2A210AAA6C0072A896 /* PeopleReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A29210AAA6C0072A896 /* PeopleReducer.swift */; };
 		D7DD0A2C210AAB8E0072A896 /* PeopleActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A2B210AAB8E0072A896 /* PeopleActions.swift */; };
-		D7EE6AD3210E13AE006BF44C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EE6AD2210E13AE006BF44C /* Result.swift */; };
+		D7DFBFF2210FCD9E00A6A0D1 /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DFBFF1210FCD9E00A6A0D1 /* Middleware.swift */; };
+		D7DFBFF6210FCF5E00A6A0D1 /* PeopleMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DFBFF5210FCF5E00A6A0D1 /* PeopleMiddleware.swift */; };
 		D7FE7513210955A900DE1E28 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7512210955A900DE1E28 /* PeopleView.swift */; };
 		D7FE7515210955C500DE1E28 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7514210955C500DE1E28 /* PeopleViewController.swift */; };
 		D7FE751B21095C4700DE1E28 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE751A21095C4700DE1E28 /* Person.swift */; };
@@ -58,7 +59,8 @@
 		D7DD0A27210A90C20072A896 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		D7DD0A29210AAA6C0072A896 /* PeopleReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleReducer.swift; sourceTree = "<group>"; };
 		D7DD0A2B210AAB8E0072A896 /* PeopleActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleActions.swift; sourceTree = "<group>"; };
-		D7EE6AD2210E13AE006BF44C /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		D7DFBFF1210FCD9E00A6A0D1 /* Middleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Middleware.swift; sourceTree = "<group>"; };
+		D7DFBFF5210FCF5E00A6A0D1 /* PeopleMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleMiddleware.swift; sourceTree = "<group>"; };
 		D7FE7512210955A900DE1E28 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		D7FE7514210955C500DE1E28 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		D7FE751A21095C4700DE1E28 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				D730D08821094CD10092EB4C /* Routing */,
 				D72D4000210946F40095BEE0 /* AppState.swift */,
+				D7DFBFF1210FCD9E00A6A0D1 /* Middleware.swift */,
 				D7DD0A25210A8D930072A896 /* AppTabBarViewController.swift */,
 				D7DD0A27210A90C20072A896 /* AppReducer.swift */,
 				D75A341021093428003A4C6D /* AppDelegate.swift */,
@@ -152,22 +155,46 @@
 		D7DD0A2D210AAE290072A896 /* People */ = {
 			isa = PBXGroup;
 			children = (
-				D7FE751A21095C4700DE1E28 /* Person.swift */,
-				D7DD0A1B210A7CCA0072A896 /* PeopleState.swift */,
-				D7DD0A2B210AAB8E0072A896 /* PeopleActions.swift */,
-				D7DD0A29210AAA6C0072A896 /* PeopleReducer.swift */,
-				D7FE7512210955A900DE1E28 /* PeopleView.swift */,
-				D7FE7514210955C500DE1E28 /* PeopleViewController.swift */,
-				D700E4E1210E9C050054AFD0 /* PersonTableViewCell.swift */,
-				D700E4E3210EA7970054AFD0 /* PeopleAPIService.swift */,
+				D7DFBFF8210FCF8500A6A0D1 /* Model */,
+				D7DFBFF7210FCF6D00A6A0D1 /* View */,
+				D7DFBFF9210FCFA800A6A0D1 /* Logic */,
 			);
 			path = People;
+			sourceTree = "<group>";
+		};
+		D7DFBFF7210FCF6D00A6A0D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D700E4E1210E9C050054AFD0 /* PersonTableViewCell.swift */,
+				D7FE7512210955A900DE1E28 /* PeopleView.swift */,
+				D7FE7514210955C500DE1E28 /* PeopleViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D7DFBFF8210FCF8500A6A0D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D7FE751A21095C4700DE1E28 /* Person.swift */,
+				D7DD0A1B210A7CCA0072A896 /* PeopleState.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D7DFBFF9210FCFA800A6A0D1 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				D700E4E3210EA7970054AFD0 /* PeopleAPIService.swift */,
+				D7DD0A2B210AAB8E0072A896 /* PeopleActions.swift */,
+				D7DFBFF5210FCF5E00A6A0D1 /* PeopleMiddleware.swift */,
+				D7DD0A29210AAA6C0072A896 /* PeopleReducer.swift */,
+			);
+			path = Logic;
 			sourceTree = "<group>";
 		};
 		D7EE6AD1210E1399006BF44C /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				D7EE6AD2210E13AE006BF44C /* Result.swift */,
 				D700E4E5210EA81A0054AFD0 /* StarWarsAPI.swift */,
 			);
 			path = Core;
@@ -272,18 +299,18 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwiftRouter/ReSwiftRouter.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwiftRouter.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -331,14 +358,15 @@
 			files = (
 				D72D4001210946F40095BEE0 /* AppState.swift in Sources */,
 				D7FE7515210955C500DE1E28 /* PeopleViewController.swift in Sources */,
-				D7EE6AD3210E13AE006BF44C /* Result.swift in Sources */,
 				D7DD0A28210A90C20072A896 /* AppReducer.swift in Sources */,
 				D7FE751B21095C4700DE1E28 /* Person.swift in Sources */,
 				D75A341121093428003A4C6D /* AppDelegate.swift in Sources */,
 				D700E4E4210EA7970054AFD0 /* PeopleAPIService.swift in Sources */,
 				D7DD0A26210A8D930072A896 /* AppTabBarViewController.swift in Sources */,
+				D7DFBFF2210FCD9E00A6A0D1 /* Middleware.swift in Sources */,
 				D7FE75202109624500DE1E28 /* FlexView.swift in Sources */,
 				D7DD0A2C210AAB8E0072A896 /* PeopleActions.swift in Sources */,
+				D7DFBFF6210FCF5E00A6A0D1 /* PeopleMiddleware.swift in Sources */,
 				D730D08721094BD50092EB4C /* Screen.swift in Sources */,
 				D7DD0A24210A8BA80072A896 /* ViewControllerRoutable.swift in Sources */,
 				D7DD0A2A210AAA6C0072A896 /* PeopleReducer.swift in Sources */,

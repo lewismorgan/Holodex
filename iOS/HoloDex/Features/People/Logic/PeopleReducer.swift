@@ -16,8 +16,8 @@ public struct PeopleReducer {
     case _ as ReSwiftInit:
       break
 
-    case let action as PeopleActions.SetPeople:
-      onSetPeople(action, &state)
+    case let action as PeopleActions.FetchPeople:
+      onFetchPeople(action, &state)
     default:
       break
     }
@@ -25,8 +25,11 @@ public struct PeopleReducer {
     return state
   }
 
-  private static func onSetPeople(_ action: PeopleActions.SetPeople, _ state: inout PeopleState) {
-    switch action.result {
+  private static func onFetchPeople(_ action: PeopleActions.FetchPeople, _ state: inout PeopleState) {
+    switch action {
+    case .request:
+      // TODO: Loading indicator for a People Request
+      debugPrint("Requesting People")
     case .success(let people):
       state.people = people
     case .failure(let error):
