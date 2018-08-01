@@ -8,8 +8,6 @@
 
 import ReSwift
 
-// https://github.com/cardoso/ReduxMovieDB/blob/master/ReduxMovieDB/ActionCreators.swift
-
 protocol RequestAction {}
 
 struct PeopleActions {

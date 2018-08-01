@@ -13,28 +13,33 @@ import Alamofire
 import Promises
 import Foundation
 
+/// Describes a PeopleService
 protocol PeopleService {
-  func fetchPeople() -> Promise<[Person]>
+  func fetchPeople(page: Int) -> Promise<[Person]>
+  func fetchAllPeople() -> Promise<[Person]>
 }
 
 /// A PeopleService that is connected to a network
 class NetworkPeopleService: PeopleService {
-  func fetchPeople() -> Promise<[Person]> {
-    let promise = Promise<[Person]> { fullfill, reject in
-      Alamofire.request("https://httpbin.org/get").responseJSON { response in
-        switch response.result {
-        case .success(let value):
-          debugPrint("Response value: \(value)")
-          var jyn = Person()
-          jyn.name = "Jyn Arson"
-          var anakin = Person()
-          anakin.name = "Anakin Skywailer"
-          fullfill([jyn, anakin])
-        case .failure(let error):
-          reject(error)
-        }
-      }
+  let networkService: NetworkService
+
+  init(_ networkService: NetworkService) {
+    self.networkService = networkService
+  }
+
+  func fetchPeople(page: Int) -> Promise<[Person]> {
+    return networkService.fetchResponseJson("kdjsf").then(on: DispatchQueue.global(qos: .background)) { result in
+      debugPrint("Fetched people\t \(result)")
+      var jyn = Person()
+      jyn.name = "Jyn Erso"
+      var anakin = Person()
+      anakin.name = "Anakin Skywalker"
+      return Promise([anakin, jyn])
     }
-    return promise
+  }
+
+  // TODO: Implement fetchAllPeople()
+  func fetchAllPeople() -> Promise<[Person]> {
+    fatalError("fetchAllPeople() has not bee implemented yet")
   }
 }

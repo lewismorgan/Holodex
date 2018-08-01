@@ -14,7 +14,7 @@ func fetchPeople(peopleService: PeopleService) -> MiddlewareItem {
     guard let action = action as? PeopleActions.FetchPeople,
       case .request = action else { return }
 
-    peopleService.fetchPeople()
+    peopleService.fetchPeople(page: 0)
       .then { dispatch(PeopleActions.FetchPeople.success(people: $0)) }
       .catch { dispatch(PeopleActions.FetchPeople.failure(error: $0)) }
   }
