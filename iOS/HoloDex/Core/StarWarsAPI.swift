@@ -14,9 +14,12 @@ protocol NetworkService {
 }
 
 class StarWarsAPI: NetworkService {
+  let baseUrl = "https://swapi.co/api/"
+
   func fetchResponseJson(_ url: String) -> Promise<Any> {
     return Promise { fullfill, reject in
-      Alamofire.request("https://httpbin.org/get").responseJSON { response in
+      debugPrint("Request: \(self.baseUrl)\(url)")
+      Alamofire.request(self.baseUrl + url).responseJSON { response in
         switch response.result {
         case .success(let value):
           fullfill(value)

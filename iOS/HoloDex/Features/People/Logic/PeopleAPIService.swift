@@ -28,18 +28,23 @@ class NetworkPeopleService: PeopleService {
   }
 
   func fetchPeople(page: Int) -> Promise<[Person]> {
-    return networkService.fetchResponseJson("kdjsf").then(on: DispatchQueue.global(qos: .background)) { result in
-      debugPrint("Fetched people\t \(result)")
-      var jyn = Person()
-      jyn.name = "Jyn Erso"
-      var anakin = Person()
-      anakin.name = "Anakin Skywalker"
-      return Promise([anakin, jyn])
-    }
+    let pageVal = (page >= 1 ? page : 1)
+    return networkService.fetchResponseJson("people/?page=\(pageVal)")
+      .then(on: DispatchQueue.global(qos: .background)) { result in
+        debugPrint(result)
+
+        var jyn = Person()
+        jyn.name = "Jyn Erso"
+        var anakin = Person()
+        anakin.name = "Anakin Skywalker"
+        return Promise([anakin, jyn])
+      }
   }
 
   // TODO: Implement fetchAllPeople()
   func fetchAllPeople() -> Promise<[Person]> {
-    fatalError("fetchAllPeople() has not bee implemented yet")
+    // Read value of count and next
+    // While the value of count != the current page, get the next page and merge w/ promise
+    fatalError("fetchAllPeople() is not implemented yet")
   }
 }
