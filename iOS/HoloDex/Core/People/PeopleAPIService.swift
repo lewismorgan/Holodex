@@ -13,12 +13,6 @@ import Alamofire
 import Promises
 import Foundation
 
-/// Describes a PeopleService
-protocol PeopleService {
-  func fetchPeople(page: Int) -> Promise<[Person]>
-  func fetchAllPeople() -> Promise<[Person]>
-}
-
 /// A PeopleService that is connected to a network
 class NetworkPeopleService: PeopleService {
   let networkService: NetworkService
@@ -41,10 +35,18 @@ class NetworkPeopleService: PeopleService {
       }
   }
 
-  // TODO: Implement fetchAllPeople()
   func fetchAllPeople() -> Promise<[Person]> {
     // Read value of count and next
     // While the value of count != the current page, get the next page and merge w/ promise
-    fatalError("fetchAllPeople() is not implemented yet")
+    return networkService.fetchPaginatedJson("people/")
+      .then(on: DispatchQueue.global(qos: .background)) { (result: PageResponse<Person>) in
+        return Promise { fullfill, reject in
+          if let people = result.results {
+            fullfill(people)
+          } else {
+            reject(NSError(domain: "", code: 1, userInfo: nil))
+          }
+        }
+    }
   }
 }

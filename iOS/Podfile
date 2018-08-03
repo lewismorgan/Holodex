@@ -8,6 +8,8 @@ target 'HoloDex' do
   # Pods for HoloDex
   pod 'Alamofire'
   pod 'PromisesSwift'
+  pod 'ObjectMapper', :inhibit_warnings => true
+  pod 'AlamofireObjectMapper', :inhibit_warnings => true
   pod 'ReSwift'
   pod 'ReSwiftRouter'
   pod 'PinLayout'

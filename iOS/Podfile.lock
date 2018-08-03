@@ -1,6 +1,10 @@
 PODS:
   - Alamofire (4.7.3)
+  - AlamofireObjectMapper (5.1.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 3.3)
   - FlexLayout (1.3.10)
+  - ObjectMapper (3.3.0)
   - PinLayout (1.7.10)
   - PromisesObjC (1.2.3)
   - PromisesSwift (1.2.3):
@@ -11,7 +15,9 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - AlamofireObjectMapper
   - FlexLayout
+  - ObjectMapper
   - PinLayout
   - PromisesSwift
   - ReSwift
@@ -20,7 +26,9 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - AlamofireObjectMapper
     - FlexLayout
+    - ObjectMapper
     - PinLayout
     - PromisesObjC
     - PromisesSwift
@@ -29,13 +37,15 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AlamofireObjectMapper: 3395e698901d8b0e6f48b7d0c43bd47875325102
   FlexLayout: f250e6ba1ab1101c3d6729b2d9c0e089bb1d52c9
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   PinLayout: e8e74faf770501bd6c29cad14db52acd8b2994e6
   PromisesObjC: a3a4263d8a9260214267e0b3788d0f83466ad449
   PromisesSwift: f7f45c21986419e85f7c5b645ed8c6a2c10c04b4
   ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
   ReSwiftRouter: 81f41b37a5dd1c88e1d3d10a660ff2dcc939ba7c
 
-PODFILE CHECKSUM: e502376f13265b858315b41061796f81d59d340f
+PODFILE CHECKSUM: 0691dd09a0c069aa0b49076e55dd537b401180e1
 
 COCOAPODS: 1.5.3
