@@ -18,6 +18,7 @@
 		D75A341B21093429003A4C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75A341921093429003A4C6D /* LaunchScreen.storyboard */; };
 		D7A501962113E26200DEA577 /* PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A501952113E26200DEA577 /* PeopleService.swift */; };
 		D7A501982113E2AC00DEA577 /* StaticPeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A501972113E2AC00DEA577 /* StaticPeopleService.swift */; };
+		D7A5019A2113E6D500DEA577 /* PageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A501992113E6D500DEA577 /* PageResponse.swift */; };
 		D7DD0A16210A77C30072A896 /* HDBaseAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A15210A77C30072A896 /* HDBaseAppView.swift */; };
 		D7DD0A18210A7A350072A896 /* HDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A17210A7A350072A896 /* HDViewController.swift */; };
 		D7DD0A1C210A7CCA0072A896 /* PeopleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A1B210A7CCA0072A896 /* PeopleState.swift */; };
@@ -52,6 +53,7 @@
 		D75A341C21093429003A4C6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7A501952113E26200DEA577 /* PeopleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleService.swift; sourceTree = "<group>"; };
 		D7A501972113E2AC00DEA577 /* StaticPeopleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticPeopleService.swift; sourceTree = "<group>"; };
+		D7A501992113E6D500DEA577 /* PageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageResponse.swift; sourceTree = "<group>"; };
 		D7DD0A15210A77C30072A896 /* HDBaseAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDBaseAppView.swift; sourceTree = "<group>"; };
 		D7DD0A17210A7A350072A896 /* HDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDViewController.swift; sourceTree = "<group>"; };
 		D7DD0A1B210A7CCA0072A896 /* PeopleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleState.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 			children = (
 				D7A501942113E24E00DEA577 /* People */,
 				D700E4E5210EA81A0054AFD0 /* StarWarsAPI.swift */,
+				D7A501992113E6D500DEA577 /* PageResponse.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				D7DD0A26210A8D930072A896 /* AppTabBarViewController.swift in Sources */,
 				D7DFBFF2210FCD9E00A6A0D1 /* Middleware.swift in Sources */,
 				D7FE75202109624500DE1E28 /* FlexView.swift in Sources */,
+				D7A5019A2113E6D500DEA577 /* PageResponse.swift in Sources */,
 				D7A501982113E2AC00DEA577 /* StaticPeopleService.swift in Sources */,
 				D7DD0A2C210AAB8E0072A896 /* PeopleActions.swift in Sources */,
 				D7DFBFF6210FCF5E00A6A0D1 /* PeopleMiddleware.swift in Sources */,

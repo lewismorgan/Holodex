@@ -12,49 +12,27 @@ import AlamofireObjectMapper
 import Promises
 
 protocol NetworkService {
-  func fetchResponseJson(_ url: String) -> Promise<Any>
-  func fetchPaginatedJson<T: Mappable & Codable>(_ url: String) -> Promise<PageResponse<T>>
+  func fetchResponseJson<T: Mappable & Codable>(_ url: String, on queue: DispatchQueue) -> Promise<T>
 }
 
-struct PageResponse<T: Mappable & Codable>: Mappable, Codable {
-  var count: Int?
-  var next: String?
-  var previous: String?
-  var results: [T]?
-
-  init?(map: Map) {
-  }
-  mutating func mapping(map: Map) {
-    count <- map["count"]
-    next <- map["next"]
-    previous <- map["previous"]
-    results <- map["results"]
-  }
-}
-
-class StarWarsAPI: NetworkService {
+/// Connects to the StarWarsAPI
+class StarWarsAPI {
   let baseUrl = "https://swapi.co/api/"
 
-  func fetchPaginatedJson<T: Mappable & Codable>(_ url: String) -> Promise<PageResponse<T>> {
-    return Promise { fullfill, reject in
-      Alamofire.request(self.baseUrl + url).responseObject { (response: DataResponse<PageResponse<T>>) in
-        switch response.result {
-        case .success(let value):
-          fullfill(value)
-        case.failure(let error):
-          reject(error)
-        }
-      }
-    }
+  func createRequest<T: BaseMappable>(_ url: String,
+                                      completionHandler: @escaping (Alamofire.DataResponse<T>) -> Void) -> DataRequest {
+      return Alamofire.request(baseUrl + url).responseObject(completionHandler: completionHandler)
   }
+}
 
-  func fetchResponseJson(_ url: String) -> Promise<Any> {
-    return Promise { fullfill, reject in
-      debugPrint("Request: \(self.baseUrl)\(url)")
-      Alamofire.request(self.baseUrl + url).responseJSON { response in
+extension StarWarsAPI: NetworkService {
+  /// Creates a request to the Star Wars API and returns a promise with the expected result type
+  func fetchResponseJson<T: Mappable & Codable>(_ url: String, on queue: DispatchQueue) -> Promise<T> {
+    return Promise<T>(on: queue) { fullfill, reject in
+      _ = self.createRequest(self.baseUrl + url) { (response: DataResponse<T>) in
         switch response.result {
-        case .success(let value):
-          fullfill(value)
+        case .success(let result):
+          fullfill(result)
         case .failure(let error):
           reject(error)
         }

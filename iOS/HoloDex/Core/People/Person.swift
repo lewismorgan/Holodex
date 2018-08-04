@@ -10,8 +10,8 @@ import ObjectMapper
 
 struct Person: Mappable, Codable {
   var name: String?
-  var height: Int?
-  var mass: Int?
+  var height: String?
+  var mass: String?
   var hairColor: String?
   var skinColor: String?
   var eyeColor: String?

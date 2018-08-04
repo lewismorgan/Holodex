@@ -23,30 +23,24 @@ class NetworkPeopleService: PeopleService {
 
   func fetchPeople(page: Int) -> Promise<[Person]> {
     let pageVal = (page >= 1 ? page : 1)
-    return networkService.fetchResponseJson("people/?page=\(pageVal)")
-      .then(on: DispatchQueue.global(qos: .background)) { result in
-        debugPrint(result)
-
-        var jyn = Person()
-        jyn.name = "Jyn Erso"
-        var anakin = Person()
-        anakin.name = "Anakin Skywalker"
-        return Promise([anakin, jyn])
-      }
+    return networkService.fetchResponseJson("people/?page=\(pageVal)", on: DispatchQueue.global(qos: .background))
+      .then(on: DispatchQueue.global(qos: .background)) { (result: PageResponse<Person>) in
+        return Promise<[Person]> { fullfill, _ in
+          guard let people = result.results else {
+            fatalError()
+          }
+          fullfill(people)
+        }
+    }
   }
 
   func fetchAllPeople() -> Promise<[Person]> {
-    // Read value of count and next
-    // While the value of count != the current page, get the next page and merge w/ promise
-    return networkService.fetchPaginatedJson("people/")
-      .then(on: DispatchQueue.global(qos: .background)) { (result: PageResponse<Person>) in
-        return Promise { fullfill, reject in
-          if let people = result.results {
-            fullfill(people)
-          } else {
-            reject(NSError(domain: "", code: 1, userInfo: nil))
-          }
-        }
-    }
+    fatalError("fetchAllPeople() is not implemented yet.")
+  }
+}
+
+extension NetworkService {
+  static func workThread() -> DispatchQueue {
+    return DispatchQueue.global(qos: .background)
   }
 }
