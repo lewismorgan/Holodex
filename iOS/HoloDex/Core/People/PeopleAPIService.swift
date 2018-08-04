@@ -10,8 +10,9 @@
 // and https://github.com/timojaask/ReSwiftAsyncMiddlewarePattern
 
 import Alamofire
-import Promises
-import Foundation
+import RxSwift
+
+// "people/?page=\(pageVal)"
 
 /// A PeopleService that is connected to a network
 class NetworkPeopleService: PeopleService {
@@ -21,26 +22,19 @@ class NetworkPeopleService: PeopleService {
     self.networkService = networkService
   }
 
-  func fetchPeople(page: Int) -> Promise<[Person]> {
+  func fetchPeople(page: Int) -> Single<[Person]> {
     let pageVal = (page >= 1 ? page : 1)
-    return networkService.fetchResponseJson("people/?page=\(pageVal)", on: DispatchQueue.global(qos: .background))
-      .then(on: DispatchQueue.global(qos: .background)) { (result: PageResponse<Person>) in
-        return Promise<[Person]> { fullfill, _ in
-          guard let people = result.results else {
-            fatalError()
-          }
-          fullfill(people)
-        }
+    return self.networkService.fetchResponseJson("people/?page=\(pageVal)").map { (item: PageResponse<Person>) in
+      if let people = item.results {
+        return people
+      } else {
+        throw(GeneralHoloDexError(title: "fetchPeople", description: "error fetching people by page", code: page))
+      }
     }
   }
 
-  func fetchAllPeople() -> Promise<[Person]> {
-    fatalError("fetchAllPeople() is not implemented yet.")
-  }
-}
-
-extension NetworkService {
-  static func workThread() -> DispatchQueue {
-    return DispatchQueue.global(qos: .background)
+  func fetchAllPeople() -> Observable<[Person]> {
+    // TODO: create fetch people's until there is no more count lefts.
+    fatalError("not implemented yet")
   }
 }

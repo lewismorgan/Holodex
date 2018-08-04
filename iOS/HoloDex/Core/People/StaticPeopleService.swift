@@ -8,23 +8,21 @@
 
 /// A PeopleService that returns static data
 
-import Promises
+import RxSwift
 
 class StaticPeopleService: PeopleService {
-  func fetchPeople(page: Int) -> Promise<[Person]> {
-    return Promise { fullfill, _ in
-      if page == 0 {
-        fullfill([self.createAnakin()])
-      } else {
-        fullfill([self.createJyn()])
-      }
+  func fetchPeople(page: Int) -> Single<[Person]> {
+    var items = [Person]()
+    if page == 0 {
+      items.append(createJyn())
+    } else {
+      items.append(createAnakin())
     }
+    return Single.just(items)
   }
 
-  func fetchAllPeople() -> Promise<[Person]> {
-    return Promise { fullfill, _ in
-      fullfill([self.createJyn(), self.createAnakin()])
-    }
+  func fetchAllPeople() -> Observable<[Person]> {
+    return Observable<[Person]>.just([createAnakin(), createJyn()])
   }
 
   private func createAnakin() -> Person {

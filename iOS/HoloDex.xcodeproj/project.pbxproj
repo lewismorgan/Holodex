@@ -11,6 +11,7 @@
 		D700E4E2210E9C050054AFD0 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700E4E1210E9C050054AFD0 /* PersonTableViewCell.swift */; };
 		D700E4E4210EA7970054AFD0 /* PeopleAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700E4E3210EA7970054AFD0 /* PeopleAPIService.swift */; };
 		D700E4E6210EA81A0054AFD0 /* StarWarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700E4E5210EA81A0054AFD0 /* StarWarsAPI.swift */; };
+		D71DECC62115507100574453 /* HoloDexError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71DECC52115507100574453 /* HoloDexError.swift */; };
 		D72D4001210946F40095BEE0 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72D4000210946F40095BEE0 /* AppState.swift */; };
 		D730D08721094BD50092EB4C /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D730D08621094BD50092EB4C /* Screen.swift */; };
 		D75A341121093428003A4C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75A341021093428003A4C6D /* AppDelegate.swift */; };
@@ -44,6 +45,7 @@
 		D700E4E1210E9C050054AFD0 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		D700E4E3210EA7970054AFD0 /* PeopleAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleAPIService.swift; sourceTree = "<group>"; };
 		D700E4E5210EA81A0054AFD0 /* StarWarsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAPI.swift; sourceTree = "<group>"; };
+		D71DECC52115507100574453 /* HoloDexError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoloDexError.swift; sourceTree = "<group>"; };
 		D72D4000210946F40095BEE0 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		D730D08621094BD50092EB4C /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		D75A340D21093428003A4C6D /* HoloDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoloDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,6 +215,7 @@
 				D7A501942113E24E00DEA577 /* People */,
 				D700E4E5210EA81A0054AFD0 /* StarWarsAPI.swift */,
 				D7A501992113E6D500DEA577 /* PageResponse.swift */,
+				D71DECC52115507100574453 /* HoloDexError.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -318,10 +321,10 @@
 				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
-				"${BUILT_PRODUCTS_DIR}/PromisesSwift/Promises.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwiftRouter/ReSwiftRouter.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -330,10 +333,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Promises.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwiftRouter.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -383,6 +386,7 @@
 				D7FE7515210955C500DE1E28 /* PeopleViewController.swift in Sources */,
 				D7DD0A28210A90C20072A896 /* AppReducer.swift in Sources */,
 				D7FE751B21095C4700DE1E28 /* Person.swift in Sources */,
+				D71DECC62115507100574453 /* HoloDexError.swift in Sources */,
 				D75A341121093428003A4C6D /* AppDelegate.swift in Sources */,
 				D700E4E4210EA7970054AFD0 /* PeopleAPIService.swift in Sources */,
 				D7DD0A26210A8D930072A896 /* AppTabBarViewController.swift in Sources */,

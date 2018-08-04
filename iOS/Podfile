@@ -6,10 +6,11 @@ target 'HoloDex' do
   use_frameworks!
 
   # Pods for HoloDex
-  pod 'Alamofire'
-  pod 'PromisesSwift'
   pod 'ObjectMapper', :inhibit_warnings => true
+  pod 'Alamofire'
   pod 'AlamofireObjectMapper', :inhibit_warnings => true
+  pod 'RxSwift'
+  pod 'RxCocoa'
   pod 'ReSwift'
   pod 'ReSwiftRouter'
   pod 'PinLayout'

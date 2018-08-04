@@ -6,37 +6,43 @@
 //  Copyright © 2018 Lewis J Morgan. All rights reserved.
 //
 
-import Alamofire
 import ObjectMapper
+import Alamofire
 import AlamofireObjectMapper
-import Promises
+import RxSwift
 
 protocol NetworkService {
-  func fetchResponseJson<T: Mappable & Codable>(_ url: String, on queue: DispatchQueue) -> Promise<T>
+  func fetchResponseJson<T: Mappable & Codable>(_ url: String) -> Single<T>
 }
 
 /// Connects to the StarWarsAPI
 class StarWarsAPI {
-  let baseUrl = "https://swapi.co/api/"
+  let baseUrl = "https://www.swapi.co/api/"
 
   func createRequest<T: BaseMappable>(_ url: String,
                                       completionHandler: @escaping (Alamofire.DataResponse<T>) -> Void) -> DataRequest {
-      return Alamofire.request(baseUrl + url).responseObject(completionHandler: completionHandler)
+    let headers: HTTPHeaders = [
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    ]
+    let requestUrl = baseUrl + url + "&format=json"
+    return Alamofire.request(requestUrl, method: .get, headers: headers).responseObject(completionHandler: completionHandler)
   }
 }
 
 extension StarWarsAPI: NetworkService {
   /// Creates a request to the Star Wars API and returns a promise with the expected result type
-  func fetchResponseJson<T: Mappable & Codable>(_ url: String, on queue: DispatchQueue) -> Promise<T> {
-    return Promise<T>(on: queue) { fullfill, reject in
-      _ = self.createRequest(self.baseUrl + url) { (response: DataResponse<T>) in
+  func fetchResponseJson<T: Mappable & Codable>(_ url: String) -> Single<T> {
+    return Single<T>.create { single in
+      _ = self.createRequest(url) { (response: DataResponse<T>) in
         switch response.result {
         case .success(let result):
-          fullfill(result)
+          single(.success(result))
         case .failure(let error):
-          reject(error)
+          single(.error(error))
         }
       }
+      return Disposables.create()
     }
   }
 }

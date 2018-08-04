@@ -6,10 +6,10 @@
 //  Copyright © 2018 Lewis J Morgan. All rights reserved.
 //
 
-import Promises
+import RxSwift
 
 /// Describes a PeopleService
 protocol PeopleService {
-  func fetchPeople(page: Int) -> Promise<[Person]>
-  func fetchAllPeople() -> Promise<[Person]>
+  func fetchPeople(page: Int) -> Single<[Person]>
+  func fetchAllPeople() -> Observable<[Person]>
 }

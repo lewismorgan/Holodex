@@ -8,14 +8,23 @@
 
 import Foundation
 import ReSwift
+import RxSwift
+
+let disposeSingleObservers = DisposeBag()
 
 func fetchPeople(peopleService: PeopleService) -> MiddlewareItem {
   return { (action: Action, dispatch: @escaping DispatchFunction) in
     guard let action = action as? PeopleActions.FetchPeople,
       case .request = action else { return }
 
-    peopleService.fetchPeople(page: 3)
-      .then { dispatch(PeopleActions.FetchPeople.success(people: $0)) }
-      .catch { dispatch(PeopleActions.FetchPeople.failure(error: $0)) }
+    debugPrint("Inside middleware")
+    peopleService.fetchPeople(page: 4).subscribe { event in
+      switch event {
+      case .success(let element):
+        dispatch(PeopleActions.FetchPeople.success(people: element))
+      case .error(let error):
+        dispatch(PeopleActions.FetchPeople.failure(error: error))
+      }
+    }.disposed(by: disposeSingleObservers)
   }
 }
