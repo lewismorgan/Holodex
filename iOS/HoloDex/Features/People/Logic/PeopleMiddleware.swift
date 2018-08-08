@@ -20,9 +20,7 @@ func fetchPeople(peopleService: PeopleService) -> MiddlewareItem {
     peopleService.fetchMultiplePeople(startPage: 1, endPage: 2).subscribe { event in
       switch event {
       case .next(let element):
-        for people in element {
-          dispatch(PeopleActions.FetchPeople.success(people: people))
-        }
+        dispatch(PeopleActions.FetchPeople.success(people: element))
       case .error(let error):
         dispatch(PeopleActions.FetchPeople.failure(error: error))
       case .completed:

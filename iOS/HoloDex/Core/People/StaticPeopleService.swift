@@ -24,12 +24,12 @@ class StaticPeopleService: PeopleService {
     return Single.just(items)
   }
 
-  func fetchMultiplePeople(startPage: Int, endPage: Int) -> Observable<[[Person]]> {
+  func fetchMultiplePeople(startPage: Int, endPage: Int) -> Observable<[Person]> {
     var people = [Observable<[Person]>]()
     for page in startPage...endPage {
       people.append(fetchPeople(page: page).asObservable())
     }
-    return Observable.zip(people)
+    return Observable.merge(people)
   }
 
   private func createPerson(_ name: String) -> Person {

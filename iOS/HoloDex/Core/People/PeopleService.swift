@@ -11,5 +11,5 @@ import RxSwift
 /// Describes a PeopleService
 protocol PeopleService {
   func fetchPeople(page: Int) -> Single<[Person]>
-  func fetchMultiplePeople(startPage: Int, endPage: Int) -> Observable<[[Person]]>
+  func fetchMultiplePeople(startPage: Int, endPage: Int) -> Observable<[Person]>
 }

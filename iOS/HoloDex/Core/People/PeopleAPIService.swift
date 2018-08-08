@@ -32,13 +32,13 @@ class NetworkPeopleService: PeopleService {
   }
 
   /// Fetches people from the starting page to the ending page.
-  func fetchMultiplePeople(startPage: Int, endPage: Int) -> Observable<[[Person]]> {
+  func fetchMultiplePeople(startPage: Int, endPage: Int) -> Observable<[Person]> {
     var requests = [Observable<[Person]>]()
 
     for page in startPage...endPage {
       requests.append(fetchPeople(page: page).asObservable())
     }
 
-    return Observable.zip(requests)
+    return Observable.merge(requests)
   }
 }
