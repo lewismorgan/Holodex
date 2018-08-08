@@ -17,8 +17,7 @@ func fetchPeople(peopleService: PeopleService) -> MiddlewareItem {
     guard let action = action as? PeopleActions.FetchPeople,
       case .request = action else { return }
 
-    debugPrint("Inside middleware")
-    peopleService.fetchPeople(startPage: 1, endPage: 2).subscribe { event in
+    peopleService.fetchMultiplePeople(startPage: 1, endPage: 2).subscribe { event in
       switch event {
       case .next(let element):
         for people in element {

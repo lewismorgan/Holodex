@@ -6,34 +6,43 @@
 //  Copyright © 2018 Lewis J Morgan. All rights reserved.
 //
 
-/// A PeopleService that returns static data
-
 import RxSwift
 
+/// A PeopleService that returns static data
 class StaticPeopleService: PeopleService {
   func fetchPeople(page: Int) -> Single<[Person]> {
     var items = [Person]()
-    if page == 0 {
-      items.append(createJyn())
-    } else {
-      items.append(createAnakin())
+
+    for item in 1...10 {
+      if item % 2 == 1 {
+        items.append(createAnakin())
+      } else {
+        items.append(createJyn())
+      }
     }
+
     return Single.just(items)
   }
 
-  func fetchPeople(startPage: Int, endPage: Int) -> Observable<[[Person]]> {
-    return Observable.just([[createAnakin(), createJyn()]])
+  func fetchMultiplePeople(startPage: Int, endPage: Int) -> Observable<[[Person]]> {
+    var people = [Observable<[Person]>]()
+    for page in startPage...endPage {
+      people.append(fetchPeople(page: page).asObservable())
+    }
+    return Observable.zip(people)
+  }
+
+  private func createPerson(_ name: String) -> Person {
+    var rando = Person()
+    rando.name = name
+    return rando
   }
 
   private func createAnakin() -> Person {
-    var anakin = Person()
-    anakin.name = "Anakin Skywalker"
-    return anakin
+    return createPerson("Anakin Skywalker")
   }
 
   private func createJyn() -> Person {
-    var jyn = Person()
-    jyn.name = "Jyn Erso"
-    return jyn
+    return createPerson("Jyn Erso")
   }
 }

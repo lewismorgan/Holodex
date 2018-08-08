@@ -32,7 +32,7 @@ class NetworkPeopleService: PeopleService {
   }
 
   /// Fetches people from the starting page to the ending page.
-  func fetchPeople(startPage: Int, endPage: Int) -> Observable<[[Person]]> {
+  func fetchMultiplePeople(startPage: Int, endPage: Int) -> Observable<[[Person]]> {
     var requests = [Observable<[Person]>]()
 
     for page in startPage...endPage {
@@ -42,41 +42,3 @@ class NetworkPeopleService: PeopleService {
     return Observable.zip(requests)
   }
 }
-
-//    return Observable<(Int, [Person])>.create { observer in
-//      let rootPage = "https://swapi.co/api/people/"
-//      var disposables = [Disposable]()
-//
-//      // Create the initial fetch request
-//      self.networkService.fetchJson("people/?page=" + String(page)) { (result: Result<PageResponse<Person>>) in
-//        switch result {
-//        case .success(let value):
-//          if let resultPeople = value.results {
-//            observer.onNext((1, resultPeople))
-//          }
-//
-//          if let next = value.next {
-//            // There is another page. Create the next fetch request.
-//            let nextPage = String(next[rootPage.endIndex...])
-//            disposables.append(self.fetchPeople(page: page + 1).subscribe({ (fetchedPeople) in
-//              switch fetchedPeople {
-//              case .success(let emittedElement):
-//                observer.onNext((5, emittedElement))
-//              case .error(let error):
-//                observer.onError(error)
-//              }
-//            }))
-//            debugPrint("Next: \(nextPage)")
-//          }
-//        case .failure(let error):
-//          observer.onError(error)
-//        }
-//      }
-//      return Disposables.create {
-//        for disposable in disposables {
-//          disposable.dispose()
-//        }
-//      }
-//    }
-//    //fatalError("not implemented yet")
-//  }
