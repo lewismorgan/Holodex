@@ -30,7 +30,11 @@ public struct PeopleReducer {
     case .request:
       debugPrint("Requesting People")
     case .success(let people):
-      state.people = people
+      if state.people == nil {
+        state.people = people
+      } else {
+        state.people?.append(contentsOf: people)
+      }
     case .failure(let error):
       fatalError("Failure trying to obtain people: \(error)")
     }
