@@ -21,8 +21,8 @@ class StaticPeopleService: PeopleService {
     return Single.just(items)
   }
 
-  func fetchAllPeople() -> Observable<[Person]> {
-    return Observable<[Person]>.just([createAnakin(), createJyn()])
+  func fetchPeople(startPage: Int, endPage: Int) -> Observable<[[Person]]> {
+    return Observable.just([[createAnakin(), createJyn()]])
   }
 
   private func createAnakin() -> Person {

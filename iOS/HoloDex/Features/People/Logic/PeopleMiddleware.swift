@@ -18,10 +18,12 @@ func fetchPeople(peopleService: PeopleService) -> MiddlewareItem {
       case .request = action else { return }
 
     debugPrint("Inside middleware")
-    peopleService.fetchAllPeople().subscribe { event in
+    peopleService.fetchPeople(startPage: 1, endPage: 2).subscribe { event in
       switch event {
       case .next(let element):
-        dispatch(PeopleActions.FetchPeople.success(people: element))
+        for people in element {
+          dispatch(PeopleActions.FetchPeople.success(people: people))
+        }
       case .error(let error):
         dispatch(PeopleActions.FetchPeople.failure(error: error))
       case .completed:
