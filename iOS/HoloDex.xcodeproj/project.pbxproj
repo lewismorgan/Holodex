@@ -96,28 +96,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D72AB0A3210954E000D4CE76 /* Features */ = {
+		D70C54A0211CEBCD00106D73 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				D7FE751C21095DD500DE1E28 /* UI */,
 				D7DD0A2D210AAE290072A896 /* People */,
-			);
-			path = Features;
-			sourceTree = "<group>";
-		};
-		D730D08521094A300092EB4C /* App */ = {
-			isa = PBXGroup;
-			children = (
-				D730D08821094CD10092EB4C /* Routing */,
+				D70C54A1211CEBDA00106D73 /* Routing */,
 				D72D4000210946F40095BEE0 /* AppState.swift */,
 				D7DFBFF1210FCD9E00A6A0D1 /* Middleware.swift */,
 				D7DD0A27210A90C20072A896 /* AppReducer.swift */,
 				D75A341021093428003A4C6D /* AppDelegate.swift */,
 				D75A341921093429003A4C6D /* LaunchScreen.storyboard */,
 			);
-			name = App;
+			path = App;
 			sourceTree = "<group>";
 		};
-		D730D08821094CD10092EB4C /* Routing */ = {
+		D70C54A1211CEBDA00106D73 /* Routing */ = {
 			isa = PBXGroup;
 			children = (
 				D730D08621094BD50092EB4C /* Screen.swift */,
@@ -126,7 +120,7 @@
 				D7DD0A23210A8BA80072A896 /* ViewControllerRoutable.swift */,
 				D7DD0A25210A8D930072A896 /* AppTabBarViewController.swift */,
 			);
-			name = Routing;
+			path = Routing;
 			sourceTree = "<group>";
 		};
 		D75A340421093428003A4C6D = {
@@ -150,10 +144,8 @@
 		D75A340F21093428003A4C6D /* HoloDex */ = {
 			isa = PBXGroup;
 			children = (
+				D70C54A0211CEBCD00106D73 /* App */,
 				D7EE6AD1210E1399006BF44C /* Core */,
-				D7FE751C21095DD500DE1E28 /* UI */,
-				D72AB0A3210954E000D4CE76 /* Features */,
-				D730D08521094A300092EB4C /* App */,
 				D75A341721093429003A4C6D /* Assets.xcassets */,
 				D75A341C21093429003A4C6D /* Info.plist */,
 			);
