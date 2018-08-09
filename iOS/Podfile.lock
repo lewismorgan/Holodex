@@ -11,9 +11,17 @@ PODS:
   - ReSwift (4.0.1)
   - ReSwiftRouter (0.6.0):
     - ReSwift (~> 4.0.0)
+  - RxBlocking (4.2.0):
+    - RxSwift (~> 4.0)
   - RxCocoa (4.2.0):
     - RxSwift (~> 4.0)
+  - RxNimble (4.1.0):
+    - Nimble (~> 7.0)
+    - RxBlocking (~> 4.0)
+    - RxSwift (~> 4.0)
   - RxSwift (4.2.0)
+  - RxTest (4.2.0):
+    - RxSwift (~> 4.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -25,8 +33,11 @@ DEPENDENCIES:
   - Quick
   - ReSwift
   - ReSwiftRouter
+  - RxBlocking
   - RxCocoa
+  - RxNimble
   - RxSwift
+  - RxTest
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -39,8 +50,11 @@ SPEC REPOS:
     - Quick
     - ReSwift
     - ReSwiftRouter
+    - RxBlocking
     - RxCocoa
+    - RxNimble
     - RxSwift
+    - RxTest
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -52,9 +66,12 @@ SPEC CHECKSUMS:
   Quick: d17304d58d0d169dd0bd1c6e5c28e3318de32a1a
   ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
   ReSwiftRouter: 81f41b37a5dd1c88e1d3d10a660ff2dcc939ba7c
+  RxBlocking: e339d8a6e752e25ade95ff858466c55436668f59
   RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
+  RxNimble: e5a34bf3b18d85406fc2a6e2cbc73aa2b4a858f0
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
+  RxTest: 8da864c0ee47534f586ff18fb0c7e5b2f1fe5023
 
-PODFILE CHECKSUM: b24a5a820f2e66e35d69713afd0fc8caea73b610
+PODFILE CHECKSUM: 21810a382d1bee6d80fadbf89fe47afe49ccd7b8
 
 COCOAPODS: 1.5.3

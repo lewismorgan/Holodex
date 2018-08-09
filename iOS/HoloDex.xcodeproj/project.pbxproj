@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C1312C13219584170A884CB /* Pods_HoloDexTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2B56C4FAF3F8EA73A0C0315 /* Pods_HoloDexTests.framework */; };
-		A7D3B55E1C3FF6E8FD6E4232 /* Pods_HoloDex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE1630955B03B456FEC2E91 /* Pods_HoloDex.framework */; };
+		2685B2403D194218BE6EE639 /* Pods_HoloDex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61337C0BDDA746E4E7CEABA /* Pods_HoloDex.framework */; };
+		8819D4DDC8757C56DF655D9D /* Pods_HoloDexUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C61037C3E124C14FE93392 /* Pods_HoloDexUnitTests.framework */; };
 		D700E4E2210E9C050054AFD0 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700E4E1210E9C050054AFD0 /* PersonTableViewCell.swift */; };
 		D700E4E4210EA7970054AFD0 /* PeopleAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700E4E3210EA7970054AFD0 /* PeopleAPIService.swift */; };
 		D700E4E6210EA81A0054AFD0 /* StarWarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700E4E5210EA81A0054AFD0 /* StarWarsAPI.swift */; };
-		D70C54A9211CEFFD00106D73 /* HoloDexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70C54A8211CEFFD00106D73 /* HoloDexTests.swift */; };
 		D71DECC62115507100574453 /* HoloDexError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71DECC52115507100574453 /* HoloDexError.swift */; };
 		D72D4001210946F40095BEE0 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72D4000210946F40095BEE0 /* AppState.swift */; };
 		D730D08721094BD50092EB4C /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D730D08621094BD50092EB4C /* Screen.swift */; };
+		D7362736211CF804003F54FC /* HoloDexUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7362735211CF804003F54FC /* HoloDexUnitTests.swift */; };
+		D73849EC211CFDEF007D2E5F /* PeopleAPIServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73849EB211CFDEF007D2E5F /* PeopleAPIServiceSpec.swift */; };
 		D75A341121093428003A4C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75A341021093428003A4C6D /* AppDelegate.swift */; };
 		D75A341821093429003A4C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D75A341721093429003A4C6D /* Assets.xcassets */; };
 		D75A341B21093429003A4C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75A341921093429003A4C6D /* LaunchScreen.storyboard */; };
@@ -42,7 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D70C54AB211CEFFD00106D73 /* PBXContainerItemProxy */ = {
+		D7362738211CF804003F54FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D75A340521093428003A4C6D /* Project object */;
 			proxyType = 1;
@@ -52,19 +53,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		34CB417C9F0CB3ED421D7DDF /* Pods-HoloDex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDex.release.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex.release.xcconfig"; sourceTree = "<group>"; };
-		7F3213FAE8A465C993CDEFDD /* Pods-HoloDexTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDexTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDexTests/Pods-HoloDexTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8A1439FBD3860444A60CD706 /* Pods-HoloDexTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDexTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDexTests/Pods-HoloDexTests.release.xcconfig"; sourceTree = "<group>"; };
-		9725803AAA5D91577D8D9F36 /* Pods-HoloDex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex.debug.xcconfig"; sourceTree = "<group>"; };
+		02C61037C3E124C14FE93392 /* Pods_HoloDexUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloDexUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		782488DC2A579B684ABC5B33 /* Pods-HoloDexUnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDexUnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDexUnitTests/Pods-HoloDexUnitTests.release.xcconfig"; sourceTree = "<group>"; };
+		89E342FA4D0702CD58D523DD /* Pods-HoloDexUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDexUnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDexUnitTests/Pods-HoloDexUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C4B98A549745D135699BD622 /* Pods-HoloDex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex.debug.xcconfig"; sourceTree = "<group>"; };
+		D61337C0BDDA746E4E7CEABA /* Pods_HoloDex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloDex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D700E4E1210E9C050054AFD0 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		D700E4E3210EA7970054AFD0 /* PeopleAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleAPIService.swift; sourceTree = "<group>"; };
 		D700E4E5210EA81A0054AFD0 /* StarWarsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAPI.swift; sourceTree = "<group>"; };
-		D70C54A6211CEFFD00106D73 /* HoloDexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoloDexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D70C54A8211CEFFD00106D73 /* HoloDexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoloDexTests.swift; sourceTree = "<group>"; };
-		D70C54AA211CEFFD00106D73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D71DECC52115507100574453 /* HoloDexError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoloDexError.swift; sourceTree = "<group>"; };
 		D72D4000210946F40095BEE0 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		D730D08621094BD50092EB4C /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		D7362733211CF804003F54FC /* HoloDexUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoloDexUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7362735211CF804003F54FC /* HoloDexUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoloDexUnitTests.swift; sourceTree = "<group>"; };
+		D7362737211CF804003F54FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D73849EB211CFDEF007D2E5F /* PeopleAPIServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleAPIServiceSpec.swift; sourceTree = "<group>"; };
 		D75A340D21093428003A4C6D /* HoloDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoloDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75A341021093428003A4C6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D75A341721093429003A4C6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -90,16 +93,15 @@
 		D7FE7514210955C500DE1E28 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		D7FE751A21095C4700DE1E28 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		D7FE751F2109624500DE1E28 /* FlexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexView.swift; sourceTree = "<group>"; };
-		E2B56C4FAF3F8EA73A0C0315 /* Pods_HoloDexTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloDexTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ECE1630955B03B456FEC2E91 /* Pods_HoloDex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloDex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E31A2CD2D784AC45C6739CEB /* Pods-HoloDex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDex.release.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D70C54A3211CEFFD00106D73 /* Frameworks */ = {
+		D7362730211CF804003F54FC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C1312C13219584170A884CB /* Pods_HoloDexTests.framework in Frameworks */,
+				8819D4DDC8757C56DF655D9D /* Pods_HoloDexUnitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,20 +109,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7D3B55E1C3FF6E8FD6E4232 /* Pods_HoloDex.framework in Frameworks */,
+				2685B2403D194218BE6EE639 /* Pods_HoloDex.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A955901FAAD1BCE3BEBE1CAE /* Frameworks */ = {
+		196F8F7C4C4828FF130585ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ECE1630955B03B456FEC2E91 /* Pods_HoloDex.framework */,
-				E2B56C4FAF3F8EA73A0C0315 /* Pods_HoloDexTests.framework */,
+				D61337C0BDDA746E4E7CEABA /* Pods_HoloDex.framework */,
+				02C61037C3E124C14FE93392 /* Pods_HoloDexUnitTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A867D720C4632F92D84423B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C4B98A549745D135699BD622 /* Pods-HoloDex.debug.xcconfig */,
+				E31A2CD2D784AC45C6739CEB /* Pods-HoloDex.release.xcconfig */,
+				89E342FA4D0702CD58D523DD /* Pods-HoloDexUnitTests.debug.xcconfig */,
+				782488DC2A579B684ABC5B33 /* Pods-HoloDexUnitTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		D70C54A0211CEBCD00106D73 /* App */ = {
@@ -150,23 +163,24 @@
 			path = Routing;
 			sourceTree = "<group>";
 		};
-		D70C54A7211CEFFD00106D73 /* HoloDexTests */ = {
+		D7362734211CF804003F54FC /* HoloDexUnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				D70C54A8211CEFFD00106D73 /* HoloDexTests.swift */,
-				D70C54AA211CEFFD00106D73 /* Info.plist */,
+				D7362735211CF804003F54FC /* HoloDexUnitTests.swift */,
+				D7362737211CF804003F54FC /* Info.plist */,
+				D73849EB211CFDEF007D2E5F /* PeopleAPIServiceSpec.swift */,
 			);
-			path = HoloDexTests;
+			path = HoloDexUnitTests;
 			sourceTree = "<group>";
 		};
 		D75A340421093428003A4C6D = {
 			isa = PBXGroup;
 			children = (
 				D75A340F21093428003A4C6D /* HoloDex */,
-				D70C54A7211CEFFD00106D73 /* HoloDexTests */,
+				D7362734211CF804003F54FC /* HoloDexUnitTests */,
 				D75A340E21093428003A4C6D /* Products */,
-				F2219EED61AB3983B5FBC7DA /* Pods */,
-				A955901FAAD1BCE3BEBE1CAE /* Frameworks */,
+				A867D720C4632F92D84423B8 /* Pods */,
+				196F8F7C4C4828FF130585ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,7 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				D75A340D21093428003A4C6D /* HoloDex.app */,
-				D70C54A6211CEFFD00106D73 /* HoloDexTests.xctest */,
+				D7362733211CF804003F54FC /* HoloDexUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -261,50 +275,39 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		F2219EED61AB3983B5FBC7DA /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9725803AAA5D91577D8D9F36 /* Pods-HoloDex.debug.xcconfig */,
-				34CB417C9F0CB3ED421D7DDF /* Pods-HoloDex.release.xcconfig */,
-				7F3213FAE8A465C993CDEFDD /* Pods-HoloDexTests.debug.xcconfig */,
-				8A1439FBD3860444A60CD706 /* Pods-HoloDexTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D70C54A5211CEFFD00106D73 /* HoloDexTests */ = {
+		D7362732211CF804003F54FC /* HoloDexUnitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D70C54AD211CEFFD00106D73 /* Build configuration list for PBXNativeTarget "HoloDexTests" */;
+			buildConfigurationList = D736273C211CF804003F54FC /* Build configuration list for PBXNativeTarget "HoloDexUnitTests" */;
 			buildPhases = (
-				C50606EDEFA22F7AF9448EB9 /* [CP] Check Pods Manifest.lock */,
-				D70C54A2211CEFFD00106D73 /* Sources */,
-				D70C54A3211CEFFD00106D73 /* Frameworks */,
-				D70C54A4211CEFFD00106D73 /* Resources */,
-				E7B6659293D0FD5929E22EEE /* [CP] Embed Pods Frameworks */,
+				1D8C51CB851D7B7269917EAB /* [CP] Check Pods Manifest.lock */,
+				D736272F211CF804003F54FC /* Sources */,
+				D7362730211CF804003F54FC /* Frameworks */,
+				D7362731211CF804003F54FC /* Resources */,
+				1C1F6E8D4B7797CB26746C71 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D70C54AC211CEFFD00106D73 /* PBXTargetDependency */,
+				D7362739211CF804003F54FC /* PBXTargetDependency */,
 			);
-			name = HoloDexTests;
-			productName = HoloDexTests;
-			productReference = D70C54A6211CEFFD00106D73 /* HoloDexTests.xctest */;
+			name = HoloDexUnitTests;
+			productName = HoloDexUnitTests;
+			productReference = D7362733211CF804003F54FC /* HoloDexUnitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		D75A340C21093428003A4C6D /* HoloDex */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D75A341F21093429003A4C6D /* Build configuration list for PBXNativeTarget "HoloDex" */;
 			buildPhases = (
-				C725367676E80D2D12B339E8 /* [CP] Check Pods Manifest.lock */,
+				8E34F0D91B2B58232E5992D2 /* [CP] Check Pods Manifest.lock */,
 				D72D3FFA210943E50095BEE0 /* SwiftLint */,
 				D75A340921093428003A4C6D /* Sources */,
 				D75A340A21093428003A4C6D /* Frameworks */,
 				D75A340B21093428003A4C6D /* Resources */,
-				A30B5FBD5084D56CF9B72A4F /* [CP] Embed Pods Frameworks */,
+				D334DB95C549BB9FB05BA530 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -325,7 +328,7 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Lewis J Morgan";
 				TargetAttributes = {
-					D70C54A5211CEFFD00106D73 = {
+					D7362732211CF804003F54FC = {
 						CreatedOnToolsVersion = 9.4.1;
 						TestTargetID = D75A340C21093428003A4C6D;
 					};
@@ -348,13 +351,13 @@
 			projectRoot = "";
 			targets = (
 				D75A340C21093428003A4C6D /* HoloDex */,
-				D70C54A5211CEFFD00106D73 /* HoloDexTests */,
+				D7362732211CF804003F54FC /* HoloDexUnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D70C54A4211CEFFD00106D73 /* Resources */ = {
+		D7362731211CF804003F54FC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -373,7 +376,71 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A30B5FBD5084D56CF9B72A4F /* [CP] Embed Pods Frameworks */ = {
+		1C1F6E8D4B7797CB26746C71 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HoloDexUnitTests/Pods-HoloDexUnitTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxNimble/RxNimble.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxNimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HoloDexUnitTests/Pods-HoloDexUnitTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1D8C51CB851D7B7269917EAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HoloDexUnitTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E34F0D91B2B58232E5992D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HoloDex-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D334DB95C549BB9FB05BA530 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -407,42 +474,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C50606EDEFA22F7AF9448EB9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HoloDexTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C725367676E80D2D12B339E8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HoloDex-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D72D3FFA210943E50095BEE0 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -457,34 +488,15 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
-		E7B6659293D0FD5929E22EEE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-HoloDexTests/Pods-HoloDexTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HoloDexTests/Pods-HoloDexTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D70C54A2211CEFFD00106D73 /* Sources */ = {
+		D736272F211CF804003F54FC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D70C54A9211CEFFD00106D73 /* HoloDexTests.swift in Sources */,
+				D73849EC211CFDEF007D2E5F /* PeopleAPIServiceSpec.swift in Sources */,
+				D7362736211CF804003F54FC /* HoloDexUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,10 +537,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D70C54AC211CEFFD00106D73 /* PBXTargetDependency */ = {
+		D7362739211CF804003F54FC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D75A340C21093428003A4C6D /* HoloDex */;
-			targetProxy = D70C54AB211CEFFD00106D73 /* PBXContainerItemProxy */;
+			targetProxy = D7362738211CF804003F54FC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -544,20 +556,21 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		D70C54AE211CEFFD00106D73 /* Debug */ = {
+		D736273A211CF804003F54FC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F3213FAE8A465C993CDEFDD /* Pods-HoloDexTests.debug.xcconfig */;
+			baseConfigurationReference = 89E342FA4D0702CD58D523DD /* Pods-HoloDexUnitTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = J8SLW9YW9U;
-				INFOPLIST_FILE = HoloDexTests/Info.plist;
+				INFOPLIST_FILE = HoloDexUnitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lewisjmorgan.holodex.HoloDexTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lewisjmorgan.holodex.HoloDexUnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -565,20 +578,20 @@
 			};
 			name = Debug;
 		};
-		D70C54AF211CEFFD00106D73 /* Release */ = {
+		D736273B211CF804003F54FC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A1439FBD3860444A60CD706 /* Pods-HoloDexTests.release.xcconfig */;
+			baseConfigurationReference = 782488DC2A579B684ABC5B33 /* Pods-HoloDexUnitTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J8SLW9YW9U;
-				INFOPLIST_FILE = HoloDexTests/Info.plist;
+				INFOPLIST_FILE = HoloDexUnitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lewisjmorgan.holodex.HoloDexTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lewisjmorgan.holodex.HoloDexUnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -702,7 +715,7 @@
 		};
 		D75A342021093429003A4C6D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9725803AAA5D91577D8D9F36 /* Pods-HoloDex.debug.xcconfig */;
+			baseConfigurationReference = C4B98A549745D135699BD622 /* Pods-HoloDex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -721,7 +734,7 @@
 		};
 		D75A342121093429003A4C6D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34CB417C9F0CB3ED421D7DDF /* Pods-HoloDex.release.xcconfig */;
+			baseConfigurationReference = E31A2CD2D784AC45C6739CEB /* Pods-HoloDex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -741,11 +754,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D70C54AD211CEFFD00106D73 /* Build configuration list for PBXNativeTarget "HoloDexTests" */ = {
+		D736273C211CF804003F54FC /* Build configuration list for PBXNativeTarget "HoloDexUnitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D70C54AE211CEFFD00106D73 /* Debug */,
-				D70C54AF211CEFFD00106D73 /* Release */,
+				D736273A211CF804003F54FC /* Debug */,
+				D736273B211CF804003F54FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
