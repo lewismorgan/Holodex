@@ -3,10 +3,10 @@ PODS:
   - AlamofireObjectMapper (5.1.0):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 3.3)
-  - FlexLayout (1.3.10)
+  - FlexLayout (1.3.11)
   - Nimble (7.1.3)
   - ObjectMapper (3.3.0)
-  - PinLayout (1.7.10)
+  - PinLayout (1.7.11)
   - Quick (1.3.1)
   - ReSwift (4.0.1)
   - ReSwiftRouter (0.6.0):
@@ -59,10 +59,10 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   AlamofireObjectMapper: 3395e698901d8b0e6f48b7d0c43bd47875325102
-  FlexLayout: f250e6ba1ab1101c3d6729b2d9c0e089bb1d52c9
+  FlexLayout: b008184d23aae0c56e1c916e803445a13a6f4e5a
   Nimble: 2839b01d1b31f6a6a7777a221f0d91cf52e8e27b
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
-  PinLayout: e8e74faf770501bd6c29cad14db52acd8b2994e6
+  PinLayout: 98a38fd83aba58fa6f1e0543952313259aa0a212
   Quick: d17304d58d0d169dd0bd1c6e5c28e3318de32a1a
   ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
   ReSwiftRouter: 81f41b37a5dd1c88e1d3d10a660ff2dcc939ba7c
@@ -72,6 +72,6 @@ SPEC CHECKSUMS:
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
   RxTest: 8da864c0ee47534f586ff18fb0c7e5b2f1fe5023
 
-PODFILE CHECKSUM: 21810a382d1bee6d80fadbf89fe47afe49ccd7b8
+PODFILE CHECKSUM: cdf0f1ea90d973aa0b0115778a5a7332347708a2
 
 COCOAPODS: 1.5.3

@@ -15,7 +15,7 @@ target 'HoloDex' do
   pod 'FlexLayout'
 
   target 'HoloDexUnitTests' do
-    inherit! :search_paths
+    inherit! :complete
     pod 'Quick'
     pod 'Nimble'
     pod 'RxTest'
