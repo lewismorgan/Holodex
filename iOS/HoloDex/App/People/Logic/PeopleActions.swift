@@ -10,12 +10,14 @@ import Core
 import People
 import ReSwift
 
-protocol RequestAction {}
-
 struct PeopleActions {
-  enum FetchPeople: Action, RequestAction {
+  enum FetchPeople: Action {
     case request
     case success(people: [Person])
     case failure(error: Error)
+  }
+  enum DetailPerson: Action {
+    case show(Person)
+    case dismiss
   }
 }

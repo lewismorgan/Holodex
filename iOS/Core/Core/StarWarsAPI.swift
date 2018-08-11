@@ -23,7 +23,8 @@ public class StarWarsAPI {
     ]
     let requestUrl = baseUrl + url + "&format=json"
     debugPrint("Request: \(requestUrl)")
-    return Alamofire.request(requestUrl, method: .get, headers: headers).responseObject(completionHandler: completionHandler)
+    return Alamofire.request(requestUrl, method: .get, headers: headers)
+                      .responseObject(completionHandler: completionHandler)
   }
 }
 

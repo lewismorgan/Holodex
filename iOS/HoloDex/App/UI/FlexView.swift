@@ -14,10 +14,3 @@ protocol FlexView {
   func layoutFlexContent(_ flexContainer: UIView)
   func layoutSubviews()
 }
-
-protocol BaseAppView {
-  /// Initialization of components within the view
-  func setup()
-  /// Perform any styling for components within this method
-  func style()
-}

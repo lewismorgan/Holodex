@@ -6,28 +6,9 @@
 //  Copyright © 2018 Lewis J Morgan. All rights reserved.
 //
 
-import UIKit
-import ReSwift
-
-//class HDBaseAppView: HDFlexView, BaseAppView {
-//  override init(frame: CGRect) {
-//    super.init(frame: frame)
-//    setup()
-//  }
-//
-//  required init?(coder aDecoder: NSCoder) {
-//    fatalError("init(coder:) has not bee implemented")
-//  }
-//
-//  func setup() {
-//  }
-//
-//  func style() {
-//  }
-//
-//  override func layoutSubviews() {
-//    rootFlexContainer.pin.all(self.safeAreaInsets)
-//    // Layout all the children
-//    rootFlexContainer.flex.layout()
-//  }
-//}
+protocol BaseAppView : FlexView {
+  /// Initialization of components within the view
+  func setup()
+  /// Perform any styling for components within this method
+  func style()
+}

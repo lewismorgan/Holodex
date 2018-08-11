@@ -18,10 +18,10 @@
 		D76E6076211E7AE600232A9E /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7376228211E6DF700E58C0C /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D76E6087211E85E600232A9E /* People.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D76E6085211E85DF00232A9E /* People.framework */; };
 		D76E6088211E85E600232A9E /* People.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D76E6085211E85DF00232A9E /* People.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D76E608C211E8DEE00232A9E /* PeopleNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76E608B211E8DEE00232A9E /* PeopleNavigationController.swift */; };
 		D7DD0A16210A77C30072A896 /* HDBaseAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A15210A77C30072A896 /* HDBaseAppView.swift */; };
-		D7DD0A18210A7A350072A896 /* HDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A17210A7A350072A896 /* HDViewController.swift */; };
+		D7DD0A18210A7A350072A896 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A17210A7A350072A896 /* AppViewController.swift */; };
 		D7DD0A1C210A7CCA0072A896 /* PeopleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A1B210A7CCA0072A896 /* PeopleState.swift */; };
-		D7DD0A1E210A7EEF0072A896 /* HDStatefulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A1D210A7EEF0072A896 /* HDStatefulViewController.swift */; };
 		D7DD0A20210A88FB0072A896 /* RootRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A1F210A88FB0072A896 /* RootRoutable.swift */; };
 		D7DD0A22210A8B560072A896 /* AppTabBarViewRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A21210A8B560072A896 /* AppTabBarViewRoutable.swift */; };
 		D7DD0A24210A8BA80072A896 /* ViewControllerRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A23210A8BA80072A896 /* ViewControllerRoutable.swift */; };
@@ -76,10 +76,10 @@
 		D75A341A21093429003A4C6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D75A341C21093429003A4C6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D76E6085211E85DF00232A9E /* People.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = People.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D76E608B211E8DEE00232A9E /* PeopleNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleNavigationController.swift; sourceTree = "<group>"; };
 		D7DD0A15210A77C30072A896 /* HDBaseAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDBaseAppView.swift; sourceTree = "<group>"; };
-		D7DD0A17210A7A350072A896 /* HDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDViewController.swift; sourceTree = "<group>"; };
+		D7DD0A17210A7A350072A896 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		D7DD0A1B210A7CCA0072A896 /* PeopleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleState.swift; sourceTree = "<group>"; };
-		D7DD0A1D210A7EEF0072A896 /* HDStatefulViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDStatefulViewController.swift; sourceTree = "<group>"; };
 		D7DD0A1F210A88FB0072A896 /* RootRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRoutable.swift; sourceTree = "<group>"; };
 		D7DD0A21210A8B560072A896 /* AppTabBarViewRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarViewRoutable.swift; sourceTree = "<group>"; };
 		D7DD0A23210A8BA80072A896 /* ViewControllerRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRoutable.swift; sourceTree = "<group>"; };
@@ -206,6 +206,7 @@
 				D700E4E1210E9C050054AFD0 /* PersonTableViewCell.swift */,
 				D7FE7512210955A900DE1E28 /* PeopleView.swift */,
 				D7FE7514210955C500DE1E28 /* PeopleViewController.swift */,
+				D76E608B211E8DEE00232A9E /* PeopleNavigationController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -233,8 +234,7 @@
 			children = (
 				D7FE751F2109624500DE1E28 /* FlexView.swift */,
 				D7DD0A15210A77C30072A896 /* HDBaseAppView.swift */,
-				D7DD0A17210A7A350072A896 /* HDViewController.swift */,
-				D7DD0A1D210A7EEF0072A896 /* HDStatefulViewController.swift */,
+				D7DD0A17210A7A350072A896 /* AppViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -432,6 +432,7 @@
 				D72D4001210946F40095BEE0 /* AppState.swift in Sources */,
 				D7FE7515210955C500DE1E28 /* PeopleViewController.swift in Sources */,
 				D7DD0A28210A90C20072A896 /* AppReducer.swift in Sources */,
+				D76E608C211E8DEE00232A9E /* PeopleNavigationController.swift in Sources */,
 				D75A341121093428003A4C6D /* AppDelegate.swift in Sources */,
 				D7DD0A26210A8D930072A896 /* AppTabBarViewController.swift in Sources */,
 				D7DFBFF2210FCD9E00A6A0D1 /* Middleware.swift in Sources */,
@@ -444,8 +445,7 @@
 				D7DD0A20210A88FB0072A896 /* RootRoutable.swift in Sources */,
 				D7DD0A22210A8B560072A896 /* AppTabBarViewRoutable.swift in Sources */,
 				D7DD0A16210A77C30072A896 /* HDBaseAppView.swift in Sources */,
-				D7DD0A18210A7A350072A896 /* HDViewController.swift in Sources */,
-				D7DD0A1E210A7EEF0072A896 /* HDStatefulViewController.swift in Sources */,
+				D7DD0A18210A7A350072A896 /* AppViewController.swift in Sources */,
 				D700E4E2210E9C050054AFD0 /* PersonTableViewCell.swift in Sources */,
 				D7FE7513210955A900DE1E28 /* PeopleView.swift in Sources */,
 				D7DD0A1C210A7CCA0072A896 /* PeopleState.swift in Sources */,
