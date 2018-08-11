@@ -6,7 +6,7 @@
 //  Copyright © 2018 Lewis J Morgan. All rights reserved.
 //
 
-@testable import HoloDex
+@testable import People
 import Quick
 import Nimble
 import RxSwift

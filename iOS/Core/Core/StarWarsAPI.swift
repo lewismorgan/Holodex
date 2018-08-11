@@ -11,13 +11,8 @@ import Alamofire
 import AlamofireObjectMapper
 import RxSwift
 
-protocol NetworkService {
-  func fetchResponseJson<T: Mappable & Codable>(_ url: String) -> Single<T>
-  func fetchJson<T: Mappable & Codable>(_ url: String, completionHandler: @escaping (Result<T>) -> Void)
-}
-
 /// Connects to the StarWarsAPI
-class StarWarsAPI {
+public class StarWarsAPI {
   let baseUrl = "https://www.swapi.co/api/"
 
   func createRequest<T: BaseMappable>(_ url: String,
@@ -34,33 +29,14 @@ class StarWarsAPI {
 
 extension StarWarsAPI: NetworkService {
 
-//  func fetchHypermediaJson<T: Mappable & Codable>(_ url: String, count: Int) -> Observable<T> {
-//    return Observable<T>.create { observable in
-//      var emittedCount = 0
-//
-//      self.createRequest(url) { (response: DataResponse<PageResponse<T>>) in
-//        switch response.result {
-//        case .success(let result):
-//          if let results = result.results {
-//
-//            observable.onNext(results)
-//          }
-//        case .failure(let error):
-//        }
-//      }
-//
-//      return Disposables.create {}
-//    }
-//  }
-
-  func fetchJson<T: Mappable & Codable>(_ url: String, completionHandler: @escaping (Result<T>) -> Void) {
+  public func fetchJson<T: Mappable & Codable>(_ url: String, completionHandler: @escaping (Result<T>) -> Void) {
     _ = self.createRequest(url) { (response: DataResponse<T>) in
       completionHandler(response.result)
     }
   }
 
   /// Creates a request to the Star Wars API and returns a promise with the expected result type
-  func fetchResponseJson<T: Mappable & Codable>(_ url: String) -> Single<T> {
+  public func fetchResponseJson<T: Mappable & Codable>(_ url: String) -> Single<T> {
     return Single<T>.create { single in
       _ = self.createRequest(url) { (response: DataResponse<T>) in
         switch response.result {

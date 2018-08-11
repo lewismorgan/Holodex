@@ -8,24 +8,24 @@
 
 import ObjectMapper
 
-struct Person: Mappable, Codable {
-  var name: String?
-  var height: String?
-  var mass: String?
-  var hairColor: String?
-  var skinColor: String?
-  var eyeColor: String?
-  var birthYear: String?
-  var gender: String?
-  var homeworld: String?
+public struct Person: Mappable, Codable {
+  public var name: String?
+  public var height: String?
+  public var mass: String?
+  public var hairColor: String?
+  public var skinColor: String?
+  public var eyeColor: String?
+  public var birthYear: String?
+  public var gender: String?
+  public var homeworld: String?
 
-  init() {
+  public init() {
   }
 
-  init?(map: Map) {
+  public init?(map: Map) {
   }
 
-  mutating func mapping(map: Map) {
+  public mutating func mapping(map: Map) {
     name        <- map["name"]
     height      <- map["height"]
     mass        <- map["mass"]

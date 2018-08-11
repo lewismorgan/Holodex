@@ -7,21 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A5F60FC9456979F0848663E /* Pods_HoloDex_HoloDexUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370F9E05ECC030A3A27E24A3 /* Pods_HoloDex_HoloDexUnitTests.framework */; };
-		3585EA42A7250C41DDD970CB /* Pods_HoloDex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F2C198BB55E8BC7EEE0961 /* Pods_HoloDex.framework */; };
+		6A82E5FA2FEE5AEF8F747805 /* Pods_HoloDex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1DD888D0D4578ED250C6998 /* Pods_HoloDex.framework */; };
 		D700E4E2210E9C050054AFD0 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700E4E1210E9C050054AFD0 /* PersonTableViewCell.swift */; };
-		D700E4E4210EA7970054AFD0 /* NetworkPeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700E4E3210EA7970054AFD0 /* NetworkPeopleService.swift */; };
-		D700E4E6210EA81A0054AFD0 /* StarWarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700E4E5210EA81A0054AFD0 /* StarWarsAPI.swift */; };
-		D71DECC62115507100574453 /* HoloDexError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71DECC52115507100574453 /* HoloDexError.swift */; };
 		D72D4001210946F40095BEE0 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72D4000210946F40095BEE0 /* AppState.swift */; };
 		D730D08721094BD50092EB4C /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D730D08621094BD50092EB4C /* Screen.swift */; };
-		D73849EC211CFDEF007D2E5F /* StaticPeopleServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73849EB211CFDEF007D2E5F /* StaticPeopleServiceSpec.swift */; };
 		D75A341121093428003A4C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75A341021093428003A4C6D /* AppDelegate.swift */; };
 		D75A341821093429003A4C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D75A341721093429003A4C6D /* Assets.xcassets */; };
 		D75A341B21093429003A4C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75A341921093429003A4C6D /* LaunchScreen.storyboard */; };
-		D7A501962113E26200DEA577 /* PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A501952113E26200DEA577 /* PeopleService.swift */; };
-		D7A501982113E2AC00DEA577 /* StaticPeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A501972113E2AC00DEA577 /* StaticPeopleService.swift */; };
-		D7A5019A2113E6D500DEA577 /* PageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A501992113E6D500DEA577 /* PageResponse.swift */; };
+		D76E6075211E7AE600232A9E /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7376228211E6DF700E58C0C /* Core.framework */; };
+		D76E6076211E7AE600232A9E /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7376228211E6DF700E58C0C /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D76E6087211E85E600232A9E /* People.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D76E6085211E85DF00232A9E /* People.framework */; };
+		D76E6088211E85E600232A9E /* People.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D76E6085211E85DF00232A9E /* People.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D7DD0A16210A77C30072A896 /* HDBaseAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A15210A77C30072A896 /* HDBaseAppView.swift */; };
 		D7DD0A18210A7A350072A896 /* HDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A17210A7A350072A896 /* HDViewController.swift */; };
 		D7DD0A1C210A7CCA0072A896 /* PeopleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A1B210A7CCA0072A896 /* PeopleState.swift */; };
@@ -37,9 +33,7 @@
 		D7DFBFF6210FCF5E00A6A0D1 /* PeopleMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DFBFF5210FCF5E00A6A0D1 /* PeopleMiddleware.swift */; };
 		D7FE7513210955A900DE1E28 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7512210955A900DE1E28 /* PeopleView.swift */; };
 		D7FE7515210955C500DE1E28 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7514210955C500DE1E28 /* PeopleViewController.swift */; };
-		D7FE751B21095C4700DE1E28 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE751A21095C4700DE1E28 /* Person.swift */; };
 		D7FE75202109624500DE1E28 /* FlexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE751F2109624500DE1E28 /* FlexView.swift */; };
-		F6B21434480F130AB88D7991 /* Pods_HoloDexUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF67E35FA20990421433E5F /* Pods_HoloDexUnitTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,31 +46,36 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D737622C211E722200E58C0C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D76E6076211E7AE600232A9E /* Core.framework in Embed Frameworks */,
+				D76E6088211E85E600232A9E /* People.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		2E84591C6AEE246EE1CCACB0 /* Pods-HoloDex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDex.release.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex.release.xcconfig"; sourceTree = "<group>"; };
-		370F9E05ECC030A3A27E24A3 /* Pods_HoloDex_HoloDexUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloDex_HoloDexUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DF67E35FA20990421433E5F /* Pods_HoloDexUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloDexUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		72F2C198BB55E8BC7EEE0961 /* Pods_HoloDex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloDex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A6B976B1D57FAA4BF0866C2C /* Pods-HoloDex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex.debug.xcconfig"; sourceTree = "<group>"; };
-		C20F20EEC12396C41C3ACD45 /* Pods-HoloDexUnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDexUnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDexUnitTests/Pods-HoloDexUnitTests.release.xcconfig"; sourceTree = "<group>"; };
-		C3A367F0F59728049A1069FF /* Pods-HoloDexUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDexUnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDexUnitTests/Pods-HoloDexUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		83BE862FB66BDDA7D50EAB82 /* Pods-HoloDex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex.debug.xcconfig"; sourceTree = "<group>"; };
+		B7C73C92F3DF0B4BA308A5E4 /* Pods-HoloDex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDex.release.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex.release.xcconfig"; sourceTree = "<group>"; };
 		D700E4E1210E9C050054AFD0 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
-		D700E4E3210EA7970054AFD0 /* NetworkPeopleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPeopleService.swift; sourceTree = "<group>"; };
-		D700E4E5210EA81A0054AFD0 /* StarWarsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAPI.swift; sourceTree = "<group>"; };
-		D71DECC52115507100574453 /* HoloDexError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoloDexError.swift; sourceTree = "<group>"; };
 		D72D4000210946F40095BEE0 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		D730D08621094BD50092EB4C /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		D7362733211CF804003F54FC /* HoloDexUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoloDexUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7362737211CF804003F54FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D73849EB211CFDEF007D2E5F /* StaticPeopleServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticPeopleServiceSpec.swift; sourceTree = "<group>"; };
+		D7376228211E6DF700E58C0C /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75A340D21093428003A4C6D /* HoloDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoloDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75A341021093428003A4C6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D75A341721093429003A4C6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D75A341A21093429003A4C6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D75A341C21093429003A4C6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D7A501952113E26200DEA577 /* PeopleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleService.swift; sourceTree = "<group>"; };
-		D7A501972113E2AC00DEA577 /* StaticPeopleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticPeopleService.swift; sourceTree = "<group>"; };
-		D7A501992113E6D500DEA577 /* PageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageResponse.swift; sourceTree = "<group>"; };
+		D76E6085211E85DF00232A9E /* People.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = People.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DD0A15210A77C30072A896 /* HDBaseAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDBaseAppView.swift; sourceTree = "<group>"; };
 		D7DD0A17210A7A350072A896 /* HDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDViewController.swift; sourceTree = "<group>"; };
 		D7DD0A1B210A7CCA0072A896 /* PeopleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleState.swift; sourceTree = "<group>"; };
@@ -92,10 +91,8 @@
 		D7DFBFF5210FCF5E00A6A0D1 /* PeopleMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleMiddleware.swift; sourceTree = "<group>"; };
 		D7FE7512210955A900DE1E28 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		D7FE7514210955C500DE1E28 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
-		D7FE751A21095C4700DE1E28 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		D7FE751F2109624500DE1E28 /* FlexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexView.swift; sourceTree = "<group>"; };
-		EF51A0A4C1EB8F05304299FD /* Pods-HoloDex-HoloDexUnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDex-HoloDexUnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDex-HoloDexUnitTests/Pods-HoloDex-HoloDexUnitTests.release.xcconfig"; sourceTree = "<group>"; };
-		FA40602EAE9CD6BC6FCB2BDC /* Pods-HoloDex-HoloDexUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDex-HoloDexUnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDex-HoloDexUnitTests/Pods-HoloDex-HoloDexUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F1DD888D0D4578ED250C6998 /* Pods_HoloDex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloDex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +100,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6B21434480F130AB88D7991 /* Pods_HoloDexUnitTests.framework in Frameworks */,
-				0A5F60FC9456979F0848663E /* Pods_HoloDex_HoloDexUnitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,42 +107,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3585EA42A7250C41DDD970CB /* Pods_HoloDex.framework in Frameworks */,
+				D76E6087211E85E600232A9E /* People.framework in Frameworks */,
+				6A82E5FA2FEE5AEF8F747805 /* Pods_HoloDex.framework in Frameworks */,
+				D76E6075211E7AE600232A9E /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		620BD071DF95D309C77CF57C /* Frameworks */ = {
+		9ACB1A4B644436FC2C89E192 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				72F2C198BB55E8BC7EEE0961 /* Pods_HoloDex.framework */,
-				3DF67E35FA20990421433E5F /* Pods_HoloDexUnitTests.framework */,
-				370F9E05ECC030A3A27E24A3 /* Pods_HoloDex_HoloDexUnitTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6E67092A18ABB9853F9A0FB6 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A6B976B1D57FAA4BF0866C2C /* Pods-HoloDex.debug.xcconfig */,
-				2E84591C6AEE246EE1CCACB0 /* Pods-HoloDex.release.xcconfig */,
-				C3A367F0F59728049A1069FF /* Pods-HoloDexUnitTests.debug.xcconfig */,
-				C20F20EEC12396C41C3ACD45 /* Pods-HoloDexUnitTests.release.xcconfig */,
-				FA40602EAE9CD6BC6FCB2BDC /* Pods-HoloDex-HoloDexUnitTests.debug.xcconfig */,
-				EF51A0A4C1EB8F05304299FD /* Pods-HoloDex-HoloDexUnitTests.release.xcconfig */,
+				83BE862FB66BDDA7D50EAB82 /* Pods-HoloDex.debug.xcconfig */,
+				B7C73C92F3DF0B4BA308A5E4 /* Pods-HoloDex.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		D70A64AC211D2AC3003604F9 /* People */ = {
-			isa = PBXGroup;
-			children = (
-				D73849EB211CFDEF007D2E5F /* StaticPeopleServiceSpec.swift */,
-			);
-			path = People;
 			sourceTree = "<group>";
 		};
 		D70C54A0211CEBCD00106D73 /* App */ = {
@@ -180,7 +155,6 @@
 		D7362734211CF804003F54FC /* HoloDexUnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				D70A64AC211D2AC3003604F9 /* People */,
 				D7362737211CF804003F54FC /* Info.plist */,
 			);
 			path = HoloDexUnitTests;
@@ -192,8 +166,8 @@
 				D75A340F21093428003A4C6D /* HoloDex */,
 				D7362734211CF804003F54FC /* HoloDexUnitTests */,
 				D75A340E21093428003A4C6D /* Products */,
-				6E67092A18ABB9853F9A0FB6 /* Pods */,
-				620BD071DF95D309C77CF57C /* Frameworks */,
+				9ACB1A4B644436FC2C89E192 /* Pods */,
+				F019FED0A88DF487CE749D40 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -210,22 +184,10 @@
 			isa = PBXGroup;
 			children = (
 				D70C54A0211CEBCD00106D73 /* App */,
-				D7EE6AD1210E1399006BF44C /* Core */,
 				D75A341721093429003A4C6D /* Assets.xcassets */,
 				D75A341C21093429003A4C6D /* Info.plist */,
 			);
 			path = HoloDex;
-			sourceTree = "<group>";
-		};
-		D7A501942113E24E00DEA577 /* People */ = {
-			isa = PBXGroup;
-			children = (
-				D7FE751A21095C4700DE1E28 /* Person.swift */,
-				D700E4E3210EA7970054AFD0 /* NetworkPeopleService.swift */,
-				D7A501952113E26200DEA577 /* PeopleService.swift */,
-				D7A501972113E2AC00DEA577 /* StaticPeopleService.swift */,
-			);
-			path = People;
 			sourceTree = "<group>";
 		};
 		D7DD0A2D210AAE290072A896 /* People */ = {
@@ -266,17 +228,6 @@
 			path = Logic;
 			sourceTree = "<group>";
 		};
-		D7EE6AD1210E1399006BF44C /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				D7A501942113E24E00DEA577 /* People */,
-				D700E4E5210EA81A0054AFD0 /* StarWarsAPI.swift */,
-				D7A501992113E6D500DEA577 /* PageResponse.swift */,
-				D71DECC52115507100574453 /* HoloDexError.swift */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
 		D7FE751C21095DD500DE1E28 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +239,16 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		F019FED0A88DF487CE749D40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D76E6085211E85DF00232A9E /* People.framework */,
+				D7376228211E6DF700E58C0C /* Core.framework */,
+				F1DD888D0D4578ED250C6998 /* Pods_HoloDex.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -295,11 +256,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D736273C211CF804003F54FC /* Build configuration list for PBXNativeTarget "HoloDexUnitTests" */;
 			buildPhases = (
-				3B09D2C3EE029A9FF36FD699 /* [CP] Check Pods Manifest.lock */,
 				D736272F211CF804003F54FC /* Sources */,
 				D7362730211CF804003F54FC /* Frameworks */,
 				D7362731211CF804003F54FC /* Resources */,
-				C0F5CBD34E9C3915FE68DDA8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -315,12 +274,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D75A341F21093429003A4C6D /* Build configuration list for PBXNativeTarget "HoloDex" */;
 			buildPhases = (
-				1C7945C99DF21E8043978D3F /* [CP] Check Pods Manifest.lock */,
+				7A6A35A527F9E577C40DA397 /* [CP] Check Pods Manifest.lock */,
 				D72D3FFA210943E50095BEE0 /* SwiftLint */,
 				D75A340921093428003A4C6D /* Sources */,
 				D75A340A21093428003A4C6D /* Frameworks */,
 				D75A340B21093428003A4C6D /* Resources */,
-				B6330B2C461091E62AD90A53 /* [CP] Embed Pods Frameworks */,
+				0A2BCF56D4C45B482DBF4A94 /* [CP] Embed Pods Frameworks */,
+				D737622C211E722200E58C0C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -389,7 +349,41 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1C7945C99DF21E8043978D3F /* [CP] Check Pods Manifest.lock */ = {
+		0A2BCF56D4C45B482DBF4A94 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ReSwiftRouter/ReSwiftRouter.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwiftRouter.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A6A35A527F9E577C40DA397 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -405,102 +399,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3B09D2C3EE029A9FF36FD699 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HoloDex-HoloDexUnitTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B6330B2C461091E62AD90A53 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/ReSwiftRouter/ReSwiftRouter.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwiftRouter.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C0F5CBD34E9C3915FE68DDA8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-HoloDex-HoloDexUnitTests/Pods-HoloDex-HoloDexUnitTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/ReSwiftRouter/ReSwiftRouter.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
-				"${BUILT_PRODUCTS_DIR}/RxNimble/RxNimble.framework",
-				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwiftRouter.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxNimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HoloDex-HoloDexUnitTests/Pods-HoloDex-HoloDexUnitTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D72D3FFA210943E50095BEE0 /* SwiftLint */ = {
@@ -524,7 +422,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D73849EC211CFDEF007D2E5F /* StaticPeopleServiceSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,15 +432,10 @@
 				D72D4001210946F40095BEE0 /* AppState.swift in Sources */,
 				D7FE7515210955C500DE1E28 /* PeopleViewController.swift in Sources */,
 				D7DD0A28210A90C20072A896 /* AppReducer.swift in Sources */,
-				D7FE751B21095C4700DE1E28 /* Person.swift in Sources */,
-				D71DECC62115507100574453 /* HoloDexError.swift in Sources */,
 				D75A341121093428003A4C6D /* AppDelegate.swift in Sources */,
-				D700E4E4210EA7970054AFD0 /* NetworkPeopleService.swift in Sources */,
 				D7DD0A26210A8D930072A896 /* AppTabBarViewController.swift in Sources */,
 				D7DFBFF2210FCD9E00A6A0D1 /* Middleware.swift in Sources */,
 				D7FE75202109624500DE1E28 /* FlexView.swift in Sources */,
-				D7A5019A2113E6D500DEA577 /* PageResponse.swift in Sources */,
-				D7A501982113E2AC00DEA577 /* StaticPeopleService.swift in Sources */,
 				D7DD0A2C210AAB8E0072A896 /* PeopleActions.swift in Sources */,
 				D7DFBFF6210FCF5E00A6A0D1 /* PeopleMiddleware.swift in Sources */,
 				D730D08721094BD50092EB4C /* Screen.swift in Sources */,
@@ -553,9 +445,7 @@
 				D7DD0A22210A8B560072A896 /* AppTabBarViewRoutable.swift in Sources */,
 				D7DD0A16210A77C30072A896 /* HDBaseAppView.swift in Sources */,
 				D7DD0A18210A7A350072A896 /* HDViewController.swift in Sources */,
-				D700E4E6210EA81A0054AFD0 /* StarWarsAPI.swift in Sources */,
 				D7DD0A1E210A7EEF0072A896 /* HDStatefulViewController.swift in Sources */,
-				D7A501962113E26200DEA577 /* PeopleService.swift in Sources */,
 				D700E4E2210E9C050054AFD0 /* PersonTableViewCell.swift in Sources */,
 				D7FE7513210955A900DE1E28 /* PeopleView.swift in Sources */,
 				D7DD0A1C210A7CCA0072A896 /* PeopleState.swift in Sources */,
@@ -586,7 +476,6 @@
 /* Begin XCBuildConfiguration section */
 		D736273A211CF804003F54FC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA40602EAE9CD6BC6FCB2BDC /* Pods-HoloDex-HoloDexUnitTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -608,7 +497,6 @@
 		};
 		D736273B211CF804003F54FC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF51A0A4C1EB8F05304299FD /* Pods-HoloDex-HoloDexUnitTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -743,7 +631,7 @@
 		};
 		D75A342021093429003A4C6D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A6B976B1D57FAA4BF0866C2C /* Pods-HoloDex.debug.xcconfig */;
+			baseConfigurationReference = 83BE862FB66BDDA7D50EAB82 /* Pods-HoloDex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -762,7 +650,7 @@
 		};
 		D75A342121093429003A4C6D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E84591C6AEE246EE1CCACB0 /* Pods-HoloDex.release.xcconfig */;
+			baseConfigurationReference = B7C73C92F3DF0B4BA308A5E4 /* Pods-HoloDex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

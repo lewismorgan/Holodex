@@ -9,8 +9,12 @@
 import RxSwift
 
 /// A PeopleService that returns static data
-class StaticPeopleService: PeopleService {
-  func fetchPeople(page: Int) -> Single<[Person]> {
+public class StaticPeopleService: PeopleService {
+
+  public init() {
+  }
+
+  public func fetchPeople(page: Int) -> Single<[Person]> {
     var items = [Person]()
 
     for item in 1...10 {
@@ -24,7 +28,7 @@ class StaticPeopleService: PeopleService {
     return Single.just(items)
   }
 
-  func fetchMultiplePeople(startPage: Int, endPage: Int) -> Observable<[Person]> {
+  public func fetchMultiplePeople(startPage: Int, endPage: Int) -> Observable<[Person]> {
     var people = [Observable<[Person]>]()
     for page in startPage...endPage {
       people.append(fetchPeople(page: page).asObservable())

@@ -1,25 +1,49 @@
 platform :ios, '10.0'
+use_frameworks!
+workspace 'HoloDex'
 
-target 'HoloDex' do
-  use_frameworks!
-
-  # Pods for HoloDex
+def corePods
+  pod 'RxSwift'
   pod 'ObjectMapper', :inhibit_warnings => true
   pod 'Alamofire'
   pod 'AlamofireObjectMapper', :inhibit_warnings => true
-  pod 'RxSwift'
+end
+
+def uiPods
   pod 'RxCocoa'
   pod 'ReSwift'
   pod 'ReSwiftRouter'
   pod 'PinLayout'
   pod 'FlexLayout'
+end
 
-  target 'HoloDexUnitTests' do
-    inherit! :complete
-    pod 'Quick'
-    pod 'Nimble'
-    pod 'RxTest'
-    pod 'RxBlocking'
-    pod 'RxNimble'
+def testingPods
+  pod 'Quick'
+  pod 'Nimble'
+  pod 'RxTest'
+  pod 'RxBlocking'
+  pod 'RxNimble'
+end
+
+target 'Core' do
+  project 'Core/Core'
+  corePods
+  target 'CoreTests' do
+    inherit! :search_paths
+    testingPods
   end
+end
+
+target 'People' do
+  project 'People/People'
+  corePods
+  target 'PeopleTests' do
+    inherit! :search_paths
+    testingPods
+  end
+end
+
+target 'HoloDex' do
+  corePods
+  uiPods
 end
