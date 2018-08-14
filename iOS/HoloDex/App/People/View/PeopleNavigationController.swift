@@ -18,6 +18,7 @@ UINavigationController, UINavigationControllerDelegate {
   let store: Store<StoredAppState>
   private var priorViewController: UIViewController?
   private var didShowDetailController: Bool = false
+
   // MARK: - Initialization
   init(store: Store<StoredAppState>) {
     self.store = store
@@ -37,6 +38,8 @@ UINavigationController, UINavigationControllerDelegate {
     viewControllers = controllers
     delegate = self
   }
+
+  // MARK: - UINavigationControllerDelegate
 
   func navigationController(_ navigationController: UINavigationController,
                             didShow viewController: UIViewController, animated: Bool) {

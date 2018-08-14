@@ -42,6 +42,14 @@ public class StaticPeopleService: PeopleService {
   private func createPerson(_ name: String) -> Person {
     var rando = Person()
     rando.name = name
+    rando.height = "1337m"
+    rando.hairColor = "Blonde"
+    rando.mass = "3.14kg"
+    rando.birthYear = "2018 BY"
+    rando.eyeColor = "Blue"
+    rando.homeworld = "Tatooine"
+    rando.gender = "Male"
+    rando.skinColor = "White"
     return rando
   }
 
