@@ -18,7 +18,7 @@ public class NetworkPeopleService: PeopleService {
 
   let networkService: NetworkService
 
-  init(_ networkService: NetworkService) {
+  public init(_ networkService: NetworkService) {
     self.networkService = networkService
   }
 

@@ -15,14 +15,17 @@ import RxSwift
 public class StarWarsAPI {
   let baseUrl = "https://www.swapi.co/api/"
 
-  func createRequest<T: BaseMappable>(_ url: String,
-                                      completionHandler: @escaping (Alamofire.DataResponse<T>) -> Void) -> DataRequest {
+  public init() {
+  }
+
+  public func createRequest<T: BaseMappable>(_ url: String,
+                                             completionHandler: @escaping (Alamofire.DataResponse<T>) -> Void) -> DataRequest {
     let headers: HTTPHeaders = [
       "Content-Type": "application/json",
       "Accept": "application/json"
     ]
     let requestUrl = baseUrl + url + "&format=json"
-    debugPrint("Request: \(requestUrl)")
+
     return Alamofire.request(requestUrl, method: .get, headers: headers)
                       .responseObject(completionHandler: completionHandler)
   }
