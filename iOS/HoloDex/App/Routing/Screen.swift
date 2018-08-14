@@ -9,6 +9,7 @@
 import ReSwiftRouter
 
 enum AppRoutes: RouteElementIdentifier {
-  case entryPoint
+  case home
   case people
+  case peopleDetail
 }

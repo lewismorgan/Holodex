@@ -16,9 +16,11 @@ class PeopleView: UIView, FlexView, BaseAppView {
   var tableView: UITableView = UITableView()
   var root = UIView()
   var peopleTableData: [Person]
+  var onSelectPersonDelegate: ((Person) -> Void)?
 
-  init(people: [Person]) {
+  init(people: [Person], onSelectPersonDelegate: @escaping (Person) -> Void) {
     self.peopleTableData = people
+    self.onSelectPersonDelegate = onSelectPersonDelegate
     super.init(frame: CGRect.zero)
     setup()
     style()
@@ -59,6 +61,12 @@ class PeopleView: UIView, FlexView, BaseAppView {
 }
 
 extension PeopleView: UITableViewDataSource, UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let person = peopleTableData[indexPath.row]
+    onSelectPersonDelegate?(person)
+    print("Selected item at row: " + String(indexPath.row))
+  }
+
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return peopleTableData.count
   }

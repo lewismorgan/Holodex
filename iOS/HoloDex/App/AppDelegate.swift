@@ -22,8 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    //let swapi = StarWarsAPI()
-    let middleware = createMiddlewareChain(items: [fetchPeople(peopleService: StaticPeopleService())])
+    let swapi = StarWarsAPI()
+    let middleware = createMiddlewareChain(items: [fetchPeople(peopleService: NetworkPeopleService(swapi))])
     self.window = UIWindow(frame: UIScreen.main.bounds)
     self.store = Store<AppState>(reducer: appReducer, state: nil, middleware: [middleware])
 
@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       }
     }
 
-    store.dispatch(SetRouteAction([AppRoutes.entryPoint.rawValue]))
+    store.dispatch(SetRouteAction([AppRoutes.home.rawValue, AppRoutes.people.rawValue]))
     store.dispatch(PeopleActions.FetchPeople.request)
 
     window?.makeKeyAndVisible()

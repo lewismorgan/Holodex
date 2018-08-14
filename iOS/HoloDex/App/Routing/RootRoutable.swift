@@ -21,12 +21,13 @@ class RootAppRoutable: Routable {
   func setToAppTabBarViewController() -> Routable {
     self.window.rootViewController = AppTabBarViewController(store)
 
-    return AppTabBarViewControllerRoutable(window.rootViewController!)
+    return AppTabBarViewControllerRoutable(store: store,
+                                           viewController: window.rootViewController! as! UITabBarController)
   }
 
   func changeRouteSegment(_ from: RouteElementIdentifier, to: RouteElementIdentifier,
                           animated: Bool, completionHandler: @escaping RoutingCompletionHandler) -> Routable {
-    if to == AppRoutes.entryPoint.rawValue {
+    if to == AppRoutes.home.rawValue {
       completionHandler()
       return setToAppTabBarViewController()
     } else {
@@ -36,7 +37,8 @@ class RootAppRoutable: Routable {
 
   func pushRouteSegment(_ routeElementIdentifier: RouteElementIdentifier, animated: Bool,
                         completionHandler: @escaping RoutingCompletionHandler) -> Routable {
-    if routeElementIdentifier == AppRoutes.entryPoint.rawValue {
+    debugPrint("id: \(routeElementIdentifier)")
+    if routeElementIdentifier == AppRoutes.home.rawValue {
       completionHandler()
       return setToAppTabBarViewController()
     } else {

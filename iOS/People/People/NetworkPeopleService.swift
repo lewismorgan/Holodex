@@ -15,12 +15,14 @@ import RxSwift
 
 /// A PeopleService that is connected to a network
 public class NetworkPeopleService: PeopleService {
+
   let networkService: NetworkService
 
-  init(_ networkService: NetworkService) {
+  public init(_ networkService: NetworkService) {
     self.networkService = networkService
   }
 
+  /// Fetches people at the specified page
   public func fetchPeople(page: Int) -> Single<[Person]> {
     let pageVal = (page >= 1 ? page : 1)
     return self.networkService.fetchResponseJson("people/?page=\(pageVal)").map { (item: PageResponse<Person>) in
@@ -30,6 +32,11 @@ public class NetworkPeopleService: PeopleService {
         throw(GeneralHoloDexError(title: "fetchPeople", description: "error fetching people by page", code: page))
       }
     }
+  }
+
+  /// Fetches a person with the provided ID.
+  public func fetchPerson(id: Int) -> Single<Person> {
+    return self.networkService.fetchResponseJson("people/" + String(id))
   }
 
   /// Fetches people from the starting page to the ending page.

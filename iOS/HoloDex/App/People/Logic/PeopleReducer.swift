@@ -20,6 +20,10 @@ public struct PeopleReducer {
 
     case let action as PeopleActions.FetchPeople:
       onFetchPeople(action, &state)
+
+    case let action as PeopleActions.DetailPerson:
+      onDetailPerson(action, &state)
+
     default:
       break
     }
@@ -30,7 +34,8 @@ public struct PeopleReducer {
   private static func onFetchPeople(_ action: PeopleActions.FetchPeople, _ state: inout PeopleState) {
     switch action {
     case .request:
-      debugPrint("Requesting People")
+      // Nothing to do as of now... Maybe in the future !
+      break
     case .success(let people):
       if state.people == nil {
         state.people = people
@@ -42,6 +47,14 @@ public struct PeopleReducer {
     }
   }
 
+  private static func onDetailPerson(_ action: PeopleActions.DetailPerson, _ state: inout PeopleState) {
+    switch action {
+    case .show(let person):
+      state.viewingPerson = person
+    case .dismiss:
+      break
+    }
+  }
   private static func initPeopleState() -> PeopleState {
     return PeopleState()
   }

@@ -1,8 +1,8 @@
 //
-//  PeopleViewController.swift
+//  PeopleDetailViewController.swift
 //  HoloDex
 //
-//  Created by Lewis Morgan on 7/25/18.
+//  Created by Lewis Morgan on 8/11/18.
 //  Copyright © 2018 Lewis J Morgan. All rights reserved.
 //
 
@@ -10,20 +10,12 @@ import Core
 import People
 import UIKit
 import ReSwift
-import ReSwiftRouter
 
-protocol PeopleViewControllerDelegate: AnyObject {
-  func onPersonSelected(selected person: Person)
-}
-
-class PeopleViewController<StoredAppState: PeopleStateStore & StateType>:
-        UIViewController, AppViewController {
+class PersonDetailViewController<StoredAppState: PeopleStateStore & StateType>: UIViewController, AppViewController {
   let store: Store<StoredAppState>
-  var mainView: PeopleView {
-    return self.view as! PeopleView
+  var mainView: PersonDetailView {
+    return self.view as! PersonDetailView
   }
-
-  weak var delegate: PeopleViewControllerDelegate?
 
   // MARK: - Initialization
   init(store: Store<StoredAppState>) {
@@ -35,14 +27,12 @@ class PeopleViewController<StoredAppState: PeopleStateStore & StateType>:
     fatalError("required init(coder:) is not implemented")
   }
 
-  func initViewItem(viewItem: PeopleView) {
+  func initViewItem(viewItem: PersonDetailView) {
     view = viewItem
   }
 
   override func loadView() {
-    initViewItem(viewItem: PeopleView(people: [Person()]) { selected in
-      self.delegate?.onPersonSelected(selected: selected)
-    })
+    initViewItem(viewItem: PersonDetailView(person: Person()))
   }
 
   // MARK: - View Controller Overrides
@@ -62,10 +52,11 @@ class PeopleViewController<StoredAppState: PeopleStateStore & StateType>:
 }
 
 // MARK: - StoreSubscriber
-extension PeopleViewController: StoreSubscriber {
+extension PersonDetailViewController: StoreSubscriber {
   func newState(state: PeopleState) {
-    if let people = state.people {
-      mainView.configureTableData(people: people)
+    if let selected = state.viewingPerson {
+      navigationItem.title = selected.name
+      mainView.updatePerson(person: selected)
     }
   }
 }
