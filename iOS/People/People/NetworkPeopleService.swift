@@ -15,13 +15,13 @@ import RxSwift
 
 /// A PeopleService that is connected to a network
 public class NetworkPeopleService: PeopleService {
-  
+
   let networkService: NetworkService
-  
+
   init(_ networkService: NetworkService) {
     self.networkService = networkService
   }
-  
+
   /// Fetches people at the specified page
   public func fetchPeople(page: Int) -> Single<[Person]> {
     let pageVal = (page >= 1 ? page : 1)
@@ -33,20 +33,20 @@ public class NetworkPeopleService: PeopleService {
       }
     }
   }
-  
+
   /// Fetches a person with the provided ID.
   public func fetchPerson(id: Int) -> Single<Person> {
     return self.networkService.fetchResponseJson("people/" + String(id))
   }
-  
+
   /// Fetches people from the starting page to the ending page.
   public func fetchMultiplePeople(startPage: Int, endPage: Int) -> Observable<[Person]> {
     var requests = [Observable<[Person]>]()
-    
+
     for page in startPage...endPage {
       requests.append(fetchPeople(page: page).asObservable())
     }
-    
+
     return Observable.merge(requests)
   }
 }

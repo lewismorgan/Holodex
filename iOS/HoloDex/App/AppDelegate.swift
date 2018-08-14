@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       }
     }
 
-    store.dispatch(SetRouteAction([AppRoutes.entryPoint.rawValue]))
+    store.dispatch(SetRouteAction([AppRoutes.home.rawValue, AppRoutes.people.rawValue]))
     store.dispatch(PeopleActions.FetchPeople.request)
 
     window?.makeKeyAndVisible()

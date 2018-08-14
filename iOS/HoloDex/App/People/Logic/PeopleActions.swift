@@ -17,7 +17,7 @@ struct PeopleActions {
     case failure(error: Error)
   }
   enum DetailPerson: Action {
-    case show(Person)
+    case show(person: Person)
     case dismiss
   }
 }

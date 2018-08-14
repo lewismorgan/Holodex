@@ -12,6 +12,7 @@ import ReSwift
 
 public struct PeopleState: StateType {
   var people: [Person]?
+  var viewingPerson: Person?
 }
 
 protocol PeopleStateStore {

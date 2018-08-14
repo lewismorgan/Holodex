@@ -26,11 +26,11 @@ public class StaticPeopleService: PeopleService {
 
     return Single.just(items)
   }
-  
+
   public func fetchPerson(id: Int) -> PrimitiveSequence<SingleTrait, Person> {
     return Single.just(createAnakin())
   }
-  
+
   public func fetchMultiplePeople(startPage: Int, endPage: Int) -> Observable<[Person]> {
     var people = [Observable<[Person]>]()
     for page in startPage...endPage {

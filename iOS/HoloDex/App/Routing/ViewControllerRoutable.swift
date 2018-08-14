@@ -10,10 +10,10 @@ import UIKit
 import ReSwiftRouter
 
 /// Base class for a routable that contains a view controller
-class ViewControllerRoutable: Routable {
-  let viewController: UIViewController
+class ViewControllerRoutable<T: UIViewController>: Routable {
+  let viewController: T
 
-  init(_ viewController: UIViewController) {
+  init(_ viewController: T) {
     self.viewController = viewController
   }
 
@@ -33,9 +33,5 @@ class ViewControllerRoutable: Routable {
   func popRouteSegment(_ routeElementIdentifier: RouteElementIdentifier, animated: Bool,
                        completionHandler: @escaping RoutingCompletionHandler) {
     fatalError("Route pop is not implemented")
-  }
-
-  func getIdentifier() -> RouteElementIdentifier {
-    fatalError("No identifier is specified for this view controller routable")
   }
 }

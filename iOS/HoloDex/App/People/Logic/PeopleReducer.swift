@@ -20,7 +20,7 @@ public struct PeopleReducer {
 
     case let action as PeopleActions.FetchPeople:
       onFetchPeople(action, &state)
-    
+
     case let action as PeopleActions.DetailPerson:
       onDetailPerson(action, &state)
 
@@ -50,16 +50,11 @@ public struct PeopleReducer {
   private static func onDetailPerson(_ action: PeopleActions.DetailPerson, _ state: inout PeopleState) {
     switch action {
     case .show(let person):
-      guard let name = person.name else {
-        fatalError("LKSDFJ")
-      }
-      debugPrint("Will detail \(name)")
-      break
+      state.viewingPerson = person
     case .dismiss:
       break
     }
   }
-  
   private static func initPeopleState() -> PeopleState {
     return PeopleState()
   }
