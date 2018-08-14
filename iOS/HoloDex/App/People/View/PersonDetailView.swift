@@ -46,9 +46,8 @@ class PersonDetailView: UIView, FlexView, BaseAppView {
 
   func layoutFlexContent(_ flexContainer: UIView) {
     let padding: CGFloat = 5.0
-    
-    debugPrint("Laying out flex content")
 
+    debugPrint("Laying out flex content")
 
     flexContainer.flex.alignContent(.center).justifyContent(.center).padding(padding).define { (flex) in
       flex.addItem().direction(.row).backgroundColor(.green).paddingBottom(padding).define { (flex) in

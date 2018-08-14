@@ -19,7 +19,8 @@ public class StarWarsAPI {
   }
 
   public func createRequest<T: BaseMappable>(_ url: String,
-                                             completionHandler: @escaping (Alamofire.DataResponse<T>) -> Void) -> DataRequest {
+                                             completionHandler: @escaping (Alamofire.DataResponse<T>) -> Void)
+                                                -> DataRequest {
     let headers: HTTPHeaders = [
       "Content-Type": "application/json",
       "Accept": "application/json"

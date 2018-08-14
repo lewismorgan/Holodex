@@ -32,9 +32,7 @@ class PersonDetailViewController<StoredAppState: PeopleStateStore & StateType>: 
   }
 
   override func loadView() {
-    var person = Person()
-    person.name = "NULL"
-    initViewItem(viewItem: PersonDetailView(person: person))
+    initViewItem(viewItem: PersonDetailView(person: Person()))
   }
 
   // MARK: - View Controller Overrides
@@ -57,6 +55,7 @@ class PersonDetailViewController<StoredAppState: PeopleStateStore & StateType>: 
 extension PersonDetailViewController: StoreSubscriber {
   func newState(state: PeopleState) {
     if let selected = state.viewingPerson {
+      navigationItem.title = selected.name
       mainView.updatePerson(person: selected)
     }
   }

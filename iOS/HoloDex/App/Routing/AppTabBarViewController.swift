@@ -33,7 +33,7 @@ class AppTabBarViewController: UITabBarController {
     // swiftlint:disable todo
 
     // TODO: Create a PeopleTabBarItem
-    peopleNavController.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 0)
+    peopleNavController.tabBarItem = UITabBarItem(title: "People", image: nil, tag: 0)
 
     let tabBarList = [peopleNavController]
     viewControllers = tabBarList

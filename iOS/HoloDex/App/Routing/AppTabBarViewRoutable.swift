@@ -59,18 +59,20 @@ class PeopleNavigationRoutable: ViewControllerRoutable<UINavigationController> {
     return PersonDetailRoutable(personDetailController)
   }
 
-  override func popRouteSegment(_ routeElementIdentifier: RouteElementIdentifier, animated: Bool, completionHandler: @escaping RoutingCompletionHandler) {
+  override func popRouteSegment(_ routeElementIdentifier: RouteElementIdentifier,
+                                animated: Bool, completionHandler: @escaping RoutingCompletionHandler) {
     viewController.popViewController(animated: true)
     completionHandler()
   }
 }
 
 class PersonDetailRoutable: ViewControllerRoutable<UIViewController> {
-  override func changeRouteSegment(_ from: RouteElementIdentifier, to: RouteElementIdentifier, animated: Bool, completionHandler: @escaping RoutingCompletionHandler) -> Routable {
-    debugPrint("Change")
-    fatalError()
+  override func changeRouteSegment(_ from: RouteElementIdentifier, to: RouteElementIdentifier,
+                                   animated: Bool, completionHandler: @escaping RoutingCompletionHandler) -> Routable {
+    fatalError("not implemented")
   }
-  override func popRouteSegment(_ routeElementIdentifier: RouteElementIdentifier, animated: Bool, completionHandler: @escaping RoutingCompletionHandler) {
-    debugPrint("PersonDetail pop")
+  override func popRouteSegment(_ routeElementIdentifier: RouteElementIdentifier,
+                                animated: Bool, completionHandler: @escaping RoutingCompletionHandler) {
+    fatalError("not implemented")
   }
 }
