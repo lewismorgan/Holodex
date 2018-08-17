@@ -13,7 +13,7 @@ public class StaticPeopleService: PeopleService {
   public init() {
   }
 
-  public func fetchPeople(page: Int) -> Single<[Person]> {
+  public func fetchPeople(page: Int) -> Single<([Person], Int?)> {
     var items = [Person]()
 
     for item in 1...10 {
@@ -24,7 +24,7 @@ public class StaticPeopleService: PeopleService {
       }
     }
 
-    return Single.just(items)
+    return Single.just((items, page + 1))
   }
 
   public func fetchPerson(id: Int) -> PrimitiveSequence<SingleTrait, Person> {
@@ -34,7 +34,7 @@ public class StaticPeopleService: PeopleService {
   public func fetchMultiplePeople(startPage: Int, endPage: Int) -> Observable<[Person]> {
     var people = [Observable<[Person]>]()
     for page in startPage...endPage {
-      people.append(fetchPeople(page: page).asObservable())
+      people.append(fetchPeople(page: page).map { $0.0 }.asObservable())
     }
     return Observable.merge(people)
   }

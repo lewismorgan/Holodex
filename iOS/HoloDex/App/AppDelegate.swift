@@ -22,8 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    let swapi = StarWarsAPI()
-    let middleware = createMiddlewareChain(items: [fetchPeople(peopleService: NetworkPeopleService(swapi))])
+    //let swapi = StarWarsAPI()
+    let middleware = createMiddlewareChain(items: [fetchPeople(peopleService: StaticPeopleService())])
     self.window = UIWindow(frame: UIScreen.main.bounds)
     self.store = Store<AppState>(reducer: appReducer, state: nil, middleware: [middleware])
 
@@ -40,7 +40,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     store.dispatch(SetRouteAction([AppRoutes.home.rawValue, AppRoutes.people.rawValue]))
-    store.dispatch(PeopleActions.FetchPeople.request)
+    // TODO: Dispatch a FetchPeople request when navigating to the People tab.
+    store.dispatch(PeopleActions.FetchPeople.request(page: 1))
 
     window?.makeKeyAndVisible()
     return true

@@ -34,15 +34,16 @@ public struct PeopleReducer {
   private static func onFetchPeople(_ action: PeopleActions.FetchPeople, _ state: inout PeopleState) {
     switch action {
     case .request:
-      // Nothing to do as of now... Maybe in the future !
-      break
-    case .success(let people):
-      if state.people == nil {
-        state.people = people
+      state = PeopleState.loading
+      debugPrint("onFetchPeople is request")
+    case .success(let tuple):
+      if tuple.next > 0 {
+        state = PeopleState.paging(people: tuple.people, next: tuple.next)
       } else {
-        state.people?.append(contentsOf: people)
+        state = PeopleState.populated(people: tuple.people)
       }
     case .failure(let error):
+      state = PeopleState.error
       fatalError("Failure trying to obtain people: \(error)")
     }
   }
@@ -50,12 +51,13 @@ public struct PeopleReducer {
   private static func onDetailPerson(_ action: PeopleActions.DetailPerson, _ state: inout PeopleState) {
     switch action {
     case .show(let person):
-      state.viewingPerson = person
+      state = PeopleState.viewing(person: person)
     case .dismiss:
       break
     }
   }
+
   private static func initPeopleState() -> PeopleState {
-    return PeopleState()
+    return PeopleState.empty
   }
 }

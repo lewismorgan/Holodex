@@ -58,6 +58,10 @@ class PeopleView: UIView, FlexView, BaseAppView {
     self.peopleTableData = people
     tableView.reloadData()
   }
+
+  func appendTableData(people: [Person]) {
+    self.peopleTableData.append(contentsOf: people)
+  }
 }
 
 extension PeopleView: UITableViewDataSource, UITableViewDelegate {

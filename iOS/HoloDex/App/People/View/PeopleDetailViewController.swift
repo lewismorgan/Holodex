@@ -54,9 +54,12 @@ class PersonDetailViewController<StoredAppState: PeopleStateStore & StateType>: 
 // MARK: - StoreSubscriber
 extension PersonDetailViewController: StoreSubscriber {
   func newState(state: PeopleState) {
-    if let selected = state.viewingPerson {
-      navigationItem.title = selected.name
-      mainView.updatePerson(person: selected)
+    switch state {
+    case .viewing(let viewing):
+      navigationItem.title = viewing.name
+      mainView.updatePerson(person: viewing)
+    default:
+      break
     }
   }
 }

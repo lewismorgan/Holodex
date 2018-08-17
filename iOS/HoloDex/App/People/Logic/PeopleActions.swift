@@ -12,8 +12,8 @@ import ReSwift
 
 struct PeopleActions {
   enum FetchPeople: Action {
-    case request
-    case success(people: [Person])
+    case request(page: Int)
+    case success(people: [Person], next: Int)
     case failure(error: Error)
   }
   enum DetailPerson: Action {

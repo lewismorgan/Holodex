@@ -40,7 +40,7 @@ class PeopleViewController<StoredAppState: PeopleStateStore & StateType>:
   }
 
   override func loadView() {
-    initViewItem(viewItem: PeopleView(people: [Person()]) { selected in
+    initViewItem(viewItem: PeopleView(people: [Person]()) { selected in
       self.delegate?.onPersonSelected(selected: selected)
     })
   }
@@ -64,8 +64,17 @@ class PeopleViewController<StoredAppState: PeopleStateStore & StateType>:
 // MARK: - StoreSubscriber
 extension PeopleViewController: StoreSubscriber {
   func newState(state: PeopleState) {
-    if let people = state.people {
+    switch state {
+    case .empty:
+      mainView.configureTableData(people: [Person]())
+    case .loading:
+      debugPrint("PeopleState has entered the loading state")
+    case .paging(let people, _):
+      mainView.appendTableData(people: people)
+    case .populated(let people):
       mainView.configureTableData(people: people)
+    default:
+      break
     }
   }
 }
