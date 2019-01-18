@@ -12,8 +12,11 @@ import ReSwift
 class AppTabBarViewController: UITabBarController {
   fileprivate let store: Store<AppState>
 
+  public var peopleNavController: PeopleNavigationController<AppState>
+
   init(_ store: Store<AppState>) {
     self.store = store
+    peopleNavController = PeopleNavigationController(store: store)
     super.init(nibName: nil, bundle: nil)
   }
 
@@ -28,12 +31,11 @@ class AppTabBarViewController: UITabBarController {
 
   func setupTabBarItems() {
     // swiftlint:disable todo
-    let peopleViewController = PeopleViewController(store: store)
 
     // TODO: Create a PeopleTabBarItem
-    peopleViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 0)
+    peopleNavController.tabBarItem = UITabBarItem(title: "People", image: nil, tag: 0)
 
-    let tabBarList = [peopleViewController]
+    let tabBarList = [peopleNavController]
     viewControllers = tabBarList
     // swiftlint:enable todo
   }

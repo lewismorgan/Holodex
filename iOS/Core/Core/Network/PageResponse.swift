@@ -9,16 +9,16 @@
 import Foundation
 import ObjectMapper
 
-struct PageResponse<T: Mappable & Codable>: Mappable, Codable {
-  var count: Int?
-  var next: String?
-  var previous: String?
-  var results: [T]?
+public struct PageResponse<T: Mappable & Codable>: Mappable, Codable {
+  public var count: Int?
+  public var next: String?
+  public var previous: String?
+  public var results: [T]?
 
-  init?(map: Map) {
+  public init?(map: Map) {
   }
 
-  mutating func mapping(map: Map) {
+  public mutating func mapping(map: Map) {
     count <- map["count"]
     next <- map["next"]
     previous <- map["previous"]

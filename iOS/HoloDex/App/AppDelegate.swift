@@ -6,6 +6,8 @@
 //  Copyright © 2018 Lewis J Morgan. All rights reserved.
 //
 
+import Core
+import People
 import UIKit
 import ReSwift
 import ReSwiftRouter
@@ -37,8 +39,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       }
     }
 
-    store.dispatch(SetRouteAction([AppRoutes.entryPoint.rawValue]))
-    store.dispatch(PeopleActions.FetchPeople.request)
+    store.dispatch(SetRouteAction([AppRoutes.home.rawValue, AppRoutes.people.rawValue]))
+    // TODO: Dispatch a FetchPeople request when navigating to the People tab.
+    store.dispatch(PeopleActions.FetchPeople.request(page: 1))
 
     window?.makeKeyAndVisible()
     return true

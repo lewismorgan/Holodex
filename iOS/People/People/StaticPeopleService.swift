@@ -9,8 +9,11 @@
 import RxSwift
 
 /// A PeopleService that returns static data
-class StaticPeopleService: PeopleService {
-  func fetchPeople(page: Int) -> Single<[Person]> {
+public class StaticPeopleService: PeopleService {
+  public init() {
+  }
+
+  public func fetchPeople(page: Int) -> Single<([Person], Int?)> {
     var items = [Person]()
 
     for item in 1...10 {
@@ -21,13 +24,17 @@ class StaticPeopleService: PeopleService {
       }
     }
 
-    return Single.just(items)
+    return Single.just((items, page + 1))
   }
 
-  func fetchMultiplePeople(startPage: Int, endPage: Int) -> Observable<[Person]> {
+  public func fetchPerson(id: Int) -> PrimitiveSequence<SingleTrait, Person> {
+    return Single.just(createAnakin())
+  }
+
+  public func fetchMultiplePeople(startPage: Int, endPage: Int) -> Observable<[Person]> {
     var people = [Observable<[Person]>]()
     for page in startPage...endPage {
-      people.append(fetchPeople(page: page).asObservable())
+      people.append(fetchPeople(page: page).map { $0.0 }.asObservable())
     }
     return Observable.merge(people)
   }
@@ -35,6 +42,14 @@ class StaticPeopleService: PeopleService {
   private func createPerson(_ name: String) -> Person {
     var rando = Person()
     rando.name = name
+    rando.height = "1337m"
+    rando.hairColor = "Blonde"
+    rando.mass = "3.14kg"
+    rando.birthYear = "2018 BY"
+    rando.eyeColor = "Blue"
+    rando.homeworld = "Tatooine"
+    rando.gender = "Male"
+    rando.skinColor = "White"
     return rando
   }
 

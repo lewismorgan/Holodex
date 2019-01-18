@@ -6,14 +6,18 @@
 //  Copyright © 2018 Lewis J Morgan. All rights reserved.
 //
 
+import Core
+import People
 import ReSwift
 
-protocol RequestAction {}
-
 struct PeopleActions {
-  enum FetchPeople: Action, RequestAction {
-    case request
-    case success(people: [Person])
+  enum FetchPeople: Action {
+    case request(page: Int)
+    case success(people: [Person], next: Int)
     case failure(error: Error)
+  }
+  enum DetailPerson: Action {
+    case show(person: Person)
+    case dismiss
   }
 }

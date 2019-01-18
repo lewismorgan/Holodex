@@ -6,16 +6,24 @@
 //  Copyright © 2018 Lewis J Morgan. All rights reserved.
 //
 
+import Core
+import People
 import UIKit
 import ReSwift
+import ReSwiftRouter
+
+protocol PeopleViewControllerDelegate: AnyObject {
+  func onPersonSelected(selected person: Person)
+}
 
 class PeopleViewController<StoredAppState: PeopleStateStore & StateType>:
         UIViewController, AppViewController {
-  // TODO: UI Search Controller -> Save search in state?
   let store: Store<StoredAppState>
   var mainView: PeopleView {
     return self.view as! PeopleView
   }
+
+  weak var delegate: PeopleViewControllerDelegate?
 
   // MARK: - Initialization
   init(store: Store<StoredAppState>) {
@@ -32,7 +40,9 @@ class PeopleViewController<StoredAppState: PeopleStateStore & StateType>:
   }
 
   override func loadView() {
-    initViewItem(viewItem: PeopleView(people: [Person()]))
+    initViewItem(viewItem: PeopleView(people: [Person]()) { selected in
+      self.delegate?.onPersonSelected(selected: selected)
+    })
   }
 
   // MARK: - View Controller Overrides
@@ -54,8 +64,17 @@ class PeopleViewController<StoredAppState: PeopleStateStore & StateType>:
 // MARK: - StoreSubscriber
 extension PeopleViewController: StoreSubscriber {
   func newState(state: PeopleState) {
-    if let people = state.people {
+    switch state {
+    case .empty:
+      mainView.configureTableData(people: [Person]())
+    case .loading:
+      debugPrint("PeopleState has entered the loading state")
+    case .paging(let people, _):
+      mainView.appendTableData(people: people)
+    case .populated(let people):
       mainView.configureTableData(people: people)
+    default:
+      break
     }
   }
 }
