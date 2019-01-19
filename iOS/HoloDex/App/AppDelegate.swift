@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   // MARK: - App Delegate Methods
 
   func application(_ application: UIApplication,
-                   didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     //let swapi = StarWarsAPI()
     let middleware = createMiddlewareChain(items: [fetchPeople(peopleService: StaticPeopleService())])
     self.window = UIWindow(frame: UIScreen.main.bounds)
