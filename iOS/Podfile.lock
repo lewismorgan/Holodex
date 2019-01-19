@@ -1,43 +1,38 @@
 PODS:
-  - Alamofire (4.7.3)
-  - AlamofireObjectMapper (5.1.0):
-    - Alamofire (~> 4.1)
-    - ObjectMapper (~> 3.3)
+  - Alamofire (4.8.1)
+  - AlamofireObjectMapper (5.2.0):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
   - FlexLayout (1.3.11)
-  - Nimble (7.1.3)
-  - ObjectMapper (3.3.0)
-  - PinLayout (1.7.11)
-  - Quick (1.3.1)
+  - Nimble (7.3.1)
+  - ObjectMapper (3.4.2)
+  - PinLayout (1.8.6)
+  - Quick (1.3.2)
   - ReSwift (4.0.1)
   - ReSwiftRouter (0.6.0):
     - ReSwift (~> 4.0.0)
-  - RxBlocking (4.2.0):
+  - RxAtomic (4.4.0)
+  - RxCocoa (4.4.0):
     - RxSwift (~> 4.0)
-  - RxCocoa (4.2.0):
-    - RxSwift (~> 4.0)
-  - RxNimble (4.1.0):
-    - Nimble (~> 7.0)
-    - RxBlocking (~> 4.0)
-    - RxSwift (~> 4.0)
-  - RxSwift (4.2.0)
-  - RxTest (4.2.0):
+  - RxSwift (4.4.0):
+    - RxAtomic (~> 4.4)
+  - RxTest (4.4.0):
+    - RxAtomic (~> 4.4)
     - RxSwift (~> 4.0)
 
 DEPENDENCIES:
-  - Alamofire
-  - AlamofireObjectMapper
-  - FlexLayout
-  - Nimble
-  - ObjectMapper
-  - PinLayout
-  - Quick
-  - ReSwift
-  - ReSwiftRouter
-  - RxBlocking
-  - RxCocoa
-  - RxNimble
-  - RxSwift
-  - RxTest
+  - Alamofire (~> 4.0)
+  - AlamofireObjectMapper (~> 5.0)
+  - FlexLayout (~> 1.0)
+  - Nimble (~> 7.0)
+  - ObjectMapper (~> 3.0)
+  - PinLayout (~> 1.0)
+  - Quick (~> 1.3)
+  - ReSwift (~> 4.0)
+  - ReSwiftRouter (~> 0.5)
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
+  - RxTest (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -50,28 +45,26 @@ SPEC REPOS:
     - Quick
     - ReSwift
     - ReSwiftRouter
-    - RxBlocking
+    - RxAtomic
     - RxCocoa
-    - RxNimble
     - RxSwift
     - RxTest
 
 SPEC CHECKSUMS:
-  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  AlamofireObjectMapper: 3395e698901d8b0e6f48b7d0c43bd47875325102
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  AlamofireObjectMapper: 92b6ce2423a9d159e686f6a1d514a009bf903ddc
   FlexLayout: b008184d23aae0c56e1c916e803445a13a6f4e5a
-  Nimble: 2839b01d1b31f6a6a7777a221f0d91cf52e8e27b
-  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
-  PinLayout: 98a38fd83aba58fa6f1e0543952313259aa0a212
-  Quick: d17304d58d0d169dd0bd1c6e5c28e3318de32a1a
+  Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  PinLayout: fe2a2432d6982588e208572005c941aeeae417ab
+  Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
   ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
   ReSwiftRouter: 81f41b37a5dd1c88e1d3d10a660ff2dcc939ba7c
-  RxBlocking: e339d8a6e752e25ade95ff858466c55436668f59
-  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
-  RxNimble: e5a34bf3b18d85406fc2a6e2cbc73aa2b4a858f0
-  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
-  RxTest: 8da864c0ee47534f586ff18fb0c7e5b2f1fe5023
+  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
+  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
+  RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  RxTest: 19d03286bdc0a3aaea5d61d4cde31fdf4bb8a5ba
 
-PODFILE CHECKSUM: 7a6b654d0904ca39423ddb4cd8f9d9604df78431
+PODFILE CHECKSUM: 7c7ce8d77bb96aa502c6930dcadfedf948d04443
 
 COCOAPODS: 1.5.3
