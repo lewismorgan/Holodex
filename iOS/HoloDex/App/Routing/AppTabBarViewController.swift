@@ -7,16 +7,12 @@
 //
 
 import UIKit
-import ReSwift
 
 class AppTabBarViewController: UITabBarController {
-  fileprivate let store: Store<AppState>
+  public var peopleNavController: PeopleNavigationController
 
-  public var peopleNavController: PeopleNavigationController<AppState>
-
-  init(_ store: Store<AppState>) {
-    self.store = store
-    peopleNavController = PeopleNavigationController(store: store)
+  init() {
+    peopleNavController = PeopleNavigationController()
     super.init(nibName: nil, bundle: nil)
   }
 

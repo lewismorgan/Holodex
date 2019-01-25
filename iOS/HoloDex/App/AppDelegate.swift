@@ -9,39 +9,19 @@
 import Core
 import People
 import UIKit
-import ReSwift
-import ReSwiftRouter
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
-  var store: Store<AppState>!
-  var router: Router<AppState>!
 
   // MARK: - App Delegate Methods
 
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     //let swapi = StarWarsAPI()
-    let middleware = createMiddlewareChain(items: [fetchPeople(peopleService: StaticPeopleService())])
     self.window = UIWindow(frame: UIScreen.main.bounds)
-    self.store = Store<AppState>(reducer: appReducer, state: nil, middleware: [middleware])
 
-    // Set a dummy view controller to satisfy UIKit
-    window?.rootViewController = UIViewController()
-
-    let rootRoutable = RootAppRoutable(store: store, window: window!)
-
-    // Set Router
-    router = Router<AppState>(store: store, rootRoutable: rootRoutable) {
-      $0.select {
-        $0.navigationState
-      }
-    }
-
-    store.dispatch(SetRouteAction([AppRoutes.home.rawValue, AppRoutes.people.rawValue]))
-    // TODO: Dispatch a FetchPeople request when navigating to the People tab.
-    store.dispatch(PeopleActions.FetchPeople.request(page: 1))
+    window?.rootViewController = AppTabBarViewController()
 
     window?.makeKeyAndVisible()
     return true

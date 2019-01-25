@@ -9,19 +9,14 @@
 import Core
 import People
 import UIKit
-import ReSwift
-import ReSwiftRouter
 
 /// Manages switching between the list of people and the detailed view
-class PeopleNavigationController<StoredAppState: PeopleStateStore & StateType>:
-UINavigationController, UINavigationControllerDelegate {
-  let store: Store<StoredAppState>
+class PeopleNavigationController: UINavigationController, UINavigationControllerDelegate, PeopleViewControllerDelegate {
   private var priorViewController: UIViewController?
   private var didShowDetailController: Bool = false
 
   // MARK: - Initialization
-  init(store: Store<StoredAppState>) {
-    self.store = store
+  init() {
     super.init(nibName: nil, bundle: nil)
     loadViewControllers()
   }
@@ -31,7 +26,7 @@ UINavigationController, UINavigationControllerDelegate {
   }
 
   func loadViewControllers() {
-    let peopleViewController = PeopleViewController(store: store)
+    let peopleViewController = PeopleViewController()
     peopleViewController.delegate = self
 
     let controllers = [peopleViewController]
@@ -43,23 +38,10 @@ UINavigationController, UINavigationControllerDelegate {
 
   func navigationController(_ navigationController: UINavigationController,
                             didShow viewController: UIViewController, animated: Bool) {
-    // Router doesn't really work with UINavigationControllers, so this is a workaround to send
-    // a route update when the back button is pressed.
-    if viewController is PeopleViewController<StoredAppState> {
-      if didShowDetailController {
-        store.dispatch(SetRouteAction([AppRoutes.home.rawValue, AppRoutes.people.rawValue]))
-        didShowDetailController = false
-      }
-    } else if viewController is PersonDetailViewController<StoredAppState> {
-      didShowDetailController = true
-    }
+    // TODO - Routing from navigation controller back button
   }
-}
 
-extension PeopleNavigationController: PeopleViewControllerDelegate {
   func onPersonSelected(selected person: Person) {
-    store.dispatch(PeopleActions.DetailPerson.show(person: person))
-    store.dispatch(SetRouteAction([AppRoutes.home.rawValue, AppRoutes.people.rawValue,
-                                   AppRoutes.peopleDetail.rawValue]))
+    // TODO: - Push view controller
   }
 }

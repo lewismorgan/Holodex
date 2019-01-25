@@ -12,7 +12,7 @@ import UIKit
 import PinLayout
 import FlexLayout
 
-class PeopleView: UIView, FlexView, BaseAppView {
+class PeopleView: UIView {
   var tableView: UITableView = UITableView()
   var root = UIView()
   var peopleTableData: [Person]

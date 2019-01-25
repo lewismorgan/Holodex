@@ -8,9 +8,8 @@
 
 import Core
 import People
-import ReSwift
 
-public enum PeopleState: StateType {
+public enum PeopleState {
   var currentPeople: [Person] {
     switch self {
     case .populated(let people):

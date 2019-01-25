@@ -9,19 +9,9 @@
 import Core
 import People
 import UIKit
-import ReSwift
 
-class PersonDetailViewController<StoredAppState: PeopleStateStore & StateType>: UIViewController, AppViewController {
-  let store: Store<StoredAppState>
-  var mainView: PersonDetailView {
-    return self.view as! PersonDetailView
-  }
-
+class PersonDetailViewController: UIViewController {
   // MARK: - Initialization
-  init(store: Store<StoredAppState>) {
-    self.store = store
-    super.init(nibName: nil, bundle: nil)
-  }
 
   required init?(coder aDecoder: NSCoder) {
     fatalError("required init(coder:) is not implemented")
@@ -38,28 +28,9 @@ class PersonDetailViewController<StoredAppState: PeopleStateStore & StateType>: 
   // MARK: - View Controller Overrides
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-
-    store.subscribe(self) {
-      $0.select { state in state.peopleState }
-    }
   }
 
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillAppear(animated)
-
-    store.unsubscribe(self)
-  }
-}
-
-// MARK: - StoreSubscriber
-extension PersonDetailViewController: StoreSubscriber {
-  func newState(state: PeopleState) {
-    switch state {
-    case .viewing(let viewing):
-      navigationItem.title = viewing.name
-      mainView.updatePerson(person: viewing)
-    default:
-      break
-    }
   }
 }

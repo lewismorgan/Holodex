@@ -8,15 +8,14 @@
 
 import Core
 import People
-import ReSwift
 
 struct PeopleActions {
-  enum FetchPeople: Action {
+  enum FetchPeople {
     case request(page: Int)
     case success(people: [Person], next: Int)
     case failure(error: Error)
   }
-  enum DetailPerson: Action {
+  enum DetailPerson {
     case show(person: Person)
     case dismiss
   }

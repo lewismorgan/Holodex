@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6A82E5FA2FEE5AEF8F747805 /* Pods_HoloDex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1DD888D0D4578ED250C6998 /* Pods_HoloDex.framework */; };
+		2CC8378072E498B963F4B3CB /* Pods_HoloDex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6514E2B0AFB803A7E204DF5 /* Pods_HoloDex.framework */; };
 		D700E4E2210E9C050054AFD0 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700E4E1210E9C050054AFD0 /* PersonTableViewCell.swift */; };
-		D72D4001210946F40095BEE0 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72D4000210946F40095BEE0 /* AppState.swift */; };
-		D730D08721094BD50092EB4C /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D730D08621094BD50092EB4C /* Screen.swift */; };
 		D75A341121093428003A4C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75A341021093428003A4C6D /* AppDelegate.swift */; };
 		D75A341821093429003A4C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D75A341721093429003A4C6D /* Assets.xcassets */; };
 		D75A341B21093429003A4C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75A341921093429003A4C6D /* LaunchScreen.storyboard */; };
@@ -21,21 +19,11 @@
 		D76E608C211E8DEE00232A9E /* PeopleNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76E608B211E8DEE00232A9E /* PeopleNavigationController.swift */; };
 		D76E608E211EC2AA00232A9E /* PeopleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76E608D211EC2AA00232A9E /* PeopleDetailViewController.swift */; };
 		D76E6090211EC32900232A9E /* PersonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76E608F211EC32900232A9E /* PersonDetailView.swift */; };
-		D7DD0A16210A77C30072A896 /* BaseAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A15210A77C30072A896 /* BaseAppView.swift */; };
-		D7DD0A18210A7A350072A896 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A17210A7A350072A896 /* AppViewController.swift */; };
 		D7DD0A1C210A7CCA0072A896 /* PeopleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A1B210A7CCA0072A896 /* PeopleState.swift */; };
-		D7DD0A20210A88FB0072A896 /* RootRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A1F210A88FB0072A896 /* RootRoutable.swift */; };
-		D7DD0A22210A8B560072A896 /* AppTabBarViewRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A21210A8B560072A896 /* AppTabBarViewRoutable.swift */; };
-		D7DD0A24210A8BA80072A896 /* ViewControllerRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A23210A8BA80072A896 /* ViewControllerRoutable.swift */; };
 		D7DD0A26210A8D930072A896 /* AppTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A25210A8D930072A896 /* AppTabBarViewController.swift */; };
-		D7DD0A28210A90C20072A896 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A27210A90C20072A896 /* AppReducer.swift */; };
-		D7DD0A2A210AAA6C0072A896 /* PeopleReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A29210AAA6C0072A896 /* PeopleReducer.swift */; };
 		D7DD0A2C210AAB8E0072A896 /* PeopleActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A2B210AAB8E0072A896 /* PeopleActions.swift */; };
-		D7DFBFF2210FCD9E00A6A0D1 /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DFBFF1210FCD9E00A6A0D1 /* Middleware.swift */; };
-		D7DFBFF6210FCF5E00A6A0D1 /* PeopleMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DFBFF5210FCF5E00A6A0D1 /* PeopleMiddleware.swift */; };
 		D7FE7513210955A900DE1E28 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7512210955A900DE1E28 /* PeopleView.swift */; };
 		D7FE7515210955C500DE1E28 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7514210955C500DE1E28 /* PeopleViewController.swift */; };
-		D7FE75202109624500DE1E28 /* FlexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE751F2109624500DE1E28 /* FlexView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,11 +52,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		83BE862FB66BDDA7D50EAB82 /* Pods-HoloDex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex.debug.xcconfig"; sourceTree = "<group>"; };
-		B7C73C92F3DF0B4BA308A5E4 /* Pods-HoloDex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDex.release.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex.release.xcconfig"; sourceTree = "<group>"; };
+		AE4A093D73FA297651A53BBE /* Pods-HoloDex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDex.release.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex.release.xcconfig"; sourceTree = "<group>"; };
+		C8D456AC11015CDA3F4EFE9E /* Pods-HoloDex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex.debug.xcconfig"; sourceTree = "<group>"; };
+		D6514E2B0AFB803A7E204DF5 /* Pods_HoloDex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloDex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D700E4E1210E9C050054AFD0 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
-		D72D4000210946F40095BEE0 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		D730D08621094BD50092EB4C /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		D7362733211CF804003F54FC /* HoloDexUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoloDexUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7362737211CF804003F54FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7376228211E6DF700E58C0C /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,22 +68,11 @@
 		D76E608B211E8DEE00232A9E /* PeopleNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleNavigationController.swift; sourceTree = "<group>"; };
 		D76E608D211EC2AA00232A9E /* PeopleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailViewController.swift; sourceTree = "<group>"; };
 		D76E608F211EC32900232A9E /* PersonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailView.swift; sourceTree = "<group>"; };
-		D7DD0A15210A77C30072A896 /* BaseAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAppView.swift; sourceTree = "<group>"; };
-		D7DD0A17210A7A350072A896 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		D7DD0A1B210A7CCA0072A896 /* PeopleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleState.swift; sourceTree = "<group>"; };
-		D7DD0A1F210A88FB0072A896 /* RootRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRoutable.swift; sourceTree = "<group>"; };
-		D7DD0A21210A8B560072A896 /* AppTabBarViewRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarViewRoutable.swift; sourceTree = "<group>"; };
-		D7DD0A23210A8BA80072A896 /* ViewControllerRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRoutable.swift; sourceTree = "<group>"; };
 		D7DD0A25210A8D930072A896 /* AppTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarViewController.swift; sourceTree = "<group>"; };
-		D7DD0A27210A90C20072A896 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
-		D7DD0A29210AAA6C0072A896 /* PeopleReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleReducer.swift; sourceTree = "<group>"; };
 		D7DD0A2B210AAB8E0072A896 /* PeopleActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleActions.swift; sourceTree = "<group>"; };
-		D7DFBFF1210FCD9E00A6A0D1 /* Middleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Middleware.swift; sourceTree = "<group>"; };
-		D7DFBFF5210FCF5E00A6A0D1 /* PeopleMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleMiddleware.swift; sourceTree = "<group>"; };
 		D7FE7512210955A900DE1E28 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		D7FE7514210955C500DE1E28 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
-		D7FE751F2109624500DE1E28 /* FlexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexView.swift; sourceTree = "<group>"; };
-		F1DD888D0D4578ED250C6998 /* Pods_HoloDex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloDex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,32 +88,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				D76E6087211E85E600232A9E /* People.framework in Frameworks */,
-				6A82E5FA2FEE5AEF8F747805 /* Pods_HoloDex.framework in Frameworks */,
 				D76E6075211E7AE600232A9E /* Core.framework in Frameworks */,
+				2CC8378072E498B963F4B3CB /* Pods_HoloDex.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9ACB1A4B644436FC2C89E192 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				83BE862FB66BDDA7D50EAB82 /* Pods-HoloDex.debug.xcconfig */,
-				B7C73C92F3DF0B4BA308A5E4 /* Pods-HoloDex.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		D70C54A0211CEBCD00106D73 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				D7FE751C21095DD500DE1E28 /* UI */,
 				D7DD0A2D210AAE290072A896 /* People */,
 				D70C54A1211CEBDA00106D73 /* Routing */,
-				D72D4000210946F40095BEE0 /* AppState.swift */,
-				D7DFBFF1210FCD9E00A6A0D1 /* Middleware.swift */,
-				D7DD0A27210A90C20072A896 /* AppReducer.swift */,
 				D75A341021093428003A4C6D /* AppDelegate.swift */,
 				D75A341921093429003A4C6D /* LaunchScreen.storyboard */,
 			);
@@ -147,10 +110,6 @@
 		D70C54A1211CEBDA00106D73 /* Routing */ = {
 			isa = PBXGroup;
 			children = (
-				D730D08621094BD50092EB4C /* Screen.swift */,
-				D7DD0A23210A8BA80072A896 /* ViewControllerRoutable.swift */,
-				D7DD0A1F210A88FB0072A896 /* RootRoutable.swift */,
-				D7DD0A21210A8B560072A896 /* AppTabBarViewRoutable.swift */,
 				D7DD0A25210A8D930072A896 /* AppTabBarViewController.swift */,
 			);
 			path = Routing;
@@ -170,8 +129,8 @@
 				D75A340F21093428003A4C6D /* HoloDex */,
 				D7362734211CF804003F54FC /* HoloDexUnitTests */,
 				D75A340E21093428003A4C6D /* Products */,
-				9ACB1A4B644436FC2C89E192 /* Pods */,
 				F019FED0A88DF487CE749D40 /* Frameworks */,
+				E6D3AB6BA96D1E8D9F0E4868 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -229,20 +188,17 @@
 			isa = PBXGroup;
 			children = (
 				D7DD0A2B210AAB8E0072A896 /* PeopleActions.swift */,
-				D7DFBFF5210FCF5E00A6A0D1 /* PeopleMiddleware.swift */,
-				D7DD0A29210AAA6C0072A896 /* PeopleReducer.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
 		};
-		D7FE751C21095DD500DE1E28 /* UI */ = {
+		E6D3AB6BA96D1E8D9F0E4868 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D7FE751F2109624500DE1E28 /* FlexView.swift */,
-				D7DD0A15210A77C30072A896 /* BaseAppView.swift */,
-				D7DD0A17210A7A350072A896 /* AppViewController.swift */,
+				C8D456AC11015CDA3F4EFE9E /* Pods-HoloDex.debug.xcconfig */,
+				AE4A093D73FA297651A53BBE /* Pods-HoloDex.release.xcconfig */,
 			);
-			path = UI;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		F019FED0A88DF487CE749D40 /* Frameworks */ = {
@@ -250,7 +206,7 @@
 			children = (
 				D76E6085211E85DF00232A9E /* People.framework */,
 				D7376228211E6DF700E58C0C /* Core.framework */,
-				F1DD888D0D4578ED250C6998 /* Pods_HoloDex.framework */,
+				D6514E2B0AFB803A7E204DF5 /* Pods_HoloDex.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -280,13 +236,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D75A341F21093429003A4C6D /* Build configuration list for PBXNativeTarget "HoloDex" */;
 			buildPhases = (
-				7A6A35A527F9E577C40DA397 /* [CP] Check Pods Manifest.lock */,
+				3D5709B817F9DDDAD1038C20 /* [CP] Check Pods Manifest.lock */,
 				D72D3FFA210943E50095BEE0 /* SwiftLint */,
 				D75A340921093428003A4C6D /* Sources */,
 				D75A340A21093428003A4C6D /* Frameworks */,
 				D75A340B21093428003A4C6D /* Resources */,
-				0A2BCF56D4C45B482DBF4A94 /* [CP] Embed Pods Frameworks */,
 				D737622C211E722200E58C0C /* Embed Frameworks */,
+				B1625F81203B4F6C956DDD59 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -356,10 +312,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0A2BCF56D4C45B482DBF4A94 /* [CP] Embed Pods Frameworks */ = {
+		3D5709B817F9DDDAD1038C20 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HoloDex-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1625F81203B4F6C956DDD59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex-frameworks.sh",
@@ -370,11 +350,11 @@
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/ReSwiftRouter/ReSwiftRouter.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
@@ -383,31 +363,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwiftRouter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7A6A35A527F9E577C40DA397 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HoloDex-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D72D3FFA210943E50095BEE0 /* SwiftLint */ = {
@@ -438,25 +398,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D72D4001210946F40095BEE0 /* AppState.swift in Sources */,
 				D7FE7515210955C500DE1E28 /* PeopleViewController.swift in Sources */,
-				D7DD0A28210A90C20072A896 /* AppReducer.swift in Sources */,
 				D76E608C211E8DEE00232A9E /* PeopleNavigationController.swift in Sources */,
 				D76E608E211EC2AA00232A9E /* PeopleDetailViewController.swift in Sources */,
 				D75A341121093428003A4C6D /* AppDelegate.swift in Sources */,
 				D7DD0A26210A8D930072A896 /* AppTabBarViewController.swift in Sources */,
-				D7DFBFF2210FCD9E00A6A0D1 /* Middleware.swift in Sources */,
-				D7FE75202109624500DE1E28 /* FlexView.swift in Sources */,
 				D7DD0A2C210AAB8E0072A896 /* PeopleActions.swift in Sources */,
 				D76E6090211EC32900232A9E /* PersonDetailView.swift in Sources */,
-				D7DFBFF6210FCF5E00A6A0D1 /* PeopleMiddleware.swift in Sources */,
-				D730D08721094BD50092EB4C /* Screen.swift in Sources */,
-				D7DD0A24210A8BA80072A896 /* ViewControllerRoutable.swift in Sources */,
-				D7DD0A2A210AAA6C0072A896 /* PeopleReducer.swift in Sources */,
-				D7DD0A20210A88FB0072A896 /* RootRoutable.swift in Sources */,
-				D7DD0A22210A8B560072A896 /* AppTabBarViewRoutable.swift in Sources */,
-				D7DD0A16210A77C30072A896 /* BaseAppView.swift in Sources */,
-				D7DD0A18210A7A350072A896 /* AppViewController.swift in Sources */,
 				D700E4E2210E9C050054AFD0 /* PersonTableViewCell.swift in Sources */,
 				D7FE7513210955A900DE1E28 /* PeopleView.swift in Sources */,
 				D7DD0A1C210A7CCA0072A896 /* PeopleState.swift in Sources */,
@@ -500,7 +448,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lewisjmorgan.holodex.HoloDexUnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoloDex.app/HoloDex";
 			};
@@ -520,7 +468,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lewisjmorgan.holodex.HoloDexUnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoloDex.app/HoloDex";
 			};
@@ -642,7 +590,7 @@
 		};
 		D75A342021093429003A4C6D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 83BE862FB66BDDA7D50EAB82 /* Pods-HoloDex.debug.xcconfig */;
+			baseConfigurationReference = C8D456AC11015CDA3F4EFE9E /* Pods-HoloDex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -662,7 +610,7 @@
 		};
 		D75A342121093429003A4C6D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B7C73C92F3DF0B4BA308A5E4 /* Pods-HoloDex.release.xcconfig */;
+			baseConfigurationReference = AE4A093D73FA297651A53BBE /* Pods-HoloDex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

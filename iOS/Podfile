@@ -11,8 +11,6 @@ end
 
 def uiPods
   pod 'RxCocoa', '~> 4.0'
-  pod 'ReSwift', '~> 4.0'
-  pod 'ReSwiftRouter', '~> 0.5'
   pod 'PinLayout', '~> 1.0'
   pod 'FlexLayout', '~> 1.0'
 end

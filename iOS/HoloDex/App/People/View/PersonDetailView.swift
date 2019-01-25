@@ -10,7 +10,7 @@ import Foundation
 import People
 import UIKit
 
-class PersonDetailView: UIView, FlexView, BaseAppView {
+class PersonDetailView: UIView {
   var person: Person
   var root = UIView()
 

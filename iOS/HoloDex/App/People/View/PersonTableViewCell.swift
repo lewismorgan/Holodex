@@ -10,7 +10,7 @@ import Core
 import People
 import UIKit
 
-class PersonTableViewCell: UITableViewCell, BaseAppView, FlexView {
+class PersonTableViewCell: UITableViewCell {
   static let reuseIdentifier = "PersonTableViewCellCell"
   let nameLabel = UILabel()
 
