@@ -99,20 +99,11 @@
 		D70C54A0211CEBCD00106D73 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				D7DD0A2D210AAE290072A896 /* People */,
-				D70C54A1211CEBDA00106D73 /* Routing */,
+				D7DD0A25210A8D930072A896 /* AppTabBarViewController.swift */,
 				D75A341021093428003A4C6D /* AppDelegate.swift */,
 				D75A341921093429003A4C6D /* LaunchScreen.storyboard */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		D70C54A1211CEBDA00106D73 /* Routing */ = {
-			isa = PBXGroup;
-			children = (
-				D7DD0A25210A8D930072A896 /* AppTabBarViewController.swift */,
-			);
-			path = Routing;
 			sourceTree = "<group>";
 		};
 		D7362734211CF804003F54FC /* HoloDexUnitTests */ = {
@@ -146,6 +137,7 @@
 		D75A340F21093428003A4C6D /* HoloDex */ = {
 			isa = PBXGroup;
 			children = (
+				D7DD0A2D210AAE290072A896 /* People */,
 				D70C54A0211CEBCD00106D73 /* App */,
 				D75A341721093429003A4C6D /* Assets.xcassets */,
 				D75A341C21093429003A4C6D /* Info.plist */,

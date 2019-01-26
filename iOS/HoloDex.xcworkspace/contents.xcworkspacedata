@@ -4,13 +4,9 @@
    <FileRef
       location = "group:Core/Core.xcodeproj">
    </FileRef>
-   <Group
-      location = "container:"
-      name = "Features">
-      <FileRef
-         location = "group:People/People.xcodeproj">
-      </FileRef>
-   </Group>
+   <FileRef
+      location = "group:People/People.xcodeproj">
+   </FileRef>
    <FileRef
       location = "group:HoloDex.xcodeproj">
    </FileRef>
