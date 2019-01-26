@@ -16,6 +16,12 @@ PODS:
   - RxTest (4.4.0):
     - RxAtomic (~> 4.4)
     - RxSwift (~> 4.0)
+  - XCoordinator (1.2.3):
+    - XCoordinator/Core (= 1.2.3)
+  - XCoordinator/Core (1.2.3)
+  - XCoordinator/RxSwift (1.2.3):
+    - RxSwift (~> 4.0)
+    - XCoordinator/Core
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
@@ -28,6 +34,8 @@ DEPENDENCIES:
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
   - RxTest (~> 4.0)
+  - XCoordinator (~> 1.0)
+  - XCoordinator/RxSwift (~> 1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -42,6 +50,7 @@ SPEC REPOS:
     - RxCocoa
     - RxSwift
     - RxTest
+    - XCoordinator
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
@@ -55,7 +64,8 @@ SPEC CHECKSUMS:
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   RxTest: 19d03286bdc0a3aaea5d61d4cde31fdf4bb8a5ba
+  XCoordinator: dfeb8525f55825b720a5d78454a5044775c5b170
 
-PODFILE CHECKSUM: 020b90a2a444b6b457c5d8ff3b4af871d10bae62
+PODFILE CHECKSUM: b245313c5053e3db86ee86f1ff05bb707d11f616
 
 COCOAPODS: 1.5.3
