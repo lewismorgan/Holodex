@@ -10,8 +10,13 @@ import Core
 import People
 import UIKit
 
+// TODO: - Person Bindings
+
 class PersonDetailViewController: UIViewController {
   // MARK: - Initialization
+  init(person: Person) {
+    super.init(nibName: nil, bundle: nil)
+  }
 
   required init?(coder aDecoder: NSCoder) {
     fatalError("required init(coder:) is not implemented")

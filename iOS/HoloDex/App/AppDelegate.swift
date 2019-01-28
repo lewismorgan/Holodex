@@ -9,21 +9,19 @@
 import Core
 import People
 import UIKit
+import XCoordinator
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-  var window: UIWindow?
+  let window: UIWindow! = UIWindow()
+  let router = AppCoordinator().anyRouter
 
   // MARK: - App Delegate Methods
 
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     //let swapi = StarWarsAPI()
-    self.window = UIWindow(frame: UIScreen.main.bounds)
-
-    window?.rootViewController = AppTabBarViewController()
-
-    window?.makeKeyAndVisible()
+    router.setRoot(for: window)
     return true
   }
 
