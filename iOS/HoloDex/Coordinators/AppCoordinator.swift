@@ -9,19 +9,17 @@
 import UIKit
 import XCoordinator
 
-class AppCoordinator: NavigationCoordinator<AppRoute> {
+class AppTabCoordinator: TabBarCoordinator<AppRoute> {
+  let peopleViewController = PeopleViewController()
+
   init() {
-    super.init(initialRoute: .home)
+    super.init(tabs: [peopleViewController], select: 0)
   }
 
-  override func prepareTransition(for route: AppRoute) -> NavigationTransition {
+  override func prepareTransition(for route: AppRoute) -> TabBarTransition {
     switch route {
     case .home, .people:
-      let viewController = PeopleViewController()
-      return .push(viewController)
-    case .person(let person):
-      let viewController = PersonDetailViewController(person: person)
-      return .push(viewController)
+      return .select(peopleViewController)
     }
   }
 }

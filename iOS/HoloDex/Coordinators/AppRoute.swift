@@ -12,5 +12,4 @@ import People
 enum AppRoute: Route {
   case home
   case people
-  case person(Person)
 }

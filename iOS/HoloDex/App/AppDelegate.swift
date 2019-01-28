@@ -14,7 +14,7 @@ import XCoordinator
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   let window: UIWindow! = UIWindow()
-  let router = AppCoordinator().anyRouter
+  let router = AppTabCoordinator().anyCoordinator
 
   // MARK: - App Delegate Methods
 

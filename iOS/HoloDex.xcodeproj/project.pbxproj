@@ -18,10 +18,9 @@
 		D76E6076211E7AE600232A9E /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7376228211E6DF700E58C0C /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D76E6087211E85E600232A9E /* People.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D76E6085211E85DF00232A9E /* People.framework */; };
 		D76E6088211E85E600232A9E /* People.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D76E6085211E85DF00232A9E /* People.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D76E608C211E8DEE00232A9E /* PeopleNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76E608B211E8DEE00232A9E /* PeopleNavigationController.swift */; };
 		D76E608E211EC2AA00232A9E /* PeopleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76E608D211EC2AA00232A9E /* PeopleDetailViewController.swift */; };
 		D76E6090211EC32900232A9E /* PersonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76E608F211EC32900232A9E /* PersonDetailView.swift */; };
-		D7DD0A26210A8D930072A896 /* AppTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD0A25210A8D930072A896 /* AppTabBarViewController.swift */; };
+		D7C857D521FFACBF00DA33A0 /* PeopleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C857D421FFACBF00DA33A0 /* PeopleCoordinator.swift */; };
 		D7FE7513210955A900DE1E28 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7512210955A900DE1E28 /* PeopleView.swift */; };
 		D7FE7515210955C500DE1E28 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7514210955C500DE1E28 /* PeopleViewController.swift */; };
 /* End PBXBuildFile section */
@@ -67,10 +66,9 @@
 		D766BA2521FBDDE2007A2ED2 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		D766BA2721FBDE66007A2ED2 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
 		D76E6085211E85DF00232A9E /* People.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = People.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D76E608B211E8DEE00232A9E /* PeopleNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleNavigationController.swift; sourceTree = "<group>"; };
 		D76E608D211EC2AA00232A9E /* PeopleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailViewController.swift; sourceTree = "<group>"; };
 		D76E608F211EC32900232A9E /* PersonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailView.swift; sourceTree = "<group>"; };
-		D7DD0A25210A8D930072A896 /* AppTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarViewController.swift; sourceTree = "<group>"; };
+		D7C857D421FFACBF00DA33A0 /* PeopleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCoordinator.swift; sourceTree = "<group>"; };
 		D7FE7512210955A900DE1E28 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		D7FE7514210955C500DE1E28 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,7 +97,6 @@
 		D70C54A0211CEBCD00106D73 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				D7DD0A25210A8D930072A896 /* AppTabBarViewController.swift */,
 				D75A341021093428003A4C6D /* AppDelegate.swift */,
 				D75A341921093429003A4C6D /* LaunchScreen.storyboard */,
 			);
@@ -151,6 +148,7 @@
 			children = (
 				D766BA2521FBDDE2007A2ED2 /* AppCoordinator.swift */,
 				D766BA2721FBDE66007A2ED2 /* AppRoute.swift */,
+				D7C857D421FFACBF00DA33A0 /* PeopleCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -161,7 +159,6 @@
 				D700E4E1210E9C050054AFD0 /* PersonTableViewCell.swift */,
 				D7FE7512210955A900DE1E28 /* PeopleView.swift */,
 				D7FE7514210955C500DE1E28 /* PeopleViewController.swift */,
-				D76E608B211E8DEE00232A9E /* PeopleNavigationController.swift */,
 				D76E608D211EC2AA00232A9E /* PeopleDetailViewController.swift */,
 				D76E608F211EC32900232A9E /* PersonDetailView.swift */,
 			);
@@ -378,11 +375,10 @@
 			files = (
 				D766BA2621FBDDE2007A2ED2 /* AppCoordinator.swift in Sources */,
 				D766BA2821FBDE66007A2ED2 /* AppRoute.swift in Sources */,
+				D7C857D521FFACBF00DA33A0 /* PeopleCoordinator.swift in Sources */,
 				D7FE7515210955C500DE1E28 /* PeopleViewController.swift in Sources */,
-				D76E608C211E8DEE00232A9E /* PeopleNavigationController.swift in Sources */,
 				D76E608E211EC2AA00232A9E /* PeopleDetailViewController.swift in Sources */,
 				D75A341121093428003A4C6D /* AppDelegate.swift in Sources */,
-				D7DD0A26210A8D930072A896 /* AppTabBarViewController.swift in Sources */,
 				D76E6090211EC32900232A9E /* PersonDetailView.swift in Sources */,
 				D700E4E2210E9C050054AFD0 /* PersonTableViewCell.swift in Sources */,
 				D7FE7513210955A900DE1E28 /* PeopleView.swift in Sources */,

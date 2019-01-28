@@ -20,6 +20,7 @@ class PeopleViewController: UIViewController {
   // MARK: - Initialization
   init() {
     super.init(nibName: nil, bundle: nil)
+    tabBarItem = UITabBarItem(title: "People", image: nil, tag: 0)
   }
 
   required init?(coder aDecoder: NSCoder) {
