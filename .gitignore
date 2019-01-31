@@ -41,8 +41,8 @@ Pods/
 
 # Carthage
 #
-iOS/Carthage/Checkouts
-iOS/Carthage/Build
+Carthage/Checkouts
+Carthage/Build
 
 # fastlane
 #
