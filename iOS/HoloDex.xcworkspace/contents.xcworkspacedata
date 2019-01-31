@@ -2,15 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Core/Core.xcodeproj">
+      location = "group:Network/Network.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:People/People.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:HoloDex.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

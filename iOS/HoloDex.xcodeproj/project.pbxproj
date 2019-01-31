@@ -7,19 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2CC8378072E498B963F4B3CB /* Pods_HoloDex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6514E2B0AFB803A7E204DF5 /* Pods_HoloDex.framework */; };
 		D700E4E2210E9C050054AFD0 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700E4E1210E9C050054AFD0 /* PersonTableViewCell.swift */; };
 		D75A341121093428003A4C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75A341021093428003A4C6D /* AppDelegate.swift */; };
 		D75A341821093429003A4C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D75A341721093429003A4C6D /* Assets.xcassets */; };
 		D75A341B21093429003A4C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75A341921093429003A4C6D /* LaunchScreen.storyboard */; };
 		D766BA2621FBDDE2007A2ED2 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766BA2521FBDDE2007A2ED2 /* AppCoordinator.swift */; };
 		D766BA2821FBDE66007A2ED2 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766BA2721FBDE66007A2ED2 /* AppRoute.swift */; };
-		D76E6075211E7AE600232A9E /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7376228211E6DF700E58C0C /* Core.framework */; };
-		D76E6076211E7AE600232A9E /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7376228211E6DF700E58C0C /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D76E6087211E85E600232A9E /* People.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D76E6085211E85DF00232A9E /* People.framework */; };
-		D76E6088211E85E600232A9E /* People.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D76E6085211E85DF00232A9E /* People.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D76E608E211EC2AA00232A9E /* PeopleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76E608D211EC2AA00232A9E /* PeopleDetailViewController.swift */; };
 		D76E6090211EC32900232A9E /* PersonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76E608F211EC32900232A9E /* PersonDetailView.swift */; };
+		D7BA267422037CA6007E88AD /* FlexLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA266C22037CA5007E88AD /* FlexLayout.framework */; };
+		D7BA267522037CA6007E88AD /* XCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA266D22037CA5007E88AD /* XCoordinator.framework */; };
+		D7BA267622037CA6007E88AD /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA266E22037CA5007E88AD /* RxCocoa.framework */; };
+		D7BA267722037CA6007E88AD /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA266F22037CA5007E88AD /* ObjectMapper.framework */; };
+		D7BA267822037CA6007E88AD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA267022037CA5007E88AD /* Alamofire.framework */; };
+		D7BA267922037CA6007E88AD /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA267122037CA5007E88AD /* AlamofireObjectMapper.framework */; };
+		D7BA267A22037CA6007E88AD /* PinLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA267222037CA5007E88AD /* PinLayout.framework */; };
+		D7BA267B22037CA6007E88AD /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA267322037CA5007E88AD /* RxSwift.framework */; };
+		D7BA26992203837B007E88AD /* RxAtomic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA26982203837B007E88AD /* RxAtomic.framework */; };
+		D7BA269E22038477007E88AD /* People.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D76E6085211E85DF00232A9E /* People.framework */; };
+		D7BA269F22038477007E88AD /* People.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D76E6085211E85DF00232A9E /* People.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D7BA26A12203847F007E88AD /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA269722038285007E88AD /* Network.framework */; };
+		D7BA26A22203847F007E88AD /* Network.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA269722038285007E88AD /* Network.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D7C857D521FFACBF00DA33A0 /* PeopleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C857D421FFACBF00DA33A0 /* PeopleCoordinator.swift */; };
 		D7FE7513210955A900DE1E28 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7512210955A900DE1E28 /* PeopleView.swift */; };
 		D7FE7515210955C500DE1E28 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7514210955C500DE1E28 /* PeopleViewController.swift */; };
@@ -36,14 +44,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D737622C211E722200E58C0C /* Embed Frameworks */ = {
+		D7BA26A022038477007E88AD /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D76E6076211E7AE600232A9E /* Core.framework in Embed Frameworks */,
-				D76E6088211E85E600232A9E /* People.framework in Embed Frameworks */,
+				D7BA269F22038477007E88AD /* People.framework in Embed Frameworks */,
+				D7BA26A22203847F007E88AD /* Network.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,13 +59,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AE4A093D73FA297651A53BBE /* Pods-HoloDex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDex.release.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex.release.xcconfig"; sourceTree = "<group>"; };
-		C8D456AC11015CDA3F4EFE9E /* Pods-HoloDex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloDex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex.debug.xcconfig"; sourceTree = "<group>"; };
-		D6514E2B0AFB803A7E204DF5 /* Pods_HoloDex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloDex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D700E4E1210E9C050054AFD0 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		D7362733211CF804003F54FC /* HoloDexUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoloDexUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7362737211CF804003F54FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D7376228211E6DF700E58C0C /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75A340D21093428003A4C6D /* HoloDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoloDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75A341021093428003A4C6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D75A341721093429003A4C6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,6 +72,16 @@
 		D76E6085211E85DF00232A9E /* People.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = People.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D76E608D211EC2AA00232A9E /* PeopleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailViewController.swift; sourceTree = "<group>"; };
 		D76E608F211EC32900232A9E /* PersonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailView.swift; sourceTree = "<group>"; };
+		D7BA266C22037CA5007E88AD /* FlexLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlexLayout.framework; path = Carthage/Build/iOS/FlexLayout.framework; sourceTree = "<group>"; };
+		D7BA266D22037CA5007E88AD /* XCoordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinator.framework; path = Carthage/Build/iOS/XCoordinator.framework; sourceTree = "<group>"; };
+		D7BA266E22037CA5007E88AD /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		D7BA266F22037CA5007E88AD /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		D7BA267022037CA5007E88AD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		D7BA267122037CA5007E88AD /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
+		D7BA267222037CA5007E88AD /* PinLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PinLayout.framework; path = Carthage/Build/iOS/PinLayout.framework; sourceTree = "<group>"; };
+		D7BA267322037CA5007E88AD /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		D7BA269722038285007E88AD /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = "../../../Library/Developer/Xcode/DerivedData/HoloDex-azdblphaicwucpdjeqmfvevxymke/Build/Products/Debug-iphoneos/Network.framework"; sourceTree = "<group>"; };
+		D7BA26982203837B007E88AD /* RxAtomic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAtomic.framework; path = Carthage/Build/iOS/RxAtomic.framework; sourceTree = "<group>"; };
 		D7C857D421FFACBF00DA33A0 /* PeopleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCoordinator.swift; sourceTree = "<group>"; };
 		D7FE7512210955A900DE1E28 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		D7FE7514210955C500DE1E28 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
@@ -85,9 +99,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D76E6087211E85E600232A9E /* People.framework in Frameworks */,
-				D76E6075211E7AE600232A9E /* Core.framework in Frameworks */,
-				2CC8378072E498B963F4B3CB /* Pods_HoloDex.framework in Frameworks */,
+				D7BA267B22037CA6007E88AD /* RxSwift.framework in Frameworks */,
+				D7BA267722037CA6007E88AD /* ObjectMapper.framework in Frameworks */,
+				D7BA267422037CA6007E88AD /* FlexLayout.framework in Frameworks */,
+				D7BA267522037CA6007E88AD /* XCoordinator.framework in Frameworks */,
+				D7BA26992203837B007E88AD /* RxAtomic.framework in Frameworks */,
+				D7BA269E22038477007E88AD /* People.framework in Frameworks */,
+				D7BA267822037CA6007E88AD /* Alamofire.framework in Frameworks */,
+				D7BA267622037CA6007E88AD /* RxCocoa.framework in Frameworks */,
+				D7BA267A22037CA6007E88AD /* PinLayout.framework in Frameworks */,
+				D7BA26A12203847F007E88AD /* Network.framework in Frameworks */,
+				D7BA267922037CA6007E88AD /* AlamofireObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +140,6 @@
 				D7362734211CF804003F54FC /* HoloDexUnitTests */,
 				D75A340E21093428003A4C6D /* Products */,
 				F019FED0A88DF487CE749D40 /* Frameworks */,
-				E6D3AB6BA96D1E8D9F0E4868 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,21 +186,20 @@
 			path = People;
 			sourceTree = "<group>";
 		};
-		E6D3AB6BA96D1E8D9F0E4868 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C8D456AC11015CDA3F4EFE9E /* Pods-HoloDex.debug.xcconfig */,
-				AE4A093D73FA297651A53BBE /* Pods-HoloDex.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		F019FED0A88DF487CE749D40 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D7BA269722038285007E88AD /* Network.framework */,
 				D76E6085211E85DF00232A9E /* People.framework */,
-				D7376228211E6DF700E58C0C /* Core.framework */,
-				D6514E2B0AFB803A7E204DF5 /* Pods_HoloDex.framework */,
+				D7BA26982203837B007E88AD /* RxAtomic.framework */,
+				D7BA267022037CA5007E88AD /* Alamofire.framework */,
+				D7BA267122037CA5007E88AD /* AlamofireObjectMapper.framework */,
+				D7BA266C22037CA5007E88AD /* FlexLayout.framework */,
+				D7BA266F22037CA5007E88AD /* ObjectMapper.framework */,
+				D7BA267222037CA5007E88AD /* PinLayout.framework */,
+				D7BA266E22037CA5007E88AD /* RxCocoa.framework */,
+				D7BA267322037CA5007E88AD /* RxSwift.framework */,
+				D7BA266D22037CA5007E88AD /* XCoordinator.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -209,13 +229,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D75A341F21093429003A4C6D /* Build configuration list for PBXNativeTarget "HoloDex" */;
 			buildPhases = (
-				3D5709B817F9DDDAD1038C20 /* [CP] Check Pods Manifest.lock */,
 				D72D3FFA210943E50095BEE0 /* SwiftLint */,
 				D75A340921093428003A4C6D /* Sources */,
 				D75A340A21093428003A4C6D /* Frameworks */,
 				D75A340B21093428003A4C6D /* Resources */,
-				D737622C211E722200E58C0C /* Embed Frameworks */,
-				B1625F81203B4F6C956DDD59 /* [CP] Embed Pods Frameworks */,
+				D7BA267C22037CE8007E88AD /* Carthage - Copy Frameworks */,
+				D7BA26A022038477007E88AD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,66 +304,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3D5709B817F9DDDAD1038C20 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HoloDex-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B1625F81203B4F6C956DDD59 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/XCoordinator/XCoordinator.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCoordinator.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HoloDex/Pods-HoloDex-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D72D3FFA210943E50095BEE0 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -357,7 +316,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "#if which swiftlint >/dev/null; then\n#swiftlint\n#else\n#echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n#fi\n";
+		};
+		D7BA267C22037CE8007E88AD /* Carthage - Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FlexLayout.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PinLayout.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/XCoordinator.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxAtomic.framework",
+			);
+			name = "Carthage - Copy Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireObjectMapper.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/FlexLayout.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ObjectMapper.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PinLayout.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/XCoordinator.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxAtomic.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -564,11 +559,14 @@
 		};
 		D75A342021093429003A4C6D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8D456AC11015CDA3F4EFE9E /* Pods-HoloDex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J8SLW9YW9U;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HoloDex/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -584,11 +582,14 @@
 		};
 		D75A342121093429003A4C6D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE4A093D73FA297651A53BBE /* Pods-HoloDex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J8SLW9YW9U;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HoloDex/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (

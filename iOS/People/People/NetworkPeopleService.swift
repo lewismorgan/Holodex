@@ -9,7 +9,7 @@
 // Disucssion on Network/Async calls https://github.com/ReSwift/ReSwift/issues/214
 // and https://github.com/timojaask/ReSwiftAsyncMiddlewarePattern
 
-import Core
+import Network
 import Alamofire
 import RxSwift
 

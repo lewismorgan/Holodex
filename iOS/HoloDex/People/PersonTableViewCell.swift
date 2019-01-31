@@ -6,7 +6,7 @@
 //  Copyright © 2018 Lewis J Morgan. All rights reserved.
 //
 
-import Core
+import Network
 import People
 import UIKit
 
