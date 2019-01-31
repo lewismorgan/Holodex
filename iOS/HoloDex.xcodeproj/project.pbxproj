@@ -13,6 +13,8 @@
 		D75A341B21093429003A4C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75A341921093429003A4C6D /* LaunchScreen.storyboard */; };
 		D766BA2621FBDDE2007A2ED2 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766BA2521FBDDE2007A2ED2 /* AppCoordinator.swift */; };
 		D766BA2821FBDE66007A2ED2 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766BA2721FBDE66007A2ED2 /* AppRoute.swift */; };
+		D76DEA672203899300BAE67C /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA269722038285007E88AD /* Network.framework */; };
+		D76DEA682203899300BAE67C /* Network.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA269722038285007E88AD /* Network.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D76E608E211EC2AA00232A9E /* PeopleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76E608D211EC2AA00232A9E /* PeopleDetailViewController.swift */; };
 		D76E6090211EC32900232A9E /* PersonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76E608F211EC32900232A9E /* PersonDetailView.swift */; };
 		D7BA267422037CA6007E88AD /* FlexLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA266C22037CA5007E88AD /* FlexLayout.framework */; };
@@ -26,8 +28,6 @@
 		D7BA26992203837B007E88AD /* RxAtomic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA26982203837B007E88AD /* RxAtomic.framework */; };
 		D7BA269E22038477007E88AD /* People.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D76E6085211E85DF00232A9E /* People.framework */; };
 		D7BA269F22038477007E88AD /* People.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D76E6085211E85DF00232A9E /* People.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D7BA26A12203847F007E88AD /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA269722038285007E88AD /* Network.framework */; };
-		D7BA26A22203847F007E88AD /* Network.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA269722038285007E88AD /* Network.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D7C857D521FFACBF00DA33A0 /* PeopleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C857D421FFACBF00DA33A0 /* PeopleCoordinator.swift */; };
 		D7FE7513210955A900DE1E28 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7512210955A900DE1E28 /* PeopleView.swift */; };
 		D7FE7515210955C500DE1E28 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7514210955C500DE1E28 /* PeopleViewController.swift */; };
@@ -51,7 +51,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				D7BA269F22038477007E88AD /* People.framework in Embed Frameworks */,
-				D7BA26A22203847F007E88AD /* Network.framework in Embed Frameworks */,
+				D76DEA682203899300BAE67C /* Network.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,7 +108,7 @@
 				D7BA267822037CA6007E88AD /* Alamofire.framework in Frameworks */,
 				D7BA267622037CA6007E88AD /* RxCocoa.framework in Frameworks */,
 				D7BA267A22037CA6007E88AD /* PinLayout.framework in Frameworks */,
-				D7BA26A12203847F007E88AD /* Network.framework in Frameworks */,
+				D76DEA672203899300BAE67C /* Network.framework in Frameworks */,
 				D7BA267922037CA6007E88AD /* AlamofireObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,7 +316,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#if which swiftlint >/dev/null; then\n#swiftlint\n#else\n#echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n#fi\n";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		D7BA267C22037CE8007E88AD /* Carthage - Copy Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -561,6 +561,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J8SLW9YW9U;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -575,6 +576,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.lewismorgan.HoloDex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -584,6 +586,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J8SLW9YW9U;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -598,6 +601,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.lewismorgan.HoloDex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
