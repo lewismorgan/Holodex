@@ -7,18 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D700E4E2210E9C050054AFD0 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700E4E1210E9C050054AFD0 /* PersonTableViewCell.swift */; };
 		D75958B322038CA100BAFCC1 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75958B222038CA100BAFCC1 /* Network.framework */; };
 		D75958B422038CA100BAFCC1 /* Network.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D75958B222038CA100BAFCC1 /* Network.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D75958B622038CA800BAFCC1 /* People.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75958B522038CA800BAFCC1 /* People.framework */; };
 		D75958B722038CA800BAFCC1 /* People.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D75958B522038CA800BAFCC1 /* People.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D75958BC220394D300BAFCC1 /* PersonListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D75958BB220394D300BAFCC1 /* PersonListView.xib */; };
 		D75A341121093428003A4C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75A341021093428003A4C6D /* AppDelegate.swift */; };
 		D75A341821093429003A4C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D75A341721093429003A4C6D /* Assets.xcassets */; };
 		D75A341B21093429003A4C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75A341921093429003A4C6D /* LaunchScreen.storyboard */; };
-		D766BA2621FBDDE2007A2ED2 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766BA2521FBDDE2007A2ED2 /* AppCoordinator.swift */; };
+		D766BA2621FBDDE2007A2ED2 /* AppTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766BA2521FBDDE2007A2ED2 /* AppTabBarCoordinator.swift */; };
 		D766BA2821FBDE66007A2ED2 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766BA2721FBDE66007A2ED2 /* AppRoute.swift */; };
-		D76E608E211EC2AA00232A9E /* PeopleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76E608D211EC2AA00232A9E /* PeopleDetailViewController.swift */; };
-		D76E6090211EC32900232A9E /* PersonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76E608F211EC32900232A9E /* PersonDetailView.swift */; };
 		D7BA267422037CA6007E88AD /* FlexLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA266C22037CA5007E88AD /* FlexLayout.framework */; };
 		D7BA267522037CA6007E88AD /* XCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA266D22037CA5007E88AD /* XCoordinator.framework */; };
 		D7BA267622037CA6007E88AD /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA266E22037CA5007E88AD /* RxCocoa.framework */; };
@@ -28,9 +26,8 @@
 		D7BA267A22037CA6007E88AD /* PinLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA267222037CA5007E88AD /* PinLayout.framework */; };
 		D7BA267B22037CA6007E88AD /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA267322037CA5007E88AD /* RxSwift.framework */; };
 		D7BA26992203837B007E88AD /* RxAtomic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA26982203837B007E88AD /* RxAtomic.framework */; };
-		D7C857D521FFACBF00DA33A0 /* PeopleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C857D421FFACBF00DA33A0 /* PeopleCoordinator.swift */; };
-		D7FE7513210955A900DE1E28 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7512210955A900DE1E28 /* PeopleView.swift */; };
-		D7FE7515210955C500DE1E28 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7514210955C500DE1E28 /* PeopleViewController.swift */; };
+		D7C857D521FFACBF00DA33A0 /* PeopleListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C857D421FFACBF00DA33A0 /* PeopleListCoordinator.swift */; };
+		D7FE7515210955C500DE1E28 /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7514210955C500DE1E28 /* PersonListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,20 +56,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D700E4E1210E9C050054AFD0 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		D7362733211CF804003F54FC /* HoloDexUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoloDexUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7362737211CF804003F54FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D75958B222038CA100BAFCC1 /* Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75958B522038CA800BAFCC1 /* People.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = People.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D75958BB220394D300BAFCC1 /* PersonListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonListView.xib; sourceTree = "<group>"; };
 		D75A340D21093428003A4C6D /* HoloDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoloDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75A341021093428003A4C6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D75A341721093429003A4C6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D75A341A21093429003A4C6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D75A341C21093429003A4C6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D766BA2521FBDDE2007A2ED2 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D766BA2521FBDDE2007A2ED2 /* AppTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarCoordinator.swift; sourceTree = "<group>"; };
 		D766BA2721FBDE66007A2ED2 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
-		D76E608D211EC2AA00232A9E /* PeopleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailViewController.swift; sourceTree = "<group>"; };
-		D76E608F211EC32900232A9E /* PersonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailView.swift; sourceTree = "<group>"; };
 		D7BA266C22037CA5007E88AD /* FlexLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlexLayout.framework; path = Carthage/Build/iOS/FlexLayout.framework; sourceTree = "<group>"; };
 		D7BA266D22037CA5007E88AD /* XCoordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinator.framework; path = Carthage/Build/iOS/XCoordinator.framework; sourceTree = "<group>"; };
 		D7BA266E22037CA5007E88AD /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
@@ -82,9 +77,8 @@
 		D7BA267222037CA5007E88AD /* PinLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PinLayout.framework; path = Carthage/Build/iOS/PinLayout.framework; sourceTree = "<group>"; };
 		D7BA267322037CA5007E88AD /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		D7BA26982203837B007E88AD /* RxAtomic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAtomic.framework; path = Carthage/Build/iOS/RxAtomic.framework; sourceTree = "<group>"; };
-		D7C857D421FFACBF00DA33A0 /* PeopleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCoordinator.swift; sourceTree = "<group>"; };
-		D7FE7512210955A900DE1E28 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
-		D7FE7514210955C500DE1E28 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		D7C857D421FFACBF00DA33A0 /* PeopleListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListCoordinator.swift; sourceTree = "<group>"; };
+		D7FE7514210955C500DE1E28 /* PersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,13 +110,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D70C54A0211CEBCD00106D73 /* App */ = {
+		D70C54A0211CEBCD00106D73 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				D75A341021093428003A4C6D /* AppDelegate.swift */,
 				D75A341921093429003A4C6D /* LaunchScreen.storyboard */,
 			);
-			path = App;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		D7362734211CF804003F54FC /* HoloDexUnitTests */ = {
@@ -157,9 +151,9 @@
 		D75A340F21093428003A4C6D /* HoloDex */ = {
 			isa = PBXGroup;
 			children = (
+				D70C54A0211CEBCD00106D73 /* Common */,
 				D766BA2421FBDDC3007A2ED2 /* Coordinators */,
 				D7DD0A2D210AAE290072A896 /* People */,
-				D70C54A0211CEBCD00106D73 /* App */,
 				D75A341721093429003A4C6D /* Assets.xcassets */,
 				D75A341C21093429003A4C6D /* Info.plist */,
 			);
@@ -169,9 +163,9 @@
 		D766BA2421FBDDC3007A2ED2 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				D766BA2521FBDDE2007A2ED2 /* AppCoordinator.swift */,
+				D766BA2521FBDDE2007A2ED2 /* AppTabBarCoordinator.swift */,
 				D766BA2721FBDE66007A2ED2 /* AppRoute.swift */,
-				D7C857D421FFACBF00DA33A0 /* PeopleCoordinator.swift */,
+				D7C857D421FFACBF00DA33A0 /* PeopleListCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -179,11 +173,8 @@
 		D7DD0A2D210AAE290072A896 /* People */ = {
 			isa = PBXGroup;
 			children = (
-				D700E4E1210E9C050054AFD0 /* PersonTableViewCell.swift */,
-				D7FE7512210955A900DE1E28 /* PeopleView.swift */,
-				D7FE7514210955C500DE1E28 /* PeopleViewController.swift */,
-				D76E608D211EC2AA00232A9E /* PeopleDetailViewController.swift */,
-				D76E608F211EC32900232A9E /* PersonDetailView.swift */,
+				D7FE7514210955C500DE1E28 /* PersonListViewController.swift */,
+				D75958BB220394D300BAFCC1 /* PersonListView.xib */,
 			);
 			path = People;
 			sourceTree = "<group>";
@@ -298,6 +289,7 @@
 			files = (
 				D75A341B21093429003A4C6D /* LaunchScreen.storyboard in Resources */,
 				D75A341821093429003A4C6D /* Assets.xcassets in Resources */,
+				D75958BC220394D300BAFCC1 /* PersonListView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,15 +360,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D766BA2621FBDDE2007A2ED2 /* AppCoordinator.swift in Sources */,
+				D766BA2621FBDDE2007A2ED2 /* AppTabBarCoordinator.swift in Sources */,
 				D766BA2821FBDE66007A2ED2 /* AppRoute.swift in Sources */,
-				D7C857D521FFACBF00DA33A0 /* PeopleCoordinator.swift in Sources */,
-				D7FE7515210955C500DE1E28 /* PeopleViewController.swift in Sources */,
-				D76E608E211EC2AA00232A9E /* PeopleDetailViewController.swift in Sources */,
+				D7C857D521FFACBF00DA33A0 /* PeopleListCoordinator.swift in Sources */,
+				D7FE7515210955C500DE1E28 /* PersonListViewController.swift in Sources */,
 				D75A341121093428003A4C6D /* AppDelegate.swift in Sources */,
-				D76E6090211EC32900232A9E /* PersonDetailView.swift in Sources */,
-				D700E4E2210E9C050054AFD0 /* PersonTableViewCell.swift in Sources */,
-				D7FE7513210955A900DE1E28 /* PeopleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

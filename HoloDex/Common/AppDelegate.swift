@@ -6,21 +6,18 @@
 //  Copyright © 2018 Lewis J Morgan. All rights reserved.
 //
 
-import Network
-import People
 import UIKit
 import XCoordinator
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   let window: UIWindow! = UIWindow()
-  let router = AppTabCoordinator().anyCoordinator
+  let router = AppTabBarCoordinator().anyCoordinator
 
   // MARK: - App Delegate Methods
 
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    //let swapi = StarWarsAPI()
     router.setRoot(for: window)
     return true
   }

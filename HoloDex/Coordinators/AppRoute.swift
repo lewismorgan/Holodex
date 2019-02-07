@@ -10,6 +10,5 @@ import XCoordinator
 import People
 
 enum AppRoute: Route {
-  case home
   case people
 }
