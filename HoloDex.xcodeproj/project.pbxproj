@@ -17,13 +17,11 @@
 		D75A341B21093429003A4C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75A341921093429003A4C6D /* LaunchScreen.storyboard */; };
 		D766BA2621FBDDE2007A2ED2 /* AppTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766BA2521FBDDE2007A2ED2 /* AppTabBarCoordinator.swift */; };
 		D766BA2821FBDE66007A2ED2 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766BA2721FBDE66007A2ED2 /* AppRoute.swift */; };
-		D7BA267422037CA6007E88AD /* FlexLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA266C22037CA5007E88AD /* FlexLayout.framework */; };
 		D7BA267522037CA6007E88AD /* XCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA266D22037CA5007E88AD /* XCoordinator.framework */; };
 		D7BA267622037CA6007E88AD /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA266E22037CA5007E88AD /* RxCocoa.framework */; };
 		D7BA267722037CA6007E88AD /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA266F22037CA5007E88AD /* ObjectMapper.framework */; };
 		D7BA267822037CA6007E88AD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA267022037CA5007E88AD /* Alamofire.framework */; };
 		D7BA267922037CA6007E88AD /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA267122037CA5007E88AD /* AlamofireObjectMapper.framework */; };
-		D7BA267A22037CA6007E88AD /* PinLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA267222037CA5007E88AD /* PinLayout.framework */; };
 		D7BA267B22037CA6007E88AD /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA267322037CA5007E88AD /* RxSwift.framework */; };
 		D7BA26992203837B007E88AD /* RxAtomic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA26982203837B007E88AD /* RxAtomic.framework */; };
 		D7C857D521FFACBF00DA33A0 /* PeopleListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C857D421FFACBF00DA33A0 /* PeopleListCoordinator.swift */; };
@@ -96,12 +94,10 @@
 				D7BA267B22037CA6007E88AD /* RxSwift.framework in Frameworks */,
 				D75958B622038CA800BAFCC1 /* People.framework in Frameworks */,
 				D7BA267722037CA6007E88AD /* ObjectMapper.framework in Frameworks */,
-				D7BA267422037CA6007E88AD /* FlexLayout.framework in Frameworks */,
 				D7BA267522037CA6007E88AD /* XCoordinator.framework in Frameworks */,
 				D7BA26992203837B007E88AD /* RxAtomic.framework in Frameworks */,
 				D7BA267822037CA6007E88AD /* Alamofire.framework in Frameworks */,
 				D7BA267622037CA6007E88AD /* RxCocoa.framework in Frameworks */,
-				D7BA267A22037CA6007E88AD /* PinLayout.framework in Frameworks */,
 				D7BA267922037CA6007E88AD /* AlamofireObjectMapper.framework in Frameworks */,
 				D75958B322038CA100BAFCC1 /* Network.framework in Frameworks */,
 			);
@@ -220,11 +216,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D75A341F21093429003A4C6D /* Build configuration list for PBXNativeTarget "HoloDex" */;
 			buildPhases = (
-				D72D3FFA210943E50095BEE0 /* SwiftLint */,
+				D72D3FFA210943E50095BEE0 /* [ SwiftLint ] */,
 				D75A340921093428003A4C6D /* Sources */,
 				D75A340A21093428003A4C6D /* Frameworks */,
 				D75A340B21093428003A4C6D /* Resources */,
-				D7BA267C22037CE8007E88AD /* Carthage - Copy Frameworks */,
+				D7BA267C22037CE8007E88AD /* [ Carthage - Copy Frameworks ] */,
 				D7BA26A022038477007E88AD /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -296,21 +292,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D72D3FFA210943E50095BEE0 /* SwiftLint */ = {
+		D72D3FFA210943E50095BEE0 /* [ SwiftLint ] */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = SwiftLint;
+			name = "[ SwiftLint ]";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-		D7BA267C22037CE8007E88AD /* Carthage - Copy Frameworks */ = {
+		D7BA267C22037CE8007E88AD /* [ Carthage - Copy Frameworks ] */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -320,23 +316,19 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/FlexLayout.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/PinLayout.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/XCoordinator.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxAtomic.framework",
 			);
-			name = "Carthage - Copy Frameworks";
+			name = "[ Carthage - Copy Frameworks ]";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireObjectMapper.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/FlexLayout.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ObjectMapper.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PinLayout.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/XCoordinator.framework",
