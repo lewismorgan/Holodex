@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D750042D220E350F0098FCA5 /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D750042C220E350F0098FCA5 /* Action.framework */; };
 		D75958B322038CA100BAFCC1 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75958B222038CA100BAFCC1 /* Network.framework */; };
 		D75958B422038CA100BAFCC1 /* Network.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D75958B222038CA100BAFCC1 /* Network.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D75958B622038CA800BAFCC1 /* People.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75958B522038CA800BAFCC1 /* People.framework */; };
@@ -17,6 +18,7 @@
 		D75A341B21093429003A4C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75A341921093429003A4C6D /* LaunchScreen.storyboard */; };
 		D766BA2621FBDDE2007A2ED2 /* AppTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766BA2521FBDDE2007A2ED2 /* AppTabBarCoordinator.swift */; };
 		D766BA2821FBDE66007A2ED2 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766BA2721FBDE66007A2ED2 /* AppRoute.swift */; };
+		D7A1D762220E31BF00286709 /* PersonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1D761220E31BF00286709 /* PersonListViewModel.swift */; };
 		D7BA267522037CA6007E88AD /* XCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA266D22037CA5007E88AD /* XCoordinator.framework */; };
 		D7BA267622037CA6007E88AD /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA266E22037CA5007E88AD /* RxCocoa.framework */; };
 		D7BA267722037CA6007E88AD /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA266F22037CA5007E88AD /* ObjectMapper.framework */; };
@@ -56,6 +58,7 @@
 /* Begin PBXFileReference section */
 		D7362733211CF804003F54FC /* HoloDexUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoloDexUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7362737211CF804003F54FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D750042C220E350F0098FCA5 /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
 		D75958B222038CA100BAFCC1 /* Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75958B522038CA800BAFCC1 /* People.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = People.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75958BB220394D300BAFCC1 /* PersonListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonListView.xib; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 		D75A341C21093429003A4C6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D766BA2521FBDDE2007A2ED2 /* AppTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarCoordinator.swift; sourceTree = "<group>"; };
 		D766BA2721FBDE66007A2ED2 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
+		D7A1D761220E31BF00286709 /* PersonListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewModel.swift; sourceTree = "<group>"; };
 		D7BA266C22037CA5007E88AD /* FlexLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlexLayout.framework; path = Carthage/Build/iOS/FlexLayout.framework; sourceTree = "<group>"; };
 		D7BA266D22037CA5007E88AD /* XCoordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinator.framework; path = Carthage/Build/iOS/XCoordinator.framework; sourceTree = "<group>"; };
 		D7BA266E22037CA5007E88AD /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D750042D220E350F0098FCA5 /* Action.framework in Frameworks */,
 				D7BA267B22037CA6007E88AD /* RxSwift.framework in Frameworks */,
 				D75958B622038CA800BAFCC1 /* People.framework in Frameworks */,
 				D7BA267722037CA6007E88AD /* ObjectMapper.framework in Frameworks */,
@@ -179,6 +184,7 @@
 			children = (
 				D7FE7514210955C500DE1E28 /* PersonListViewController.swift */,
 				D75958BB220394D300BAFCC1 /* PersonListView.xib */,
+				D7A1D761220E31BF00286709 /* PersonListViewModel.swift */,
 			);
 			path = People;
 			sourceTree = "<group>";
@@ -186,6 +192,7 @@
 		F019FED0A88DF487CE749D40 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D750042C220E350F0098FCA5 /* Action.framework */,
 				D7BA26982203837B007E88AD /* RxAtomic.framework */,
 				D7BA267022037CA5007E88AD /* Alamofire.framework */,
 				D7BA267122037CA5007E88AD /* AlamofireObjectMapper.framework */,
@@ -329,6 +336,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/XCoordinator.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxAtomic.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Action.framework",
 			);
 			name = "[ Carthage - Copy Frameworks ]";
 			outputFileListPaths = (
@@ -341,6 +349,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/XCoordinator.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxAtomic.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Action.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -365,6 +374,7 @@
 				D7C857D521FFACBF00DA33A0 /* PeopleListCoordinator.swift in Sources */,
 				D7FE7515210955C500DE1E28 /* PersonListViewController.swift in Sources */,
 				D75A341121093428003A4C6D /* AppDelegate.swift in Sources */,
+				D7A1D762220E31BF00286709 /* PersonListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
