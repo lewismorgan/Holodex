@@ -18,6 +18,9 @@
 		D75A341B21093429003A4C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75A341921093429003A4C6D /* LaunchScreen.storyboard */; };
 		D766BA2621FBDDE2007A2ED2 /* AppTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766BA2521FBDDE2007A2ED2 /* AppTabBarCoordinator.swift */; };
 		D766BA2821FBDE66007A2ED2 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766BA2721FBDE66007A2ED2 /* AppRoute.swift */; };
+		D77DC9D9220E3FFC0003453C /* PersonListViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77DC9D8220E3FFC0003453C /* PersonListViewModelImpl.swift */; };
+		D77DC9DC220E441F0003453C /* ViewModelBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77DC9DB220E441F0003453C /* ViewModelBinding.swift */; };
+		D77DC9DE220E44660003453C /* UIViewController+ViewModelBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77DC9DD220E44660003453C /* UIViewController+ViewModelBinding.swift */; };
 		D7A1D762220E31BF00286709 /* PersonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1D761220E31BF00286709 /* PersonListViewModel.swift */; };
 		D7BA267522037CA6007E88AD /* XCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA266D22037CA5007E88AD /* XCoordinator.framework */; };
 		D7BA267622037CA6007E88AD /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA266E22037CA5007E88AD /* RxCocoa.framework */; };
@@ -69,6 +72,9 @@
 		D75A341C21093429003A4C6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D766BA2521FBDDE2007A2ED2 /* AppTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarCoordinator.swift; sourceTree = "<group>"; };
 		D766BA2721FBDE66007A2ED2 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
+		D77DC9D8220E3FFC0003453C /* PersonListViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewModelImpl.swift; sourceTree = "<group>"; };
+		D77DC9DB220E441F0003453C /* ViewModelBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBinding.swift; sourceTree = "<group>"; };
+		D77DC9DD220E44660003453C /* UIViewController+ViewModelBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ViewModelBinding.swift"; sourceTree = "<group>"; };
 		D7A1D761220E31BF00286709 /* PersonListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewModel.swift; sourceTree = "<group>"; };
 		D7BA266C22037CA5007E88AD /* FlexLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlexLayout.framework; path = Carthage/Build/iOS/FlexLayout.framework; sourceTree = "<group>"; };
 		D7BA266D22037CA5007E88AD /* XCoordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinator.framework; path = Carthage/Build/iOS/XCoordinator.framework; sourceTree = "<group>"; };
@@ -152,6 +158,7 @@
 		D75A340F21093428003A4C6D /* HoloDex */ = {
 			isa = PBXGroup;
 			children = (
+				D77DC9DA220E43FD0003453C /* Binding */,
 				D70C54A0211CEBCD00106D73 /* Common */,
 				D766BA2421FBDDC3007A2ED2 /* Coordinators */,
 				D7A1D760220E308800286709 /* Scenes */,
@@ -171,6 +178,15 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
+		D77DC9DA220E43FD0003453C /* Binding */ = {
+			isa = PBXGroup;
+			children = (
+				D77DC9DB220E441F0003453C /* ViewModelBinding.swift */,
+				D77DC9DD220E44660003453C /* UIViewController+ViewModelBinding.swift */,
+			);
+			path = Binding;
+			sourceTree = "<group>";
+		};
 		D7A1D760220E308800286709 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +201,7 @@
 				D7FE7514210955C500DE1E28 /* PersonListViewController.swift */,
 				D75958BB220394D300BAFCC1 /* PersonListView.xib */,
 				D7A1D761220E31BF00286709 /* PersonListViewModel.swift */,
+				D77DC9D8220E3FFC0003453C /* PersonListViewModelImpl.swift */,
 			);
 			path = People;
 			sourceTree = "<group>";
@@ -369,11 +386,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D77DC9DC220E441F0003453C /* ViewModelBinding.swift in Sources */,
 				D766BA2621FBDDE2007A2ED2 /* AppTabBarCoordinator.swift in Sources */,
 				D766BA2821FBDE66007A2ED2 /* AppRoute.swift in Sources */,
 				D7C857D521FFACBF00DA33A0 /* PeopleListCoordinator.swift in Sources */,
 				D7FE7515210955C500DE1E28 /* PersonListViewController.swift in Sources */,
 				D75A341121093428003A4C6D /* AppDelegate.swift in Sources */,
+				D77DC9D9220E3FFC0003453C /* PersonListViewModelImpl.swift in Sources */,
+				D77DC9DE220E44660003453C /* UIViewController+ViewModelBinding.swift in Sources */,
 				D7A1D762220E31BF00286709 /* PersonListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,7 +11,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class PersonListViewController: UIViewController {
+class PersonListViewController: UIViewController, ViewModelBinding {
+  var viewModel: PersonListViewModel!
+
   private static let NIB_NAME = "PersonListView"
 
   // MARK: - Views
@@ -27,6 +29,12 @@ class PersonListViewController: UIViewController {
 
   required init?(coder aDecoder: NSCoder) {
     fatalError("required init(coder:) is not implemented")
+  }
+
+  // MARK: - ViewModelBinding
+
+  func createBinding() {
+    // TODO: - Add in data binding from table and search
   }
 
   // MARK: - View Controller Overrides
@@ -45,6 +53,7 @@ extension PersonListViewController: UITableViewDataSource, UITableViewDelegate {
     //let person = people[indexPath.row]
 
     // TODO: - Call ViewModel's router transition here ?
+
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
