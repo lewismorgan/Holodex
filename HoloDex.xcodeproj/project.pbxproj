@@ -149,7 +149,7 @@
 			children = (
 				D70C54A0211CEBCD00106D73 /* Common */,
 				D766BA2421FBDDC3007A2ED2 /* Coordinators */,
-				D7DD0A2D210AAE290072A896 /* People */,
+				D7A1D760220E308800286709 /* Scenes */,
 				D75A341721093429003A4C6D /* Assets.xcassets */,
 				D75A341C21093429003A4C6D /* Info.plist */,
 			);
@@ -164,6 +164,14 @@
 				D7C857D421FFACBF00DA33A0 /* PeopleListCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		D7A1D760220E308800286709 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D7DD0A2D210AAE290072A896 /* People */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		D7DD0A2D210AAE290072A896 /* People */ = {
