@@ -27,7 +27,7 @@ public class OldStarWarsAPI {
     ]
     let requestUrl = baseUrl + url + "&format=json"
 
-    return Alamofire.request(requestUrl, method: .get, headers: headers)
+    return AF.request(requestUrl, method: .get, headers: headers)
                       .responseObject(completionHandler: completionHandler)
   }
 }
