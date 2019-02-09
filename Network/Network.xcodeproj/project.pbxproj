@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D737DEAB220F45C8000D3D41 /* StarWarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D737DEAA220F45C8000D3D41 /* StarWarsAPI.swift */; };
 		D7BA268B22037EBF007E88AD /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA268722037EBF007E88AD /* ObjectMapper.framework */; };
 		D7BA268C22037EBF007E88AD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA268822037EBF007E88AD /* Alamofire.framework */; };
 		D7BA268D22037EBF007E88AD /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA268922037EBF007E88AD /* RxSwift.framework */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D737DEAA220F45C8000D3D41 /* StarWarsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAPI.swift; sourceTree = "<group>"; };
 		D7BA268722037EBF007E88AD /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = ../Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		D7BA268822037EBF007E88AD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		D7BA268922037EBF007E88AD /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				D7F772C622036E5100A23DF9 /* PageResponse.swift */,
 				D7F772AD22036E3300A23DF9 /* Network.h */,
 				D7F772AE22036E3300A23DF9 /* Info.plist */,
+				D737DEAA220F45C8000D3D41 /* StarWarsAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D737DEAB220F45C8000D3D41 /* StarWarsAPI.swift in Sources */,
 				D7F772C522036E4D00A23DF9 /* NetworkService.swift in Sources */,
 				D7F772CB22036EA200A23DF9 /* OldStarWarsAPI.swift in Sources */,
 				D7F772CA22036EA200A23DF9 /* HoloDexError.swift in Sources */,
