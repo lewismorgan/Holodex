@@ -1,5 +1,6 @@
 github "ReactiveX/RxSwift" ~> 4.0
 github "RxSwiftCommunity/Action" ~> 3.0
+github "RxSwiftCommunity/RxDataSources" ~> 3.0
 github "tristanhimmelman/ObjectMapper" ~> 3.4
 github "Alamofire/Alamofire" ~> 4.0
 github "tristanhimmelman/AlamofireObjectMapper" ~> 5.0
