@@ -6,12 +6,11 @@
 //  Copyright © 2018 Lewis J Morgan. All rights reserved.
 //
 
+import Network
 import RxSwift
 
-/// A PeopleService that returns static data
-public class StaticPeopleService: PeopleService {
-  public init() {
-  }
+/// Extension method for static data from the StarWarsAPI
+public extension StarWarsAPI {
 
   public func fetchPeople(page: Int) -> Single<([Person], Int?)> {
     var items = [Person]()

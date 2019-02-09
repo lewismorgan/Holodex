@@ -22,6 +22,10 @@ public struct Person: Mappable, Codable {
   public init() {
   }
 
+  public init(name: String) {
+    self.name = name
+  }
+
   public init?(map: Map) {
   }
 

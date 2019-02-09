@@ -8,14 +8,15 @@
 
 import RxSwift
 import RxCocoa
-import People
 import XCoordinator
+import Network
+import People
 
 class PersonListViewModelImpl: PersonListViewModel {
 
   // MARK: - Input
 
-  var search: Driver<String>
+  //var search: Driver<String>
 
   // MARK: - Output
 
@@ -26,11 +27,10 @@ class PersonListViewModelImpl: PersonListViewModel {
   private let router: AnyRouter<PeopleListRoute>
 
   init(router: AnyRouter<PeopleListRoute>,
-       search: Driver<String>,
-       people: Observable<[Person]>) {
+       swapi: StarWarsAPI) {
     self.router = router
 
-    self.search = search
-    self.people = people
+    //self.search = search
+    self.people = swapi.fetchMultiplePeople(startPage: 0, endPage: 5)
   }
 }

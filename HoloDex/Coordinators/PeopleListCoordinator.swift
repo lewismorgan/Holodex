@@ -8,6 +8,7 @@
 
 import UIKit
 import XCoordinator
+import Network
 import People
 
 enum PeopleListRoute: Route {
@@ -17,10 +18,12 @@ enum PeopleListRoute: Route {
 }
 
 class PeopleListCoordinator: NavigationCoordinator<PeopleListRoute> {
+  private let swapi: StarWarsAPI!
 
   // MARK: - Init
 
-  init() {
+  init(swapi: StarWarsAPI) {
+    self.swapi = swapi
     super.init(initialRoute: .home)
   }
 
@@ -30,12 +33,13 @@ class PeopleListCoordinator: NavigationCoordinator<PeopleListRoute> {
     switch route {
     case .home, .persons:
       let viewController = PersonListViewController()
-      // TODO: - ViewModel Binding
+      let viewModel = PersonListViewModelImpl(router: self.anyRouter,
+                                              swapi: swapi)
+      viewController.bind(to: viewModel)
       return .push(viewController)
     case .person:
       // TODO: - PersonViewController & PersonView
       let viewController = UIViewController()
-      // TODO: - ViewModel Binding
       return .push(viewController)
     }
   }

@@ -15,7 +15,7 @@ protocol PersonListViewModel {
 
   // MARK: - Input
 
-  var search: Driver<String> { get }
+  //var search: Driver<String> { get }
 
   // MARK: - Output
 

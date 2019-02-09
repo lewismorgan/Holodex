@@ -34,7 +34,7 @@ class PersonListViewController: UIViewController, ViewModelBinding {
   // MARK: - ViewModelBinding
 
   func createBinding() {
-    // TODO: - Add in data binding from table and search
+    // TODO: - Add In data binding for Search
   }
 
   // MARK: - View Controller Overrides
