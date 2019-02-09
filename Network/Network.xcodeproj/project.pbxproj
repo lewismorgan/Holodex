@@ -17,7 +17,7 @@
 		D7F772C522036E4D00A23DF9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F772C422036E4D00A23DF9 /* NetworkService.swift */; };
 		D7F772C722036E5100A23DF9 /* PageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F772C622036E5100A23DF9 /* PageResponse.swift */; };
 		D7F772CA22036EA200A23DF9 /* HoloDexError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F772C822036EA100A23DF9 /* HoloDexError.swift */; };
-		D7F772CB22036EA200A23DF9 /* StarWarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F772C922036EA200A23DF9 /* StarWarsAPI.swift */; };
+		D7F772CB22036EA200A23DF9 /* OldStarWarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F772C922036EA200A23DF9 /* OldStarWarsAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +44,7 @@
 		D7F772C422036E4D00A23DF9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		D7F772C622036E5100A23DF9 /* PageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageResponse.swift; sourceTree = "<group>"; };
 		D7F772C822036EA100A23DF9 /* HoloDexError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoloDexError.swift; sourceTree = "<group>"; };
-		D7F772C922036EA200A23DF9 /* StarWarsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAPI.swift; sourceTree = "<group>"; };
+		D7F772C922036EA200A23DF9 /* OldStarWarsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldStarWarsAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,7 @@
 		D7F772AC22036E3300A23DF9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				D7F772C922036EA200A23DF9 /* StarWarsAPI.swift */,
+				D7F772C922036EA200A23DF9 /* OldStarWarsAPI.swift */,
 				D7F772C822036EA100A23DF9 /* HoloDexError.swift */,
 				D7F772C422036E4D00A23DF9 /* NetworkService.swift */,
 				D7F772C622036E5100A23DF9 /* PageResponse.swift */,
@@ -231,7 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7F772C522036E4D00A23DF9 /* NetworkService.swift in Sources */,
-				D7F772CB22036EA200A23DF9 /* StarWarsAPI.swift in Sources */,
+				D7F772CB22036EA200A23DF9 /* OldStarWarsAPI.swift in Sources */,
 				D7F772CA22036EA200A23DF9 /* HoloDexError.swift in Sources */,
 				D7F772C722036E5100A23DF9 /* PageResponse.swift in Sources */,
 			);

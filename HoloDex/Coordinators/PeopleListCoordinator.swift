@@ -18,11 +18,11 @@ enum PeopleListRoute: Route {
 }
 
 class PeopleListCoordinator: NavigationCoordinator<PeopleListRoute> {
-  private let swapi: StarWarsAPI!
+  private let swapi: OldStarWarsAPI!
 
   // MARK: - Init
 
-  init(swapi: StarWarsAPI) {
+  init(swapi: OldStarWarsAPI) {
     self.swapi = swapi
     super.init(initialRoute: .home)
   }
