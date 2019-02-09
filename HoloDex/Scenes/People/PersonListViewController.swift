@@ -10,16 +10,19 @@ import People
 import UIKit
 import RxSwift
 import RxCocoa
+import RxDataSources
 
 class PersonListViewController: UIViewController, ViewModelBinding {
+  private static let NIB_NAME = "PersonListView"
   var viewModel: PersonListViewModel!
 
-  private static let NIB_NAME = "PersonListView"
+  // MARK: - Private
+
+  private let bag = DisposeBag()
 
   // MARK: - Views
 
-  @IBOutlet var tableView: UITableView!
-  @IBOutlet var search: UISearchBar!
+  @IBOutlet weak public var tableView: UITableView!
 
   // MARK: - Initialization
 
@@ -34,10 +37,17 @@ class PersonListViewController: UIViewController, ViewModelBinding {
   // MARK: - ViewModelBinding
 
   func createBinding() {
-    // TODO: - Add In data binding for Search
+    viewModel.people.bind(to: tableView.rx.items(cellIdentifier: "PersonCell")) { _, model, cell in
+      cell.textLabel?.text = model.name
+    }.disposed(by: bag)
   }
 
   // MARK: - View Controller Overrides
+
+  override func viewDidLoad() {
+    tableView.register(PersonCell.self, forCellReuseIdentifier: "PersonCell")
+    createBinding()
+  }
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
@@ -48,27 +58,12 @@ class PersonListViewController: UIViewController, ViewModelBinding {
   }
 }
 
-extension PersonListViewController: UITableViewDataSource, UITableViewDelegate {
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //let person = people[indexPath.row]
-
-    // TODO: - Call ViewModel's router transition here ?
-
+class PersonCell: UITableViewCell {
+  override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+    super.init(style: style, reuseIdentifier: reuseIdentifier)
   }
 
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 0
-  }
-
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "PersonListViewCell",
-                                             for: indexPath)
-    return cell
-  }
-
-  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    // The UITableView will call the cell's sizeThatFit() method to compute the height.
-    // WANRING: You must also set the UITableView.estimatedRowHeight for this to work.
-    return UITableView.automaticDimension
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
   }
 }

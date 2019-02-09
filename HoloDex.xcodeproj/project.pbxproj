@@ -23,6 +23,7 @@
 		D77DC9E4220E4E830003453C /* Network.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D77DC9E2220E4E830003453C /* Network.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D7A1D762220E31BF00286709 /* PersonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1D761220E31BF00286709 /* PersonListViewModel.swift */; };
 		D7ADA35F220E57A50057546B /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7ADA35E220E57A50057546B /* RxDataSources.framework */; };
+		D7ADA361220E596C0057546B /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7ADA360220E596C0057546B /* Differentiator.framework */; };
 		D7BA267522037CA6007E88AD /* XCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA266D22037CA5007E88AD /* XCoordinator.framework */; };
 		D7BA267622037CA6007E88AD /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA266E22037CA5007E88AD /* RxCocoa.framework */; };
 		D7BA267722037CA6007E88AD /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA266F22037CA5007E88AD /* ObjectMapper.framework */; };
@@ -78,6 +79,7 @@
 		D77DC9E2220E4E830003453C /* Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A1D761220E31BF00286709 /* PersonListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewModel.swift; sourceTree = "<group>"; };
 		D7ADA35E220E57A50057546B /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
+		D7ADA360220E596C0057546B /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
 		D7BA266C22037CA5007E88AD /* FlexLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlexLayout.framework; path = Carthage/Build/iOS/FlexLayout.framework; sourceTree = "<group>"; };
 		D7BA266D22037CA5007E88AD /* XCoordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinator.framework; path = Carthage/Build/iOS/XCoordinator.framework; sourceTree = "<group>"; };
 		D7BA266E22037CA5007E88AD /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7ADA361220E596C0057546B /* Differentiator.framework in Frameworks */,
 				D7ADA35F220E57A50057546B /* RxDataSources.framework in Frameworks */,
 				D750042D220E350F0098FCA5 /* Action.framework in Frameworks */,
 				D7BA267B22037CA6007E88AD /* RxSwift.framework in Frameworks */,
@@ -212,6 +215,7 @@
 		F019FED0A88DF487CE749D40 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D7ADA360220E596C0057546B /* Differentiator.framework */,
 				D7ADA35E220E57A50057546B /* RxDataSources.framework */,
 				D750042C220E350F0098FCA5 /* Action.framework */,
 				D7BA26982203837B007E88AD /* RxAtomic.framework */,
@@ -359,6 +363,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxAtomic.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Action.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxDataSources.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Differentiator.framework",
 			);
 			name = "[ Carthage - Copy Frameworks ]";
 			outputFileListPaths = (
@@ -373,6 +378,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxAtomic.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Action.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxDataSources.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Differentiator.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -11,6 +11,5 @@ import UIKit
 extension ViewModelBinding where Self: UIViewController {
   func bind(to model: Self.ViewModelType) {
     viewModel = model
-    createBinding()
   }
 }
