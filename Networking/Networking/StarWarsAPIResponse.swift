@@ -8,11 +8,11 @@
 
 import ObjectMapper
 
-public class StarWarsAPIResponse: Mappable {
+public class StarWarsAPIResponse<T: Mappable>: Mappable {
   public var count: Int = 0
   public var next: String = ""
   public var previous: String = ""
-  public var results: [[String: Any]] = []
+  public var results: [T] = []
 
   public init() {
 

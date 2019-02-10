@@ -36,6 +36,8 @@
 		D7F747FB220FCE7200172F7B /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F747F9220FCE3F00172F7B /* ObjectMapper.framework */; };
 		D7F747FC220FCE7F00172F7B /* ObjectMapper.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D7F747F9220FCE3F00172F7B /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D7F747FE220FD0FF00172F7B /* StarWarsAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F747FD220FD0FF00172F7B /* StarWarsAPIResponse.swift */; };
+		D7F74800220FFE3100172F7B /* StarWarsAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F747FF220FFE3100172F7B /* StarWarsAPIError.swift */; };
+		D7F74802220FFE5500172F7B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F74801220FFE5500172F7B /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		D7F747F6220FC76100172F7B /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = ../Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		D7F747F9220FCE3F00172F7B /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = ../Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		D7F747FD220FD0FF00172F7B /* StarWarsAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAPIResponse.swift; sourceTree = "<group>"; };
+		D7F747FF220FFE3100172F7B /* StarWarsAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAPIError.swift; sourceTree = "<group>"; };
+		D7F74801220FFE5500172F7B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,7 +149,9 @@
 			isa = PBXGroup;
 			children = (
 				D7CCDCCC220FA1A000623068 /* StarWarsAPI.swift */,
+				D7F747FF220FFE3100172F7B /* StarWarsAPIError.swift */,
 				D7F747FD220FD0FF00172F7B /* StarWarsAPIResponse.swift */,
+				D7F74801220FFE5500172F7B /* Extensions.swift */,
 				D7CCDC8D220F9AE200623068 /* Networking.h */,
 				D7CCDC8E220F9AE200623068 /* Info.plist */,
 			);
@@ -291,6 +297,8 @@
 			files = (
 				D7F747FE220FD0FF00172F7B /* StarWarsAPIResponse.swift in Sources */,
 				D7CCDCCD220FA1A000623068 /* StarWarsAPI.swift in Sources */,
+				D7F74800220FFE3100172F7B /* StarWarsAPIError.swift in Sources */,
+				D7F74802220FFE5500172F7B /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
