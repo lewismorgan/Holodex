@@ -20,34 +20,31 @@ class StarWarsAPITests: QuickSpec {
   override func spec() {
     describe("a Star Wars API") {
       var swapi: StarWarsAPI!
+      var endpoint: String = ""
 
       beforeEach {
         swapi = StarWarsAPI()
+        endpoint = "planets"
       }
 
       describe("building a request") {
         it("creates a request to the API") {
-          let result = try! swapi.buildRequest(endpoint: "planets", type: NamedResult.self).toBlocking().first()!
-          expect(result.results.count) != 0
+          let result = try! swapi.buildRequest(endpoint: "\(endpoint)/1/", type: NamedResult.self).toBlocking().first()!
+          expect(result.name) == "Tatooine"
         }
       }
       
       describe("building a next page request") {
-        var baseRequest: StarWarsAPIResponse<NamedResult>!
-        beforeEach {
-          baseRequest = StarWarsAPIResponse<NamedResult>()
-          baseRequest.next = "https://swapi.co/api/planets/?page=2&format=json"
-        }
-        it("builds a request for the next page") {
-          let request = try! swapi.buildNextRequest(current: baseRequest, type: NamedResult.self).toBlocking().first()!
-          expect(request.previous) == "https://swapi.co/api/planets/?page=1&format=json"
-        }
-        it("sends an error upstream if there are no more pages") {
-          baseRequest.next = ""
-          let materialized = swapi.buildNextRequest(current: baseRequest, type: NamedResult.self).toBlocking().materialize()
-          expect(materialized).to(self.beFailed { _, error  in
-            expect(error as? StarWarsAPIError).to(equal(StarWarsAPIError.noPages))
-          })
+        let nPages = 3
+        it("builds a paged request for 3 pages") {
+          let trigger = PublishSubject<Void>()
+          let request = swapi.buildPageRequest(endpoint: endpoint, page: 1,
+                                               loadNext: trigger.asObservable().startWith(()), type: NamedResult.self).take(nPages)
+          
+          let items = try! request.toBlocking().toArray()
+          
+          // There should be nPages of arrays emitted by the stream
+          expect(items.count) == nPages
         }
       }
     }

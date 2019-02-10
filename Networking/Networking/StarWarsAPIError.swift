@@ -6,7 +6,7 @@
 //  Copyright © 2019 Lewis Morgan. All rights reserved.
 //
 
-enum StarWarsAPIError: Error, Equatable {
+public enum StarWarsAPIError: Error, Equatable {
   case noPages
   case badEndpoint
   case nullMapping
