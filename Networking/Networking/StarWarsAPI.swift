@@ -29,8 +29,9 @@ class StarWarsAPI {
   func buildRequest<T: Mappable>(endpoint: String,
                                  params: [String: Any] = [:], type: T.Type) -> Observable<StarWarsAPIResponse<T>> {
     return createRequest(endpoint: endpoint, params: params.merging(["format": "json"]) { $1 }).map { result in
-      // TODO: - Safely unwrap
-      let response = Mapper<StarWarsAPIResponse<T>>().map(JSONObject: result)!
+      guard let response = Mapper<StarWarsAPIResponse<T>>().map(JSONObject: result) else {
+        throw StarWarsAPIError.nullMapping
+      }
       return response
     }
   }
