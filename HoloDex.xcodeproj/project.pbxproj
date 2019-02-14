@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D750042D220E350F0098FCA5 /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D750042C220E350F0098FCA5 /* Action.framework */; };
-		D75087B722161E3400337E4B /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75087B622161E3400337E4B /* Networking.framework */; };
-		D75087B922161E3400337E4B /* People.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75087B822161E3400337E4B /* People.framework */; };
 		D75958BC220394D300BAFCC1 /* PersonListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D75958BB220394D300BAFCC1 /* PersonListView.xib */; };
 		D75A341121093428003A4C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75A341021093428003A4C6D /* AppDelegate.swift */; };
 		D75A341821093429003A4C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D75A341721093429003A4C6D /* Assets.xcassets */; };
@@ -19,6 +17,11 @@
 		D77DC9D9220E3FFC0003453C /* PersonListViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77DC9D8220E3FFC0003453C /* PersonListViewModelImpl.swift */; };
 		D77DC9DC220E441F0003453C /* ViewModelBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77DC9DB220E441F0003453C /* ViewModelBinding.swift */; };
 		D77DC9DE220E44660003453C /* UIViewController+ViewModelBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77DC9DD220E44660003453C /* UIViewController+ViewModelBinding.swift */; };
+		D78B1D56221623B700253FDB /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78B1D55221623B700253FDB /* RxAlamofire.framework */; };
+		D78B1D63221624B000253FDB /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78B1D62221624B000253FDB /* Networking.framework */; };
+		D78B1D64221624B000253FDB /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D78B1D62221624B000253FDB /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D78B1D66221624B000253FDB /* People.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78B1D65221624B000253FDB /* People.framework */; };
+		D78B1D67221624B000253FDB /* People.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D78B1D65221624B000253FDB /* People.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D7A1D762220E31BF00286709 /* PersonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1D761220E31BF00286709 /* PersonListViewModel.swift */; };
 		D7ADA35F220E57A50057546B /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7ADA35E220E57A50057546B /* RxDataSources.framework */; };
 		D7ADA361220E596C0057546B /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7ADA360220E596C0057546B /* Differentiator.framework */; };
@@ -43,12 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D7BA26A022038477007E88AD /* Embed Frameworks */ = {
+		D78B1D5F2216248400253FDB /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				D78B1D64221624B000253FDB /* Networking.framework in Embed Frameworks */,
+				D78B1D67221624B000253FDB /* People.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,8 +64,6 @@
 		D7362733211CF804003F54FC /* HoloDexUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoloDexUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7362737211CF804003F54FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D750042C220E350F0098FCA5 /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
-		D75087B622161E3400337E4B /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D75087B822161E3400337E4B /* People.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = People.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75958BB220394D300BAFCC1 /* PersonListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonListView.xib; sourceTree = "<group>"; };
 		D75A340D21093428003A4C6D /* HoloDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoloDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75A341021093428003A4C6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,16 +75,16 @@
 		D77DC9D8220E3FFC0003453C /* PersonListViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewModelImpl.swift; sourceTree = "<group>"; };
 		D77DC9DB220E441F0003453C /* ViewModelBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBinding.swift; sourceTree = "<group>"; };
 		D77DC9DD220E44660003453C /* UIViewController+ViewModelBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ViewModelBinding.swift"; sourceTree = "<group>"; };
+		D78B1D55221623B700253FDB /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = "<group>"; };
+		D78B1D62221624B000253FDB /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D78B1D65221624B000253FDB /* People.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = People.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A1D761220E31BF00286709 /* PersonListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewModel.swift; sourceTree = "<group>"; };
 		D7ADA35E220E57A50057546B /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
 		D7ADA360220E596C0057546B /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
-		D7BA266C22037CA5007E88AD /* FlexLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlexLayout.framework; path = Carthage/Build/iOS/FlexLayout.framework; sourceTree = "<group>"; };
 		D7BA266D22037CA5007E88AD /* XCoordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinator.framework; path = Carthage/Build/iOS/XCoordinator.framework; sourceTree = "<group>"; };
 		D7BA266E22037CA5007E88AD /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		D7BA266F22037CA5007E88AD /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		D7BA267022037CA5007E88AD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		D7BA267122037CA5007E88AD /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
-		D7BA267222037CA5007E88AD /* PinLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PinLayout.framework; path = Carthage/Build/iOS/PinLayout.framework; sourceTree = "<group>"; };
 		D7BA267322037CA5007E88AD /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		D7BA26982203837B007E88AD /* RxAtomic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAtomic.framework; path = Carthage/Build/iOS/RxAtomic.framework; sourceTree = "<group>"; };
 		D7C857D421FFACBF00DA33A0 /* PeopleListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListCoordinator.swift; sourceTree = "<group>"; };
@@ -100,11 +103,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D75087B722161E3400337E4B /* Networking.framework in Frameworks */,
-				D75087B922161E3400337E4B /* People.framework in Frameworks */,
+				D78B1D56221623B700253FDB /* RxAlamofire.framework in Frameworks */,
+				D78B1D63221624B000253FDB /* Networking.framework in Frameworks */,
 				D7ADA361220E596C0057546B /* Differentiator.framework in Frameworks */,
 				D7ADA35F220E57A50057546B /* RxDataSources.framework in Frameworks */,
 				D750042D220E350F0098FCA5 /* Action.framework in Frameworks */,
+				D78B1D66221624B000253FDB /* People.framework in Frameworks */,
 				D7BA267B22037CA6007E88AD /* RxSwift.framework in Frameworks */,
 				D7BA267722037CA6007E88AD /* ObjectMapper.framework in Frameworks */,
 				D7BA267522037CA6007E88AD /* XCoordinator.framework in Frameworks */,
@@ -139,6 +143,8 @@
 			children = (
 				D75A340F21093428003A4C6D /* HoloDex */,
 				D7362734211CF804003F54FC /* HoloDexUnitTests */,
+				D78B1D65221624B000253FDB /* People.framework */,
+				D78B1D62221624B000253FDB /* Networking.framework */,
 				D75A340E21093428003A4C6D /* Products */,
 				F019FED0A88DF487CE749D40 /* Frameworks */,
 			);
@@ -207,17 +213,13 @@
 		F019FED0A88DF487CE749D40 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D75087B622161E3400337E4B /* Networking.framework */,
-				D75087B822161E3400337E4B /* People.framework */,
+				D78B1D55221623B700253FDB /* RxAlamofire.framework */,
 				D7ADA360220E596C0057546B /* Differentiator.framework */,
 				D7ADA35E220E57A50057546B /* RxDataSources.framework */,
 				D750042C220E350F0098FCA5 /* Action.framework */,
 				D7BA26982203837B007E88AD /* RxAtomic.framework */,
 				D7BA267022037CA5007E88AD /* Alamofire.framework */,
-				D7BA267122037CA5007E88AD /* AlamofireObjectMapper.framework */,
-				D7BA266C22037CA5007E88AD /* FlexLayout.framework */,
 				D7BA266F22037CA5007E88AD /* ObjectMapper.framework */,
-				D7BA267222037CA5007E88AD /* PinLayout.framework */,
 				D7BA266E22037CA5007E88AD /* RxCocoa.framework */,
 				D7BA267322037CA5007E88AD /* RxSwift.framework */,
 				D7BA266D22037CA5007E88AD /* XCoordinator.framework */,
@@ -255,7 +257,7 @@
 				D75A340A21093428003A4C6D /* Frameworks */,
 				D75A340B21093428003A4C6D /* Resources */,
 				D7BA267C22037CE8007E88AD /* [ Carthage - Copy Frameworks ] */,
-				D7BA26A022038477007E88AD /* Embed Frameworks */,
+				D78B1D5F2216248400253FDB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -349,7 +351,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxAlamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/XCoordinator.framework",
@@ -364,7 +366,7 @@
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireObjectMapper.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxAlamofire.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ObjectMapper.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
