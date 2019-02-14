@@ -14,6 +14,9 @@ import RxAlamofire
 public class StarWarsAPI: NetworkingAPI {
   private static let baseUrl = "https://swapi.co/api/"
 
+  public init() {
+  }
+
   // MARK: - Private
 
   private func createRequest(endpoint: String, params: [String: Any]) -> Observable<Any> {
