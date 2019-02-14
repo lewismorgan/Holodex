@@ -18,12 +18,12 @@ enum PeopleListRoute: Route {
 }
 
 class PeopleListCoordinator: NavigationCoordinator<PeopleListRoute> {
-  private let swapi: OldStarWarsAPI!
+  private let endpoint: PeopleEndpoint!
 
   // MARK: - Init
 
-  init(swapi: OldStarWarsAPI) {
-    self.swapi = swapi
+  init(endpoint: PeopleEndpoint) {
+    self.endpoint = endpoint
     super.init(initialRoute: .home)
   }
 
@@ -34,7 +34,7 @@ class PeopleListCoordinator: NavigationCoordinator<PeopleListRoute> {
     case .home, .persons:
       let viewController = PersonListViewController()
       let viewModel = PersonListViewModelImpl(router: self.anyRouter,
-                                              swapi: swapi)
+                                              endpoint: endpoint)
       viewController.bind(to: viewModel)
       return .push(viewController)
     case .person:

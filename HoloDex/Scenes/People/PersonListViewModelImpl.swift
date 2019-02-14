@@ -27,10 +27,10 @@ class PersonListViewModelImpl: PersonListViewModel {
   private let router: AnyRouter<PeopleListRoute>
 
   init(router: AnyRouter<PeopleListRoute>,
-       swapi: OldStarWarsAPI) {
+       endpoint: PeopleEndpoint) {
     self.router = router
 
     //self.search = search
-    self.people = swapi.fetchMultiplePeople(startPage: 0, endPage: 5)
+    self.people = endpoint.getPeople(from: 1)
   }
 }

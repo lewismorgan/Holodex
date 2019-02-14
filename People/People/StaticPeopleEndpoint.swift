@@ -11,6 +11,9 @@ import RxSwift
 
 /// People Endpoint that does not make any actual network requests
 public class StaticPeopleEndpoint: PeopleEndpoint {
+  public init() {
+  }
+  
   public func getPeople(from page: Int) -> Observable<[Person]> {
     return Observable.empty()
   }
