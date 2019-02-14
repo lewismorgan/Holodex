@@ -27,7 +27,7 @@ class PersonListViewModelImpl: PersonListViewModel {
   private let router: AnyRouter<PeopleListRoute>
 
   init(router: AnyRouter<PeopleListRoute>,
-       swapi: StarWarsAPI) {
+       swapi: OldStarWarsAPI) {
     self.router = router
 
     //self.search = search

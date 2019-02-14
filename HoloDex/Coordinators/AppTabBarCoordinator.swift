@@ -12,7 +12,7 @@ import Network
 import People
 
 class AppTabBarCoordinator: TabBarCoordinator<AppRoute> {
-  private let swapi: StarWarsAPI!
+  private let swapi: OldStarWarsAPI!
   private let peopleRouter: AnyRouter<PeopleListRoute>
 
   // MARK: - Init
@@ -20,7 +20,7 @@ class AppTabBarCoordinator: TabBarCoordinator<AppRoute> {
   // MARK: - TODO: Add tab bar items to coordinators generated vc's
 
   init() {
-    self.swapi = StarWarsAPI()
+    self.swapi = OldStarWarsAPI()
     self.peopleRouter = PeopleListCoordinator(swapi: swapi).anyRouter
 
     super.init(tabs: [peopleRouter], select: peopleRouter)

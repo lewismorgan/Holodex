@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		D7376241211E773800E58C0C /* People.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7376237211E773800E58C0C /* People.framework */; };
-		D7376246211E773800E58C0C /* PeopleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7376245211E773800E58C0C /* PeopleTests.swift */; };
 		D7376248211E773800E58C0C /* People.h in Headers */ = {isa = PBXBuildFile; fileRef = D737623A211E773800E58C0C /* People.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D7376256211E776500E58C0C /* NetworkPeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7376252211E775500E58C0C /* NetworkPeopleService.swift */; };
 		D7376257211E776500E58C0C /* PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7376253211E775500E58C0C /* PeopleService.swift */; };
 		D7376258211E776500E58C0C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7376251211E775500E58C0C /* Person.swift */; };
 		D7376259211E776500E58C0C /* StaticPeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7376254211E775500E58C0C /* StaticPeopleService.swift */; };
-		D737625B211E77A500E58C0C /* StaticPeopleServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D737625A211E77A500E58C0C /* StaticPeopleServiceSpec.swift */; };
-		D7BA269622037F3E007E88AD /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA269522037F3E007E88AD /* Network.framework */; };
+		D7B93C75221079E1005F33B0 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B93C74221079E1005F33B0 /* Network.framework */; };
+		D7B93C77221079E1005F33B0 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B93C76221079E1005F33B0 /* Networking.framework */; };
+		D7B93C7922107A30005F33B0 /* StarWarsAPI+PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B93C7822107A30005F33B0 /* StarWarsAPI+PeopleService.swift */; };
+		D7B93C7B22107A9F005F33B0 /* PeopleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B93C7A22107A9F005F33B0 /* PeopleAPI.swift */; };
 		D7BA26A5220384DB007E88AD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA26A3220384DB007E88AD /* Alamofire.framework */; };
 		D7BA26A6220384DB007E88AD /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA26A4220384DB007E88AD /* RxSwift.framework */; };
 		D7BA26A8220384EE007E88AD /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA26A7220384EE007E88AD /* ObjectMapper.framework */; };
@@ -36,14 +37,15 @@
 		D737623A211E773800E58C0C /* People.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
 		D737623B211E773800E58C0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7376240211E773800E58C0C /* PeopleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeopleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7376245211E773800E58C0C /* PeopleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTests.swift; sourceTree = "<group>"; };
 		D7376247211E773800E58C0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7376251211E775500E58C0C /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		D7376252211E775500E58C0C /* NetworkPeopleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPeopleService.swift; sourceTree = "<group>"; };
 		D7376253211E775500E58C0C /* PeopleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleService.swift; sourceTree = "<group>"; };
 		D7376254211E775500E58C0C /* StaticPeopleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticPeopleService.swift; sourceTree = "<group>"; };
-		D737625A211E77A500E58C0C /* StaticPeopleServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticPeopleServiceSpec.swift; sourceTree = "<group>"; };
-		D7BA269522037F3E007E88AD /* Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7B93C74221079E1005F33B0 /* Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7B93C76221079E1005F33B0 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7B93C7822107A30005F33B0 /* StarWarsAPI+PeopleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StarWarsAPI+PeopleService.swift"; sourceTree = "<group>"; };
+		D7B93C7A22107A9F005F33B0 /* PeopleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleAPI.swift; sourceTree = "<group>"; };
 		D7BA26A3220384DB007E88AD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		D7BA26A4220384DB007E88AD /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		D7BA26A7220384EE007E88AD /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = ../Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
@@ -54,7 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7BA269622037F3E007E88AD /* Network.framework in Frameworks */,
+				D7B93C75221079E1005F33B0 /* Network.framework in Frameworks */,
+				D7B93C77221079E1005F33B0 /* Networking.framework in Frameworks */,
 				D7BA26A5220384DB007E88AD /* Alamofire.framework in Frameworks */,
 				D7BA26A8220384EE007E88AD /* ObjectMapper.framework in Frameworks */,
 				D7BA26A6220384DB007E88AD /* RxSwift.framework in Frameworks */,
@@ -75,7 +78,8 @@
 		92DCB948F4F1971A0FC46B78 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D7BA269522037F3E007E88AD /* Network.framework */,
+				D7B93C74221079E1005F33B0 /* Network.framework */,
+				D7B93C76221079E1005F33B0 /* Networking.framework */,
 				D7BA26A7220384EE007E88AD /* ObjectMapper.framework */,
 				D7BA26A3220384DB007E88AD /* Alamofire.framework */,
 				D7BA26A4220384DB007E88AD /* RxSwift.framework */,
@@ -109,6 +113,8 @@
 				D7376253211E775500E58C0C /* PeopleService.swift */,
 				D7376252211E775500E58C0C /* NetworkPeopleService.swift */,
 				D7376254211E775500E58C0C /* StaticPeopleService.swift */,
+				D7B93C7A22107A9F005F33B0 /* PeopleAPI.swift */,
+				D7B93C7822107A30005F33B0 /* StarWarsAPI+PeopleService.swift */,
 				D737623A211E773800E58C0C /* People.h */,
 				D737623B211E773800E58C0C /* Info.plist */,
 			);
@@ -118,8 +124,6 @@
 		D7376244211E773800E58C0C /* PeopleTests */ = {
 			isa = PBXGroup;
 			children = (
-				D7376245211E773800E58C0C /* PeopleTests.swift */,
-				D737625A211E77A500E58C0C /* StaticPeopleServiceSpec.swift */,
 				D7376247211E773800E58C0C /* Info.plist */,
 			);
 			path = PeopleTests;
@@ -235,7 +239,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7376258211E776500E58C0C /* Person.swift in Sources */,
+				D7B93C7922107A30005F33B0 /* StarWarsAPI+PeopleService.swift in Sources */,
 				D7376257211E776500E58C0C /* PeopleService.swift in Sources */,
+				D7B93C7B22107A9F005F33B0 /* PeopleAPI.swift in Sources */,
 				D7376259211E776500E58C0C /* StaticPeopleService.swift in Sources */,
 				D7376256211E776500E58C0C /* NetworkPeopleService.swift in Sources */,
 			);
@@ -245,8 +251,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7376246211E773800E58C0C /* PeopleTests.swift in Sources */,
-				D737625B211E77A500E58C0C /* StaticPeopleServiceSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

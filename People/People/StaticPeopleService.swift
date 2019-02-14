@@ -10,7 +10,7 @@ import Network
 import RxSwift
 
 /// Extension method for static data from the StarWarsAPI
-public extension StarWarsAPI {
+public extension OldStarWarsAPI {
 
   public func fetchPeople(page: Int) -> Single<([Person], Int?)> {
     var items = [Person]()

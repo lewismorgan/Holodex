@@ -1,5 +1,5 @@
 //
-//  StarWarsAPI.swift
+//  OldStarWarsAPI.swift
 //  HoloDex
 //
 //  Created by Lewis Morgan on 7/29/18.
@@ -11,8 +11,8 @@ import Alamofire
 import AlamofireObjectMapper
 import RxSwift
 
-/// Connects to the StarWarsAPI
-public class StarWarsAPI {
+/// Connects to the OldStarWarsAPI
+public class OldStarWarsAPI {
   let baseUrl = "https://www.swapi.co/api/"
 
   public init() {
@@ -32,7 +32,7 @@ public class StarWarsAPI {
   }
 }
 
-extension StarWarsAPI: NetworkService {
+extension OldStarWarsAPI: NetworkService {
 
   public func fetchJson<T: Mappable & Codable>(_ url: String, completionHandler: @escaping (Result<T>) -> Void) {
     _ = self.createRequest(url) { (response: DataResponse<T>) in
