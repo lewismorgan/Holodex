@@ -12,7 +12,7 @@ public class PagedResults<T: Mappable> {
   public let count: Int
   public let nextPage: Int
   public let results: [T]
-  
+
   init(count: Int, nextPage: Int, results: [T]) {
     self.count = count
     self.nextPage = nextPage

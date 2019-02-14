@@ -37,7 +37,7 @@ public class StarWarsAPI: NetworkingAPI {
       return response
     }
   }
-  
+
   /// Creates a request for a specific page in the StarWarsAPI
   public func buildPageRequest<T: Mappable>(endpoint: String, page: Int, type: T.Type) -> Observable<PagedResults<T>> {
     return buildRequest(endpoint: endpoint, params: ["page": page], type: StarWarsAPIResponse<T>.self)
@@ -55,9 +55,9 @@ public class StarWarsAPI: NetworkingAPI {
         }
     }
   }
-  
+
   // MARK: - Public Unique Methods
-  
+
   /// Creates a request that has multiple pages that will observe the next page when the trigger has a value emitted
   public func buildStreamingPageRequest<T: Mappable>(endpoint: String, page: Int,
                                                      loadNext trigger: Observable<Void>, type: T.Type) -> Observable<[T]> {

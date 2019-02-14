@@ -13,11 +13,11 @@ import RxSwift
 public class StaticPeopleEndpoint: PeopleEndpoint {
   public init() {
   }
-  
+
   public func getPeople(from page: Int) -> Observable<[Person]> {
     return Observable.empty()
   }
-  
+
   public func getPerson(from id: Int) -> Observable<Person> {
     return Observable.empty()
   }

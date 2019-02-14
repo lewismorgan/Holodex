@@ -10,7 +10,7 @@ public enum NetworkAPIError: Error, Equatable {
   case noPages
   case badEndpoint
   case nullMapping
-  
+
   public static func == (lhs: NetworkAPIError, rhs: NetworkAPIError) -> Bool {
     switch (lhs, rhs) {
     case (.noPages, .noPages):

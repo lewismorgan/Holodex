@@ -16,13 +16,13 @@ extension NSURLComponents {
     let endpoint = path.dropLast().dropFirst(index)
     return String(endpoint)
   }
-  
+
   func queryItemsToDict() -> [String: String] {
     guard let items = self.queryItems else {
       return [:]
     }
     var queryDict: [String: String] = [:]
-    
+
     items.forEach { item in
       queryDict[item.name] = item.value != nil ? item.value : ""
     }
