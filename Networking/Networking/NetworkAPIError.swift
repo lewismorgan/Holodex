@@ -1,17 +1,17 @@
 //
-//  StarWarsAPIError.swift
+//  NetworkAPIError.swift
 //  Networking
 //
 //  Created by Lewis Morgan on 2/10/19.
 //  Copyright © 2019 Lewis Morgan. All rights reserved.
 //
 
-public enum StarWarsAPIError: Error, Equatable {
+public enum NetworkAPIError: Error, Equatable {
   case noPages
   case badEndpoint
   case nullMapping
   
-  public static func == (lhs: StarWarsAPIError, rhs: StarWarsAPIError) -> Bool {
+  public static func == (lhs: NetworkAPIError, rhs: NetworkAPIError) -> Bool {
     switch (lhs, rhs) {
     case (.noPages, .noPages):
       return true

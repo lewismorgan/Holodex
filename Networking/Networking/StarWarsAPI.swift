@@ -11,7 +11,7 @@ import ObjectMapper
 import RxSwift
 import RxAlamofire
 
-public class StarWarsAPI {
+public class StarWarsAPI: NetworkingAPI {
   private static let baseUrl = "https://swapi.co/api/"
 
   // MARK: - Private
@@ -23,17 +23,37 @@ public class StarWarsAPI {
     return json(.get, url, parameters: params)
   }
 
-  // MARK: - Public
+  // MARK: - NetworkingAPI Implementation
 
   /// Creates a request to the StarWarsAPI
   public func buildRequest<T: Mappable>(endpoint: String, params: [String: Any] = [:], type: T.Type) -> Observable<T> {
     return createRequest(endpoint: endpoint, params: params.merging(["format": "json"]) { $1 }).map { result in
       guard let response = Mapper<T>().map(JSONObject: result) else {
-        throw StarWarsAPIError.nullMapping
+        throw NetworkAPIError.nullMapping
       }
       return response
     }
   }
+  
+  /// Creates a request for a specific page in the StarWarsAPI
+  public func buildPageRequest<T: Mappable>(endpoint: String, page: Int, type: T.Type) -> Observable<PagedResults<T>> {
+    return buildRequest(endpoint: endpoint, params: ["page": page], type: StarWarsAPIResponse<T>.self)
+      .flatMap { (response) -> Observable<PagedResults<T>> in
+        // Convert the URL page
+        let components = NSURLComponents(string: response.next)
+        guard let items = components?.queryItemsToDict(), let page = items["page"] else {
+          // There are no more pages
+          return Observable.error(NetworkAPIError.noPages)
+        }
+        if let nextPage = Int(page) {
+          return Observable.just(PagedResults(count: response.count, nextPage: nextPage, results: response.results))
+        } else {
+          return Observable.error(NetworkAPIError.noPages)
+        }
+    }
+  }
+  
+  // MARK: - Public Unique Methods
   
   /// Creates a request that has multiple pages that will observe the next page when the trigger has a value emitted
   public func buildStreamingPageRequest<T: Mappable>(endpoint: String, page: Int,
@@ -51,23 +71,6 @@ public class StarWarsAPI {
                                    self.buildStreamingPageRequest(endpoint: endpoint, page: nextPage, loadNext: trigger, type: type)
                                     .catchErrorJustReturn([]))
         } else { return Observable.just(response.results) }
-    }
-  }
-  
-  public func buildPageRequest<T: Mappable>(endpoint: String, page: Int, type: T.Type) -> Observable<PagedResults<T>> {
-    return buildRequest(endpoint: endpoint, params: ["page": page], type: StarWarsAPIResponse<T>.self)
-      .flatMap { (response) -> Observable<PagedResults<T>> in
-        // Convert the URL page
-        let components = NSURLComponents(string: response.next)
-        guard let items = components?.queryItemsToDict(), let page = items["page"] else {
-          // There are no more pages
-          return Observable.error(StarWarsAPIError.noPages)
-        }
-        if let nextPage = Int(page) {
-          return Observable.just(PagedResults(count: response.count, nextPage: nextPage, results: response.results))
-        } else {
-          return Observable.error(StarWarsAPIError.noPages)
-        }
     }
   }
 }
