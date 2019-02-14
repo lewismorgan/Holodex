@@ -36,8 +36,8 @@ public class StarWarsAPI {
   }
   
   /// Creates a request that has multiple pages that will observe the next page when the trigger has a value emitted
-  public func buildPageRequest<T: Mappable>(endpoint: String, page: Int = 1,
-                                             loadNext trigger: Observable<Void>, type: T.Type) -> Observable<[T]> {
+  public func buildStreamingPageRequest<T: Mappable>(endpoint: String, page: Int,
+                                                     loadNext trigger: Observable<Void>, type: T.Type) -> Observable<[T]> {
     return buildRequest(endpoint: endpoint, params: ["page": page], type: StarWarsAPIResponse<T>.self)
       .flatMap { (response) -> Observable<[T]> in
         let components = NSURLComponents(string: response.next)
@@ -46,9 +46,28 @@ public class StarWarsAPI {
           return Observable.of(response.results)
         }
         if let nextPage = Int(page) {
-          return Observable.concat(Observable.of(response.results), Observable.never().takeUntil(trigger),
-                                   self.buildPageRequest(endpoint: endpoint, page: nextPage, loadNext: trigger, type: type))
-        } else { return Observable.of(response.results) }
+          return Observable.concat(Observable.just(response.results),
+                                   Observable.never().takeUntil(trigger),
+                                   self.buildStreamingPageRequest(endpoint: endpoint, page: nextPage, loadNext: trigger, type: type)
+                                    .catchErrorJustReturn([]))
+        } else { return Observable.just(response.results) }
+    }
+  }
+  
+  public func buildPageRequest<T: Mappable>(endpoint: String, page: Int, type: T.Type) -> Observable<PagedResults<T>> {
+    return buildRequest(endpoint: endpoint, params: ["page": page], type: StarWarsAPIResponse<T>.self)
+      .flatMap { (response) -> Observable<PagedResults<T>> in
+        // Convert the URL page
+        let components = NSURLComponents(string: response.next)
+        guard let items = components?.queryItemsToDict(), let page = items["page"] else {
+          // There are no more pages
+          return Observable.error(StarWarsAPIError.noPages)
+        }
+        if let nextPage = Int(page) {
+          return Observable.just(PagedResults(count: response.count, nextPage: nextPage, results: response.results))
+        } else {
+          return Observable.error(StarWarsAPIError.noPages)
+        }
     }
   }
 }

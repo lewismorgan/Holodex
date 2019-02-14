@@ -16,6 +16,7 @@
 		D76ADCBE220FA4EC00EE06FA /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D76ADCB9220FA4CB00EE06FA /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D76ADCBF220FA4EC00EE06FA /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D76ADCB8220FA4CB00EE06FA /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D76ADCC0220FA4ED00EE06FA /* RxTest.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D76ADCBA220FA4CB00EE06FA /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D7711CBF2215FA9A000A04F2 /* PagedResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7711CBE2215FA9A000A04F2 /* PagedResults.swift */; };
 		D7CCDC94220F9AE200623068 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7CCDC8A220F9AE200623068 /* Networking.framework */; };
 		D7CCDC9B220F9AE200623068 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = D7CCDC8D220F9AE200623068 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D7CCDCAE220F9D6600623068 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7CCDCAB220F9D6600623068 /* Alamofire.framework */; };
@@ -77,6 +78,7 @@
 		D76ADCB8220FA4CB00EE06FA /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = ../Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		D76ADCB9220FA4CB00EE06FA /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = ../Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		D76ADCBA220FA4CB00EE06FA /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = ../Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		D7711CBE2215FA9A000A04F2 /* PagedResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedResults.swift; sourceTree = "<group>"; };
 		D7CCDC8A220F9AE200623068 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7CCDC8D220F9AE200623068 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		D7CCDC8E220F9AE200623068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				D7CCDCCC220FA1A000623068 /* StarWarsAPI.swift */,
 				D7F747FF220FFE3100172F7B /* StarWarsAPIError.swift */,
 				D7F747FD220FD0FF00172F7B /* StarWarsAPIResponse.swift */,
+				D7711CBE2215FA9A000A04F2 /* PagedResults.swift */,
 				D7F74801220FFE5500172F7B /* Extensions.swift */,
 				D7CCDC8D220F9AE200623068 /* Networking.h */,
 				D7CCDC8E220F9AE200623068 /* Info.plist */,
@@ -298,6 +301,7 @@
 				D7F747FE220FD0FF00172F7B /* StarWarsAPIResponse.swift in Sources */,
 				D7CCDCCD220FA1A000623068 /* StarWarsAPI.swift in Sources */,
 				D7F74800220FFE3100172F7B /* StarWarsAPIError.swift in Sources */,
+				D7711CBF2215FA9A000A04F2 /* PagedResults.swift in Sources */,
 				D7F74802220FFE5500172F7B /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,6 +19,7 @@ import ObjectMapper
 class StarWarsAPITests: QuickSpec {
   override func spec() {
     describe("a Star Wars API") {
+      // Setup
       var swapi: StarWarsAPI!
       var endpoint: String = ""
 
@@ -27,18 +28,18 @@ class StarWarsAPITests: QuickSpec {
         endpoint = "planets"
       }
 
+      // Method Tests
       describe("building a request") {
         it("creates a request to the API") {
           let result = try! swapi.buildRequest(endpoint: "\(endpoint)/1/", type: NamedResult.self).toBlocking().first()!
           expect(result.name) == "Tatooine"
         }
       }
-      
-      describe("building a next page request") {
+      describe("building a streaming page request") {
         let nPages = 3
-        it("builds a paged request for 3 pages") {
+        it("builds a streaming paged request with a trigger for \(nPages) pages") {
           let trigger = PublishSubject<Void>()
-          let request = swapi.buildPageRequest(endpoint: endpoint, page: 1,
+          let request = swapi.buildStreamingPageRequest(endpoint: endpoint, page: 1,
                                                loadNext: trigger.asObservable().startWith(()), type: NamedResult.self).take(nPages)
           
           let items = try! request.toBlocking().toArray()
@@ -47,21 +48,19 @@ class StarWarsAPITests: QuickSpec {
           expect(items.count) == nPages
         }
       }
-    }
-  }
-  
-  private func beFailed(test: @escaping ([Any], Error) -> Void = { _,_  in }) -> Predicate<MaterializedSequenceResult<StarWarsAPIResponse<NamedResult>>> {
-    return Predicate.define("be failed") { expression, message in
-      if let actual = try expression.evaluate(),
-        case let .failed(elements, error) = actual {
-        test(elements, error)
-        return PredicateResult(status: .matches, message: message)
+      describe("building a page request") {
+        it("creates a request for a single page detailing the next page") {
+          let request = swapi.buildPageRequest(endpoint: endpoint, page: 1, type: NamedResult.self)
+          
+          let items = try! request.toBlocking().toArray()
+          
+          expect(items.count) == 1
+          expect(items[0].nextPage) == 2
+        }
       }
-      return PredicateResult(status: .fail, message: message)
     }
   }
 }
-
 
 class NamedResult: Mappable {
   public var name: String! = ""
