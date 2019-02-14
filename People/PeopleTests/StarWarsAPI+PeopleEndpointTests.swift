@@ -28,7 +28,7 @@ class SWAPIPeopleEndpointTests: QuickSpec {
           
           let items = try! results.toBlocking().toArray()
           
-          expect(items.count) > 0
+          expect(items.count).to(beGreaterThan(0))
         }
       }
       describe("get a person from id") {
@@ -37,7 +37,7 @@ class SWAPIPeopleEndpointTests: QuickSpec {
           
           let item = try! result.toBlocking().toArray()
           
-          expect(item.count) == 1
+          expect(item.count).to(equal(1))
           expect(item[0].name).toNot(beEmpty()) // Every person must have a name
         }
       }
