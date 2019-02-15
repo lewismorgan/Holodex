@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		D718C878221601B70094A8D6 /* PeopleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D718C877221601B70094A8D6 /* PeopleEndpoint.swift */; };
 		D718C87A221603160094A8D6 /* StarWarsAPI+PeopleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D718C879221603160094A8D6 /* StarWarsAPI+PeopleEndpoint.swift */; };
-		D718C87C221604D90094A8D6 /* StaticPeopleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D718C87B221604D90094A8D6 /* StaticPeopleEndpoint.swift */; };
+		D718C87C221604D90094A8D6 /* RandomPeopleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D718C87B221604D90094A8D6 /* RandomPeopleEndpoint.swift */; };
 		D718C87F221607A10094A8D6 /* StarWarsAPI+PeopleEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D718C87E221607A10094A8D6 /* StarWarsAPI+PeopleEndpointTests.swift */; };
 		D718C8802216081A0094A8D6 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA26A4220384DB007E88AD /* RxSwift.framework */; };
 		D718C8832216081A0094A8D6 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D718C8812216081A0094A8D6 /* Nimble.framework */; };
 		D718C8842216081A0094A8D6 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D718C8822216081A0094A8D6 /* Quick.framework */; };
 		D718C8872216083A0094A8D6 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D718C8852216083A0094A8D6 /* RxTest.framework */; };
 		D718C8882216083A0094A8D6 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D718C8862216083A0094A8D6 /* RxBlocking.framework */; };
+		D724D3EE22176F0200383887 /* RandomPeopleEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724D3ED22176F0200383887 /* RandomPeopleEndpointTests.swift */; };
 		D7376241211E773800E58C0C /* People.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7376237211E773800E58C0C /* People.framework */; };
 		D7376248211E773800E58C0C /* People.h in Headers */ = {isa = PBXBuildFile; fileRef = D737623A211E773800E58C0C /* People.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D7376258211E776500E58C0C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7376251211E775500E58C0C /* Person.swift */; };
@@ -71,12 +72,13 @@
 /* Begin PBXFileReference section */
 		D718C877221601B70094A8D6 /* PeopleEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleEndpoint.swift; sourceTree = "<group>"; };
 		D718C879221603160094A8D6 /* StarWarsAPI+PeopleEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StarWarsAPI+PeopleEndpoint.swift"; sourceTree = "<group>"; };
-		D718C87B221604D90094A8D6 /* StaticPeopleEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticPeopleEndpoint.swift; sourceTree = "<group>"; };
+		D718C87B221604D90094A8D6 /* RandomPeopleEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPeopleEndpoint.swift; sourceTree = "<group>"; };
 		D718C87E221607A10094A8D6 /* StarWarsAPI+PeopleEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StarWarsAPI+PeopleEndpointTests.swift"; sourceTree = "<group>"; };
 		D718C8812216081A0094A8D6 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = ../Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		D718C8822216081A0094A8D6 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = ../Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		D718C8852216083A0094A8D6 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = ../Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		D718C8862216083A0094A8D6 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = ../Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		D724D3ED22176F0200383887 /* RandomPeopleEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPeopleEndpointTests.swift; sourceTree = "<group>"; };
 		D7376237211E773800E58C0C /* People.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = People.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D737623A211E773800E58C0C /* People.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
 		D737623B211E773800E58C0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -162,7 +164,7 @@
 			children = (
 				D718C877221601B70094A8D6 /* PeopleEndpoint.swift */,
 				D718C879221603160094A8D6 /* StarWarsAPI+PeopleEndpoint.swift */,
-				D718C87B221604D90094A8D6 /* StaticPeopleEndpoint.swift */,
+				D718C87B221604D90094A8D6 /* RandomPeopleEndpoint.swift */,
 				D7376251211E775500E58C0C /* Person.swift */,
 				D737623A211E773800E58C0C /* People.h */,
 				D737623B211E773800E58C0C /* Info.plist */,
@@ -175,6 +177,7 @@
 			children = (
 				D7376247211E773800E58C0C /* Info.plist */,
 				D718C87E221607A10094A8D6 /* StarWarsAPI+PeopleEndpointTests.swift */,
+				D724D3ED22176F0200383887 /* RandomPeopleEndpointTests.swift */,
 			);
 			path = PeopleTests;
 			sourceTree = "<group>";
@@ -292,7 +295,7 @@
 			files = (
 				D718C87A221603160094A8D6 /* StarWarsAPI+PeopleEndpoint.swift in Sources */,
 				D7376258211E776500E58C0C /* Person.swift in Sources */,
-				D718C87C221604D90094A8D6 /* StaticPeopleEndpoint.swift in Sources */,
+				D718C87C221604D90094A8D6 /* RandomPeopleEndpoint.swift in Sources */,
 				D718C878221601B70094A8D6 /* PeopleEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D724D3EE22176F0200383887 /* RandomPeopleEndpointTests.swift in Sources */,
 				D718C87F221607A10094A8D6 /* StarWarsAPI+PeopleEndpointTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

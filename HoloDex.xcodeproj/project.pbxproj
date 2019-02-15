@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D724D3E922176E0500383887 /* People.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D724D3E722176DEE00383887 /* People.framework */; };
+		D724D3EA22176E0500383887 /* People.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D724D3E722176DEE00383887 /* People.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D724D3EB22176E0500383887 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D724D3E822176DEE00383887 /* Networking.framework */; };
+		D724D3EC22176E0500383887 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D724D3E822176DEE00383887 /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D750042D220E350F0098FCA5 /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D750042C220E350F0098FCA5 /* Action.framework */; };
 		D75958BC220394D300BAFCC1 /* PersonListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D75958BB220394D300BAFCC1 /* PersonListView.xib */; };
 		D75A341121093428003A4C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75A341021093428003A4C6D /* AppDelegate.swift */; };
@@ -18,10 +22,6 @@
 		D77DC9DC220E441F0003453C /* ViewModelBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77DC9DB220E441F0003453C /* ViewModelBinding.swift */; };
 		D77DC9DE220E44660003453C /* UIViewController+ViewModelBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77DC9DD220E44660003453C /* UIViewController+ViewModelBinding.swift */; };
 		D78B1D56221623B700253FDB /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78B1D55221623B700253FDB /* RxAlamofire.framework */; };
-		D78B1D63221624B000253FDB /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78B1D62221624B000253FDB /* Networking.framework */; };
-		D78B1D64221624B000253FDB /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D78B1D62221624B000253FDB /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D78B1D66221624B000253FDB /* People.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78B1D65221624B000253FDB /* People.framework */; };
-		D78B1D67221624B000253FDB /* People.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D78B1D65221624B000253FDB /* People.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D7A1D762220E31BF00286709 /* PersonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1D761220E31BF00286709 /* PersonListViewModel.swift */; };
 		D7ADA35F220E57A50057546B /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7ADA35E220E57A50057546B /* RxDataSources.framework */; };
 		D7ADA361220E596C0057546B /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7ADA360220E596C0057546B /* Differentiator.framework */; };
@@ -46,14 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D78B1D5F2216248400253FDB /* Embed Frameworks */ = {
+		D724D3DE22176CCD00383887 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D78B1D64221624B000253FDB /* Networking.framework in Embed Frameworks */,
-				D78B1D67221624B000253FDB /* People.framework in Embed Frameworks */,
+				D724D3EC22176E0500383887 /* Networking.framework in Embed Frameworks */,
+				D724D3EA22176E0500383887 /* People.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,6 +61,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D724D3E722176DEE00383887 /* People.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = People.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D724D3E822176DEE00383887 /* Networking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7362733211CF804003F54FC /* HoloDexUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoloDexUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7362737211CF804003F54FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D750042C220E350F0098FCA5 /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
@@ -76,8 +78,6 @@
 		D77DC9DB220E441F0003453C /* ViewModelBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBinding.swift; sourceTree = "<group>"; };
 		D77DC9DD220E44660003453C /* UIViewController+ViewModelBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ViewModelBinding.swift"; sourceTree = "<group>"; };
 		D78B1D55221623B700253FDB /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = "<group>"; };
-		D78B1D62221624B000253FDB /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D78B1D65221624B000253FDB /* People.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = People.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A1D761220E31BF00286709 /* PersonListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewModel.swift; sourceTree = "<group>"; };
 		D7ADA35E220E57A50057546B /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
 		D7ADA360220E596C0057546B /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
@@ -104,14 +104,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D78B1D56221623B700253FDB /* RxAlamofire.framework in Frameworks */,
-				D78B1D63221624B000253FDB /* Networking.framework in Frameworks */,
+				D724D3E922176E0500383887 /* People.framework in Frameworks */,
 				D7ADA361220E596C0057546B /* Differentiator.framework in Frameworks */,
 				D7ADA35F220E57A50057546B /* RxDataSources.framework in Frameworks */,
 				D750042D220E350F0098FCA5 /* Action.framework in Frameworks */,
-				D78B1D66221624B000253FDB /* People.framework in Frameworks */,
 				D7BA267B22037CA6007E88AD /* RxSwift.framework in Frameworks */,
 				D7BA267722037CA6007E88AD /* ObjectMapper.framework in Frameworks */,
 				D7BA267522037CA6007E88AD /* XCoordinator.framework in Frameworks */,
+				D724D3EB22176E0500383887 /* Networking.framework in Frameworks */,
 				D7BA26992203837B007E88AD /* RxAtomic.framework in Frameworks */,
 				D7BA267822037CA6007E88AD /* Alamofire.framework in Frameworks */,
 				D7BA267622037CA6007E88AD /* RxCocoa.framework in Frameworks */,
@@ -143,8 +143,6 @@
 			children = (
 				D75A340F21093428003A4C6D /* HoloDex */,
 				D7362734211CF804003F54FC /* HoloDexUnitTests */,
-				D78B1D65221624B000253FDB /* People.framework */,
-				D78B1D62221624B000253FDB /* Networking.framework */,
 				D75A340E21093428003A4C6D /* Products */,
 				F019FED0A88DF487CE749D40 /* Frameworks */,
 			);
@@ -213,6 +211,8 @@
 		F019FED0A88DF487CE749D40 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D724D3E722176DEE00383887 /* People.framework */,
+				D724D3E822176DEE00383887 /* Networking.framework */,
 				D78B1D55221623B700253FDB /* RxAlamofire.framework */,
 				D7ADA360220E596C0057546B /* Differentiator.framework */,
 				D7ADA35E220E57A50057546B /* RxDataSources.framework */,
@@ -257,7 +257,7 @@
 				D75A340A21093428003A4C6D /* Frameworks */,
 				D75A340B21093428003A4C6D /* Resources */,
 				D7BA267C22037CE8007E88AD /* [ Carthage - Copy Frameworks ] */,
-				D78B1D5F2216248400253FDB /* Embed Frameworks */,
+				D724D3DE22176CCD00383887 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
