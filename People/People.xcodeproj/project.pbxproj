@@ -17,6 +17,7 @@
 		D718C8872216083A0094A8D6 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D718C8852216083A0094A8D6 /* RxTest.framework */; };
 		D718C8882216083A0094A8D6 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D718C8862216083A0094A8D6 /* RxBlocking.framework */; };
 		D724D3EE22176F0200383887 /* RandomPeopleEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724D3ED22176F0200383887 /* RandomPeopleEndpointTests.swift */; };
+		D724D3F12217726C00383887 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75087AB221610B700337E4B /* Networking.framework */; };
 		D7376241211E773800E58C0C /* People.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7376237211E773800E58C0C /* People.framework */; };
 		D7376248211E773800E58C0C /* People.h in Headers */ = {isa = PBXBuildFile; fileRef = D737623A211E773800E58C0C /* People.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D7376258211E776500E58C0C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7376251211E775500E58C0C /* Person.swift */; };
@@ -26,7 +27,6 @@
 		D750879D22160E3C00337E4B /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D718C8822216081A0094A8D6 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D750879E22160E3C00337E4B /* ObjectMapper.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA26A7220384EE007E88AD /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D750879F22160E3C00337E4B /* RxSwift.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA26A4220384DB007E88AD /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D75087AC221610B700337E4B /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75087AB221610B700337E4B /* Networking.framework */; };
 		D75087AF2216119000337E4B /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75087AD2216119000337E4B /* RxAlamofire.framework */; };
 		D75087B02216119000337E4B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75087AE2216119000337E4B /* Alamofire.framework */; };
 		D75087B1221611A100337E4B /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D75087AE2216119000337E4B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -98,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D75087AC221610B700337E4B /* Networking.framework in Frameworks */,
+				D724D3F12217726C00383887 /* Networking.framework in Frameworks */,
 				D780178D22160AE300125B39 /* ObjectMapper.framework in Frameworks */,
 				D7BA26A6220384DB007E88AD /* RxSwift.framework in Frameworks */,
 			);

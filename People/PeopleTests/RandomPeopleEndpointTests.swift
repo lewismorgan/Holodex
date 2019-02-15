@@ -20,24 +20,24 @@ class RandomPeopleEndpointTests: QuickSpec {
       beforeEach {
         people = RandomPeopleEndpoint()
       }
-      
+
       // MARK: - Tests
-      
+
       describe("getting a person") {
         it("emits a random person") {
           let observable = people.getPerson(from: 1)
-          
+
           let person = try! observable.toBlocking().first()
-          
+
           expect(person?.name).toNot(beEmpty())
         }
       }
       describe("getting a list of random people from a page") {
         it("emits a list of random people") {
           let observable = people.getPeople(from: 1)
-          
+
           let persons = try! observable.toBlocking().first()
-          
+
           expect(persons).toNot(beNil())
           expect(persons).toNot(beEmpty())
         }

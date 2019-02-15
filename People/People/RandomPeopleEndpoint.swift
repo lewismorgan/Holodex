@@ -24,9 +24,9 @@ public class RandomPeopleEndpoint: PeopleEndpoint {
 
   private func createPerson(name: String) -> Person {
     var person = Person()
-  
+
     person.name = name
-  
+
     return person
   }
 }
