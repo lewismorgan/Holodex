@@ -22,6 +22,10 @@
 		D77DC9DC220E441F0003453C /* ViewModelBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77DC9DB220E441F0003453C /* ViewModelBinding.swift */; };
 		D77DC9DE220E44660003453C /* UIViewController+ViewModelBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77DC9DD220E44660003453C /* UIViewController+ViewModelBinding.swift */; };
 		D78B1D56221623B700253FDB /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78B1D55221623B700253FDB /* RxAlamofire.framework */; };
+		D78C536D2218879000D5B56F /* PersonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78C536C2218879000D5B56F /* PersonDetailViewModel.swift */; };
+		D78C536F22188DB800D5B56F /* PersonDetailViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78C536E22188DB800D5B56F /* PersonDetailViewModelImpl.swift */; };
+		D78C53712218917700D5B56F /* PersonDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78C53702218917700D5B56F /* PersonDetailView.xib */; };
+		D78C53732218919F00D5B56F /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78C53722218919F00D5B56F /* PersonDetailViewController.swift */; };
 		D7A1D762220E31BF00286709 /* PersonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1D761220E31BF00286709 /* PersonListViewModel.swift */; };
 		D7ADA35F220E57A50057546B /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7ADA35E220E57A50057546B /* RxDataSources.framework */; };
 		D7ADA361220E596C0057546B /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7ADA360220E596C0057546B /* Differentiator.framework */; };
@@ -78,6 +82,10 @@
 		D77DC9DB220E441F0003453C /* ViewModelBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBinding.swift; sourceTree = "<group>"; };
 		D77DC9DD220E44660003453C /* UIViewController+ViewModelBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ViewModelBinding.swift"; sourceTree = "<group>"; };
 		D78B1D55221623B700253FDB /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = "<group>"; };
+		D78C536C2218879000D5B56F /* PersonDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewModel.swift; sourceTree = "<group>"; };
+		D78C536E22188DB800D5B56F /* PersonDetailViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewModelImpl.swift; sourceTree = "<group>"; };
+		D78C53702218917700D5B56F /* PersonDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonDetailView.xib; sourceTree = "<group>"; };
+		D78C53722218919F00D5B56F /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 		D7A1D761220E31BF00286709 /* PersonListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewModel.swift; sourceTree = "<group>"; };
 		D7ADA35E220E57A50057546B /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
 		D7ADA360220E596C0057546B /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
@@ -204,6 +212,10 @@
 				D75958BB220394D300BAFCC1 /* PersonListView.xib */,
 				D7A1D761220E31BF00286709 /* PersonListViewModel.swift */,
 				D77DC9D8220E3FFC0003453C /* PersonListViewModelImpl.swift */,
+				D78C536C2218879000D5B56F /* PersonDetailViewModel.swift */,
+				D78C536E22188DB800D5B56F /* PersonDetailViewModelImpl.swift */,
+				D78C53702218917700D5B56F /* PersonDetailView.xib */,
+				D78C53722218919F00D5B56F /* PersonDetailViewController.swift */,
 			);
 			path = People;
 			sourceTree = "<group>";
@@ -321,6 +333,7 @@
 			files = (
 				D75A341B21093429003A4C6D /* LaunchScreen.storyboard in Resources */,
 				D75A341821093429003A4C6D /* Assets.xcassets in Resources */,
+				D78C53712218917700D5B56F /* PersonDetailView.xib in Resources */,
 				D75958BC220394D300BAFCC1 /* PersonListView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,9 +412,12 @@
 				D766BA2821FBDE66007A2ED2 /* AppRoute.swift in Sources */,
 				D7C857D521FFACBF00DA33A0 /* PeopleListCoordinator.swift in Sources */,
 				D7FE7515210955C500DE1E28 /* PersonListViewController.swift in Sources */,
+				D78C536F22188DB800D5B56F /* PersonDetailViewModelImpl.swift in Sources */,
 				D75A341121093428003A4C6D /* AppDelegate.swift in Sources */,
 				D77DC9D9220E3FFC0003453C /* PersonListViewModelImpl.swift in Sources */,
+				D78C53732218919F00D5B56F /* PersonDetailViewController.swift in Sources */,
 				D77DC9DE220E44660003453C /* UIViewController+ViewModelBinding.swift in Sources */,
+				D78C536D2218879000D5B56F /* PersonDetailViewModel.swift in Sources */,
 				D7A1D762220E31BF00286709 /* PersonListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

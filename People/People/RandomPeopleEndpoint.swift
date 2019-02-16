@@ -21,7 +21,7 @@ public class RandomPeopleEndpoint: PeopleEndpoint {
   public func getPeople(from page: Int) -> Observable<[Person]> {
     return Observable.create { [weak self] emitter in
       var items: [Person] = []
-      
+
       // Create an id from 0 to 2-50
       for id in 0...Int.random(in: 2...Int.random(in: 20...50)) {
         guard let name = self?.createName(), let person = self?.createPerson(from: id, name: name) else {
@@ -30,7 +30,7 @@ public class RandomPeopleEndpoint: PeopleEndpoint {
         }
         items.append(person)
       }
-      
+
       emitter.onNext(items)
       emitter.onCompleted()
       return Disposables.create()
@@ -45,11 +45,11 @@ public class RandomPeopleEndpoint: PeopleEndpoint {
     return RandomPeopleEndpoint.firstNames[Int.random(in: 0..<RandomPeopleEndpoint.firstNames.count)] + " "
       + RandomPeopleEndpoint.lastNames[Int.random(in: 0..<RandomPeopleEndpoint.lastNames.count)]
   }
-  
+
   private func createColor() -> String {
     return RandomPeopleEndpoint.colors[Int.random(in: 0..<RandomPeopleEndpoint.colors.count)]
   }
-  
+
   private func createPerson(from id: Int, name: String) -> Person {
     var person = Person()
 
@@ -61,7 +61,7 @@ public class RandomPeopleEndpoint: PeopleEndpoint {
     person.height = "\(id) ft"
     person.eyeColor = createColor()
     person.hairColor = createColor()
- 
+
     return person
   }
 }

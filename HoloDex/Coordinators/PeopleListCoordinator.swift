@@ -36,16 +36,20 @@ class PeopleListCoordinator: NavigationCoordinator<PeopleListRoute> {
       let viewModel = PersonListViewModelImpl(router: self.anyRouter,
                                               endpoint: endpoint)
       viewController.bind(to: viewModel)
+
       return .push(viewController)
     case .person:
-      // TODO: - PersonViewController & PersonView
-      let viewController = UIViewController()
+      debugPrint("Requesting detail about a person from coordinator")
+      let viewController = PersonDetailViewController()
+      let viewModel = PersonDetailViewModelImpl(router: self.anyRouter)
+      viewController.bind(to: viewModel)
+
       return .push(viewController)
     }
   }
 
   override func generateRootViewController() -> UINavigationController {
-    // TODO: - Don't override the function, as delegate will not work, move to init method of tab coordinator
+    // TODO: Don't override the function, as delegate will not work, move to init method of tab coordinator
     let controller = super.generateRootViewController()
     controller.tabBarItem = UITabBarItem(title: "People", image: nil, tag: 0)
     return controller

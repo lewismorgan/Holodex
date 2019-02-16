@@ -21,7 +21,7 @@ public class StarWarsAPI: NetworkingAPI {
 
   private func createRequest(endpoint: String, params: [String: Any]) -> Observable<Any> {
     let url = StarWarsAPI.baseUrl + endpoint
-    // TODO: - Log everytime a request is created instead of printing
+    // TODO: Log everytime a request is created instead of printing
     print("endpoint: \(endpoint) | params: \(params)")
     return json(.get, url, parameters: params)
   }
@@ -60,7 +60,8 @@ public class StarWarsAPI: NetworkingAPI {
 
   /// Creates a request that has multiple pages that will observe the next page when the trigger has a value emitted
   public func buildStreamingPageRequest<T: Mappable>(endpoint: String, page: Int,
-                                                     loadNext trigger: Observable<Void>, type: T.Type) -> Observable<[T]> {
+                                                     loadNext trigger: Observable<Void>,
+                                                     type: T.Type) -> Observable<[T]> {
     return buildRequest(endpoint: endpoint, params: ["page": page], type: StarWarsAPIResponse<T>.self)
       .flatMap { (response) -> Observable<[T]> in
         let components = NSURLComponents(string: response.next)
@@ -71,7 +72,8 @@ public class StarWarsAPI: NetworkingAPI {
         if let nextPage = Int(page) {
           return Observable.concat(Observable.just(response.results),
                                    Observable.never().takeUntil(trigger),
-                                   self.buildStreamingPageRequest(endpoint: endpoint, page: nextPage, loadNext: trigger, type: type)
+                                   self.buildStreamingPageRequest(endpoint: endpoint, page: nextPage,
+                                                                  loadNext: trigger, type: type)
                                     .catchErrorJustReturn([]))
         } else { return Observable.just(response.results) }
     }

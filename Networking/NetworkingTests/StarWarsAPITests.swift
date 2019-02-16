@@ -40,7 +40,8 @@ class StarWarsAPITests: QuickSpec {
         it("builds a streaming paged request with a trigger for \(nPages) pages") {
           let trigger = PublishSubject<Void>()
           let request = swapi.buildStreamingPageRequest(endpoint: endpoint, page: 1,
-                                                        loadNext: trigger.asObservable().startWith(()), type: NamedResult.self)
+                                                        loadNext: trigger.asObservable().startWith(()),
+                                                        type: NamedResult.self)
             .take(nPages)
 
           let items = try! request.toBlocking().toArray()

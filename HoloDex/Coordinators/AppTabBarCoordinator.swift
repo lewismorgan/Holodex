@@ -16,7 +16,7 @@ class AppTabBarCoordinator: TabBarCoordinator<AppRoute> {
 
   // MARK: - Init
 
-  // MARK: - TODO: Add tab bar items to coordinators generated vc's
+  // TODO: Add tab bar items to coordinators generated vc's
 
   init() {
     self.peopleRouter = PeopleListCoordinator(endpoint: RandomPeopleEndpoint()).anyRouter

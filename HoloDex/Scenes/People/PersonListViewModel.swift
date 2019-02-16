@@ -19,5 +19,7 @@ protocol PersonListViewModel {
 
   // MARK: - Output
 
-  var people: Observable<[Person]> { get }
+  var people: Variable<[Person]> { get }
+
+  func detailPerson(person: Person)
 }
