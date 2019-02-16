@@ -129,13 +129,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D70C54A0211CEBCD00106D73 /* Common */ = {
+		D70C54A0211CEBCD00106D73 /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				D75A341021093428003A4C6D /* AppDelegate.swift */,
 				D75A341921093429003A4C6D /* LaunchScreen.storyboard */,
 			);
-			path = Common;
+			path = Base;
 			sourceTree = "<group>";
 		};
 		D7362734211CF804003F54FC /* HoloDexUnitTests */ = {
@@ -168,10 +168,10 @@
 		D75A340F21093428003A4C6D /* HoloDex */ = {
 			isa = PBXGroup;
 			children = (
+				D70C54A0211CEBCD00106D73 /* Base */,
 				D77DC9DA220E43FD0003453C /* Binding */,
-				D70C54A0211CEBCD00106D73 /* Common */,
 				D766BA2421FBDDC3007A2ED2 /* Coordinators */,
-				D7A1D760220E308800286709 /* Scenes */,
+				D7A1D760220E308800286709 /* Features */,
 				D75A341721093429003A4C6D /* Assets.xcassets */,
 				D75A341C21093429003A4C6D /* Info.plist */,
 			);
@@ -197,27 +197,43 @@
 			path = Binding;
 			sourceTree = "<group>";
 		};
-		D7A1D760220E308800286709 /* Scenes */ = {
+		D7A1D760220E308800286709 /* Features */ = {
 			isa = PBXGroup;
 			children = (
 				D7DD0A2D210AAE290072A896 /* People */,
 			);
-			path = Scenes;
+			path = Features;
 			sourceTree = "<group>";
 		};
 		D7DD0A2D210AAE290072A896 /* People */ = {
 			isa = PBXGroup;
 			children = (
+				D7FFC2FE2218B50500292BE8 /* Models */,
+				D7FFC2FF2218B55900292BE8 /* Controllers */,
+			);
+			path = People;
+			sourceTree = "<group>";
+		};
+		D7FFC2FE2218B50500292BE8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D77DC9D8220E3FFC0003453C /* PersonListViewModelImpl.swift */,
+				D78C536E22188DB800D5B56F /* PersonDetailViewModelImpl.swift */,
+				D7A1D761220E31BF00286709 /* PersonListViewModel.swift */,
+				D78C536C2218879000D5B56F /* PersonDetailViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D7FFC2FF2218B55900292BE8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				D7FE7514210955C500DE1E28 /* PersonListViewController.swift */,
 				D75958BB220394D300BAFCC1 /* PersonListView.xib */,
-				D7A1D761220E31BF00286709 /* PersonListViewModel.swift */,
-				D77DC9D8220E3FFC0003453C /* PersonListViewModelImpl.swift */,
-				D78C536C2218879000D5B56F /* PersonDetailViewModel.swift */,
-				D78C536E22188DB800D5B56F /* PersonDetailViewModelImpl.swift */,
 				D78C53702218917700D5B56F /* PersonDetailView.xib */,
 				D78C53722218919F00D5B56F /* PersonDetailViewController.swift */,
 			);
-			path = People;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		F019FED0A88DF487CE749D40 /* Frameworks */ = {
