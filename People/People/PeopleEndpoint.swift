@@ -6,9 +6,10 @@
 //  Copyright © 2019 Lewis Morgan. All rights reserved.
 //
 
+import Networking
 import RxSwift
 
-protocol PeopleEndpoint {
+public protocol PeopleEndpoint: Endpoint {
   func getPeople(from page: Int) -> Observable<[Person]>
   func getPerson(from id: Int) -> Observable<Person>
 }

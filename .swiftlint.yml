@@ -5,5 +5,7 @@ excluded:
 disabled_rules:
 - force_cast
 - identifier_name
+- force_try
+- todo
 
 reporter: "xcode"

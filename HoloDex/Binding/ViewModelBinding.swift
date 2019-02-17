@@ -13,5 +13,5 @@ protocol ViewModelBinding: AnyObject {
 
   var viewModel: ViewModelType! { get set }
 
-  func createBinding()
+  //func createBinding()
 }

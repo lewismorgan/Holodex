@@ -14,23 +14,25 @@ import People
 
 class PersonListViewModelImpl: PersonListViewModel {
 
-  // MARK: - Input
-
-  //var search: Driver<String>
-
-  // MARK: - Output
-
-  var people: Observable<[Person]>
+  var people: Variable<[Person]> = Variable<[Person]>([])
 
   // MARK: - Private
 
   private let router: AnyRouter<PeopleListRoute>
 
+  private let bag = DisposeBag()
+
+  // MARK: - Init
+
   init(router: AnyRouter<PeopleListRoute>,
-       swapi: OldStarWarsAPI) {
+       endpoint: PeopleEndpoint) {
     self.router = router
 
-    //self.search = search
-    self.people = swapi.fetchMultiplePeople(startPage: 0, endPage: 5)
+    Observable.merge(endpoint.getPeople(from: 1), endpoint.getPeople(from: 2))
+      .bind(to: people).disposed(by: bag)
+  }
+
+  func onSelected(person: Person) {
+    router.trigger(.person(person), with: .init(animated: true))
   }
 }

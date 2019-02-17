@@ -18,12 +18,12 @@ enum PeopleListRoute: Route {
 }
 
 class PeopleListCoordinator: NavigationCoordinator<PeopleListRoute> {
-  private let swapi: OldStarWarsAPI!
+  private let endpoint: PeopleEndpoint!
 
   // MARK: - Init
 
-  init(swapi: OldStarWarsAPI) {
-    self.swapi = swapi
+  init(endpoint: PeopleEndpoint) {
+    self.endpoint = endpoint
     super.init(initialRoute: .home)
   }
 
@@ -34,18 +34,23 @@ class PeopleListCoordinator: NavigationCoordinator<PeopleListRoute> {
     case .home, .persons:
       let viewController = PersonListViewController()
       let viewModel = PersonListViewModelImpl(router: self.anyRouter,
-                                              swapi: swapi)
+                                              endpoint: endpoint)
       viewController.bind(to: viewModel)
+
       return .push(viewController)
-    case .person:
-      // TODO: - PersonViewController & PersonView
-      let viewController = UIViewController()
+    case .person(let person):
+      let viewController = PersonDetailViewController()
+      let viewModel = PersonDetailViewModelImpl(router: self.anyRouter)
+      viewModel.person.value = person
+
+      viewController.bind(to: viewModel)
+
       return .push(viewController)
     }
   }
 
   override func generateRootViewController() -> UINavigationController {
-    // TODO: - Don't override the function, as delegate will not work, move to init method of tab coordinator
+    // TODO: Don't override the function, as delegate will not work, move to init method of tab coordinator
     let controller = super.generateRootViewController()
     controller.tabBarItem = UITabBarItem(title: "People", image: nil, tag: 0)
     return controller

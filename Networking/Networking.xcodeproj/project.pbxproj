@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D724D3F02217715600383887 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724D3EF2217715600383887 /* Endpoint.swift */; };
 		D76ADCB4220FA38500EE06FA /* RxSwift.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D7CCDCAF220F9DBC00623068 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D76ADCB5220FA38500EE06FA /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = D7CCDCAB220F9D6600623068 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D76ADCB7220FA43700EE06FA /* StarWarsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76ADCB6220FA43700EE06FA /* StarWarsAPITests.swift */; };
@@ -75,6 +76,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D724D3EF2217715600383887 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		D76ADCB6220FA43700EE06FA /* StarWarsAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAPITests.swift; sourceTree = "<group>"; };
 		D76ADCB8220FA4CB00EE06FA /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = ../Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		D76ADCB9220FA4CB00EE06FA /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = ../Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				D7F747FD220FD0FF00172F7B /* StarWarsAPIResponse.swift */,
 				D7711CC02215FE00000A04F2 /* NetworkingAPI.swift */,
 				D7711CBE2215FA9A000A04F2 /* PagedResults.swift */,
+				D724D3EF2217715600383887 /* Endpoint.swift */,
 				D7F74801220FFE5500172F7B /* Extensions.swift */,
 				D7CCDC8D220F9AE200623068 /* Networking.h */,
 				D7CCDC8E220F9AE200623068 /* Info.plist */,
@@ -301,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D724D3F02217715600383887 /* Endpoint.swift in Sources */,
 				D7F747FE220FD0FF00172F7B /* StarWarsAPIResponse.swift in Sources */,
 				D7CCDCCD220FA1A000623068 /* StarWarsAPI.swift in Sources */,
 				D7F74800220FFE3100172F7B /* NetworkAPIError.swift in Sources */,

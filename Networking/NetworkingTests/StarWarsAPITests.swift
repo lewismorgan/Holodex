@@ -40,10 +40,12 @@ class StarWarsAPITests: QuickSpec {
         it("builds a streaming paged request with a trigger for \(nPages) pages") {
           let trigger = PublishSubject<Void>()
           let request = swapi.buildStreamingPageRequest(endpoint: endpoint, page: 1,
-                                               loadNext: trigger.asObservable().startWith(()), type: NamedResult.self).take(nPages)
-          
+                                                        loadNext: trigger.asObservable().startWith(()),
+                                                        type: NamedResult.self)
+            .take(nPages)
+
           let items = try! request.toBlocking().toArray()
-          
+
           // There should be nPages of arrays emitted by the stream, right now it only works because of take(...)
           // trigger isn't working properly :(
           expect(items.count).to(equal(nPages))
@@ -54,9 +56,9 @@ class StarWarsAPITests: QuickSpec {
           let firstPage = 1
           let secondPage = 2
           let request = swapi.buildPageRequest(endpoint: endpoint, page: firstPage, type: NamedResult.self)
-          
+
           let items = try! request.toBlocking().toArray()
-          
+
           expect(items.count).to(equal(1))
           expect(items[0].nextPage).to(equal(secondPage))
         }
@@ -67,10 +69,10 @@ class StarWarsAPITests: QuickSpec {
 
 class NamedResult: Mappable {
   public var name: String! = ""
-  
+
   required init?(map: Map) {
   }
-  
+
   public func mapping(map: Map) {
     name <- map["name"]
   }
