@@ -48,11 +48,4 @@ class PeopleListCoordinator: NavigationCoordinator<PeopleListRoute> {
       return .push(viewController)
     }
   }
-
-  override func generateRootViewController() -> UINavigationController {
-    // TODO: Don't override the function, as delegate will not work, move to init method of tab coordinator
-    let controller = super.generateRootViewController()
-    controller.tabBarItem = UITabBarItem(title: "People", image: nil, tag: 0)
-    return controller
-  }
 }

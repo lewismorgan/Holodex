@@ -16,15 +16,26 @@ class AppCoordinator: TabBarCoordinator<AppRoute> {
 
   // MARK: - Init
 
-  // TODO: Add tab bar items to coordinators generated vc's
+  convenience init() {
+    let peopleCoordinator = PeopleListCoordinator(endpoint: StarWarsAPI()).anyRouter
+    peopleCoordinator.viewController.tabBarItem = UITabBarItem(title: "People", image: nil, tag: 0)
 
-  init() {
-    self.peopleRouter = PeopleListCoordinator(endpoint: RandomPeopleEndpoint()).anyRouter
-
-    super.init(tabs: [peopleRouter], select: peopleRouter)
+    self.init(peopleRouter: peopleCoordinator.anyRouter)
   }
 
-  // MARK: - Overrides
+  init(peopleRouter: AnyRouter<PeopleListRoute>) {
+    self.peopleRouter = peopleRouter
+
+    super.init(tabs: [peopleRouter], select: peopleRouter)
+
+    setupView()
+  }
+
+  // MARK: - Private Functions
+  private func setupView() {
+  }
+
+  // MARK: - TabBarCoordinator
 
   override func prepareTransition(for route: AppRoute) -> TabBarTransition {
     switch route {

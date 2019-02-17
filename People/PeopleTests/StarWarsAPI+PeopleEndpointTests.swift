@@ -22,6 +22,15 @@ class SWAPIPeopleEndpointTests: QuickSpec {
         swapi = StarWarsAPI()
       }
 
+      describe("getting all people") {
+        it("gets all people") {
+          let results = swapi.getAll()
+
+          let items = try! results.toBlocking().toArray()
+
+          expect(items.count) >= 9
+        }
+      }
       describe("get people from page") {
         it("gets all the people from the page") {
           let results = swapi.getPeople(from: 1)
@@ -38,7 +47,7 @@ class SWAPIPeopleEndpointTests: QuickSpec {
           let item = try! result.toBlocking().toArray()
 
           expect(item.count) == 1
-          expect(item[0].name).toNot(beEmpty()) // Every person must have a name
+          expect(item[0].name).toNot(beEmpty())
         }
       }
     }

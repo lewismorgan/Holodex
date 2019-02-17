@@ -17,16 +17,16 @@ public class StarWarsAPI: NetworkingAPI {
   public init() {
   }
 
-  // MARK: - Private
+  // MARK: - Private Functions
 
   private func createRequest(endpoint: String, params: [String: Any]) -> Observable<Any> {
     let url = StarWarsAPI.baseUrl + endpoint
     // TODO: Log everytime a request is created instead of printing
-    print("endpoint: \(endpoint) | params: \(params)")
+    debugPrint("endpoint:", endpoint, "params:", params)
     return json(.get, url, parameters: params)
   }
 
-  // MARK: - NetworkingAPI Implementation
+  // MARK: - NetworkingAPI
 
   /// Creates a request to the StarWarsAPI
   public func buildRequest<T: Mappable>(endpoint: String, params: [String: Any] = [:], type: T.Type) -> Observable<T> {
@@ -56,24 +56,22 @@ public class StarWarsAPI: NetworkingAPI {
       }
   }
 
-  // MARK: - Public Unique Methods
+  // MARK: - Public Functions
 
-  /// Creates a request that has multiple pages that will observe the next page when the trigger has a value emitted
+  /// Creates a request that will build a page request until there are no more pages
   public func buildStreamingPageRequest<T: Mappable>(endpoint: String, page: Int,
-                                                     loadNext trigger: Observable<Void>,
                                                      type: T.Type) -> Observable<[T]> {
     return buildRequest(endpoint: endpoint, params: ["page": page], type: StarWarsAPIResponse<T>.self)
       .flatMap { response -> Observable<[T]> in
         let components = NSURLComponents(string: response.next)
         guard let items = components?.queryItemsToDict(), let page = items["page"] else {
           // There are no more pages
-          return Observable.of(response.results)
+          return Observable.just(response.results)
         }
         if let nextPage = Int(page) {
           return Observable.concat(Observable.just(response.results),
-                                   Observable.never().takeUntil(trigger),
                                    self.buildStreamingPageRequest(endpoint: endpoint, page: nextPage,
-                                                                  loadNext: trigger, type: type)
+                                                                  type: type)
                                     .catchErrorJustReturn([]))
         } else { return Observable.just(response.results) }
       }

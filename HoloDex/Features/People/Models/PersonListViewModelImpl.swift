@@ -19,6 +19,7 @@ class PersonListViewModelImpl: PersonListViewModel {
   var filtered: Observable<[Person]> {
     return filteredSubject.asObservable()
   }
+  let loading: Variable<Bool> = Variable<Bool>(true)
 
   // MARK: - Private
   private let filteredSubject = ReplaySubject<[Person]>.create(bufferSize: 1)
@@ -31,11 +32,24 @@ class PersonListViewModelImpl: PersonListViewModel {
        endpoint: PeopleEndpoint) {
     self.router = router
 
-    Observable.merge(endpoint.getPeople(from: 1), endpoint.getPeople(from: 2))
-      .bind(to: people)
+    // Share the stream so there aren't more than 1 network requests
+    let peopleStream = endpoint.getAll().share()
+
+    // Bind to People
+    peopleStream.scan([Person](), accumulator: { seed, acc  in
+        return seed + acc
+    }).bind(to: people)
       .disposed(by: bag)
 
-    // Create the filteredSubject
+    // Bind to Loading
+    peopleStream.reduce(0, accumulator: { seed, acc in
+      return seed + acc.count
+    }).flatMap { _ in return Observable.just(false) }
+      .debug("🚀")
+      .bind(to: loading)
+      .disposed(by: bag)
+
+    // Bind to filteredSubject
     Observable.combineLatest(people.asObservable(),
                              query.asObservable()) { [unowned self] people, searchTerm -> [Person] in
       return self.filterPeople(with: people, query: searchTerm)

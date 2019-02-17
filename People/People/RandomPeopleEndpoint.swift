@@ -41,6 +41,13 @@ public class RandomPeopleEndpoint: PeopleEndpoint {
     }
   }
 
+  public func getAll() -> Observable<[Person]> {
+    return Observable.range(start: 1, count: 50)
+      .flatMap { [weak self] page -> Observable<[Person]> in
+        return self?.getPeople(from: page) ?? Observable.empty()
+      }
+  }
+
   public func getPerson(from personId: Int) -> Observable<Person> {
     return Observable.of(createPerson())
   }

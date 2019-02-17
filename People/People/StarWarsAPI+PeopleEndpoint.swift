@@ -10,6 +10,10 @@ import Networking
 import RxSwift
 
 extension StarWarsAPI: PeopleEndpoint {
+  public func getAll() -> Observable<[Person]> {
+    return self.buildStreamingPageRequest(endpoint: "people", page: 1, type: Person.self)
+  }
+
   public func getPeople(from page: Int) -> Observable<[Person]> {
     return self.buildPageRequest(endpoint: "people", page: page, type: Person.self).map { $0.results }
   }

@@ -45,6 +45,8 @@ class PersonListViewController: UIViewController, ViewModelBinding {
       .drive(viewModel.query)
       .disposed(by: bag)
 
+    // Activity Indicator
+    viewModel.loading.asObservable().debug("❤️").subscribe().disposed(by: bag)
     // List of People bound to the filtered list, filtering handled by the ViewModel implementation
     viewModel.filtered
       .bind(to: tableView.rx.items(cellIdentifier: "PersonCell")) { _, model, cell in
@@ -94,11 +96,21 @@ class PersonListViewController: UIViewController, ViewModelBinding {
 
       // Call the onSelected function in the viewModel
       self?.viewModel.onSelected(person: person)
+
+      // Display the navigation bar if this is contained in a nav controller
+      if let navigationController = self?.navigationController {
+        if navigationController.isNavigationBarHidden {
+          navigationController.setNavigationBarHidden(false, animated: true)
+        }
+      }
     }).disposed(by: bag)
   }
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+
+    // Hide the top navigation bar
+    self.navigationController?.setNavigationBarHidden(true, animated: true)
   }
 
   override func viewWillDisappear(_ animated: Bool) {

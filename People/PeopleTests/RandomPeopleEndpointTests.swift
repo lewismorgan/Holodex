@@ -48,6 +48,15 @@ class RandomPeopleEndpointTests: QuickSpec {
           expect(persons.count) >= 10
         }
       }
+      describe("getting all people") {
+        it("emits 10+ arrays of people") {
+          let observable = people.getAll()
+
+          let arrays = try! observable.toBlocking().toArray()
+
+          expect(arrays.count) >= 10
+        }
+      }
     }
   }
 }
