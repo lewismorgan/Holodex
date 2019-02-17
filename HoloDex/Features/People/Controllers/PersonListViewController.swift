@@ -23,6 +23,7 @@ class PersonListViewController: UIViewController, ViewModelBinding {
   // MARK: Views
 
   @IBOutlet weak public var tableView: UITableView!
+  @IBOutlet weak public var searchBar: UISearchBar!
 
   // MARK: Init
 
@@ -36,9 +37,17 @@ class PersonListViewController: UIViewController, ViewModelBinding {
 
   // MARK: - Functions
 
-  /// Add the observable bindings from the view model to the view
-  private func addBindings() {
-    viewModel.people.asObservable()
+  private func addViewModelBindings() {
+    // Search -- debounce isn't needed as there are no network requests are only made on the page
+    searchBar.rx.text.orEmpty
+      .distinctUntilChanged()
+      .debug("🔎", trimOutput: false)
+      .asDriver(onErrorJustReturn: "")
+      .drive(viewModel.query)
+      .disposed(by: bag)
+
+    // List of People bound to the filtered list, filtering handled by the ViewModel implementation
+    viewModel.filtered.debug("😅", trimOutput: true)
       .bind(to: tableView.rx.items(cellIdentifier: "PersonCell")) { _, model, cell in
         cell.textLabel?.text = model.name
       }
@@ -48,10 +57,13 @@ class PersonListViewController: UIViewController, ViewModelBinding {
   // MARK: - UIViewController
 
   override func viewDidLoad() {
-    // MARK: View Initialization
+    // Initialize variables
     tableView.register(PersonCell.self, forCellReuseIdentifier: "PersonCell")
 
-    addBindings()
+    // Setup the bindings to the view model
+    addViewModelBindings()
+
+    // Add event handlers
 
     // Same thing as didSelectRowAtIndexPath, just provides a direct access to the model
     tableView.rx.modelSelected(Person.self).subscribe(onNext: { [weak self] person in
@@ -62,8 +74,7 @@ class PersonListViewController: UIViewController, ViewModelBinding {
 
       // Call the onSelected function in the viewModel
       self?.viewModel.onSelected(person: person)
-    })
-    .disposed(by: bag)
+    }).disposed(by: bag)
   }
 
   override func viewWillAppear(_ animated: Bool) {

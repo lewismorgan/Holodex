@@ -14,12 +14,11 @@ import People
 protocol PersonListViewModel {
 
   // MARK: - Input
-
-  //var search: Driver<String> { get }
+  var query: Variable<String> { get }
 
   // MARK: - Output
-
   var people: Variable<[Person]> { get }
+  var filtered: Observable<[Person]> { get }
 
   func onSelected(person: Person)
 }

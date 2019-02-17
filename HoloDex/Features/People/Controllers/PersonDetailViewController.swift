@@ -55,7 +55,7 @@ class PersonDetailViewController: UIViewController, ViewModelBinding {
       guard let gender = person.gender else {
         return "N/A Gender"
       }
-      if gender != "male" || gender != "female" {
+      if !(gender == "male" || gender == "female") {
         return "N/A Gender"
       }
       return gender
