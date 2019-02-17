@@ -32,8 +32,7 @@ class PersonListViewModelImpl: PersonListViewModel {
       .bind(to: people).disposed(by: bag)
   }
 
-  func detailPerson(person: Person) {
-    debugPrint("Detailing a person")
+  func onSelected(person: Person) {
     router.trigger(.person(person), with: .init(animated: true))
   }
 }

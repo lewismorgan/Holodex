@@ -24,7 +24,7 @@ class PersonListViewController: UIViewController, ViewModelBinding {
 
   @IBOutlet weak public var tableView: UITableView!
 
-  // MARK: Initialization
+  // MARK: Init
 
   init() {
     super.init(nibName: PersonListViewController.NIB_NAME, bundle: nil)
@@ -38,8 +38,9 @@ class PersonListViewController: UIViewController, ViewModelBinding {
 
   /// Add the observable bindings from the view model to the view
   private func addBindings() {
-    viewModel.people.asObservable().bind(to: tableView.rx.items(cellIdentifier: "PersonCell")) { _, model, cell in
-      cell.textLabel?.text = model.name
+    viewModel.people.asObservable()
+      .bind(to: tableView.rx.items(cellIdentifier: "PersonCell")) { _, model, cell in
+        cell.textLabel?.text = model.name
       }
       .disposed(by: bag)
   }
@@ -54,13 +55,13 @@ class PersonListViewController: UIViewController, ViewModelBinding {
 
     // Same thing as didSelectRowAtIndexPath, just provides a direct access to the model
     tableView.rx.modelSelected(Person.self).subscribe(onNext: { [weak self] person in
-      self?.viewModel.detailPerson(person: person)
-    })
-    .disposed(by: bag)
+      // Deselect the row
+      if let selectedRowIndexPath = self?.tableView.indexPathForSelectedRow {
+        self?.tableView.deselectRow(at: selectedRowIndexPath, animated: true)
+      }
 
-    // Deselect row when it is selected that way it is not showing as being selected when navigating back
-    tableView.rx.itemSelected.subscribe(onNext: { [weak self] indexPath in
-      self?.tableView.deselectRow(at: indexPath, animated: true)
+      // Call the onSelected function in the viewModel
+      self?.viewModel.onSelected(person: person)
     })
     .disposed(by: bag)
   }

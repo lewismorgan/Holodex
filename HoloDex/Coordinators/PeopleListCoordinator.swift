@@ -38,10 +38,11 @@ class PeopleListCoordinator: NavigationCoordinator<PeopleListRoute> {
       viewController.bind(to: viewModel)
 
       return .push(viewController)
-    case .person:
-      debugPrint("Requesting detail about a person from coordinator")
+    case .person(let person):
       let viewController = PersonDetailViewController()
       let viewModel = PersonDetailViewModelImpl(router: self.anyRouter)
+      viewModel.person.value = person
+
       viewController.bind(to: viewModel)
 
       return .push(viewController)

@@ -21,5 +21,5 @@ protocol PersonListViewModel {
 
   var people: Variable<[Person]> { get }
 
-  func detailPerson(person: Person)
+  func onSelected(person: Person)
 }
