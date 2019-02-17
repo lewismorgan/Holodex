@@ -16,7 +16,7 @@
 		D75A341121093428003A4C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75A341021093428003A4C6D /* AppDelegate.swift */; };
 		D75A341821093429003A4C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D75A341721093429003A4C6D /* Assets.xcassets */; };
 		D75A341B21093429003A4C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75A341921093429003A4C6D /* LaunchScreen.storyboard */; };
-		D766BA2621FBDDE2007A2ED2 /* AppTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766BA2521FBDDE2007A2ED2 /* AppTabBarCoordinator.swift */; };
+		D766BA2621FBDDE2007A2ED2 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766BA2521FBDDE2007A2ED2 /* AppCoordinator.swift */; };
 		D766BA2821FBDE66007A2ED2 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766BA2721FBDE66007A2ED2 /* AppRoute.swift */; };
 		D77DC9D9220E3FFC0003453C /* PersonListViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77DC9D8220E3FFC0003453C /* PersonListViewModelImpl.swift */; };
 		D77DC9DC220E441F0003453C /* ViewModelBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77DC9DB220E441F0003453C /* ViewModelBinding.swift */; };
@@ -76,7 +76,7 @@
 		D75A341721093429003A4C6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D75A341A21093429003A4C6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D75A341C21093429003A4C6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D766BA2521FBDDE2007A2ED2 /* AppTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarCoordinator.swift; sourceTree = "<group>"; };
+		D766BA2521FBDDE2007A2ED2 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		D766BA2721FBDE66007A2ED2 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
 		D77DC9D8220E3FFC0003453C /* PersonListViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewModelImpl.swift; sourceTree = "<group>"; };
 		D77DC9DB220E441F0003453C /* ViewModelBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBinding.swift; sourceTree = "<group>"; };
@@ -181,7 +181,7 @@
 		D766BA2421FBDDC3007A2ED2 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				D766BA2521FBDDE2007A2ED2 /* AppTabBarCoordinator.swift */,
+				D766BA2521FBDDE2007A2ED2 /* AppCoordinator.swift */,
 				D766BA2721FBDE66007A2ED2 /* AppRoute.swift */,
 				D7C857D421FFACBF00DA33A0 /* PeopleListCoordinator.swift */,
 			);
@@ -424,7 +424,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D77DC9DC220E441F0003453C /* ViewModelBinding.swift in Sources */,
-				D766BA2621FBDDE2007A2ED2 /* AppTabBarCoordinator.swift in Sources */,
+				D766BA2621FBDDE2007A2ED2 /* AppCoordinator.swift in Sources */,
 				D766BA2821FBDE66007A2ED2 /* AppRoute.swift in Sources */,
 				D7C857D521FFACBF00DA33A0 /* PeopleListCoordinator.swift in Sources */,
 				D7FE7515210955C500DE1E28 /* PersonListViewController.swift in Sources */,

@@ -11,7 +11,7 @@ import XCoordinator
 import Networking
 import People
 
-class AppTabBarCoordinator: TabBarCoordinator<AppRoute> {
+class AppCoordinator: TabBarCoordinator<AppRoute> {
   private let peopleRouter: AnyRouter<PeopleListRoute>
 
   // MARK: - Init
