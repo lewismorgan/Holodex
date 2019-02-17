@@ -39,14 +39,13 @@ class RandomPeopleEndpointTests: QuickSpec {
         }
       }
       describe("getting a list of random people from a page") {
-        it("emits a list of random people") {
+        it("emits a list of 10+ random people") {
           let observable = people.getPeople(from: 1)
 
           let persons = try! observable.toBlocking().first()!
 
           expect(persons).toNot(beNil())
-          expect(persons).toNot(beEmpty())
-          expect(persons.count).to(beGreaterThan(1))
+          expect(persons.count).to(beGreaterThanOrEqualTo(10))
         }
       }
     }

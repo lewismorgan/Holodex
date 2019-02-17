@@ -8,7 +8,7 @@
 
 import UIKit
 import XCoordinator
-import Network
+import Networking
 import People
 
 class AppTabBarCoordinator: TabBarCoordinator<AppRoute> {

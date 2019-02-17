@@ -51,7 +51,16 @@ class PersonDetailViewController: UIViewController, ViewModelBinding {
       .drive(birth.rx.text)
       .disposed(by: bag)
 
-    person.map { $0.gender }
+    person.map({ person -> String in
+      guard let gender = person.gender else {
+        return "N/A Gender"
+      }
+      if gender != "male" || gender != "female" {
+        return "N/A Gender"
+      }
+      return gender
+    })
+      .map { $0.capitalized }
       .drive(gender.rx.text)
       .disposed(by: bag)
 
@@ -61,12 +70,12 @@ class PersonDetailViewController: UIViewController, ViewModelBinding {
       .disposed(by: bag)
 
     person.map { $0.hairColor }
-      .map { "\($0 ?? "<UNKNOWN>") Hair" }
+      .map { "\($0?.capitalized ?? "<UNKNOWN>") Hair" }
       .drive(hair.rx.text)
       .disposed(by: bag)
 
     person.map { $0.eyeColor }
-      .map { "\($0 ?? "<UNKNOWN>") Eyes" }
+      .map { "\($0?.capitalized ?? "<UNKNOWN>") Eyes" }
       .drive(eyes.rx.text)
       .disposed(by: bag)
 
