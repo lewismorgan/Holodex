@@ -46,6 +46,7 @@ class PersonListViewModelImpl: PersonListViewModel {
       .disposed(by: bag)
   }
 
+  /// Returns an array of people with names that match the query string, by first or last name
   private func filterPeople(with people: [Person], query: String) -> [Person] {
     guard !query.isEmpty else {
       return people
@@ -55,7 +56,16 @@ class PersonListViewModelImpl: PersonListViewModel {
       guard let name = person.name else {
         return false
       }
-      return name.hasPrefix(query) || name.hasSuffix(query)
+      // Only check for the suffix or prefix in the string, could do contains but that may confuse the user
+      let matches = name.hasSuffix(query) || name.hasPrefix(query)
+
+      // The user could be searching for a portion of the last name, so grab that if they have one
+      if !matches && name.contains(" ") {
+        let lastName = name.split(separator: " ")[1]
+        // Only checking for the prefix and suffix is good enough
+        return lastName.hasPrefix(query) || lastName.hasSuffix(query)
+      }
+      return matches
     }
 
     return filtered

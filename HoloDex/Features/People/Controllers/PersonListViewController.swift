@@ -41,17 +41,34 @@ class PersonListViewController: UIViewController, ViewModelBinding {
     // Search -- debounce isn't needed as there are no network requests are only made on the page
     searchBar.rx.text.orEmpty
       .distinctUntilChanged()
-      .debug("🔎", trimOutput: false)
       .asDriver(onErrorJustReturn: "")
       .drive(viewModel.query)
       .disposed(by: bag)
 
     // List of People bound to the filtered list, filtering handled by the ViewModel implementation
-    viewModel.filtered.debug("😅", trimOutput: true)
+    viewModel.filtered
       .bind(to: tableView.rx.items(cellIdentifier: "PersonCell")) { _, model, cell in
         cell.textLabel?.text = model.name
       }
       .disposed(by: bag)
+  }
+
+  private func createSearchBarEvents() {
+    // Stop editing if the search button is clicked or the cancel button is clicked
+    Observable.merge(searchBar.rx.searchButtonClicked.asObservable(), searchBar.rx.cancelButtonClicked.asObservable())
+      .subscribe(onNext: { [weak self] in
+        self?.searchBar.endEditing(true)
+      }).disposed(by: bag)
+
+    // Display the cancel button only when the user is searching for something (ie: keyboard displayed)
+
+    searchBar.rx.textDidBeginEditing.asObservable().subscribe(onNext: { [weak self] _ in
+      self?.searchBar.setShowsCancelButton(true, animated: true)
+    }).disposed(by: bag)
+
+    searchBar.rx.textDidEndEditing.asObservable().subscribe(onNext: { [weak self] _ in
+      self?.searchBar.setShowsCancelButton(false, animated: true)
+    }).disposed(by: bag)
   }
 
   // MARK: - UIViewController
@@ -63,9 +80,10 @@ class PersonListViewController: UIViewController, ViewModelBinding {
     // Setup the bindings to the view model
     addViewModelBindings()
 
-    // Add event handlers
+    // Setup UI events
+    createSearchBarEvents()
 
-    // Same thing as didSelectRowAtIndexPath, just provides a direct access to the model
+    // didSelectRowAtIndexPath alternative giving access to the model selected
     tableView.rx.modelSelected(Person.self).subscribe(onNext: { [weak self] person in
       // Deselect the row
       if let selectedRowIndexPath = self?.tableView.indexPathForSelectedRow {
