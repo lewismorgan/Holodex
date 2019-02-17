@@ -1,9 +1,9 @@
 //
 //  NetworkAPIError.swift
-//  Networking
+//  HoloDex
 //
 //  Created by Lewis Morgan on 2/10/19.
-//  Copyright © 2019 Lewis Morgan. All rights reserved.
+//  Copyright © 2019 Lewis J Morgan. All rights reserved.
 //
 
 public enum NetworkAPIError: Error, Equatable {

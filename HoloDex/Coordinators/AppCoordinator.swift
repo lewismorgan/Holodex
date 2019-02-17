@@ -6,10 +6,10 @@
 //  Copyright © 2019 Lewis J Morgan. All rights reserved.
 //
 
-import UIKit
-import XCoordinator
 import Networking
 import People
+import UIKit
+import XCoordinator
 
 class AppCoordinator: TabBarCoordinator<AppRoute> {
   private let peopleRouter: AnyRouter<PeopleListRoute>

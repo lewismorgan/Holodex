@@ -6,8 +6,8 @@
 //  Copyright © 2019 Lewis J Morgan. All rights reserved.
 //
 
-import RxSwift
 import People
+import RxSwift
 
 protocol PersonDetailViewModel {
   var person: Variable<Person> { get }

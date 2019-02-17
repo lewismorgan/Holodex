@@ -3,9 +3,55 @@ excluded:
 - Carthage
 
 disabled_rules:
-- force_cast
-- identifier_name
 - force_try
 - todo
+
+opt_in_rules:
+  - empty_count
+  - file_header
+  - explicit_init
+  - closure_spacing
+  - overridden_super_call
+  - redundant_nil_coalescing
+  - private_outlet
+  - nimble_operator
+  - attributes
+  - operator_usage_whitespace
+  - closure_end_indentation
+  - first_where
+  - sorted_imports
+  - object_literal
+  - number_separator
+  - prohibited_super_call
+  - fatal_error_message
+  - control_statement
+  - trailing_newline
+  - colon
+  - comma
+  - unneeded_parentheses_in_closure_argument
+  - pattern_matching_keywords
+  - contains_over_first_not_nil
+
+file_header:
+  required_pattern: |
+                    \/\/
+                    \/\/  .*?\.swift
+                    \/\/  HoloDex
+                    \/\/
+                    \/\/  Created by .*? on \d{1,2}\/\d{1,2}\/\d{2}\.
+                    \/\/  Copyright © 2019 Lewis J Morgan\. All rights reserved\.
+                    \/\/
+line_length: 120
+
+file_length:
+  warning: 500
+  error: 800
+
+large_tuple: # warn user when using 3 values in tuple, give error if there are 4
+  - 3
+  - 4
+
+number_separator:
+  minimum_length: 5
 
 reporter: "xcode"

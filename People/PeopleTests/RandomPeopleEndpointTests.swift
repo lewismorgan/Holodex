@@ -1,16 +1,16 @@
 //
 //  RandomPeopleEndpointTests.swift
-//  PeopleTests
+//  HoloDex
 //
 //  Created by Lewis Morgan on 2/15/19.
-//  Copyright © 2019 Lewis Morgan. All rights reserved.
+//  Copyright © 2019 Lewis J Morgan. All rights reserved.
 //
 
+import Nimble
 @testable import People
 import Quick
-import Nimble
-import RxSwift
 import RxBlocking
+import RxSwift
 
 class RandomPeopleEndpointTests: QuickSpec {
   override func spec() {
@@ -45,7 +45,7 @@ class RandomPeopleEndpointTests: QuickSpec {
           let persons = try! observable.toBlocking().first()!
 
           expect(persons).toNot(beNil())
-          expect(persons.count).to(beGreaterThanOrEqualTo(10))
+          expect(persons.count) >= 10
         }
       }
     }

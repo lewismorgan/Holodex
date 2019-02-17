@@ -8,7 +8,6 @@
 
 import People
 import RxSwift
-import RxCocoa
 import XCoordinator
 
 class PersonDetailViewModelImpl: PersonDetailViewModel {

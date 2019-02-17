@@ -1,15 +1,15 @@
 //
 //  StarWarsAPI.swift
-//  Networking
+//  HoloDex
 //
 //  Created by Lewis Morgan on 2/9/19.
-//  Copyright © 2019 Lewis Morgan. All rights reserved.
+//  Copyright © 2019 Lewis J Morgan. All rights reserved.
 //
 
 import Alamofire
 import ObjectMapper
-import RxSwift
 import RxAlamofire
+import RxSwift
 
 public class StarWarsAPI: NetworkingAPI {
   private static let baseUrl = "https://swapi.co/api/"
@@ -41,7 +41,7 @@ public class StarWarsAPI: NetworkingAPI {
   /// Creates a request for a specific page in the StarWarsAPI
   public func buildPageRequest<T: Mappable>(endpoint: String, page: Int, type: T.Type) -> Observable<PagedResults<T>> {
     return buildRequest(endpoint: endpoint, params: ["page": page], type: StarWarsAPIResponse<T>.self)
-      .flatMap { (response) -> Observable<PagedResults<T>> in
+      .flatMap { response -> Observable<PagedResults<T>> in
         // Convert the URL page
         let components = NSURLComponents(string: response.next)
         guard let items = components?.queryItemsToDict(), let page = items["page"] else {
@@ -53,7 +53,7 @@ public class StarWarsAPI: NetworkingAPI {
         } else {
           return Observable.error(NetworkAPIError.noPages)
         }
-    }
+      }
   }
 
   // MARK: - Public Unique Methods
@@ -63,7 +63,7 @@ public class StarWarsAPI: NetworkingAPI {
                                                      loadNext trigger: Observable<Void>,
                                                      type: T.Type) -> Observable<[T]> {
     return buildRequest(endpoint: endpoint, params: ["page": page], type: StarWarsAPIResponse<T>.self)
-      .flatMap { (response) -> Observable<[T]> in
+      .flatMap { response -> Observable<[T]> in
         let components = NSURLComponents(string: response.next)
         guard let items = components?.queryItemsToDict(), let page = items["page"] else {
           // There are no more pages
@@ -76,6 +76,6 @@ public class StarWarsAPI: NetworkingAPI {
                                                                   loadNext: trigger, type: type)
                                     .catchErrorJustReturn([]))
         } else { return Observable.just(response.results) }
-    }
+      }
   }
 }

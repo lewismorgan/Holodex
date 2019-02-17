@@ -3,17 +3,17 @@
 //  HoloDex
 //
 //  Created by Lewis Morgan on 7/25/18.
-//  Copyright © 2018 Lewis J Morgan. All rights reserved.
+//  Copyright © 2019 Lewis J Morgan. All rights reserved.
 //
 
 import People
-import UIKit
-import RxSwift
 import RxCocoa
 import RxDataSources
+import RxSwift
+import UIKit
 
 class PersonListViewController: UIViewController, ViewModelBinding {
-  private static let NIB_NAME = "PersonListView"
+  private static let nibName = "PersonListView"
   var viewModel: PersonListViewModel!
 
   // MARK: Private
@@ -22,13 +22,13 @@ class PersonListViewController: UIViewController, ViewModelBinding {
 
   // MARK: Views
 
-  @IBOutlet weak public var tableView: UITableView!
-  @IBOutlet weak public var searchBar: UISearchBar!
+  @IBOutlet weak private var tableView: UITableView!
+  @IBOutlet weak private var searchBar: UISearchBar!
 
   // MARK: Init
 
   init() {
-    super.init(nibName: PersonListViewController.NIB_NAME, bundle: nil)
+    super.init(nibName: PersonListViewController.nibName, bundle: nil)
   }
 
   required init?(coder aDecoder: NSCoder) {
@@ -74,6 +74,8 @@ class PersonListViewController: UIViewController, ViewModelBinding {
   // MARK: - UIViewController
 
   override func viewDidLoad() {
+    super.viewDidLoad()
+
     // Initialize variables
     tableView.register(PersonCell.self, forCellReuseIdentifier: "PersonCell")
 
@@ -100,7 +102,7 @@ class PersonListViewController: UIViewController, ViewModelBinding {
   }
 
   override func viewWillDisappear(_ animated: Bool) {
-    super.viewWillAppear(animated)
+    super.viewWillDisappear(animated)
   }
 }
 

@@ -3,7 +3,7 @@
 //  HoloDex
 //
 //  Created by Lewis Morgan on 7/25/18.
-//  Copyright © 2018 Lewis J Morgan. All rights reserved.
+//  Copyright © 2019 Lewis J Morgan. All rights reserved.
 //
 
 import ObjectMapper
@@ -30,14 +30,14 @@ public struct Person: Mappable, Codable {
   }
 
   public mutating func mapping(map: Map) {
-    name        <- map["name"]
-    height      <- map["height"]
-    mass        <- map["mass"]
-    hairColor   <- map["hair_color"]
-    skinColor   <- map["skin_color"]
-    eyeColor    <- map["eye_color"]
-    birthYear   <- map["birth_year"]
-    gender      <- map["gender"]
-    homeworld   <- map["homeworld"]
+    name <- map["name"]
+    height <- map["height"]
+    mass <- map["mass"]
+    hairColor <- map["hair_color"]
+    skinColor <- map["skin_color"]
+    eyeColor <- map["eye_color"]
+    birthYear <- map["birth_year"]
+    gender <- map["gender"]
+    homeworld <- map["homeworld"]
   }
 }

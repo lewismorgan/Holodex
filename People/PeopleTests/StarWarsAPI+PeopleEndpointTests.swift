@@ -1,17 +1,17 @@
 //
 //  StarWarsAPI+PeopleEndpointTests.swift
-//  PeopleTests
+//  HoloDex
 //
 //  Created by Lewis Morgan on 2/14/19.
-//  Copyright © 2019 Lewis Morgan. All rights reserved.
+//  Copyright © 2019 Lewis J Morgan. All rights reserved.
 //
 
-@testable import People
 import Networking
-import RxSwift
-import RxBlocking
-import Quick
 import Nimble
+@testable import People
+import Quick
+import RxBlocking
+import RxSwift
 
 class SWAPIPeopleEndpointTests: QuickSpec {
   override func spec() {
@@ -28,7 +28,7 @@ class SWAPIPeopleEndpointTests: QuickSpec {
 
           let items = try! results.toBlocking().toArray()
 
-          expect(items.count).to(beGreaterThan(0))
+          expect(items.count) > 0
         }
       }
       describe("get a person from id") {
@@ -37,7 +37,7 @@ class SWAPIPeopleEndpointTests: QuickSpec {
 
           let item = try! result.toBlocking().toArray()
 
-          expect(item.count).to(equal(1))
+          expect(item.count) == 1
           expect(item[0].name).toNot(beEmpty()) // Every person must have a name
         }
       }

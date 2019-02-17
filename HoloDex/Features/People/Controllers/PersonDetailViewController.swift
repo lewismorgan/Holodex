@@ -6,31 +6,31 @@
 //  Copyright © 2019 Lewis J Morgan. All rights reserved.
 //
 
-import UIKit
 import People
-import RxSwift
 import RxCocoa
+import RxSwift
+import UIKit
 
 class PersonDetailViewController: UIViewController, ViewModelBinding {
-  private static let NIB_NAME = "PersonDetailView"
+  private static let nibName = "PersonDetailView"
   var viewModel: PersonDetailViewModel!
 
   // MARK: Private
   private let bag = DisposeBag()
 
   // MARK: Views
-  @IBOutlet weak public var name: UILabel!
-  @IBOutlet weak public var birth: UILabel!
-  @IBOutlet weak public var gender: UILabel!
-  @IBOutlet weak public var height: UILabel!
-  @IBOutlet weak public var weight: UILabel!
-  @IBOutlet weak public var hair: UILabel!
-  @IBOutlet weak public var eyes: UILabel!
+  @IBOutlet weak private var name: UILabel!
+  @IBOutlet weak private var birth: UILabel!
+  @IBOutlet weak private var gender: UILabel!
+  @IBOutlet weak private var height: UILabel!
+  @IBOutlet weak private var weight: UILabel!
+  @IBOutlet weak private var hair: UILabel!
+  @IBOutlet weak private var eyes: UILabel!
 
   // MARK: Init
 
   init() {
-    super.init(nibName: PersonDetailViewController.NIB_NAME, bundle: nil)
+    super.init(nibName: PersonDetailViewController.nibName, bundle: nil)
   }
 
   required init?(coder aDecoder: NSCoder) {
@@ -40,6 +40,8 @@ class PersonDetailViewController: UIViewController, ViewModelBinding {
   // MARK: - UIViewController
 
   override func viewDidLoad() {
+    super.viewDidLoad()
+
     let person = viewModel.person.asDriver().debug()
 
     person.map { $0.name }

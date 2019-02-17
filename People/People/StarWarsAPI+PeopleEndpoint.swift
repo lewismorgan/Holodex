@@ -1,9 +1,9 @@
 //
 //  StarWarsAPI+PeopleEndpoint.swift
-//  People
+//  HoloDex
 //
 //  Created by Lewis Morgan on 2/14/19.
-//  Copyright © 2019 Lewis Morgan. All rights reserved.
+//  Copyright © 2019 Lewis J Morgan. All rights reserved.
 //
 
 import Networking
@@ -14,7 +14,7 @@ extension StarWarsAPI: PeopleEndpoint {
     return self.buildPageRequest(endpoint: "people", page: page, type: Person.self).map { $0.results }
   }
 
-  public func getPerson(from id: Int) -> Observable<Person> {
-    return self.buildRequest(endpoint: "people/\(id)", type: Person.self)
+  public func getPerson(from personId: Int) -> Observable<Person> {
+    return self.buildRequest(endpoint: "people/\(personId)", type: Person.self)
   }
 }

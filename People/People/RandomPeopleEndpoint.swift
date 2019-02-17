@@ -1,9 +1,9 @@
 //
 //  RandomPeopleEndpoint.swift
-//  People
+//  HoloDex
 //
 //  Created by Lewis Morgan on 2/14/19.
-//  Copyright © 2019 Lewis Morgan. All rights reserved.
+//  Copyright © 2019 Lewis J Morgan. All rights reserved.
 //
 
 import Networking
@@ -41,7 +41,7 @@ public class RandomPeopleEndpoint: PeopleEndpoint {
     }
   }
 
-  public func getPerson(from id: Int) -> Observable<Person> {
+  public func getPerson(from personId: Int) -> Observable<Person> {
     return Observable.of(createPerson())
   }
 

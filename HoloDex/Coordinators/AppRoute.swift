@@ -7,7 +7,6 @@
 //
 
 import XCoordinator
-import People
 
 enum AppRoute: Route {
   case people

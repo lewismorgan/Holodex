@@ -6,10 +6,10 @@
 //  Copyright © 2019 Lewis J Morgan. All rights reserved.
 //
 
-import UIKit
-import XCoordinator
 import Network
 import People
+import UIKit
+import XCoordinator
 
 enum PeopleListRoute: Route {
   case home

@@ -6,11 +6,9 @@
 //  Copyright © 2019 Lewis J Morgan. All rights reserved.
 //
 
-import RxSwift
-import RxCocoa
-import XCoordinator
-import Network
 import People
+import RxSwift
+import XCoordinator
 
 class PersonListViewModelImpl: PersonListViewModel {
 
@@ -39,12 +37,14 @@ class PersonListViewModelImpl: PersonListViewModel {
 
     // Create the filteredSubject
     Observable.combineLatest(people.asObservable(),
-                             query.asObservable()) { [unowned self] (people, searchTerm) -> [Person] in
+                             query.asObservable()) { [unowned self] people, searchTerm -> [Person] in
       return self.filterPeople(with: people, query: searchTerm)
     }.asDriver(onErrorJustReturn: [])
       .drive(filteredSubject)
       .disposed(by: bag)
   }
+
+  // MARK: - Private Functions
 
   /// Returns an array of people with names that match the query string, by first or last name
   private func filterPeople(with people: [Person], query: String) -> [Person] {
@@ -52,7 +52,7 @@ class PersonListViewModelImpl: PersonListViewModel {
       return people
     }
 
-    let filtered: [Person] = people.filter { (person) in
+    let filtered: [Person] = people.filter { person in
       guard let name = person.name else {
         return false
       }

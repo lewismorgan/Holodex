@@ -6,10 +6,8 @@
 //  Copyright © 2019 Lewis J Morgan. All rights reserved.
 //
 
-import RxSwift
-import RxCocoa
-import Action
 import People
+import RxSwift
 
 protocol PersonListViewModel {
 

@@ -1,9 +1,9 @@
 //
 //  StarWarsAPIResponse.swift
-//  Networking
+//  HoloDex
 //
 //  Created by Lewis Morgan on 2/9/19.
-//  Copyright © 2019 Lewis Morgan. All rights reserved.
+//  Copyright © 2019 Lewis J Morgan. All rights reserved.
 //
 
 import ObjectMapper
@@ -22,9 +22,9 @@ public class StarWarsAPIResponse<T: Mappable>: Mappable {
   }
 
   public func mapping(map: Map) {
-    count       <- map["count"]
-    next        <- map["next"]
-    previous    <- map["previous"]
-    results     <- map["results"]
+    count <- map["count"]
+    next <- map["next"]
+    previous <- map["previous"]
+    results <- map["results"]
   }
 }

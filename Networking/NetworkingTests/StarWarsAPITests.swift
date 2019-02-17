@@ -1,18 +1,18 @@
 //
 //  StarWarsAPITests.swift
-//  NetworkingTests
+//  HoloDex
 //
 //  Created by Lewis Morgan on 2/9/19.
-//  Copyright © 2019 Lewis Morgan. All rights reserved.
+//  Copyright © 2019 Lewis J Morgan. All rights reserved.
 //
 
 @testable import Networking
-import Quick
 import Nimble
+import ObjectMapper
+import Quick
+import RxBlocking
 import RxSwift
 import RxTest
-import RxBlocking
-import ObjectMapper
 
 // ONLY TEST PUBLIC METHODS !
 
@@ -32,7 +32,7 @@ class StarWarsAPITests: QuickSpec {
       describe("building a request") {
         it("creates a request to the API") {
           let result = try! swapi.buildRequest(endpoint: "\(endpoint)/1/", type: NamedResult.self).toBlocking().first()!
-          expect(result.name).to(equal("Tatooine"))
+          expect(result.name) == "Tatooine"
         }
       }
       describe("building a streaming page request") {
@@ -48,7 +48,7 @@ class StarWarsAPITests: QuickSpec {
 
           // There should be nPages of arrays emitted by the stream, right now it only works because of take(...)
           // trigger isn't working properly :(
-          expect(items.count).to(equal(nPages))
+          expect(items.count) == nPages
         }
       }
       describe("building a page request") {
@@ -59,8 +59,8 @@ class StarWarsAPITests: QuickSpec {
 
           let items = try! request.toBlocking().toArray()
 
-          expect(items.count).to(equal(1))
-          expect(items[0].nextPage).to(equal(secondPage))
+          expect(items.count) == 1
+          expect(items[0].nextPage) == secondPage
         }
       }
     }
