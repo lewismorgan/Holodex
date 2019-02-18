@@ -75,7 +75,7 @@
          <EnvironmentVariable
             key = "container"
             value = "debug"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "container"

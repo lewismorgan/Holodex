@@ -38,6 +38,8 @@ class AppCoordinator: TabBarCoordinator<AppRoute> {
 
   // MARK: - Private Functions
   private func setupView() {
+    let tabBar = self.rootViewController.tabBar
+    tabBar.barStyle = .black
   }
 
   // MARK: - TabBarCoordinator

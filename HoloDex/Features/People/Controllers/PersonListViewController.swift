@@ -50,7 +50,10 @@ class PersonListViewController: UIViewController, ViewModelBinding {
     // List of People bound to the filtered list, filtering handled by the ViewModel implementation
     viewModel.filtered
       .bind(to: tableView.rx.items(cellIdentifier: "PersonCell")) { _, model, cell in
-        cell.textLabel?.text = model.name
+        guard let personCell = cell as? PersonCell else {
+          return
+        }
+        personCell.setup(name: model.name ?? "")
       }
       .disposed(by: bag)
   }
@@ -79,7 +82,9 @@ class PersonListViewController: UIViewController, ViewModelBinding {
     super.viewDidLoad()
 
     // Initialize variables
-    tableView.register(PersonCell.self, forCellReuseIdentifier: "PersonCell")
+    // swiftlint:disable explicit_init
+    tableView.register(UINib.init(nibName: "PersonCellView", bundle: nil), forCellReuseIdentifier: "PersonCell")
+    // swiftlint:enable explicit_init
 
     // Setup the bindings to the view model
     addViewModelBindings()
@@ -120,12 +125,12 @@ class PersonListViewController: UIViewController, ViewModelBinding {
 
 // MARK: - Utility Classes
 
-class PersonCell: UITableViewCell {
-  override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-    super.init(style: style, reuseIdentifier: reuseIdentifier)
-  }
-
-  required init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-  }
-}
+//class PersonCell: UITableViewCell {
+//  override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+//    super.init(style: style, reuseIdentifier: reuseIdentifier)
+//  }
+//
+//  required init?(coder aDecoder: NSCoder) {
+//    super.init(coder: aDecoder)
+//  }
+//}
