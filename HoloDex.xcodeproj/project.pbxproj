@@ -208,10 +208,20 @@
 			path = Features;
 			sourceTree = "<group>";
 		};
+		D7C73F45221B6B330048923A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D75958BB220394D300BAFCC1 /* PersonListView.xib */,
+				D78C53702218917700D5B56F /* PersonDetailView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D7DD0A2D210AAE290072A896 /* People */ = {
 			isa = PBXGroup;
 			children = (
 				D7FFC2FE2218B50500292BE8 /* Models */,
+				D7C73F45221B6B330048923A /* Views */,
 				D7FFC2FF2218B55900292BE8 /* Controllers */,
 			);
 			path = People;
@@ -231,9 +241,7 @@
 		D7FFC2FF2218B55900292BE8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D75958BB220394D300BAFCC1 /* PersonListView.xib */,
 				D7FE7514210955C500DE1E28 /* PersonListViewController.swift */,
-				D78C53702218917700D5B56F /* PersonDetailView.xib */,
 				D78C53722218919F00D5B56F /* PersonDetailViewController.swift */,
 			);
 			path = Controllers;
