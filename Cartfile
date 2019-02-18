@@ -4,7 +4,6 @@ github "RxSwiftCommunity/RxDataSources" ~> 3.0
 github "tristanhimmelman/ObjectMapper" ~> 3.4
 github "Alamofire/Alamofire" ~> 4.0
 github "RxSwiftCommunity/RxAlamofire" ~> 4.0
-github "tristanhimmelman/AlamofireObjectMapper" ~> 5.0
 github "quickbirdstudios/XCoordinator" ~> 1.0
 github "Quick/Nimble" ~> 7.3
 github "Quick/Quick" ~> 1.3
