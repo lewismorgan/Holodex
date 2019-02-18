@@ -6,15 +6,33 @@
 //  Copyright © 2019 Lewis J Morgan. All rights reserved.
 //
 
+import Swinject
 import UIKit
 import XCoordinator
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   let window: UIWindow! = UIWindow()
-  let router = AppCoordinator().anyCoordinator
+  let router: AnyRouter<AppRoute>
+  var container: Swinject.Container
 
-  // MARK: - App Delegate Methods
+  // MARK: - Init
+
+  override init() {
+    // Setup the container based on the container environment variable for the process
+    if let containerType = ProcessInfo.processInfo.environment["container"] {
+      // The container that should be used was specified, so pull it from the factory
+      self.container = HoloDexContainerFactory.fromRaw(value: containerType)
+      print("⚙️ Using container", containerType)
+    } else {
+      self.container = HoloDexContainerFactory.create(type: .release)
+    }
+    // Setup the router
+    self.router = AppCoordinator(container: self.container).anyRouter
+    super.init()
+  }
+
+  // MARK: - AppDelegate
 
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

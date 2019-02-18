@@ -11,7 +11,7 @@ import ObjectMapper
 import RxAlamofire
 import RxSwift
 
-public class StarWarsAPI: NetworkingAPI {
+open class StarWarsAPI: NetworkingAPI {
   private static let baseUrl = "https://swapi.co/api/"
 
   public init() {

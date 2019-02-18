@@ -8,6 +8,7 @@
 
 import Networking
 import People
+import Swinject
 import UIKit
 import XCoordinator
 
@@ -16,8 +17,12 @@ class AppCoordinator: TabBarCoordinator<AppRoute> {
 
   // MARK: - Init
 
-  convenience init() {
-    let peopleCoordinator = PeopleListCoordinator(endpoint: StarWarsAPI()).anyRouter
+  convenience init(container: Swinject.Container) {
+    guard let endpoint = container.resolve(PeopleEndpoint.self) else {
+      fatalError("🛑 Container has no PeopleEndpoint registered")
+    }
+
+    let peopleCoordinator = PeopleListCoordinator(endpoint: endpoint).anyRouter
     peopleCoordinator.viewController.tabBarItem = UITabBarItem(title: "People", image: nil, tag: 0)
 
     self.init(peopleRouter: peopleCoordinator.anyRouter)
