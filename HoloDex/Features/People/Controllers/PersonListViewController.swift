@@ -122,15 +122,3 @@ class PersonListViewController: UIViewController, ViewModelBinding {
     super.viewWillDisappear(animated)
   }
 }
-
-// MARK: - Utility Classes
-
-//class PersonCell: UITableViewCell {
-//  override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-//    super.init(style: style, reuseIdentifier: reuseIdentifier)
-//  }
-//
-//  required init?(coder aDecoder: NSCoder) {
-//    super.init(coder: aDecoder)
-//  }
-//}

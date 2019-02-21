@@ -11,6 +11,15 @@ import UIKit
 class PersonCell: UITableViewCell {
   @IBOutlet weak private var name: UILabel!
 
+  override func awakeFromNib() {
+    super.awakeFromNib()
+
+    let selectedView = UIView()
+    selectedView.backgroundColor = Colors.primaryTint
+
+    self.selectedBackgroundView = selectedView
+  }
+
   public func setup(name: String) {
     self.name.text = name
   }

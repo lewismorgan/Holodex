@@ -39,6 +39,7 @@
 		D7C73F47221B6FCD0048923A /* PersonCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7C73F46221B6FCD0048923A /* PersonCellView.xib */; };
 		D7C73F49221B71A30048923A /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C73F48221B71A30048923A /* PersonCell.swift */; };
 		D7C857D521FFACBF00DA33A0 /* PeopleListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C857D421FFACBF00DA33A0 /* PeopleListCoordinator.swift */; };
+		D7F10F65221E3D1E000393CB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F10F64221E3D1E000393CB /* Colors.swift */; };
 		D7FE7515210955C500DE1E28 /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7514210955C500DE1E28 /* PersonListViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +103,7 @@
 		D7C73F46221B6FCD0048923A /* PersonCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonCellView.xib; sourceTree = "<group>"; };
 		D7C73F48221B71A30048923A /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		D7C857D421FFACBF00DA33A0 /* PeopleListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListCoordinator.swift; sourceTree = "<group>"; };
+		D7F10F64221E3D1E000393CB /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		D7FE7514210955C500DE1E28 /* PersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,6 +183,7 @@
 				D7A1D760220E308800286709 /* Features */,
 				D75A341721093429003A4C6D /* Assets.xcassets */,
 				D75A341C21093429003A4C6D /* Info.plist */,
+				D7F10F64221E3D1E000393CB /* Colors.swift */,
 			);
 			path = HoloDex;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7C73F49221B71A30048923A /* PersonCell.swift in Sources */,
+				D7F10F65221E3D1E000393CB /* Colors.swift in Sources */,
 				D77DC9DC220E441F0003453C /* ViewModelBinding.swift in Sources */,
 				D766BA2621FBDDE2007A2ED2 /* AppCoordinator.swift in Sources */,
 				D766BA2821FBDE66007A2ED2 /* AppRoute.swift in Sources */,

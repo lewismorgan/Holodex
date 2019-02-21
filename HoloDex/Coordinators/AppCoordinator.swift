@@ -23,7 +23,7 @@ class AppCoordinator: TabBarCoordinator<AppRoute> {
     }
 
     let peopleCoordinator = PeopleListCoordinator(endpoint: endpoint).anyRouter
-    peopleCoordinator.viewController.tabBarItem = UITabBarItem(title: "People", image: nil, tag: 0)
+    peopleCoordinator.viewController.tabBarItem = createTabBarItem(tabBarSystemItem: .contacts, tag: 0)
 
     self.init(peopleRouter: peopleCoordinator.anyRouter)
   }
@@ -40,6 +40,9 @@ class AppCoordinator: TabBarCoordinator<AppRoute> {
   private func setupView() {
     let tabBar = self.rootViewController.tabBar
     tabBar.barStyle = .black
+
+    tabBar.tintColor = Colors.primaryTint // Text color
+    tabBar.barTintColor = Colors.primaryBackground
   }
 
   // MARK: - TabBarCoordinator
@@ -50,4 +53,12 @@ class AppCoordinator: TabBarCoordinator<AppRoute> {
       return .select(peopleRouter)
     }
   }
+}
+
+func createTabBarItem(tabBarSystemItem: UITabBarItem.SystemItem, tag: Int) -> UITabBarItem {
+  let tabBarItem = UITabBarItem(tabBarSystemItem: tabBarSystemItem, tag: tag)
+  tabBarItem.imageInsets = UIEdgeInsets(top: 9, left: 0, bottom: -9, right: 0)
+  tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear], for: .selected)
+  tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear], for: .normal)
+  return tabBarItem
 }
