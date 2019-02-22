@@ -12,8 +12,9 @@
 		D724D3EB22176E0500383887 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D724D3E822176DEE00383887 /* Networking.framework */; };
 		D724D3EC22176E0500383887 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D724D3E822176DEE00383887 /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D74CE4FD22207F8F000CB7AD /* SwiftIconFont.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D74CE4FC22207F8F000CB7AD /* SwiftIconFont.framework */; };
+		D74CE5002220A435000CB7AD /* UITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74CE4FF2220A435000CB7AD /* UITableViewController.swift */; };
+		D74CE5042220AD3C000CB7AD /* PersonListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D74CE5032220AD3C000CB7AD /* PersonListStoryboard.storyboard */; };
 		D750042D220E350F0098FCA5 /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D750042C220E350F0098FCA5 /* Action.framework */; };
-		D75958BC220394D300BAFCC1 /* PersonListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D75958BB220394D300BAFCC1 /* PersonListView.xib */; };
 		D75A341121093428003A4C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75A341021093428003A4C6D /* AppDelegate.swift */; };
 		D75A341821093429003A4C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D75A341721093429003A4C6D /* Assets.xcassets */; };
 		D75A341B21093429003A4C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75A341921093429003A4C6D /* LaunchScreen.storyboard */; };
@@ -75,8 +76,9 @@
 		D7362733211CF804003F54FC /* HoloDexUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoloDexUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7362737211CF804003F54FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D74CE4FC22207F8F000CB7AD /* SwiftIconFont.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftIconFont.framework; path = Carthage/Build/iOS/SwiftIconFont.framework; sourceTree = "<group>"; };
+		D74CE4FF2220A435000CB7AD /* UITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewController.swift; sourceTree = "<group>"; };
+		D74CE5032220AD3C000CB7AD /* PersonListStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PersonListStoryboard.storyboard; sourceTree = "<group>"; };
 		D750042C220E350F0098FCA5 /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
-		D75958BB220394D300BAFCC1 /* PersonListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonListView.xib; sourceTree = "<group>"; };
 		D75A340D21093428003A4C6D /* HoloDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoloDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75A341021093428003A4C6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D75A341721093429003A4C6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -158,6 +160,14 @@
 			path = HoloDexUnitTests;
 			sourceTree = "<group>";
 		};
+		D74CE4FE2220A419000CB7AD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D74CE4FF2220A435000CB7AD /* UITableViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D75A340421093428003A4C6D = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +193,7 @@
 				D70C54A0211CEBCD00106D73 /* Base */,
 				D77DC9DA220E43FD0003453C /* Binding */,
 				D766BA2421FBDDC3007A2ED2 /* Coordinators */,
+				D74CE4FE2220A419000CB7AD /* Extensions */,
 				D7A1D760220E308800286709 /* Features */,
 				D75A341721093429003A4C6D /* Assets.xcassets */,
 				D75A341C21093429003A4C6D /* Info.plist */,
@@ -221,9 +232,9 @@
 		D7C73F45221B6B330048923A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D75958BB220394D300BAFCC1 /* PersonListView.xib */,
 				D78C53702218917700D5B56F /* PersonDetailView.xib */,
 				D7C73F46221B6FCD0048923A /* PersonCellView.xib */,
+				D74CE5032220AD3C000CB7AD /* PersonListStoryboard.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -373,9 +384,9 @@
 			files = (
 				D75A341B21093429003A4C6D /* LaunchScreen.storyboard in Resources */,
 				D75A341821093429003A4C6D /* Assets.xcassets in Resources */,
+				D74CE5042220AD3C000CB7AD /* PersonListStoryboard.storyboard in Resources */,
 				D7C73F47221B6FCD0048923A /* PersonCellView.xib in Resources */,
 				D78C53712218917700D5B56F /* PersonDetailView.xib in Resources */,
-				D75958BC220394D300BAFCC1 /* PersonListView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +474,7 @@
 				D75A341121093428003A4C6D /* AppDelegate.swift in Sources */,
 				D77DC9D9220E3FFC0003453C /* PersonListViewModelImpl.swift in Sources */,
 				D78C53732218919F00D5B56F /* PersonDetailViewController.swift in Sources */,
+				D74CE5002220A435000CB7AD /* UITableViewController.swift in Sources */,
 				D7C73F44221B57600048923A /* HoloDexContainerFactory.swift in Sources */,
 				D77DC9DE220E44660003453C /* UIViewController+ViewModelBinding.swift in Sources */,
 				D78C536D2218879000D5B56F /* PersonDetailViewModel.swift in Sources */,

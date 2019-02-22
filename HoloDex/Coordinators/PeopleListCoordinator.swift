@@ -32,10 +32,14 @@ class PeopleListCoordinator: NavigationCoordinator<PeopleListRoute> {
   override func prepareTransition(for route: PeopleListRoute) -> NavigationTransition {
     switch route {
     case .home, .persons:
-      let viewController = PersonListViewController()
+      let storyboard = UIStoryboard(name: "PersonListStoryboard", bundle: nil)
+      let viewController = storyboard.instantiateViewController(withIdentifier: "PersonList")
       let viewModel = PersonListViewModelImpl(router: self.anyRouter,
                                               endpoint: endpoint)
-      viewController.bind(to: viewModel)
+      guard let bindable = viewController as? PersonListViewController else {
+        fatalError("Expected viewcontroller to be a PersonListViewController")
+      }
+      bindable.bind(to: viewModel)
 
       return .push(viewController)
     case .person(let person):
