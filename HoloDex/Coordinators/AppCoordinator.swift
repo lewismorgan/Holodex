@@ -8,6 +8,7 @@
 
 import Networking
 import People
+import SwiftIconFont
 import Swinject
 import UIKit
 import XCoordinator
@@ -22,8 +23,9 @@ class AppCoordinator: TabBarCoordinator<AppRoute> {
       fatalError("🛑 Container has no PeopleEndpoint registered")
     }
 
-    let peopleCoordinator = PeopleListCoordinator(endpoint: endpoint).anyRouter
-    peopleCoordinator.viewController.tabBarItem = createTabBarItem(tabBarSystemItem: .contacts, tag: 0)
+    let peopleCoordinator = PeopleListCoordinator(endpoint: endpoint)
+    peopleCoordinator.rootViewController.tabBarItem = createTabBarItem(title: "People", from: .materialIcon,
+                                                                   code: "person", tag: 0)
 
     self.init(peopleRouter: peopleCoordinator.anyRouter)
   }
@@ -31,7 +33,8 @@ class AppCoordinator: TabBarCoordinator<AppRoute> {
   init(peopleRouter: AnyRouter<PeopleListRoute>) {
     self.peopleRouter = peopleRouter
 
-    super.init(tabs: [peopleRouter], select: peopleRouter)
+    super.init(tabs: [PlaceholderRoutes.films, PlaceholderRoutes.species, peopleRouter,
+                      PlaceholderRoutes.planets, PlaceholderRoutes.vehicles], select: peopleRouter)
 
     setupView()
   }
@@ -42,7 +45,6 @@ class AppCoordinator: TabBarCoordinator<AppRoute> {
     tabBar.barStyle = .black
 
     tabBar.tintColor = Colors.primaryTint // Text color
-    tabBar.barTintColor = Colors.primaryBackground
   }
 
   // MARK: - TabBarCoordinator
@@ -55,10 +57,42 @@ class AppCoordinator: TabBarCoordinator<AppRoute> {
   }
 }
 
-func createTabBarItem(tabBarSystemItem: UITabBarItem.SystemItem, tag: Int) -> UITabBarItem {
-  let tabBarItem = UITabBarItem(tabBarSystemItem: tabBarSystemItem, tag: tag)
-  tabBarItem.imageInsets = UIEdgeInsets(top: 9, left: 0, bottom: -9, right: 0)
-  tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear], for: .selected)
-  tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear], for: .normal)
+func createTabBarItem(title: String, from: Fonts, code: String, tag: Int) -> UITabBarItem {
+  let tabBarItem = UITabBarItem(title: title, image: UIImage.icon(from: from, iconColor: .black, code: code,
+                                                                  imageSize: CGSize.tabBarIcon, ofSize: 34),
+                                tag: 0)
+  tabBarItem.selectedImage = UIImage.icon(from: from, iconColor: Colors.primaryTint, code: code,
+                                          imageSize: CGSize.tabBarIcon, ofSize: 34)
   return tabBarItem
+}
+
+// TODO: Remove this struct when all coordinators are implementated
+struct PlaceholderRoutes {
+  static var vehicles: AnyRouter<PlaceholderRoute> {
+    let coord = NavigationCoordinator<PlaceholderRoute>()
+    coord.rootViewController.tabBarItem = createTabBarItem(title: "Vehicles", from: .fontAwesome,
+                                                           code: "spaceshuttle", tag: 0)
+    return coord.anyRouter
+  }
+  static var planets: AnyRouter<PlaceholderRoute> {
+    let coord = NavigationCoordinator<PlaceholderRoute>()
+    coord.rootViewController.tabBarItem = createTabBarItem(title: "Planets", from: .ionicon, code: "ios-planet", tag: 0)
+    return coord.anyRouter
+  }
+  static var species: AnyRouter<PlaceholderRoute> {
+    let coord = NavigationCoordinator<PlaceholderRoute>()
+    coord.rootViewController.tabBarItem = createTabBarItem(title: "Species", from: .ionicon, code: "ios-flask", tag: 0)
+    return coord.anyRouter
+  }
+  static var films: AnyRouter<PlaceholderRoute> {
+    let coord = NavigationCoordinator<PlaceholderRoute>()
+    coord.rootViewController.tabBarItem = createTabBarItem(title: "Films", from: .materialIcon, code: "movie", tag: 0)
+    return coord.anyRouter
+  }
+}
+
+enum PlaceholderRoute: Route {}
+
+extension CGSize {
+  static var tabBarIcon: CGSize { return CGSize(width: 34, height: 34) }
 }

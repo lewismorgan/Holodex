@@ -81,6 +81,7 @@ class PersonListViewController: UIViewController, ViewModelBinding {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    searchBar.backgroundImage = UIImage()
     // Initialize variables
     // swiftlint:disable explicit_init
     tableView.register(UINib.init(nibName: "PersonCellView", bundle: nil), forCellReuseIdentifier: "PersonCell")
@@ -113,9 +114,6 @@ class PersonListViewController: UIViewController, ViewModelBinding {
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-
-    // Hide the top navigation bar
-    self.navigationController?.setNavigationBarHidden(true, animated: true)
   }
 
   override func viewWillDisappear(_ animated: Bool) {
