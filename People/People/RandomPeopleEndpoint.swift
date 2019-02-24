@@ -68,6 +68,14 @@ public class RandomPeopleEndpoint: PeopleEndpoint {
     return RandomPeopleEndpoint.colors[Int.random(in: 0..<RandomPeopleEndpoint.colors.count)]
   }
 
+  private func createRandomNumbers(min: Int, max: Int) -> [String] {
+    var randoms: [String] = []
+    for ran in min...Int.random(in: min...max) {
+      randoms.append(String(ran))
+    }
+    return randoms
+  }
+
   private func createPerson() -> Person {
     var person = Person()
 
@@ -79,6 +87,9 @@ public class RandomPeopleEndpoint: PeopleEndpoint {
     person.height = "\(Int.random(in: 100...200))"
     person.eyeColor = createColor()
     person.hairColor = createColor()
+    person.films = createRandomNumbers(min: 0, max: 10)
+    person.vehicles = (Int.random(in: 0...100) >= 45 ? createRandomNumbers(min: 0, max: 3) : [])
+    person.species = createRandomNumbers(min: 0, max: 1)
 
     return person
   }

@@ -18,6 +18,9 @@ public struct Person: Mappable, Codable {
   public var birthYear: String?
   public var gender: String?
   public var homeworld: String?
+  public var films: [String]?
+  public var vehicles: [String]?
+  public var species: [String]?
 
   public init() {
   }
@@ -39,5 +42,8 @@ public struct Person: Mappable, Codable {
     birthYear <- map["birth_year"]
     gender <- map["gender"]
     homeworld <- map["homeworld"]
+    films <- map["films"]
+    vehicles <- map["vehicles"]
+    species <- map["species"]
   }
 }

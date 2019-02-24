@@ -36,6 +36,7 @@ class RandomPeopleEndpointTests: QuickSpec {
           expect(person?.height).toNot(beEmpty())
           expect(person?.homeworld).toNot(beEmpty())
           expect(person?.eyeColor).toNot(beEmpty())
+          expect(person?.films).toNot(beEmpty())
         }
       }
       describe("getting a list of random people from a page") {

@@ -68,6 +68,30 @@ class PersonDetailViewController: UITableViewController, ViewModelBinding {
 
   // MARK: - Functions
 
+  private func createVehicleSection(for person: Person) -> SectionOfDetailData {
+    var items: [DetailData] = []
+
+    if let vehicles = person.vehicles {
+      vehicles.forEach { vehicle in
+        items.append(DetailData(glyph: nil, label: vehicle))
+      }
+    }
+
+    return SectionOfDetailData(header: "Vehicles & Spacecraft", items: items)
+  }
+
+  private func createFilmSection(for person: Person) -> SectionOfDetailData {
+    var items: [DetailData] = []
+
+    if let films = person.films {
+      films.forEach { film in
+        items.append(DetailData(glyph: nil, label: film))
+      }
+    }
+
+    return SectionOfDetailData(header: "Films", items: items)
+  }
+
   private func createBiographySection(for person: Person) -> SectionOfDetailData {
     var items: [DetailData] = []
 
@@ -121,12 +145,12 @@ class PersonDetailViewController: UITableViewController, ViewModelBinding {
       return self?.createBiographySection(for: person) ?? SectionOfDetailData(header: "Biography", items: [])
     }.asObservable()
 
-    let films = person.map { _ in
-      return SectionOfDetailData(header: "Films", items: [])
+    let films = person.map { [weak self] person -> SectionOfDetailData in
+      return self?.createFilmSection(for: person) ?? SectionOfDetailData(header: "Films", items: [])
     }.asObservable()
 
-    let vehicles = person.map { _ in
-      return SectionOfDetailData(header: "Vehicles & Spacecraft", items: [])
+    let vehicles = person.map { [weak self] person -> SectionOfDetailData in
+      return self?.createVehicleSection(for: person) ?? SectionOfDetailData(header: "Vehicles & Spacecraft", items: [])
     }.asObservable()
 
     // Merge the 3 section observables into one and send to sections publisher
@@ -139,7 +163,7 @@ class PersonDetailViewController: UITableViewController, ViewModelBinding {
 // MARK: - TableView Data Structs
 
 struct DetailData {
-  var glyph: Glyph
+  var glyph: Glyph?
   var label: String
 }
 

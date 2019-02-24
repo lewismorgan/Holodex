@@ -27,8 +27,11 @@ class PersonDetailCell: UITableViewCell {
 
   // MARK: - Functions
 
-  func setup(glyph: Glyph, text: String) {
+  func setup(glyph: Glyph? = nil, text: String) {
     self.textLabel?.text = text
-    self.imageView?.image = UIImage.glyph(from: glyph, color: .white, size: CGSize(width: 46, height: 46))
+
+    if let glyph = glyph {
+      self.imageView?.image = UIImage.glyph(from: glyph, color: .white, size: CGSize(width: 46, height: 46))
+    }
   }
 }
