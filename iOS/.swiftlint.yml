@@ -1,8 +1,0 @@
-excluded:
-- Pods
-
-disabled_rules:
-- force_cast
-- identifier_name
-
-reporter: "xcode"
