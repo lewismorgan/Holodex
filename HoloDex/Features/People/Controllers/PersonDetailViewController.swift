@@ -50,17 +50,21 @@ class PersonDetailViewController: UITableViewController, ViewModelBinding {
       return dataSource.sectionModels[index].header
     }
 
-    self.sections.asObservable().debug("🎅")
-      .bind(to: self.tableView.rx.items(dataSource: dataSource)).disposed(by: bag)
-
-    // Setup the colors
-
-    self.view.backgroundColor = .black
-    self.tableView.backgroundColor = .black
+    self.sections.asObservable().bind(to: self.tableView.rx.items(dataSource: dataSource))
+      .disposed(by: bag)
 
     addViewModelBindings()
   }
   // swiftlint:enable line_length
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+
+    setupNavigationBar()
+
+    self.view.backgroundColor = .black
+    self.tableView.backgroundColor = .black
+  }
 
   // MARK: - Functions
 
@@ -88,11 +92,12 @@ class PersonDetailViewController: UITableViewController, ViewModelBinding {
     }
 
     if let height = person.height {
-      items.append(DetailData(glyph: .ruler, label: height))
+      items.append(DetailData(glyph: .ruler, label: "\(height) cm"))
     }
 
-    if let weight = person.mass {
-      items.append(DetailData(glyph: .weight, label: weight))
+    if let weight = person.mass, let kilograms = Int(weight) {
+      let lbs = Double(kilograms) / 0.453_592_37
+      items.append(DetailData(glyph: .weight, label: "\(String(format: "%.3f", lbs)) lbs"))
     }
 
     if let homeworld = person.homeworld {
@@ -107,21 +112,27 @@ class PersonDetailViewController: UITableViewController, ViewModelBinding {
 
     let name = person.map { $0.name ?? "<UNKNOWN>" }
 
-    // TODO: Make navigation title size smaller if title is too long
     name.drive(self.navigationItem.rx.title)
       .disposed(by: bag)
+
+    // Bind section details
 
     let biography = person.map { [weak self] person -> SectionOfDetailData in
       return self?.createBiographySection(for: person) ?? SectionOfDetailData(header: "Biography", items: [])
     }.asObservable()
 
-    biography.flatMap { item -> Observable<[SectionOfDetailData]> in
-      return Observable.just([item])
-    }.bind(to: self.sections).disposed(by: bag)
+    let films = person.map { _ in
+      return SectionOfDetailData(header: "Films", items: [])
+    }.asObservable()
 
-    // TODO: Create new observable, zip all 3 sections together and flatMap return single array
-    // Create SectionOfDetailData for Films
-    // Create SectionOfDetailData for Vehicles & Spacecraft
+    let vehicles = person.map { _ in
+      return SectionOfDetailData(header: "Vehicles & Spacecraft", items: [])
+    }.asObservable()
+
+    // Merge the 3 section observables into one and send to sections publisher
+    Observable.combineLatest([biography, films, vehicles])
+      .bind(to: self.sections)
+      .disposed(by: bag)
   }
 }
 
