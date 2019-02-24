@@ -1,5 +1,5 @@
 //
-//  UIColor.swift
+//  HoloDex+UIColor.swift
 //  HoloDex
 //
 //  Created by Lewis Morgan on 2/23/19.

@@ -1,5 +1,5 @@
 //
-//  UIImage.swift
+//  HoloDex+UIImage.swift
 //  HoloDex
 //
 //  Created by Lewis Morgan on 2/23/19.

@@ -8,7 +8,6 @@
 
 import Networking
 import People
-import SwiftIconFont
 import Swinject
 import UIKit
 import XCoordinator

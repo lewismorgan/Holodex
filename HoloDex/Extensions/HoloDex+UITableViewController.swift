@@ -1,5 +1,5 @@
 //
-//  UITableViewController.swift
+//  HoloDex+UITableViewController.swift
 //  HoloDex
 //
 //  Created by Lewis Morgan on 2/22/19.
