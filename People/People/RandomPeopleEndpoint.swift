@@ -26,8 +26,8 @@ public class RandomPeopleEndpoint: PeopleEndpoint {
     return Observable.create { [weak self] emitter in
       var items: [Person] = []
 
-      // Create an id starting from 0 to 10-(rand:20-100)
-      for _ in 0...Int.random(in: 10...Int.random(in: 20...100)) {
+      // Create 10 random people to emit
+      for _ in 0..<10 {
         guard let person = self?.createPerson() else {
           emitter.onError(RandomPersonError.nilPerson)
           return Disposables.create()
@@ -42,7 +42,8 @@ public class RandomPeopleEndpoint: PeopleEndpoint {
   }
 
   public func getAll() -> Observable<[Person]> {
-    return Observable.range(start: 1, count: 50)
+    // Send out 5 pages each containing 10 random people (50 total)
+    return Observable.range(start: 1, count: 5)
       .flatMap { [weak self] page -> Observable<[Person]> in
         return self?.getPeople(from: page) ?? Observable.empty()
       }

@@ -45,16 +45,16 @@ class RandomPeopleEndpointTests: QuickSpec {
           let persons = try! observable.toBlocking().first()!
 
           expect(persons).toNot(beNil())
-          expect(persons.count) >= 10
+          expect(persons.count) == 10
         }
       }
       describe("getting all people") {
-        it("emits 10+ arrays of people") {
+        it("emits 5 arrays of people") {
           let observable = people.getAll()
 
           let arrays = try! observable.toBlocking().toArray()
 
-          expect(arrays.count) >= 10
+          expect(arrays.count) == 5
         }
       }
     }
