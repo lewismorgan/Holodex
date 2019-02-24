@@ -10,14 +10,21 @@ import UIKit
 
 class PersonCell: UITableViewCell {
   @IBOutlet weak private var name: UILabel!
+  @IBOutlet weak private var arrow: UILabel!
 
   override func awakeFromNib() {
     super.awakeFromNib()
 
-    let selectedView = UIView()
-    selectedView.backgroundColor = .tint
+    self.selectedBackgroundView = {
+      let view = UIView()
+      view.backgroundColor = .tint
+      return view
+    }()
 
-    self.selectedBackgroundView = selectedView
+    self.backgroundColor = .background
+    self.tintColor = .tint
+    self.name.textColor = .white
+    self.arrow.textColor = .white
   }
 
   public func setup(name: String) {

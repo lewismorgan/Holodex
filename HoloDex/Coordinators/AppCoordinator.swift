@@ -56,8 +56,8 @@ class AppCoordinator: TabBarCoordinator<AppRoute> {
 }
 
 func createTabBarItem(title: String, from: Glyph, tag: Int) -> UITabBarItem {
-  let tabBarItem = UITabBarItem(title: title, image: UIImage.glyph(from: from, color: .white, size: CGSize.tabBarIcon),
-                                tag: 0)
+  let tabBarItem = UITabBarItem(title: title,
+                                image: UIImage.glyph(from: from, color: .white, size: CGSize.tabBarIcon), tag: 0)
   tabBarItem.selectedImage = UIImage.glyph(from: from, color: .tint, size: CGSize.tabBarIcon)
   return tabBarItem
 }

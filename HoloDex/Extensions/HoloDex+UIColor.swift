@@ -14,5 +14,5 @@ extension UIColor {
   }
 
   class var tint: UIColor { return UIColor(red: 255, green: 212, blue: 3) }
-  class var background: UIColor { return UIColor(red: 44, green: 50, blue: 59) }
+  class var background: UIColor { return UIColor(red: 37, green: 37, blue: 37) }
 }

@@ -12,6 +12,4 @@ protocol ViewModelBinding: AnyObject {
   associatedtype ViewModelType
 
   var viewModel: ViewModelType! { get set }
-
-  //func createBinding()
 }
