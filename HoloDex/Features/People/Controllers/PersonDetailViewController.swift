@@ -75,12 +75,16 @@ class PersonDetailViewController: UITableViewController, ViewModelBinding {
       items.append(DetailData(glyph: (sex == "male" ? Glyph.male : Glyph.female), label: sex.capitalized))
     }
 
+    if let skin = person.skinColor {
+      items.append(DetailData(glyph: .palette, label: skin.capitalized))
+    }
+
     if let eyes = person.eyeColor {
       items.append(DetailData(glyph: .eye, label: eyes.capitalized))
     }
 
     if let hair = person.hairColor {
-      items.append(DetailData(glyph: .palette, label: hair.capitalized))
+      items.append(DetailData(glyph: .scissors, label: hair.capitalized))
     }
 
     if let height = person.height {

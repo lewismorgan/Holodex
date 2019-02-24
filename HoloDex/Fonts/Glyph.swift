@@ -23,4 +23,5 @@ enum Glyph: String {
   case baby = "\u{E808}"
   case weight = "\u{E809}"
   case palette = "\u{E80A}"
+  case scissors = "\u{E80B}"
 }
