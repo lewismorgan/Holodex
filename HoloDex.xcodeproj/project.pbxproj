@@ -11,7 +11,6 @@
 		D724D3EA22176E0500383887 /* People.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D724D3E722176DEE00383887 /* People.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D724D3EB22176E0500383887 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D724D3E822176DEE00383887 /* Networking.framework */; };
 		D724D3EC22176E0500383887 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D724D3E822176DEE00383887 /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D74CE4FD22207F8F000CB7AD /* SwiftIconFont.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D74CE4FC22207F8F000CB7AD /* SwiftIconFont.framework */; };
 		D74CE5002220A435000CB7AD /* UITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74CE4FF2220A435000CB7AD /* UITableViewController.swift */; };
 		D74CE5042220AD3C000CB7AD /* PersonListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D74CE5032220AD3C000CB7AD /* PersonListStoryboard.storyboard */; };
 		D750042D220E350F0098FCA5 /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D750042C220E350F0098FCA5 /* Action.framework */; };
@@ -31,6 +30,12 @@
 		D7A1D762220E31BF00286709 /* PersonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1D761220E31BF00286709 /* PersonListViewModel.swift */; };
 		D7ADA35F220E57A50057546B /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7ADA35E220E57A50057546B /* RxDataSources.framework */; };
 		D7ADA361220E596C0057546B /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7ADA360220E596C0057546B /* Differentiator.framework */; };
+		D7ADED3922221AA50027CE4F /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ADED3822221AA50027CE4F /* UIColor.swift */; };
+		D7ADED3C22221E890027CE4F /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ADED3B22221E890027CE4F /* UIImageView.swift */; };
+		D7ADED3E22221F750027CE4F /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ADED3D22221F750027CE4F /* UIImage.swift */; };
+		D7ADED4022221FDE0027CE4F /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ADED3F22221FDE0027CE4F /* UIFont.swift */; };
+		D7ADED42222221B30027CE4F /* Glyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ADED41222221B30027CE4F /* Glyph.swift */; };
+		D7ADED45222226560027CE4F /* holodex-glyph.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7ADED44222226560027CE4F /* holodex-glyph.ttf */; };
 		D7BA267522037CA6007E88AD /* XCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA266D22037CA5007E88AD /* XCoordinator.framework */; };
 		D7BA267622037CA6007E88AD /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA266E22037CA5007E88AD /* RxCocoa.framework */; };
 		D7BA267722037CA6007E88AD /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA266F22037CA5007E88AD /* ObjectMapper.framework */; };
@@ -41,7 +46,6 @@
 		D7C73F47221B6FCD0048923A /* PersonCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7C73F46221B6FCD0048923A /* PersonCellView.xib */; };
 		D7C73F49221B71A30048923A /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C73F48221B71A30048923A /* PersonCell.swift */; };
 		D7C857D521FFACBF00DA33A0 /* PeopleListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C857D421FFACBF00DA33A0 /* PeopleListCoordinator.swift */; };
-		D7F10F65221E3D1E000393CB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F10F64221E3D1E000393CB /* Colors.swift */; };
 		D7FE7515210955C500DE1E28 /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7514210955C500DE1E28 /* PersonListViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +101,12 @@
 		D7A1D761220E31BF00286709 /* PersonListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewModel.swift; sourceTree = "<group>"; };
 		D7ADA35E220E57A50057546B /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
 		D7ADA360220E596C0057546B /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
+		D7ADED3822221AA50027CE4F /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		D7ADED3B22221E890027CE4F /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		D7ADED3D22221F750027CE4F /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		D7ADED3F22221FDE0027CE4F /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		D7ADED41222221B30027CE4F /* Glyph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glyph.swift; sourceTree = "<group>"; };
+		D7ADED44222226560027CE4F /* holodex-glyph.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "holodex-glyph.ttf"; sourceTree = "<group>"; };
 		D7BA266D22037CA5007E88AD /* XCoordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinator.framework; path = Carthage/Build/iOS/XCoordinator.framework; sourceTree = "<group>"; };
 		D7BA266E22037CA5007E88AD /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		D7BA266F22037CA5007E88AD /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
@@ -107,7 +117,6 @@
 		D7C73F46221B6FCD0048923A /* PersonCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonCellView.xib; sourceTree = "<group>"; };
 		D7C73F48221B71A30048923A /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		D7C857D421FFACBF00DA33A0 /* PeopleListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListCoordinator.swift; sourceTree = "<group>"; };
-		D7F10F64221E3D1E000393CB /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		D7FE7514210955C500DE1E28 /* PersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,7 +132,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D74CE4FD22207F8F000CB7AD /* SwiftIconFont.framework in Frameworks */,
 				D78B1D56221623B700253FDB /* RxAlamofire.framework in Frameworks */,
 				D724D3E922176E0500383887 /* People.framework in Frameworks */,
 				D7ADA361220E596C0057546B /* Differentiator.framework in Frameworks */,
@@ -164,6 +172,10 @@
 			isa = PBXGroup;
 			children = (
 				D74CE4FF2220A435000CB7AD /* UITableViewController.swift */,
+				D7ADED3822221AA50027CE4F /* UIColor.swift */,
+				D7ADED3B22221E890027CE4F /* UIImageView.swift */,
+				D7ADED3D22221F750027CE4F /* UIImage.swift */,
+				D7ADED3F22221FDE0027CE4F /* UIFont.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -195,9 +207,9 @@
 				D766BA2421FBDDC3007A2ED2 /* Coordinators */,
 				D74CE4FE2220A419000CB7AD /* Extensions */,
 				D7A1D760220E308800286709 /* Features */,
+				D7ADED432222249B0027CE4F /* Fonts */,
 				D75A341721093429003A4C6D /* Assets.xcassets */,
 				D75A341C21093429003A4C6D /* Info.plist */,
-				D7F10F64221E3D1E000393CB /* Colors.swift */,
 			);
 			path = HoloDex;
 			sourceTree = "<group>";
@@ -227,6 +239,15 @@
 				D7DD0A2D210AAE290072A896 /* People */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		D7ADED432222249B0027CE4F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D7ADED41222221B30027CE4F /* Glyph.swift */,
+				D7ADED44222226560027CE4F /* holodex-glyph.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		D7C73F45221B6B330048923A /* Views */ = {
@@ -387,6 +408,7 @@
 				D74CE5042220AD3C000CB7AD /* PersonListStoryboard.storyboard in Resources */,
 				D7C73F47221B6FCD0048923A /* PersonCellView.xib in Resources */,
 				D78C53712218917700D5B56F /* PersonDetailView.xib in Resources */,
+				D7ADED45222226560027CE4F /* holodex-glyph.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,7 +448,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxDataSources.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Differentiator.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftIconFont.framework",
 			);
 			name = "[ Carthage - Copy Frameworks ]";
 			outputFileListPaths = (
@@ -443,7 +464,6 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxDataSources.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Differentiator.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Swinject.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftIconFont.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -464,19 +484,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7C73F49221B71A30048923A /* PersonCell.swift in Sources */,
-				D7F10F65221E3D1E000393CB /* Colors.swift in Sources */,
 				D77DC9DC220E441F0003453C /* ViewModelBinding.swift in Sources */,
 				D766BA2621FBDDE2007A2ED2 /* AppCoordinator.swift in Sources */,
 				D766BA2821FBDE66007A2ED2 /* AppRoute.swift in Sources */,
 				D7C857D521FFACBF00DA33A0 /* PeopleListCoordinator.swift in Sources */,
+				D7ADED3922221AA50027CE4F /* UIColor.swift in Sources */,
+				D7ADED42222221B30027CE4F /* Glyph.swift in Sources */,
+				D7ADED3C22221E890027CE4F /* UIImageView.swift in Sources */,
 				D7FE7515210955C500DE1E28 /* PersonListViewController.swift in Sources */,
 				D78C536F22188DB800D5B56F /* PersonDetailViewModelImpl.swift in Sources */,
 				D75A341121093428003A4C6D /* AppDelegate.swift in Sources */,
+				D7ADED4022221FDE0027CE4F /* UIFont.swift in Sources */,
 				D77DC9D9220E3FFC0003453C /* PersonListViewModelImpl.swift in Sources */,
 				D78C53732218919F00D5B56F /* PersonDetailViewController.swift in Sources */,
 				D74CE5002220A435000CB7AD /* UITableViewController.swift in Sources */,
 				D7C73F44221B57600048923A /* HoloDexContainerFactory.swift in Sources */,
 				D77DC9DE220E44660003453C /* UIViewController+ViewModelBinding.swift in Sources */,
+				D7ADED3E22221F750027CE4F /* UIImage.swift in Sources */,
 				D78C536D2218879000D5B56F /* PersonDetailViewModel.swift in Sources */,
 				D7A1D762220E31BF00286709 /* PersonListViewModel.swift in Sources */,
 			);

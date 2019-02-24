@@ -24,8 +24,7 @@ class AppCoordinator: TabBarCoordinator<AppRoute> {
     }
 
     let peopleCoordinator = PeopleListCoordinator(endpoint: endpoint)
-    peopleCoordinator.rootViewController.tabBarItem = createTabBarItem(title: "People", from: .materialIcon,
-                                                                   code: "person", tag: 0)
+    peopleCoordinator.rootViewController.tabBarItem = createTabBarItem(title: "People", from: .person, tag: 0)
 
     self.init(peopleRouter: peopleCoordinator.anyRouter)
   }
@@ -44,7 +43,7 @@ class AppCoordinator: TabBarCoordinator<AppRoute> {
     let tabBar = self.rootViewController.tabBar
     tabBar.barStyle = .black
 
-    tabBar.tintColor = Colors.primaryTint // Text color
+    tabBar.tintColor = .tint // Text color
   }
 
   // MARK: - TabBarCoordinator
@@ -57,12 +56,10 @@ class AppCoordinator: TabBarCoordinator<AppRoute> {
   }
 }
 
-func createTabBarItem(title: String, from: Fonts, code: String, tag: Int) -> UITabBarItem {
-  let tabBarItem = UITabBarItem(title: title, image: UIImage.icon(from: from, iconColor: .black, code: code,
-                                                                  imageSize: CGSize.tabBarIcon, ofSize: 34),
+func createTabBarItem(title: String, from: Glyph, tag: Int) -> UITabBarItem {
+  let tabBarItem = UITabBarItem(title: title, image: UIImage.glyph(from: from, color: .white, size: CGSize.tabBarIcon),
                                 tag: 0)
-  tabBarItem.selectedImage = UIImage.icon(from: from, iconColor: Colors.primaryTint, code: code,
-                                          imageSize: CGSize.tabBarIcon, ofSize: 34)
+  tabBarItem.selectedImage = UIImage.glyph(from: from, color: .tint, size: CGSize.tabBarIcon)
   return tabBarItem
 }
 
@@ -70,23 +67,22 @@ func createTabBarItem(title: String, from: Fonts, code: String, tag: Int) -> UIT
 struct PlaceholderRoutes {
   static var vehicles: AnyRouter<PlaceholderRoute> {
     let coord = NavigationCoordinator<PlaceholderRoute>()
-    coord.rootViewController.tabBarItem = createTabBarItem(title: "Vehicles", from: .fontAwesome,
-                                                           code: "spaceshuttle", tag: 0)
+    coord.rootViewController.tabBarItem = createTabBarItem(title: "Vehicles", from: .starship, tag: 0)
     return coord.anyRouter
   }
   static var planets: AnyRouter<PlaceholderRoute> {
     let coord = NavigationCoordinator<PlaceholderRoute>()
-    coord.rootViewController.tabBarItem = createTabBarItem(title: "Planets", from: .ionicon, code: "ios-planet", tag: 0)
+    coord.rootViewController.tabBarItem = createTabBarItem(title: "Planets", from: .planet, tag: 0)
     return coord.anyRouter
   }
   static var species: AnyRouter<PlaceholderRoute> {
     let coord = NavigationCoordinator<PlaceholderRoute>()
-    coord.rootViewController.tabBarItem = createTabBarItem(title: "Species", from: .ionicon, code: "ios-flask", tag: 0)
+    coord.rootViewController.tabBarItem = createTabBarItem(title: "Species", from: .dna, tag: 0)
     return coord.anyRouter
   }
   static var films: AnyRouter<PlaceholderRoute> {
     let coord = NavigationCoordinator<PlaceholderRoute>()
-    coord.rootViewController.tabBarItem = createTabBarItem(title: "Films", from: .materialIcon, code: "movie", tag: 0)
+    coord.rootViewController.tabBarItem = createTabBarItem(title: "Films", from: .film, tag: 0)
     return coord.anyRouter
   }
 }

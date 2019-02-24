@@ -15,7 +15,7 @@ class PersonCell: UITableViewCell {
     super.awakeFromNib()
 
     let selectedView = UIView()
-    selectedView.backgroundColor = Colors.primaryTint
+    selectedView.backgroundColor = .tint
 
     self.selectedBackgroundView = selectedView
   }

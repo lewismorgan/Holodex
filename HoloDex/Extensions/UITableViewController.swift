@@ -15,8 +15,8 @@ extension UITableViewController {
     searchController.searchResultsUpdater = searchResultsUpdater
     searchController.obscuresBackgroundDuringPresentation = false
     searchController.searchBar.placeholder = placeholder
-    searchController.searchBar.tintColor = Colors.primaryTint
-    searchController.searchBar.barTintColor = Colors.primaryTint
+    searchController.searchBar.tintColor = .tint
+    searchController.searchBar.barTintColor = .tint
     navigationItem.searchController = searchController
     definesPresentationContext = true
   }
