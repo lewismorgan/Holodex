@@ -8,29 +8,21 @@
 
 import People
 import RxCocoa
+import RxDataSources
 import RxSwift
 import UIKit
 
-class PersonDetailViewController: UIViewController, ViewModelBinding {
-  private static let nibName = "PersonDetailView"
+class PersonDetailViewController: UITableViewController, ViewModelBinding {
   var viewModel: PersonDetailViewModel!
 
   // MARK: Private
   private let bag = DisposeBag()
-
-  // MARK: Views
-  @IBOutlet weak private var name: UILabel!
-  @IBOutlet weak private var birth: UILabel!
-  @IBOutlet weak private var gender: UILabel!
-  @IBOutlet weak private var height: UILabel!
-  @IBOutlet weak private var weight: UILabel!
-  @IBOutlet weak private var hair: UILabel!
-  @IBOutlet weak private var eyes: UILabel!
-
+  private let sections = PublishSubject<[SectionOfDetailData]>()
   // MARK: Init
 
-  init() {
-    super.init(nibName: PersonDetailViewController.nibName, bundle: nil)
+  init(model: PersonDetailViewModel) {
+    self.viewModel = model
+    super.init(style: .grouped)
   }
 
   required init?(coder aDecoder: NSCoder) {
@@ -39,51 +31,113 @@ class PersonDetailViewController: UIViewController, ViewModelBinding {
 
   // MARK: - UIViewController
 
+  // swiftlint:disable line_length
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    let person = viewModel.person.asDriver().debug()
+    // Setup the table
+    self.tableView.register(PersonDetailCell.self, forCellReuseIdentifier: "PersonDetailCell")
+    let dataSource = RxTableViewSectionedReloadDataSource<SectionOfDetailData>(
+      configureCell: { _, tableView, indexPath, item in
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PersonDetailCell", for: indexPath) as? PersonDetailCell else {
+          fatalError("🛑 Not a PersonDetailCell")
+        }
+        cell.setup(glyph: item.glyph, text: item.label)
+        return cell
+      })
 
-    person.map { $0.name }
-      .drive(name.rx.text)
+    dataSource.titleForHeaderInSection = { dataSource, index in
+      return dataSource.sectionModels[index].header
+    }
+
+    self.sections.asObservable().debug("🎅")
+      .bind(to: self.tableView.rx.items(dataSource: dataSource)).disposed(by: bag)
+
+    // Setup the colors
+
+    self.view.backgroundColor = .black
+    self.tableView.backgroundColor = .black
+
+    addViewModelBindings()
+  }
+  // swiftlint:enable line_length
+
+  // MARK: - Functions
+
+  private func createBiographySection(for person: Person) -> SectionOfDetailData {
+    var items: [DetailData] = []
+
+    if let born = person.birthYear {
+      items.append(DetailData(glyph: .baby, label: born))
+    }
+
+    if let sex = person.gender {
+      items.append(DetailData(glyph: (sex == "male" ? Glyph.male : Glyph.female), label: sex.capitalized))
+    }
+
+    if let eyes = person.eyeColor {
+      items.append(DetailData(glyph: .eye, label: eyes.capitalized))
+    }
+
+    if let hair = person.hairColor {
+      items.append(DetailData(glyph: .palette, label: hair.capitalized))
+    }
+
+    if let height = person.height {
+      items.append(DetailData(glyph: .ruler, label: height))
+    }
+
+    if let weight = person.mass {
+      items.append(DetailData(glyph: .weight, label: weight))
+    }
+
+    if let homeworld = person.homeworld {
+      items.append(DetailData(glyph: .planet, label: homeworld))
+    }
+
+    return SectionOfDetailData(header: "Biography", items: items)
+  }
+
+  private func addViewModelBindings() {
+    let person = viewModel.person.asDriver()
+
+    let name = person.map { $0.name ?? "<UNKNOWN>" }
+
+    // TODO: Make navigation title size smaller if title is too long
+    name.drive(self.navigationItem.rx.title)
       .disposed(by: bag)
 
-    person.map { $0.birthYear }
-      .map { "Born on \($0 ?? "<UNKNOWN>")" }
-      .drive(birth.rx.text)
-      .disposed(by: bag)
+    let biography = person.map { [weak self] person -> SectionOfDetailData in
+      return self?.createBiographySection(for: person) ?? SectionOfDetailData(header: "Biography", items: [])
+    }.asObservable()
 
-    person.map({ person -> String in
-      guard let gender = person.gender else {
-        return "N/A Gender"
-      }
-      if !(gender == "male" || gender == "female") {
-        return "N/A Gender"
-      }
-      return gender
-    })
-      .map { $0.capitalized }
-      .drive(gender.rx.text)
-      .disposed(by: bag)
+    biography.flatMap { item -> Observable<[SectionOfDetailData]> in
+      return Observable.just([item])
+    }.bind(to: self.sections).disposed(by: bag)
 
-    person.map { $0.height }
-      .map { "Height of \($0 ?? "<UNKNOWN>")" }
-      .drive(height.rx.text)
-      .disposed(by: bag)
+    // TODO: Create new observable, zip all 3 sections together and flatMap return single array
+    // Create SectionOfDetailData for Films
+    // Create SectionOfDetailData for Vehicles & Spacecraft
+  }
+}
 
-    person.map { $0.hairColor }
-      .map { "\($0?.capitalized ?? "<UNKNOWN>") Hair" }
-      .drive(hair.rx.text)
-      .disposed(by: bag)
+// MARK: - TableView Data Structs
 
-    person.map { $0.eyeColor }
-      .map { "\($0?.capitalized ?? "<UNKNOWN>") Eyes" }
-      .drive(eyes.rx.text)
-      .disposed(by: bag)
+struct DetailData {
+  var glyph: Glyph
+  var label: String
+}
 
-    person.map { $0.mass }
-      .map { "Weighs at \($0 ?? "<UNKNOWN>")" }
-      .drive(weight.rx.text)
-      .disposed(by: bag)
+struct SectionOfDetailData {
+  var header: String
+  var items: [DetailData]
+}
+
+extension SectionOfDetailData: SectionModelType {
+  typealias Item = DetailData
+
+  init(original: SectionOfDetailData, items: [Item]) {
+    self = original
+    self.items = items
   }
 }

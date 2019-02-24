@@ -20,4 +20,13 @@ extension UITableViewController {
     navigationItem.searchController = searchController
     definesPresentationContext = true
   }
+
+  func setupNavigationBar() {
+    if let navController = self.navigationController {
+      navController.navigationBar.prefersLargeTitles = true
+      navController.navigationBar.barStyle = .black
+      navController.navigationBar.view.backgroundColor = .black
+      navController.navigationBar.tintColor = .tint
+    }
+  }
 }

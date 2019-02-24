@@ -26,33 +26,25 @@ class PersonListViewController: UITableViewController, UISearchResultsUpdating, 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    self.navigationController?.navigationBar.prefersLargeTitles = true
-
     // Initialize variables
     // swiftlint:disable explicit_init
     tableView.register(UINib.init(nibName: "PersonCellView", bundle: nil), forCellReuseIdentifier: "PersonCell")
     // swiftlint:enable explicit_init
 
+    // TODO: Assisted search by suggesting a name to search for when user starts to type
     addSearchController(placeholder: "Luke Skywalker", searchResultsUpdater: self)
+
     // Setup the bindings to the view model
     addViewModelBindings()
 
-    // didSelectRowAtIndexPath alternative giving access to the model selected
+    // Deselect the row when selected and perform viewmodel actions
     tableView.rx.modelSelected(Person.self).subscribe(onNext: { [weak self] person in
-      // Deselect the row
       if let selectedRowIndexPath = self?.tableView.indexPathForSelectedRow {
         self?.tableView.deselectRow(at: selectedRowIndexPath, animated: true)
       }
 
-      // Call the onSelected function in the viewModel
       self?.viewModel.onSelected(person: person)
 
-      // Display the navigation bar if this is contained in a nav controller
-      if let navigationController = self?.navigationController {
-        if navigationController.isNavigationBarHidden {
-          navigationController.setNavigationBarHidden(false, animated: true)
-        }
-      }
     }).disposed(by: bag)
   }
 
@@ -62,17 +54,14 @@ class PersonListViewController: UITableViewController, UISearchResultsUpdating, 
     self.view.backgroundColor = .black
     self.tableView.backgroundColor = .black
 
-    if let navController = self.navigationController {
-      navController.navigationBar.barStyle = .black
-      navController.navigationBar.view.backgroundColor = UIColor.black
-    }
+    setupNavigationBar()
   }
 
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
   }
 
-  // MARK: UISearchResultsUpdating
+  // MARK: - UISearchResultsUpdating
   func updateSearchResults(for searchController: UISearchController) {
     guard let query = searchController.searchBar.text else {
       return
