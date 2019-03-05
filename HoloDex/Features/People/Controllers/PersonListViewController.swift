@@ -55,6 +55,16 @@ class PersonListViewController: UITableViewController, UISearchResultsUpdating, 
     self.tableView.backgroundColor = .black
 
     setupNavigationBar()
+
+    // display the search bar
+    navigationItem.hidesSearchBarWhenScrolling = false
+  }
+
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+
+    // Search bar is already shown, so now hide it when user scrolls
+    navigationItem.hidesSearchBarWhenScrolling = true
   }
 
   override func viewWillDisappear(_ animated: Bool) {
