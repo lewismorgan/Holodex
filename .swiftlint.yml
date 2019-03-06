@@ -41,7 +41,7 @@ file_header:
                     \/\/  Created by .*? on \d{1,2}\/\d{1,2}\/\d{2}\.
                     \/\/  Copyright © 2019 Lewis J Morgan\. All rights reserved\.
                     \/\/
-line_length: 120
+line_length: 130
 
 file_length:
   warning: 500

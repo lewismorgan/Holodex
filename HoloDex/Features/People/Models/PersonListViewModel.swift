@@ -13,9 +13,10 @@ protocol PersonListViewModel {
 
   // MARK: - Input
   var query: Variable<String> { get }
-  var people: Variable<[Person]> { get }
+  var request: Variable<Bool> { get }
 
   // MARK: - Output
+  var people: Variable<[Person]> { get }
   var filtered: Observable<[Person]> { get }
   var loading: Variable<Bool> { get }
 

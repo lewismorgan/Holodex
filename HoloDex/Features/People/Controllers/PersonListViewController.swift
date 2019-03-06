@@ -12,9 +12,8 @@ import RxDataSources
 import RxSwift
 import UIKit
 
-class PersonListViewController: UITableViewController, UISearchResultsUpdating, ViewModelBinding {
-  private static let nibName = "PersonList"
-  var viewModel: PersonListViewModel!
+class PersonListViewController: UITableViewController, ViewModelBinding {
+  var viewModel: PersonListViewModel?
 
   // MARK: Private
 
@@ -31,11 +30,9 @@ class PersonListViewController: UITableViewController, UISearchResultsUpdating, 
     tableView.register(UINib.init(nibName: "PersonCellView", bundle: nil), forCellReuseIdentifier: "PersonCell")
     // swiftlint:enable explicit_init
 
+    // TODO: Set placeholder to a random person in the list of names
     // TODO: Assisted search by suggesting a name to search for when user starts to type
     addSearchController(placeholder: "Luke Skywalker", searchResultsUpdater: self)
-
-    // Setup the bindings to the view model
-    addViewModelBindings()
 
     // Deselect the row when selected and perform viewmodel actions
     tableView.rx.modelSelected(Person.self).subscribe(onNext: { [weak self] person in
@@ -43,8 +40,7 @@ class PersonListViewController: UITableViewController, UISearchResultsUpdating, 
         self?.tableView.deselectRow(at: selectedRowIndexPath, animated: true)
       }
 
-      self?.viewModel.onSelected(person: person)
-
+      self?.onPersonSelected(person: person)
     }).disposed(by: bag)
   }
 
@@ -58,6 +54,11 @@ class PersonListViewController: UITableViewController, UISearchResultsUpdating, 
 
     // display the search bar
     navigationItem.hidesSearchBarWhenScrolling = false
+
+    if let model = viewModel {
+      // TODO: There is probably a better way of doing this than setting the value?
+      model.request.value = true
+    }
   }
 
   override func viewDidAppear(_ animated: Bool) {
@@ -71,25 +72,18 @@ class PersonListViewController: UITableViewController, UISearchResultsUpdating, 
     super.viewWillDisappear(animated)
   }
 
-  // MARK: - UISearchResultsUpdating
-  func updateSearchResults(for searchController: UISearchController) {
-    guard let query = searchController.searchBar.text else {
-      return
-    }
-    queryPublisher.onNext(query)
-  }
+  // MARK: - ViewModelBinding
 
-  // MARK: - Functions
-
-  private func addViewModelBindings() {
+  func modelWasBound(model: PersonListViewModel) {
     queryPublisher.asDriver(onErrorJustReturn: "")
-      .drive(viewModel.query)
+      .drive(model.query)
       .disposed(by: bag)
 
-    // Activity Indicator
-    viewModel.loading.asObservable().debug("❤️").subscribe().disposed(by: bag)
-    // List of People bound to the filtered list, filtering handled by the ViewModel implementation
-    viewModel.filtered
+    // TODO: Display an Activity Indicator when loading is emitted from model
+    model.loading.asObservable().debug("📶").subscribe().disposed(by: bag)
+
+    // Set the table items to the filter list in the model
+    model.filtered
       .bind(to: tableView.rx.items(cellIdentifier: "PersonCell")) { _, model, cell in
         guard let personCell = cell as? PersonCell else {
           return
@@ -97,5 +91,25 @@ class PersonListViewController: UITableViewController, UISearchResultsUpdating, 
         personCell.setup(name: model.name ?? "")
       }
       .disposed(by: bag)
+  }
+
+  func modelWasUnbound(model: PersonListViewModel) {
+  }
+
+  // MARK: - Functions
+
+  private func onPersonSelected(person: Person) {
+    if let model = viewModel {
+      model.onSelected(person: person)
+    }
+  }
+}
+
+extension PersonListViewController: UISearchResultsUpdating {
+  func updateSearchResults(for searchController: UISearchController) {
+    guard let query = searchController.searchBar.text else {
+      return
+    }
+    queryPublisher.onNext(query)
   }
 }

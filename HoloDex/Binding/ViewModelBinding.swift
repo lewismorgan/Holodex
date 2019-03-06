@@ -11,5 +11,8 @@ import Foundation
 protocol ViewModelBinding: AnyObject {
   associatedtype ViewModelType
 
-  var viewModel: ViewModelType! { get set }
+  var viewModel: ViewModelType? { get set }
+
+  func modelWasBound(model: ViewModelType)
+  func modelWasUnbound(model: ViewModelType)
 }

@@ -13,7 +13,15 @@ import RxSwift
 import UIKit
 
 class PersonDetailViewController: UITableViewController, ViewModelBinding {
-  var viewModel: PersonDetailViewModel!
+  func modelWasBound(model: PersonDetailViewModel) {
+    // TODO: Add code
+  }
+
+  func modelWasUnbound(model: PersonDetailViewModel) {
+    // TODO: Add code
+  }
+
+  var viewModel: PersonDetailViewModel?
 
   // MARK: Private
   private let bag = DisposeBag()
@@ -132,7 +140,11 @@ class PersonDetailViewController: UITableViewController, ViewModelBinding {
   }
 
   private func addViewModelBindings() {
-    let person = viewModel.person.asDriver()
+    guard let model = viewModel else {
+      return
+    }
+
+    let person = model.person.asDriver()
 
     let name = person.map { $0.name ?? "<UNKNOWN>" }
 

@@ -12,10 +12,14 @@ import XCoordinator
 
 class PersonListViewModelImpl: PersonListViewModel {
 
-  // PersonListViewModel
+  // MARK: - Public
 
-  let people: Variable<[Person]> = Variable<[Person]>([])
+  // Input
   let query: Variable<String> = Variable<String>("")
+  let request: Variable<Bool> = Variable<Bool>(false)
+
+  // Output
+  let people: Variable<[Person]> = Variable<[Person]>([])
   var filtered: Observable<[Person]> {
     return filteredSubject.asObservable()
   }
@@ -32,16 +36,21 @@ class PersonListViewModelImpl: PersonListViewModel {
        endpoint: PeopleEndpoint) {
     self.router = router
 
-    // Share the stream so there aren't more than 1 network requests
-    let peopleStream = endpoint.getAll().share()
+    // When a request is emitted, perform the streams
+    let requested = request.asObservable().filter { $0 == true }
 
-    // Bind to People
+    // Share the stream so there aren't more than 1 network requests when binding
+    let peopleStream = requested.debug("🤯").flatMap { _ in endpoint.getAll() }.share()
+
+    // people
+
     peopleStream.scan([Person](), accumulator: { seed, acc  in
         return seed + acc
     }).bind(to: people)
       .disposed(by: bag)
 
-    // Bind to Loading
+    // loading
+
     peopleStream.reduce(0, accumulator: { seed, acc in
       return seed + acc.count
     }).flatMap { _ in return Observable.just(false) }
@@ -49,16 +58,16 @@ class PersonListViewModelImpl: PersonListViewModel {
       .bind(to: loading)
       .disposed(by: bag)
 
-    // Bind to filteredSubject
-    Observable.combineLatest(people.asObservable(),
-                             query.asObservable()) { [unowned self] people, searchTerm -> [Person] in
+    // filteredSubject
+
+    Observable.combineLatest(people.asObservable(), query.asObservable()) { [unowned self] people, searchTerm -> [Person] in
       return self.filterPeople(with: people, query: searchTerm)
     }.asDriver(onErrorJustReturn: [])
       .drive(filteredSubject)
       .disposed(by: bag)
   }
 
-  // MARK: - Private Functions
+  // MARK: - Functions
 
   /// Returns an array of people with names that match the query string, by first or last name
   private func filterPeople(with people: [Person], query: String) -> [Person] {
