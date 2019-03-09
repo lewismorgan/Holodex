@@ -15,15 +15,15 @@ class PersonListViewModelImpl: PersonListViewModel {
   // MARK: - Public
 
   // Input
-  let query: Variable<String> = Variable<String>("")
-  let request: Variable<Bool> = Variable<Bool>(false)
+  let query: BehaviorSubject<String> = BehaviorSubject(value: "")
+  let request: BehaviorSubject<Bool> = BehaviorSubject<Bool>(value: false)
 
   // Output
-  let people: Variable<[Person]> = Variable<[Person]>([])
+  let people: BehaviorSubject<[Person]> = BehaviorSubject<[Person]>(value: [])
   var filtered: Observable<[Person]> {
     return filteredSubject.asObservable()
   }
-  let loading: Variable<Bool> = Variable<Bool>(true)
+  let loading: BehaviorSubject<Bool> = BehaviorSubject<Bool>(value: false)
 
   // MARK: - Private
   private let filteredSubject = ReplaySubject<[Person]>.create(bufferSize: 1)
@@ -36,34 +36,26 @@ class PersonListViewModelImpl: PersonListViewModel {
        endpoint: PeopleEndpoint) {
     self.router = router
 
-    // When a request is emitted, perform the streams
-    let requested = request.asObservable().filter { $0 == true }
-
     // Share the stream so there aren't more than 1 network requests when binding
-    let peopleStream = requested.debug("🤯").flatMap { _ in endpoint.getAll() }.share()
+    let requestStream = request.asObservable()
+      .filter { $0 == true }
+      .debug("🤯")
+
+    let endpointData = endpoint.getAll().scan([Person](), accumulator: { seed, acc in
+      return acc + seed
+    }).share()
 
     // people
-
-    peopleStream.scan([Person](), accumulator: { seed, acc  in
-        return seed + acc
-    }).bind(to: people)
-      .disposed(by: bag)
-
-    // loading
-
-    peopleStream.reduce(0, accumulator: { seed, acc in
-      return seed + acc.count
-    }).flatMap { _ in return Observable.just(false) }
-      .debug("🚀")
-      .bind(to: loading)
+    requestStream.flatMap { _ in endpointData }
+      .bind(to: people)
       .disposed(by: bag)
 
     // filteredSubject
 
     Observable.combineLatest(people.asObservable(), query.asObservable()) { [unowned self] people, searchTerm -> [Person] in
       return self.filterPeople(with: people, query: searchTerm)
-    }.asDriver(onErrorJustReturn: [])
-      .drive(filteredSubject)
+    }.catchErrorJustReturn([])
+      .bind(to: filteredSubject)
       .disposed(by: bag)
   }
 

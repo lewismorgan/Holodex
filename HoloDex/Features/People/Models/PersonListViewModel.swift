@@ -12,13 +12,13 @@ import RxSwift
 protocol PersonListViewModel {
 
   // MARK: - Input
-  var query: Variable<String> { get }
-  var request: Variable<Bool> { get }
+  var query: BehaviorSubject<String> { get }
+  var request: BehaviorSubject<Bool> { get }
 
   // MARK: - Output
-  var people: Variable<[Person]> { get }
+  var people: BehaviorSubject<[Person]> { get }
   var filtered: Observable<[Person]> { get }
-  var loading: Variable<Bool> { get }
+  var loading: BehaviorSubject<Bool> { get }
 
   func onSelected(person: Person)
 }

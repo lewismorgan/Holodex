@@ -13,22 +13,20 @@ import RxSwift
 import UIKit
 
 class PersonDetailViewController: UITableViewController, ViewModelBinding {
-  func modelWasBound(model: PersonDetailViewModel) {
-    // TODO: Add code
-  }
-
-  func modelWasUnbound(model: PersonDetailViewModel) {
-    // TODO: Add code
-  }
 
   var viewModel: PersonDetailViewModel?
 
   // MARK: Private
   private let bag = DisposeBag()
   private let sections = PublishSubject<[SectionOfDetailData]>()
-  // MARK: Init
 
-  init(model: PersonDetailViewModel) {
+  // MARK: - Init
+
+  convenience init() {
+    self.init(model: nil)
+  }
+
+  init(model: PersonDetailViewModel?) {
     self.viewModel = model
     super.init(style: .grouped)
   }
@@ -60,8 +58,6 @@ class PersonDetailViewController: UITableViewController, ViewModelBinding {
 
     self.sections.asObservable().bind(to: self.tableView.rx.items(dataSource: dataSource))
       .disposed(by: bag)
-
-    addViewModelBindings()
   }
   // swiftlint:enable line_length
 
@@ -72,6 +68,36 @@ class PersonDetailViewController: UITableViewController, ViewModelBinding {
 
     self.view.backgroundColor = .black
     self.tableView.backgroundColor = .black
+  }
+
+  // MARK: - ViewModelBinding
+
+  func addBindings(to model: PersonDetailViewModel) {
+    let person = model.person.asDriver()
+
+    let name = person.map { $0.name ?? "<UNKNOWN>" }
+
+    name.drive(self.navigationItem.rx.title)
+      .disposed(by: bag)
+
+    // Bind section details
+
+    let biography = person.map { [weak self] person -> SectionOfDetailData in
+      return self?.createBiographySection(for: person) ?? SectionOfDetailData(header: "Biography", items: [])
+    }.asObservable()
+
+    let films = person.map { [weak self] person -> SectionOfDetailData in
+      return self?.createFilmSection(for: person) ?? SectionOfDetailData(header: "Films", items: [])
+    }.asObservable()
+
+    let vehicles = person.map { [weak self] person -> SectionOfDetailData in
+      return self?.createVehicleSection(for: person) ?? SectionOfDetailData(header: "Vehicles & Spacecraft", items: [])
+    }.asObservable()
+
+    // Merge the 3 section observables into one and send to sections publisher
+    Observable.combineLatest([biography, films, vehicles])
+      .bind(to: self.sections)
+      .disposed(by: bag)
   }
 
   // MARK: - Functions
@@ -137,38 +163,6 @@ class PersonDetailViewController: UITableViewController, ViewModelBinding {
     }
 
     return SectionOfDetailData(header: "Biography", items: items)
-  }
-
-  private func addViewModelBindings() {
-    guard let model = viewModel else {
-      return
-    }
-
-    let person = model.person.asDriver()
-
-    let name = person.map { $0.name ?? "<UNKNOWN>" }
-
-    name.drive(self.navigationItem.rx.title)
-      .disposed(by: bag)
-
-    // Bind section details
-
-    let biography = person.map { [weak self] person -> SectionOfDetailData in
-      return self?.createBiographySection(for: person) ?? SectionOfDetailData(header: "Biography", items: [])
-    }.asObservable()
-
-    let films = person.map { [weak self] person -> SectionOfDetailData in
-      return self?.createFilmSection(for: person) ?? SectionOfDetailData(header: "Films", items: [])
-    }.asObservable()
-
-    let vehicles = person.map { [weak self] person -> SectionOfDetailData in
-      return self?.createVehicleSection(for: person) ?? SectionOfDetailData(header: "Vehicles & Spacecraft", items: [])
-    }.asObservable()
-
-    // Merge the 3 section observables into one and send to sections publisher
-    Observable.combineLatest([biography, films, vehicles])
-      .bind(to: self.sections)
-      .disposed(by: bag)
   }
 }
 

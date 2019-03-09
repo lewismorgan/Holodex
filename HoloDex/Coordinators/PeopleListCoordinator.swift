@@ -20,6 +20,9 @@ enum PeopleListRoute: Route {
 class PeopleListCoordinator: NavigationCoordinator<PeopleListRoute> {
   private let endpoint: PeopleEndpoint!
 
+  private var detailView: PersonDetailViewController?
+  private var listView: PersonListViewController?
+
   // MARK: - Init
 
   init(endpoint: PeopleEndpoint) {
@@ -32,21 +35,44 @@ class PeopleListCoordinator: NavigationCoordinator<PeopleListRoute> {
   override func prepareTransition(for route: PeopleListRoute) -> NavigationTransition {
     switch route {
     case .home, .persons:
-      let storyboard = UIStoryboard(name: "PersonListStoryboard", bundle: nil)
-      let viewController = storyboard.instantiateViewController(withIdentifier: "PersonList")
-      let viewModel = PersonListViewModelImpl(router: self.anyRouter,
-                                              endpoint: endpoint)
-      guard let bindable = viewController as? PersonListViewController else {
-        fatalError("Expected viewcontroller to be a PersonListViewController")
+      if let viewController = listView {
+        return .push(viewController)
+      } else {
+        // View has not be loaded yet
+
+        let storyboard = UIStoryboard(name: "PersonListStoryboard", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "PersonList")
+        let viewModel = PersonListViewModelImpl(router: self.anyRouter,
+                                                endpoint: endpoint)
+        guard let bindable = viewController as? PersonListViewController else {
+          fatalError("Expected viewcontroller to be a PersonListViewController")
+        }
+        bindable.bind(to: viewModel)
+
+        // Trigger data update
+        viewModel.request.onNext(true)
+
+        self.listView = bindable
+        return .push(bindable)
       }
-      bindable.bind(to: viewModel)
-
-      return .push(viewController)
     case .person(let person):
-      let viewModel = PersonDetailViewModelImpl(router: self.anyRouter)
-      viewModel.person.value = person
+      if let viewController = detailView, let model = viewController.viewModel {
+        model.person.value = person
 
-      return .push(PersonDetailViewController(model: viewModel))
+        return .push(viewController)
+      } else {
+        // View has not been loaded yet
+
+        let viewController = PersonDetailViewController()
+        let viewModel = PersonDetailViewModelImpl(router: self.anyRouter)
+        viewController.bind(to: viewModel)
+
+        // Emit value only after binding
+        viewModel.person.value = person
+
+        self.detailView = viewController
+        return .push(viewController)
+      }
     }
   }
 }

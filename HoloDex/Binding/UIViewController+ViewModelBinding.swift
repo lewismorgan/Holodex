@@ -13,14 +13,6 @@ extension ViewModelBinding where Self: UIViewController {
   /// Adds a ViewModel to a UIViewController
   func bind(to model: Self.ViewModelType) {
     viewModel = model
-    self.modelWasBound(model: model)
-  }
-
-  /// Removes the current bound ViewModel from the UIViewController.
-  func unbind() {
-    if let toUnbind = viewModel {
-      viewModel = nil
-      self.modelWasUnbound(model: toUnbind)
-    }
+    self.addBindings(to: model)
   }
 }

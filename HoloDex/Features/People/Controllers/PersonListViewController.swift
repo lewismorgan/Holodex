@@ -17,6 +17,7 @@ class PersonListViewController: UITableViewController, ViewModelBinding {
 
   // MARK: Private
 
+  private let requestDataPublisher = PublishSubject<Bool>()
   private let queryPublisher = PublishSubject<String>()
   private let bag = DisposeBag()
 
@@ -42,6 +43,8 @@ class PersonListViewController: UITableViewController, ViewModelBinding {
 
       self?.onPersonSelected(person: person)
     }).disposed(by: bag)
+
+    requestDataPublisher.onNext(true)
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -54,11 +57,6 @@ class PersonListViewController: UITableViewController, ViewModelBinding {
 
     // display the search bar
     navigationItem.hidesSearchBarWhenScrolling = false
-
-    if let model = viewModel {
-      // TODO: There is probably a better way of doing this than setting the value?
-      model.request.value = true
-    }
   }
 
   override func viewDidAppear(_ animated: Bool) {
@@ -74,7 +72,13 @@ class PersonListViewController: UITableViewController, ViewModelBinding {
 
   // MARK: - ViewModelBinding
 
-  func modelWasBound(model: PersonListViewModel) {
+  func addBindings(to model: PersonListViewModel) {
+    // Publish any values sent to requestDataPublisher to the request variable
+    requestDataPublisher.asDriver(onErrorJustReturn: false)
+      .drive(model.request)
+      .disposed(by: bag)
+
+    // Send query publishers data to query
     queryPublisher.asDriver(onErrorJustReturn: "")
       .drive(model.query)
       .disposed(by: bag)
@@ -91,9 +95,6 @@ class PersonListViewController: UITableViewController, ViewModelBinding {
         personCell.setup(name: model.name ?? "")
       }
       .disposed(by: bag)
-  }
-
-  func modelWasUnbound(model: PersonListViewModel) {
   }
 
   // MARK: - Functions

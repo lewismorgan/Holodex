@@ -13,6 +13,5 @@ protocol ViewModelBinding: AnyObject {
 
   var viewModel: ViewModelType? { get set }
 
-  func modelWasBound(model: ViewModelType)
-  func modelWasUnbound(model: ViewModelType)
+  func addBindings(to model: ViewModelType)
 }
