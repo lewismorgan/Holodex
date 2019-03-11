@@ -40,20 +40,15 @@ class PeopleListCoordinator: NavigationCoordinator<PeopleListRoute> {
       } else {
         // View has not be loaded yet
 
-        let storyboard = UIStoryboard(name: "PersonListStoryboard", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "PersonList")
-        let viewModel = PersonListViewModelImpl(router: self.anyRouter,
-                                                endpoint: endpoint)
-        guard let bindable = viewController as? PersonListViewController else {
-          fatalError("Expected viewcontroller to be a PersonListViewController")
-        }
-        bindable.bind(to: viewModel)
+        let viewController = PersonListViewController()
+        let viewModel = PersonListViewModelImpl(router: self.anyRouter)
+        viewController.bind(to: viewModel)
 
         // Trigger data update
-        viewModel.request.onNext(true)
+        viewModel.requestUpdate(endpoint: endpoint)
 
-        self.listView = bindable
-        return .push(bindable)
+        self.listView = viewController
+        return .push(viewController)
       }
     case .person(let person):
       if let viewController = detailView, let model = viewController.viewModel {

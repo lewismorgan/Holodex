@@ -60,20 +60,20 @@ open class StarWarsAPI: NetworkingAPI {
 
   /// Creates a request that will build a page request until there are no more pages
   public func buildStreamingPageRequest<T: Mappable>(endpoint: String, page: Int,
-                                                     type: T.Type) -> Observable<[T]> {
+                                                     type: T.Type) -> Observable<([T], Bool)> {
     return buildRequest(endpoint: endpoint, params: ["page": page], type: StarWarsAPIResponse<T>.self)
-      .flatMap { response -> Observable<[T]> in
+      .flatMap { response -> Observable<([T], Bool)> in
         let components = NSURLComponents(string: response.next)
         guard let items = components?.queryItemsToDict(), let page = items["page"] else {
           // There are no more pages
-          return Observable.just(response.results)
+          return Observable.just((response.results, false))
         }
         if let nextPage = Int(page) {
-          return Observable.concat(Observable.just(response.results),
+          return Observable.concat(Observable.just((response.results, true)),
                                    self.buildStreamingPageRequest(endpoint: endpoint, page: nextPage,
                                                                   type: type)
-                                    .catchErrorJustReturn([]))
-        } else { return Observable.just(response.results) }
+                                    .catchErrorJustReturn(([], false)))
+        } else { return Observable.just((response.results, false)) }
       }
   }
 }

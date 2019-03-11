@@ -21,8 +21,11 @@ extension UITableViewController {
     definesPresentationContext = true
   }
 
-  func setupNavigationBar() {
+  func setupNavigationBar(title: String? = nil) {
     if let navController = self.navigationController {
+      if let navTitle = title {
+        navigationItem.title = navTitle
+      }
       navController.navigationBar.prefersLargeTitles = true
       navController.navigationBar.barStyle = .black
       navController.navigationBar.view.backgroundColor = .black

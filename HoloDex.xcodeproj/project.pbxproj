@@ -12,7 +12,6 @@
 		D724D3EB22176E0500383887 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D724D3E822176DEE00383887 /* Networking.framework */; };
 		D724D3EC22176E0500383887 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D724D3E822176DEE00383887 /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D74CE5002220A435000CB7AD /* HoloDex+UITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74CE4FF2220A435000CB7AD /* HoloDex+UITableViewController.swift */; };
-		D74CE5042220AD3C000CB7AD /* PersonListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D74CE5032220AD3C000CB7AD /* PersonListStoryboard.storyboard */; };
 		D750042D220E350F0098FCA5 /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D750042C220E350F0098FCA5 /* Action.framework */; };
 		D75A341121093428003A4C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75A341021093428003A4C6D /* AppDelegate.swift */; };
 		D75A341821093429003A4C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D75A341721093429003A4C6D /* Assets.xcassets */; };
@@ -80,7 +79,6 @@
 		D7362737211CF804003F54FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D74CE4FC22207F8F000CB7AD /* SwiftIconFont.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftIconFont.framework; path = Carthage/Build/iOS/SwiftIconFont.framework; sourceTree = "<group>"; };
 		D74CE4FF2220A435000CB7AD /* HoloDex+UITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HoloDex+UITableViewController.swift"; sourceTree = "<group>"; };
-		D74CE5032220AD3C000CB7AD /* PersonListStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PersonListStoryboard.storyboard; sourceTree = "<group>"; };
 		D750042C220E350F0098FCA5 /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
 		D75A340D21093428003A4C6D /* HoloDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoloDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75A341021093428003A4C6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -251,7 +249,6 @@
 			isa = PBXGroup;
 			children = (
 				D7C73F46221B6FCD0048923A /* PersonCellView.xib */,
-				D74CE5032220AD3C000CB7AD /* PersonListStoryboard.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -402,7 +399,6 @@
 			files = (
 				D75A341B21093429003A4C6D /* LaunchScreen.storyboard in Resources */,
 				D75A341821093429003A4C6D /* Assets.xcassets in Resources */,
-				D74CE5042220AD3C000CB7AD /* PersonListStoryboard.storyboard in Resources */,
 				D7C73F47221B6FCD0048923A /* PersonCellView.xib in Resources */,
 				D7ADED45222226560027CE4F /* holodex-glyph.ttf in Resources */,
 			);

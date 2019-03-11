@@ -154,9 +154,8 @@
 		D7CCDC8C220F9AE200623068 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				D7CCDCCC220FA1A000623068 /* StarWarsAPI.swift */,
+				D7E881F92236CCDD00098C74 /* StarWarsAPI */,
 				D7F747FF220FFE3100172F7B /* NetworkAPIError.swift */,
-				D7F747FD220FD0FF00172F7B /* StarWarsAPIResponse.swift */,
 				D7711CC02215FE00000A04F2 /* NetworkingAPI.swift */,
 				D7711CBE2215FA9A000A04F2 /* PagedResults.swift */,
 				D724D3EF2217715600383887 /* Endpoint.swift */,
@@ -190,6 +189,15 @@
 				D7CCDCAB220F9D6600623068 /* Alamofire.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7E881F92236CCDD00098C74 /* StarWarsAPI */ = {
+			isa = PBXGroup;
+			children = (
+				D7CCDCCC220FA1A000623068 /* StarWarsAPI.swift */,
+				D7F747FD220FD0FF00172F7B /* StarWarsAPIResponse.swift */,
+			);
+			path = StarWarsAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -52,8 +52,10 @@ class PersonListViewController: UITableViewController, ViewModelBinding {
 
     self.view.backgroundColor = .black
     self.tableView.backgroundColor = .black
+    self.tableView.separatorStyle = .singleLine
+    self.tableView.separatorColor = .background
 
-    setupNavigationBar()
+    setupNavigationBar(title: "People")
 
     // display the search bar
     navigationItem.hidesSearchBarWhenScrolling = false
@@ -73,18 +75,16 @@ class PersonListViewController: UITableViewController, ViewModelBinding {
   // MARK: - ViewModelBinding
 
   func addBindings(to model: PersonListViewModel) {
-    // Publish any values sent to requestDataPublisher to the request variable
-    requestDataPublisher.asDriver(onErrorJustReturn: false)
-      .drive(model.request)
-      .disposed(by: bag)
-
     // Send query publishers data to query
     queryPublisher.asDriver(onErrorJustReturn: "")
       .drive(model.query)
       .disposed(by: bag)
 
     // TODO: Display an Activity Indicator when loading is emitted from model
-    model.loading.asObservable().debug("📶").subscribe().disposed(by: bag)
+    model.loading.asObservable()
+      .debug("📶")
+      .subscribe()
+      .disposed(by: bag)
 
     // Set the table items to the filter list in the model
     model.filtered

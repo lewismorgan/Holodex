@@ -13,7 +13,7 @@ protocol PersonListViewModel {
 
   // MARK: - Input
   var query: BehaviorSubject<String> { get }
-  var request: BehaviorSubject<Bool> { get }
+//  var request: BehaviorSubject<Bool> { get }
 
   // MARK: - Output
   var people: BehaviorSubject<[Person]> { get }
@@ -21,4 +21,5 @@ protocol PersonListViewModel {
   var loading: BehaviorSubject<Bool> { get }
 
   func onSelected(person: Person)
+  func requestUpdate(endpoint: PeopleEndpoint)
 }

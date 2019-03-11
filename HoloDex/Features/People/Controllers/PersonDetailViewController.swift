@@ -73,7 +73,7 @@ class PersonDetailViewController: UITableViewController, ViewModelBinding {
   // MARK: - ViewModelBinding
 
   func addBindings(to model: PersonDetailViewModel) {
-    let person = model.person.asDriver()
+    let person = model.person.asDriver().asSharedSequence()
 
     let name = person.map { $0.name ?? "<UNKNOWN>" }
 

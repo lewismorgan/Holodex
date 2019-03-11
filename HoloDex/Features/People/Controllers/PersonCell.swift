@@ -21,7 +21,7 @@ class PersonCell: UITableViewCell {
       return view
     }()
 
-    self.backgroundColor = .background
+    self.backgroundColor = .clear
     self.tintColor = .tint
     self.name.textColor = .white
     self.arrow.textColor = .white

@@ -36,19 +36,13 @@ class StarWarsAPITests: QuickSpec {
         }
       }
       describe("building a streaming page request") {
-        let nPages = 3
-        it("builds a streaming paged request with a trigger for \(nPages) pages") {
-          let trigger = PublishSubject<Void>()
-          let request = swapi.buildStreamingPageRequest(endpoint: endpoint, page: 1,
-                                                        loadNext: trigger.asObservable().startWith(()),
-                                                        type: NamedResult.self)
-            .take(nPages)
+        it("builds a streaming paged request that completes") {
+          let request = swapi.buildStreamingPageRequest(endpoint: endpoint, page: 1, type: NamedResult.self).share()
 
-          let items = try! request.toBlocking().toArray()
+          // the last item should not have another page
+          let last = try! request.asObservable().toBlocking().last()
 
-          // There should be nPages of arrays emitted by the stream, right now it only works because of take(...)
-          // trigger isn't working properly :(
-          expect(items.count) == nPages
+          expect(last?.1) == false
         }
       }
       describe("building a page request") {
