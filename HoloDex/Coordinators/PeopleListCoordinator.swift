@@ -60,10 +60,9 @@ class PeopleListCoordinator: NavigationCoordinator<PeopleListRoute> {
 
         let viewController = PersonDetailViewController()
         let viewModel = PersonDetailViewModelImpl(router: self.anyRouter)
-        viewController.bind(to: viewModel)
-
-        // Emit value only after binding
         viewModel.person.value = person
+
+        viewController.bind(to: viewModel)
 
         self.detailView = viewController
         return .push(viewController)

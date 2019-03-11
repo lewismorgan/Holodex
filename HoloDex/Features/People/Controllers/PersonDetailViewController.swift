@@ -18,7 +18,22 @@ class PersonDetailViewController: UITableViewController, ViewModelBinding {
 
   // MARK: Private
   private let bag = DisposeBag()
-  private let sections = PublishSubject<[SectionOfDetailData]>()
+  private var dataSource: RxTableViewSectionedReloadDataSource<SectionOfDetailData> {
+    let tableDataSource = RxTableViewSectionedReloadDataSource<SectionOfDetailData>(
+      configureCell: { _, tableView, indexPath, item in
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PersonDetailCell", for: indexPath)
+          as? PersonDetailCell else {
+          fatalError("🛑 Not a PersonDetailCell")
+        }
+        cell.setup(glyph: item.glyph, text: item.label)
+        return cell
+      })
+
+    tableDataSource.titleForHeaderInSection = { dataSource, index in
+      return dataSource.sectionModels[index].header
+    }
+    return tableDataSource
+  }
 
   // MARK: - Init
 
@@ -37,29 +52,12 @@ class PersonDetailViewController: UITableViewController, ViewModelBinding {
 
   // MARK: - UIViewController
 
-  // swiftlint:disable line_length
   override func viewDidLoad() {
     super.viewDidLoad()
 
     // Setup the table
     self.tableView.register(PersonDetailCell.self, forCellReuseIdentifier: "PersonDetailCell")
-    let dataSource = RxTableViewSectionedReloadDataSource<SectionOfDetailData>(
-      configureCell: { _, tableView, indexPath, item in
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PersonDetailCell", for: indexPath) as? PersonDetailCell else {
-          fatalError("🛑 Not a PersonDetailCell")
-        }
-        cell.setup(glyph: item.glyph, text: item.label)
-        return cell
-      })
-
-    dataSource.titleForHeaderInSection = { dataSource, index in
-      return dataSource.sectionModels[index].header
-    }
-
-    self.sections.asObservable().bind(to: self.tableView.rx.items(dataSource: dataSource))
-      .disposed(by: bag)
   }
-  // swiftlint:enable line_length
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
@@ -73,7 +71,7 @@ class PersonDetailViewController: UITableViewController, ViewModelBinding {
   // MARK: - ViewModelBinding
 
   func addBindings(to model: PersonDetailViewModel) {
-    let person = model.person.asDriver().asSharedSequence()
+    let person = model.person.asDriver()
 
     let name = person.map { $0.name ?? "<UNKNOWN>" }
 
@@ -96,7 +94,7 @@ class PersonDetailViewController: UITableViewController, ViewModelBinding {
 
     // Merge the 3 section observables into one and send to sections publisher
     Observable.combineLatest([biography, films, vehicles])
-      .bind(to: self.sections)
+      .bind(to: self.tableView.rx.items(dataSource: dataSource))
       .disposed(by: bag)
   }
 
