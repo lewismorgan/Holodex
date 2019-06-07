@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D710A838224D120900836D80 /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D710A837224D120900836D80 /* AppFlowController.swift */; };
+		D710A83A224D12B800836D80 /* HoloDex+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D710A839224D12B800836D80 /* HoloDex+UIViewController.swift */; };
+		D710A83C224D134D00836D80 /* PeopleFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D710A83B224D134D00836D80 /* PeopleFlowController.swift */; };
 		D724D3E922176E0500383887 /* People.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D724D3E722176DEE00383887 /* People.framework */; };
 		D724D3EA22176E0500383887 /* People.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D724D3E722176DEE00383887 /* People.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D724D3EB22176E0500383887 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D724D3E822176DEE00383887 /* Networking.framework */; };
@@ -73,6 +76,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D710A837224D120900836D80 /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
+		D710A839224D12B800836D80 /* HoloDex+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HoloDex+UIViewController.swift"; sourceTree = "<group>"; };
+		D710A83B224D134D00836D80 /* PeopleFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFlowController.swift; sourceTree = "<group>"; };
 		D724D3E722176DEE00383887 /* People.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = People.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D724D3E822176DEE00383887 /* Networking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7362733211CF804003F54FC /* HoloDexUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoloDexUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +177,7 @@
 				D7ADED3822221AA50027CE4F /* HoloDex+UIColor.swift */,
 				D7ADED3D22221F750027CE4F /* HoloDex+UIImage.swift */,
 				D7ADED3F22221FDE0027CE4F /* HoloDex+UIFont.swift */,
+				D710A839224D12B800836D80 /* HoloDex+UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -215,6 +222,7 @@
 				D766BA2521FBDDE2007A2ED2 /* AppCoordinator.swift */,
 				D766BA2721FBDE66007A2ED2 /* AppRoute.swift */,
 				D7C857D421FFACBF00DA33A0 /* PeopleListCoordinator.swift */,
+				D710A837224D120900836D80 /* AppFlowController.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -281,6 +289,7 @@
 				D7ADED46222241150027CE4F /* PersonDetailCell.swift */,
 				D7FE7514210955C500DE1E28 /* PersonListViewController.swift */,
 				D78C53722218919F00D5B56F /* PersonDetailViewController.swift */,
+				D710A83B224D134D00836D80 /* PeopleFlowController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -478,6 +487,7 @@
 				D7C73F49221B71A30048923A /* PersonCell.swift in Sources */,
 				D77DC9DC220E441F0003453C /* ViewModelBinding.swift in Sources */,
 				D766BA2621FBDDE2007A2ED2 /* AppCoordinator.swift in Sources */,
+				D710A838224D120900836D80 /* AppFlowController.swift in Sources */,
 				D766BA2821FBDE66007A2ED2 /* AppRoute.swift in Sources */,
 				D7C857D521FFACBF00DA33A0 /* PeopleListCoordinator.swift in Sources */,
 				D7ADED3922221AA50027CE4F /* HoloDex+UIColor.swift in Sources */,
@@ -486,12 +496,14 @@
 				D78C536F22188DB800D5B56F /* PersonDetailViewModelImpl.swift in Sources */,
 				D75A341121093428003A4C6D /* AppDelegate.swift in Sources */,
 				D7ADED4022221FDE0027CE4F /* HoloDex+UIFont.swift in Sources */,
+				D710A83C224D134D00836D80 /* PeopleFlowController.swift in Sources */,
 				D7ADED47222241150027CE4F /* PersonDetailCell.swift in Sources */,
 				D77DC9D9220E3FFC0003453C /* PersonListViewModelImpl.swift in Sources */,
 				D78C53732218919F00D5B56F /* PersonDetailViewController.swift in Sources */,
 				D74CE5002220A435000CB7AD /* HoloDex+UITableViewController.swift in Sources */,
 				D7C73F44221B57600048923A /* HoloDexContainerFactory.swift in Sources */,
 				D77DC9DE220E44660003453C /* UIViewController+ViewModelBinding.swift in Sources */,
+				D710A83A224D12B800836D80 /* HoloDex+UIViewController.swift in Sources */,
 				D7ADED3E22221F750027CE4F /* HoloDex+UIImage.swift in Sources */,
 				D78C536D2218879000D5B56F /* PersonDetailViewModel.swift in Sources */,
 				D7A1D762220E31BF00286709 /* PersonListViewModel.swift in Sources */,
