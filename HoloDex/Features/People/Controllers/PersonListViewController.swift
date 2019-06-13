@@ -6,7 +6,6 @@
 //  Copyright © 2019 Lewis J Morgan. All rights reserved.
 //
 
-import People
 import RxCocoa
 import RxDataSources
 import RxSwift

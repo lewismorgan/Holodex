@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "296BCEA101A5F510EB4B4B8E"
-               BuildableName = "HoloDex.app"
-               BlueprintName = "HoloDex"
+               BlueprintIdentifier = "6E9120AA01B2997FEDCD7176"
+               BuildableName = "HoloDexUnitTests.xctest"
+               BlueprintName = "HoloDexUnitTests"
                ReferencedContainer = "container:HoloDex.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "296BCEA101A5F510EB4B4B8E"
-            BuildableName = "HoloDex.app"
-            BlueprintName = "HoloDex"
+            BlueprintIdentifier = "6E9120AA01B2997FEDCD7176"
+            BuildableName = "HoloDexUnitTests.xctest"
+            BlueprintName = "HoloDexUnitTests"
             ReferencedContainer = "container:HoloDex.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -69,9 +69,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "296BCEA101A5F510EB4B4B8E"
-            BuildableName = "HoloDex.app"
-            BlueprintName = "HoloDex"
+            BlueprintIdentifier = "6E9120AA01B2997FEDCD7176"
+            BuildableName = "HoloDexUnitTests.xctest"
+            BlueprintName = "HoloDexUnitTests"
             ReferencedContainer = "container:HoloDex.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -90,9 +90,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "296BCEA101A5F510EB4B4B8E"
-            BuildableName = "HoloDex.app"
-            BlueprintName = "HoloDex"
+            BlueprintIdentifier = "6E9120AA01B2997FEDCD7176"
+            BuildableName = "HoloDexUnitTests.xctest"
+            BlueprintName = "HoloDexUnitTests"
             ReferencedContainer = "container:HoloDex.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

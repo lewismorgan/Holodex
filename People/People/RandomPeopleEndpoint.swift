@@ -6,7 +6,6 @@
 //  Copyright © 2019 Lewis J Morgan. All rights reserved.
 //
 
-import Networking
 import RxSwift
 
 /// Provides randomized data in conformance with the PeopleEndpoint protocol

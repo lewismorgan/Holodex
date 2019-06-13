@@ -6,8 +6,6 @@
 //  Copyright © 2019 Lewis J Morgan. All rights reserved.
 //
 
-import Network
-import People
 import UIKit
 import XCoordinator
 

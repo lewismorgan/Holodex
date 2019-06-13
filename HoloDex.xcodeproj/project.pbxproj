@@ -7,68 +7,94 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D710A838224D120900836D80 /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D710A837224D120900836D80 /* AppFlowController.swift */; };
-		D710A83A224D12B800836D80 /* HoloDex+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D710A839224D12B800836D80 /* HoloDex+UIViewController.swift */; };
-		D710A83C224D134D00836D80 /* PeopleFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D710A83B224D134D00836D80 /* PeopleFlowController.swift */; };
-		D724D3E922176E0500383887 /* People.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D724D3E722176DEE00383887 /* People.framework */; };
-		D724D3EA22176E0500383887 /* People.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D724D3E722176DEE00383887 /* People.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D724D3EB22176E0500383887 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D724D3E822176DEE00383887 /* Networking.framework */; };
-		D724D3EC22176E0500383887 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D724D3E822176DEE00383887 /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D74CE5002220A435000CB7AD /* HoloDex+UITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74CE4FF2220A435000CB7AD /* HoloDex+UITableViewController.swift */; };
-		D750042D220E350F0098FCA5 /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D750042C220E350F0098FCA5 /* Action.framework */; };
-		D75A341121093428003A4C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75A341021093428003A4C6D /* AppDelegate.swift */; };
-		D75A341821093429003A4C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D75A341721093429003A4C6D /* Assets.xcassets */; };
-		D75A341B21093429003A4C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75A341921093429003A4C6D /* LaunchScreen.storyboard */; };
-		D766BA2621FBDDE2007A2ED2 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766BA2521FBDDE2007A2ED2 /* AppCoordinator.swift */; };
-		D766BA2821FBDE66007A2ED2 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766BA2721FBDE66007A2ED2 /* AppRoute.swift */; };
-		D77DC9D9220E3FFC0003453C /* PersonListViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77DC9D8220E3FFC0003453C /* PersonListViewModelImpl.swift */; };
-		D77DC9DC220E441F0003453C /* ViewModelBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77DC9DB220E441F0003453C /* ViewModelBinding.swift */; };
-		D77DC9DE220E44660003453C /* UIViewController+ViewModelBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77DC9DD220E44660003453C /* UIViewController+ViewModelBinding.swift */; };
-		D78B1D56221623B700253FDB /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78B1D55221623B700253FDB /* RxAlamofire.framework */; };
-		D78C536D2218879000D5B56F /* PersonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78C536C2218879000D5B56F /* PersonDetailViewModel.swift */; };
-		D78C536F22188DB800D5B56F /* PersonDetailViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78C536E22188DB800D5B56F /* PersonDetailViewModelImpl.swift */; };
-		D78C53732218919F00D5B56F /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78C53722218919F00D5B56F /* PersonDetailViewController.swift */; };
-		D7A1D762220E31BF00286709 /* PersonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1D761220E31BF00286709 /* PersonListViewModel.swift */; };
-		D7ADA35F220E57A50057546B /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7ADA35E220E57A50057546B /* RxDataSources.framework */; };
-		D7ADA361220E596C0057546B /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7ADA360220E596C0057546B /* Differentiator.framework */; };
-		D7ADED3922221AA50027CE4F /* HoloDex+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ADED3822221AA50027CE4F /* HoloDex+UIColor.swift */; };
-		D7ADED3E22221F750027CE4F /* HoloDex+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ADED3D22221F750027CE4F /* HoloDex+UIImage.swift */; };
-		D7ADED4022221FDE0027CE4F /* HoloDex+UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ADED3F22221FDE0027CE4F /* HoloDex+UIFont.swift */; };
-		D7ADED42222221B30027CE4F /* Glyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ADED41222221B30027CE4F /* Glyph.swift */; };
-		D7ADED45222226560027CE4F /* holodex-glyph.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7ADED44222226560027CE4F /* holodex-glyph.ttf */; };
-		D7ADED47222241150027CE4F /* PersonDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ADED46222241150027CE4F /* PersonDetailCell.swift */; };
-		D7BA267522037CA6007E88AD /* XCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA266D22037CA5007E88AD /* XCoordinator.framework */; };
-		D7BA267622037CA6007E88AD /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA266E22037CA5007E88AD /* RxCocoa.framework */; };
-		D7BA267722037CA6007E88AD /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA266F22037CA5007E88AD /* ObjectMapper.framework */; };
-		D7BA267822037CA6007E88AD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA267022037CA5007E88AD /* Alamofire.framework */; };
-		D7BA267B22037CA6007E88AD /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA267322037CA5007E88AD /* RxSwift.framework */; };
-		D7BA26992203837B007E88AD /* RxAtomic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BA26982203837B007E88AD /* RxAtomic.framework */; };
-		D7C73F44221B57600048923A /* HoloDexContainerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C73F43221B57600048923A /* HoloDexContainerFactory.swift */; };
-		D7C73F47221B6FCD0048923A /* PersonCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7C73F46221B6FCD0048923A /* PersonCellView.xib */; };
-		D7C73F49221B71A30048923A /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C73F48221B71A30048923A /* PersonCell.swift */; };
-		D7C857D521FFACBF00DA33A0 /* PeopleListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C857D421FFACBF00DA33A0 /* PeopleListCoordinator.swift */; };
-		D7FE7515210955C500DE1E28 /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE7514210955C500DE1E28 /* PersonListViewController.swift */; };
+		01AFAD1DB69E5F6B996098E9 /* StarWarsAPI+PeopleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDFC715D81A1FCB8631BC5 /* StarWarsAPI+PeopleEndpoint.swift */; };
+		039A169D564EF72D09B4D1CB /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C38B65CBBB1FB0BEEB319226 /* Differentiator.framework */; };
+		0528904BB7F9ED1411E0E753 /* holodex-glyph.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25C6624B2F41EC5F30D920A1 /* holodex-glyph.ttf */; };
+		062324644ABFD206E21634E3 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5085BFDB16AB9586F9855 /* PersonCell.swift */; };
+		07C0146F7A7ED1B32EB74BAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD3944D2D5065516BC79AE5 /* AppDelegate.swift */; };
+		0D94F47AC90839EAF4149482 /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4070EB558E1F6CC1BF7ACC74 /* PersonListViewController.swift */; };
+		0ECECDE1503338B7002C7CA3 /* PersonCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32534749B74EC4DDED9CB880 /* PersonCellView.xib */; };
+		18FB6D07502B4CD3E6953EC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E535143A053DB34EC78BF5C /* LaunchScreen.storyboard */; };
+		1AA55929C9204EA78E9C0DE3 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC217156A0EC291750D77BF /* RxCocoa.framework */; };
+		21D71E65D29FF11C1558CAFD /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB6A39158E983B5E4067426 /* AppCoordinator.swift */; };
+		26054EED9D7205C778CF8CDF /* NetworkAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E13EE7AB03FDEBDF2AC88 /* NetworkAPIError.swift */; };
+		2B6220CD66CC45C024C05D8C /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF81AE32FB0A92C5F12B0DFE /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		31AC0B950B7D00524FC47AB4 /* StarWarsAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD9052392FD57C780BC969 /* StarWarsAPIResponse.swift */; };
+		3A2426986BE37355F9E4E725 /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC4F8E658FE6861E02E8332 /* AppFlowController.swift */; };
+		4103F58849F8DB2B66DA33F7 /* HoloDex+UITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1231696247897958F99B36D6 /* HoloDex+UITableViewController.swift */; };
+		4DAA1DD022E50DF18795C1EA /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 537F5C8F75927BA5DB2B5637 /* RxDataSources.framework */; };
+		4F309150276502DF71BBF8C4 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A27DB30A995D4CB4E8D3E3 /* Endpoint.swift */; };
+		52F69C13A2828B5818FAD77D /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = E839ECDA0A518D7F162819CE /* AppRoute.swift */; };
+		587659DE7CF740EB78A2BD79 /* Glyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231AC33D452B2D451352908E /* Glyph.swift */; };
+		58839BD38D2484FF3B421C03 /* XCoordinator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFC674C7D79017D7072BB36 /* XCoordinator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5C665EC1D97812F9CFE4EA1A /* ViewModelBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56344B1641910BBD130831A0 /* ViewModelBinding.swift */; };
+		5E47B60BD1F03DFB99BC67DD /* PersonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CA676C3129BD2C2EF51DF /* PersonListViewModel.swift */; };
+		61920C49D2AFBD0B6A4D49D1 /* RxAlamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF678182BCC392B8BE46B97 /* RxAlamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		62AF41E6FBA001BFAF99D17D /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF678182BCC392B8BE46B97 /* RxAlamofire.framework */; };
+		660AE06E96606F8317B6B9CF /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF0D58AB6FB8ABAD6B716032 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		696315EA59957973AC5DFCAC /* HoloDex+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F037E96ABB999225B6A30E6 /* HoloDex+UIColor.swift */; };
+		6AEE306E71485AF43463BC44 /* HoloDex+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D996852DEC4C907B8EC83B5B /* HoloDex+UIImage.swift */; };
+		6FBF2A172B6CA9E8F3011459 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7342F9A091AE9ABD7808DFFE /* RxSwift.framework */; };
+		79CB6D9BE0AF2B55B2A46C70 /* HoloDexContainerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8FAD389C5BFDEF3A80711A /* HoloDexContainerFactory.swift */; };
+		7C4E324439A6CA3808E2A56B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36400BB10AE3B99813285AB4 /* Extensions.swift */; };
+		8BDFD667B7D98D3D091577ED /* RxAtomic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC81A731C31C7BF08DBD6C82 /* RxAtomic.framework */; };
+		96B12843795DFA8175A55771 /* PagedResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423D29F84CDD9EBE475EA1F6 /* PagedResults.swift */; };
+		9A7E78D93576DCD3B6D6370C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AFB7D15F3AF61EA7F6ACE50 /* Assets.xcassets */; };
+		9C583733B563C191978C0BE2 /* Swinject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2851527B3FDA92CC971A14B5 /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F0ECF8F65178C9F85C8D4B5 /* PersonDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B3BC0D41440FEC154CF6E1 /* PersonDetailCell.swift */; };
+		A006226FF3779719AD72CFA8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF81AE32FB0A92C5F12B0DFE /* Alamofire.framework */; };
+		A29E0555F58A913EB7AF89FA /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 46A5B1300E89BB0E4D0FFCFE /* config.json */; };
+		A4748A419A2E132749AC771B /* NetworkingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260C9CB9D9D19188BE82B0D5 /* NetworkingAPI.swift */; };
+		A663C533048F445AF0B404FF /* RxDataSources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 537F5C8F75927BA5DB2B5637 /* RxDataSources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AA5037654280E0F33C5AD206 /* HoloDex+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677B5C355431AAC372710E58 /* HoloDex+UIViewController.swift */; };
+		AB3CD9E8A8E6D751A6F00C30 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2851527B3FDA92CC971A14B5 /* Swinject.framework */; };
+		AB88AA4A02A3B998756CAEF1 /* RandomPeopleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702C478582B3A4FE50FC8226 /* RandomPeopleEndpoint.swift */; };
+		ABF20B9E985A0C2480671422 /* PersonListViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997B0E9A6CDF9819674AB2D3 /* PersonListViewModelImpl.swift */; };
+		B25A87704C6F07EF096352A4 /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8339027A460513ACF3446CA6 /* PersonDetailViewController.swift */; };
+		BC1097EF61D1B66A53162ABD /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0D58AB6FB8ABAD6B716032 /* ObjectMapper.framework */; };
+		C8F4DC5A03992268B1A69CD2 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7342F9A091AE9ABD7808DFFE /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CF6E3FAA38B045385DA76C91 /* Differentiator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C38B65CBBB1FB0BEEB319226 /* Differentiator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CFC39E75572D4A7747B1ABD6 /* PeopleListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138D1819653D76E451E9BB2A /* PeopleListCoordinator.swift */; };
+		D1791DF0C63AF086697DD5E0 /* PersonDetailViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703F92F7FB1AD7B438808B9F /* PersonDetailViewModelImpl.swift */; };
+		DB5858A520369DA6C9007721 /* PeopleFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9259C48EA2C8AEA4DB10D459 /* PeopleFlowController.swift */; };
+		DDA4839E9AA68A6C53548929 /* RxAtomic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC81A731C31C7BF08DBD6C82 /* RxAtomic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE290B50CF00E55D9F5C8510 /* PersonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8E0D3E7D1C3357D8DAE78 /* PersonDetailViewModel.swift */; };
+		DF67865838643A4E116363F0 /* PeopleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B4B4DF3D5B05BFBD510620 /* PeopleEndpoint.swift */; };
+		E148C7CD97A80B937828FCBA /* UIViewController+ViewModelBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C1D7BA011C2DB0017781DC /* UIViewController+ViewModelBinding.swift */; };
+		E84ADF6DDB20FB9CE02C4662 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B22B6215A8CA2202B9B3A5 /* Person.swift */; };
+		EEC559002D9F4E0D7E6EEFC2 /* XCoordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFC674C7D79017D7072BB36 /* XCoordinator.framework */; };
+		F155F3CEF087C4D53CF188DC /* StarWarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A34DB82B5A7BC0F784C2B3 /* StarWarsAPI.swift */; };
+		F7413E042D01E1AF1C460690 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC217156A0EC291750D77BF /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F9C3968AE7F05E09C49D4AC4 /* HoloDex+UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE0C1E84384C601395D9B78 /* HoloDex+UIFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D7362738211CF804003F54FC /* PBXContainerItemProxy */ = {
+		0AB5E50B58835BD0C3D72EF6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D75A340521093428003A4C6D /* Project object */;
+			containerPortal = EF7B4BBB54A5ED9B997B1D91 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D75A340C21093428003A4C6D;
+			remoteGlobalIDString = 296BCEA101A5F510EB4B4B8E;
 			remoteInfo = HoloDex;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D724D3DE22176CCD00383887 /* Embed Frameworks */ = {
+		EA6458341CCE0832BA2C6624 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D724D3EC22176E0500383887 /* Networking.framework in Embed Frameworks */,
-				D724D3EA22176E0500383887 /* People.framework in Embed Frameworks */,
+				2B6220CD66CC45C024C05D8C /* Alamofire.framework in Embed Frameworks */,
+				CF6E3FAA38B045385DA76C91 /* Differentiator.framework in Embed Frameworks */,
+				660AE06E96606F8317B6B9CF /* ObjectMapper.framework in Embed Frameworks */,
+				61920C49D2AFBD0B6A4D49D1 /* RxAlamofire.framework in Embed Frameworks */,
+				DDA4839E9AA68A6C53548929 /* RxAtomic.framework in Embed Frameworks */,
+				F7413E042D01E1AF1C460690 /* RxCocoa.framework in Embed Frameworks */,
+				A663C533048F445AF0B404FF /* RxDataSources.framework in Embed Frameworks */,
+				C8F4DC5A03992268B1A69CD2 /* RxSwift.framework in Embed Frameworks */,
+				9C583733B563C191978C0BE2 /* Swinject.framework in Embed Frameworks */,
+				58839BD38D2484FF3B421C03 /* XCoordinator.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,275 +102,333 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D710A837224D120900836D80 /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
-		D710A839224D12B800836D80 /* HoloDex+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HoloDex+UIViewController.swift"; sourceTree = "<group>"; };
-		D710A83B224D134D00836D80 /* PeopleFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFlowController.swift; sourceTree = "<group>"; };
-		D724D3E722176DEE00383887 /* People.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = People.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D724D3E822176DEE00383887 /* Networking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7362733211CF804003F54FC /* HoloDexUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoloDexUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7362737211CF804003F54FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D74CE4FC22207F8F000CB7AD /* SwiftIconFont.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftIconFont.framework; path = Carthage/Build/iOS/SwiftIconFont.framework; sourceTree = "<group>"; };
-		D74CE4FF2220A435000CB7AD /* HoloDex+UITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HoloDex+UITableViewController.swift"; sourceTree = "<group>"; };
-		D750042C220E350F0098FCA5 /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
-		D75A340D21093428003A4C6D /* HoloDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoloDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D75A341021093428003A4C6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D75A341721093429003A4C6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D75A341A21093429003A4C6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D75A341C21093429003A4C6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D766BA2521FBDDE2007A2ED2 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		D766BA2721FBDE66007A2ED2 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
-		D77DC9D8220E3FFC0003453C /* PersonListViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewModelImpl.swift; sourceTree = "<group>"; };
-		D77DC9DB220E441F0003453C /* ViewModelBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBinding.swift; sourceTree = "<group>"; };
-		D77DC9DD220E44660003453C /* UIViewController+ViewModelBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ViewModelBinding.swift"; sourceTree = "<group>"; };
-		D78B1D55221623B700253FDB /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = "<group>"; };
-		D78C536C2218879000D5B56F /* PersonDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewModel.swift; sourceTree = "<group>"; };
-		D78C536E22188DB800D5B56F /* PersonDetailViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewModelImpl.swift; sourceTree = "<group>"; };
-		D78C53722218919F00D5B56F /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
-		D7A1D761220E31BF00286709 /* PersonListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewModel.swift; sourceTree = "<group>"; };
-		D7ADA35E220E57A50057546B /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
-		D7ADA360220E596C0057546B /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
-		D7ADED3822221AA50027CE4F /* HoloDex+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HoloDex+UIColor.swift"; sourceTree = "<group>"; };
-		D7ADED3D22221F750027CE4F /* HoloDex+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HoloDex+UIImage.swift"; sourceTree = "<group>"; };
-		D7ADED3F22221FDE0027CE4F /* HoloDex+UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HoloDex+UIFont.swift"; sourceTree = "<group>"; };
-		D7ADED41222221B30027CE4F /* Glyph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glyph.swift; sourceTree = "<group>"; };
-		D7ADED44222226560027CE4F /* holodex-glyph.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "holodex-glyph.ttf"; sourceTree = "<group>"; };
-		D7ADED46222241150027CE4F /* PersonDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailCell.swift; sourceTree = "<group>"; };
-		D7BA266D22037CA5007E88AD /* XCoordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCoordinator.framework; path = Carthage/Build/iOS/XCoordinator.framework; sourceTree = "<group>"; };
-		D7BA266E22037CA5007E88AD /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
-		D7BA266F22037CA5007E88AD /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
-		D7BA267022037CA5007E88AD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		D7BA267322037CA5007E88AD /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		D7BA26982203837B007E88AD /* RxAtomic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAtomic.framework; path = Carthage/Build/iOS/RxAtomic.framework; sourceTree = "<group>"; };
-		D7C73F43221B57600048923A /* HoloDexContainerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoloDexContainerFactory.swift; sourceTree = "<group>"; };
-		D7C73F46221B6FCD0048923A /* PersonCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonCellView.xib; sourceTree = "<group>"; };
-		D7C73F48221B71A30048923A /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
-		D7C857D421FFACBF00DA33A0 /* PeopleListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListCoordinator.swift; sourceTree = "<group>"; };
-		D7FE7514210955C500DE1E28 /* PersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewController.swift; sourceTree = "<group>"; };
+		1231696247897958F99B36D6 /* HoloDex+UITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HoloDex+UITableViewController.swift"; sourceTree = "<group>"; };
+		138D1819653D76E451E9BB2A /* PeopleListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListCoordinator.swift; sourceTree = "<group>"; };
+		1B6E13EE7AB03FDEBDF2AC88 /* NetworkAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPIError.swift; sourceTree = "<group>"; };
+		1F7C159E51F49B887F338600 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		231AC33D452B2D451352908E /* Glyph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glyph.swift; sourceTree = "<group>"; };
+		25C6624B2F41EC5F30D920A1 /* holodex-glyph.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "holodex-glyph.ttf"; sourceTree = "<group>"; };
+		260C9CB9D9D19188BE82B0D5 /* NetworkingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingAPI.swift; sourceTree = "<group>"; };
+		2799F9A6980E258A44CEEB76 /* Beta.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Beta.xcconfig; sourceTree = "<group>"; };
+		2851527B3FDA92CC971A14B5 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Swinject.framework; sourceTree = "<group>"; };
+		302CDC1E86AC9B6194AF7E59 /* HoloDexUnitTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = HoloDexUnitTests.xcconfig; sourceTree = "<group>"; };
+		32534749B74EC4DDED9CB880 /* PersonCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonCellView.xib; sourceTree = "<group>"; };
+		36400BB10AE3B99813285AB4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		37A8E0D3E7D1C3357D8DAE78 /* PersonDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewModel.swift; sourceTree = "<group>"; };
+		3B8FAD389C5BFDEF3A80711A /* HoloDexContainerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoloDexContainerFactory.swift; sourceTree = "<group>"; };
+		4070EB558E1F6CC1BF7ACC74 /* PersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewController.swift; sourceTree = "<group>"; };
+		423D29F84CDD9EBE475EA1F6 /* PagedResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedResults.swift; sourceTree = "<group>"; };
+		46A5B1300E89BB0E4D0FFCFE /* config.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
+		537F5C8F75927BA5DB2B5637 /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxDataSources.framework; sourceTree = "<group>"; };
+		56344B1641910BBD130831A0 /* ViewModelBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBinding.swift; sourceTree = "<group>"; };
+		5AA14C15AC9D96CADCA49315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AC217156A0EC291750D77BF /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = "<group>"; };
+		5F037E96ABB999225B6A30E6 /* HoloDex+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HoloDex+UIColor.swift"; sourceTree = "<group>"; };
+		666CA676C3129BD2C2EF51DF /* PersonListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewModel.swift; sourceTree = "<group>"; };
+		677B5C355431AAC372710E58 /* HoloDex+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HoloDex+UIViewController.swift"; sourceTree = "<group>"; };
+		6DF678182BCC392B8BE46B97 /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxAlamofire.framework; sourceTree = "<group>"; };
+		702C478582B3A4FE50FC8226 /* RandomPeopleEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPeopleEndpoint.swift; sourceTree = "<group>"; };
+		703F92F7FB1AD7B438808B9F /* PersonDetailViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewModelImpl.swift; sourceTree = "<group>"; };
+		7342F9A091AE9ABD7808DFFE /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
+		78B4B4DF3D5B05BFBD510620 /* PeopleEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleEndpoint.swift; sourceTree = "<group>"; };
+		79B22B6215A8CA2202B9B3A5 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		7CCD9052392FD57C780BC969 /* StarWarsAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAPIResponse.swift; sourceTree = "<group>"; };
+		7EE0C1E84384C601395D9B78 /* HoloDex+UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HoloDex+UIFont.swift"; sourceTree = "<group>"; };
+		8339027A460513ACF3446CA6 /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
+		856003496320659201E26261 /* HoloDex-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "HoloDex-Debug.xcconfig"; sourceTree = "<group>"; };
+		86C1D7BA011C2DB0017781DC /* UIViewController+ViewModelBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ViewModelBinding.swift"; sourceTree = "<group>"; };
+		88DC76693123A969F839D972 /* HoloDex-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "HoloDex-Release.xcconfig"; sourceTree = "<group>"; };
+		8AFB7D15F3AF61EA7F6ACE50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8AFC674C7D79017D7072BB36 /* XCoordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XCoordinator.framework; sourceTree = "<group>"; };
+		8C8A35C39F0A505040B4D2E7 /* HoloDex-Beta.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "HoloDex-Beta.xcconfig"; sourceTree = "<group>"; };
+		8FD3944D2D5065516BC79AE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9259C48EA2C8AEA4DB10D459 /* PeopleFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFlowController.swift; sourceTree = "<group>"; };
+		98FD8C930806FC1D539E80D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		997B0E9A6CDF9819674AB2D3 /* PersonListViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewModelImpl.swift; sourceTree = "<group>"; };
+		B6548EF18164DF6271B96BC9 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		B6A34DB82B5A7BC0F784C2B3 /* StarWarsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAPI.swift; sourceTree = "<group>"; };
+		C38B65CBBB1FB0BEEB319226 /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Differentiator.framework; sourceTree = "<group>"; };
+		D996852DEC4C907B8EC83B5B /* HoloDex+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HoloDex+UIImage.swift"; sourceTree = "<group>"; };
+		DF0D58AB6FB8ABAD6B716032 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = "<group>"; };
+		E28F299D0CB52169E2696006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E584460F2C9A31CC67D97454 /* HoloDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoloDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5B3BC0D41440FEC154CF6E1 /* PersonDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailCell.swift; sourceTree = "<group>"; };
+		E7CBBB24AD9680F6D961A0FB /* HoloDexUnitTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = HoloDexUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E839ECDA0A518D7F162819CE /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
+		EC81A731C31C7BF08DBD6C82 /* RxAtomic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxAtomic.framework; sourceTree = "<group>"; };
+		EEC4F8E658FE6861E02E8332 /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
+		EF81AE32FB0A92C5F12B0DFE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		EFCDFC715D81A1FCB8631BC5 /* StarWarsAPI+PeopleEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StarWarsAPI+PeopleEndpoint.swift"; sourceTree = "<group>"; };
+		F8A27DB30A995D4CB4E8D3E3 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		F9D5085BFDB16AB9586F9855 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		FEB6A39158E983B5E4067426 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D7362730211CF804003F54FC /* Frameworks */ = {
+		4BEC163BC67DF3EE360572AD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D75A340A21093428003A4C6D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D78B1D56221623B700253FDB /* RxAlamofire.framework in Frameworks */,
-				D724D3E922176E0500383887 /* People.framework in Frameworks */,
-				D7ADA361220E596C0057546B /* Differentiator.framework in Frameworks */,
-				D7ADA35F220E57A50057546B /* RxDataSources.framework in Frameworks */,
-				D750042D220E350F0098FCA5 /* Action.framework in Frameworks */,
-				D7BA267B22037CA6007E88AD /* RxSwift.framework in Frameworks */,
-				D7BA267722037CA6007E88AD /* ObjectMapper.framework in Frameworks */,
-				D7BA267522037CA6007E88AD /* XCoordinator.framework in Frameworks */,
-				D724D3EB22176E0500383887 /* Networking.framework in Frameworks */,
-				D7BA26992203837B007E88AD /* RxAtomic.framework in Frameworks */,
-				D7BA267822037CA6007E88AD /* Alamofire.framework in Frameworks */,
-				D7BA267622037CA6007E88AD /* RxCocoa.framework in Frameworks */,
+				A006226FF3779719AD72CFA8 /* Alamofire.framework in Frameworks */,
+				6FBF2A172B6CA9E8F3011459 /* RxSwift.framework in Frameworks */,
+				8BDFD667B7D98D3D091577ED /* RxAtomic.framework in Frameworks */,
+				1AA55929C9204EA78E9C0DE3 /* RxCocoa.framework in Frameworks */,
+				62AF41E6FBA001BFAF99D17D /* RxAlamofire.framework in Frameworks */,
+				BC1097EF61D1B66A53162ABD /* ObjectMapper.framework in Frameworks */,
+				EEC559002D9F4E0D7E6EEFC2 /* XCoordinator.framework in Frameworks */,
+				4DAA1DD022E50DF18795C1EA /* RxDataSources.framework in Frameworks */,
+				039A169D564EF72D09B4D1CB /* Differentiator.framework in Frameworks */,
+				AB3CD9E8A8E6D751A6F00C30 /* Swinject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D70C54A0211CEBCD00106D73 /* Base */ = {
+		1B75287AAE5EFB646140B456 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D75A341021093428003A4C6D /* AppDelegate.swift */,
-				D7C73F43221B57600048923A /* HoloDexContainerFactory.swift */,
-				D75A341921093429003A4C6D /* LaunchScreen.storyboard */,
+				EF81AE32FB0A92C5F12B0DFE /* Alamofire.framework */,
+				C38B65CBBB1FB0BEEB319226 /* Differentiator.framework */,
+				DF0D58AB6FB8ABAD6B716032 /* ObjectMapper.framework */,
+				6DF678182BCC392B8BE46B97 /* RxAlamofire.framework */,
+				EC81A731C31C7BF08DBD6C82 /* RxAtomic.framework */,
+				5AC217156A0EC291750D77BF /* RxCocoa.framework */,
+				537F5C8F75927BA5DB2B5637 /* RxDataSources.framework */,
+				7342F9A091AE9ABD7808DFFE /* RxSwift.framework */,
+				2851527B3FDA92CC971A14B5 /* Swinject.framework */,
+				8AFC674C7D79017D7072BB36 /* XCoordinator.framework */,
 			);
-			path = Base;
+			path = iOS;
 			sourceTree = "<group>";
 		};
-		D7362734211CF804003F54FC /* HoloDexUnitTests */ = {
+		2B94B8EB01886F00A892FA5C /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				D7362737211CF804003F54FC /* Info.plist */,
+				B164D5447AF2CA59EAB2409B /* StarWarsAPI */,
+				F8A27DB30A995D4CB4E8D3E3 /* Endpoint.swift */,
+				36400BB10AE3B99813285AB4 /* Extensions.swift */,
+				1B6E13EE7AB03FDEBDF2AC88 /* NetworkAPIError.swift */,
+				260C9CB9D9D19188BE82B0D5 /* NetworkingAPI.swift */,
+				423D29F84CDD9EBE475EA1F6 /* PagedResults.swift */,
 			);
-			path = HoloDexUnitTests;
+			name = Networking;
+			path = Networking/Networking;
 			sourceTree = "<group>";
 		};
-		D74CE4FE2220A419000CB7AD /* Extensions */ = {
+		339E5D78AC1016A5E358EA06 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D74CE4FF2220A435000CB7AD /* HoloDex+UITableViewController.swift */,
-				D7ADED3822221AA50027CE4F /* HoloDex+UIColor.swift */,
-				D7ADED3D22221F750027CE4F /* HoloDex+UIImage.swift */,
-				D7ADED3F22221FDE0027CE4F /* HoloDex+UIFont.swift */,
-				D710A839224D12B800836D80 /* HoloDex+UIViewController.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		D75A340421093428003A4C6D = {
-			isa = PBXGroup;
-			children = (
-				D75A340F21093428003A4C6D /* HoloDex */,
-				D7362734211CF804003F54FC /* HoloDexUnitTests */,
-				D75A340E21093428003A4C6D /* Products */,
-				F019FED0A88DF487CE749D40 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		D75A340E21093428003A4C6D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D75A340D21093428003A4C6D /* HoloDex.app */,
-				D7362733211CF804003F54FC /* HoloDexUnitTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		D75A340F21093428003A4C6D /* HoloDex */ = {
-			isa = PBXGroup;
-			children = (
-				D70C54A0211CEBCD00106D73 /* Base */,
-				D77DC9DA220E43FD0003453C /* Binding */,
-				D766BA2421FBDDC3007A2ED2 /* Coordinators */,
-				D74CE4FE2220A419000CB7AD /* Extensions */,
-				D7A1D760220E308800286709 /* Features */,
-				D7ADED432222249B0027CE4F /* Fonts */,
-				D75A341721093429003A4C6D /* Assets.xcassets */,
-				D75A341C21093429003A4C6D /* Info.plist */,
-			);
-			path = HoloDex;
-			sourceTree = "<group>";
-		};
-		D766BA2421FBDDC3007A2ED2 /* Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-				D766BA2521FBDDE2007A2ED2 /* AppCoordinator.swift */,
-				D766BA2721FBDE66007A2ED2 /* AppRoute.swift */,
-				D7C857D421FFACBF00DA33A0 /* PeopleListCoordinator.swift */,
-				D710A837224D120900836D80 /* AppFlowController.swift */,
-			);
-			path = Coordinators;
-			sourceTree = "<group>";
-		};
-		D77DC9DA220E43FD0003453C /* Binding */ = {
-			isa = PBXGroup;
-			children = (
-				D77DC9DB220E441F0003453C /* ViewModelBinding.swift */,
-				D77DC9DD220E44660003453C /* UIViewController+ViewModelBinding.swift */,
-			);
-			path = Binding;
-			sourceTree = "<group>";
-		};
-		D7A1D760220E308800286709 /* Features */ = {
-			isa = PBXGroup;
-			children = (
-				D7DD0A2D210AAE290072A896 /* People */,
-			);
-			path = Features;
-			sourceTree = "<group>";
-		};
-		D7ADED432222249B0027CE4F /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				D7ADED41222221B30027CE4F /* Glyph.swift */,
-				D7ADED44222226560027CE4F /* holodex-glyph.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		D7C73F45221B6B330048923A /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				D7C73F46221B6FCD0048923A /* PersonCellView.xib */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		D7DD0A2D210AAE290072A896 /* People */ = {
-			isa = PBXGroup;
-			children = (
-				D7FFC2FE2218B50500292BE8 /* Models */,
-				D7C73F45221B6B330048923A /* Views */,
-				D7FFC2FF2218B55900292BE8 /* Controllers */,
-			);
-			path = People;
-			sourceTree = "<group>";
-		};
-		D7FFC2FE2218B50500292BE8 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				D7A1D761220E31BF00286709 /* PersonListViewModel.swift */,
-				D77DC9D8220E3FFC0003453C /* PersonListViewModelImpl.swift */,
-				D78C536C2218879000D5B56F /* PersonDetailViewModel.swift */,
-				D78C536E22188DB800D5B56F /* PersonDetailViewModelImpl.swift */,
+				37A8E0D3E7D1C3357D8DAE78 /* PersonDetailViewModel.swift */,
+				703F92F7FB1AD7B438808B9F /* PersonDetailViewModelImpl.swift */,
+				666CA676C3129BD2C2EF51DF /* PersonListViewModel.swift */,
+				997B0E9A6CDF9819674AB2D3 /* PersonListViewModelImpl.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		D7FFC2FF2218B55900292BE8 /* Controllers */ = {
+		348299992FD0451AFEB94307 /* HoloDex */ = {
 			isa = PBXGroup;
 			children = (
-				D7C73F48221B71A30048923A /* PersonCell.swift */,
-				D7ADED46222241150027CE4F /* PersonDetailCell.swift */,
-				D7FE7514210955C500DE1E28 /* PersonListViewController.swift */,
-				D78C53722218919F00D5B56F /* PersonDetailViewController.swift */,
-				D710A83B224D134D00836D80 /* PeopleFlowController.swift */,
+				DA4AFFAA589BDAE7E08E3AA1 /* Base */,
+				522EF85030FF9F3DF92A9C6E /* Binding */,
+				D9174D3E26723838A2EC1E34 /* Coordinators */,
+				CE9D73FFC3D03AB91085514A /* Extensions */,
+				EED1DB4CF74DF8D8A9CF0387 /* Features */,
+				B83908689C6E09330AE2F44C /* Fonts */,
+				8AFB7D15F3AF61EA7F6ACE50 /* Assets.xcassets */,
+				5AA14C15AC9D96CADCA49315 /* Info.plist */,
+			);
+			path = HoloDex;
+			sourceTree = "<group>";
+		};
+		522EF85030FF9F3DF92A9C6E /* Binding */ = {
+			isa = PBXGroup;
+			children = (
+				86C1D7BA011C2DB0017781DC /* UIViewController+ViewModelBinding.swift */,
+				56344B1641910BBD130831A0 /* ViewModelBinding.swift */,
+			);
+			path = Binding;
+			sourceTree = "<group>";
+		};
+		524B5A4D4705A0DE9386C04E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF651BEF76EFC4BF78813584 /* Carthage */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		577581C09A1AC5FD7C202BFB /* People */ = {
+			isa = PBXGroup;
+			children = (
+				78B4B4DF3D5B05BFBD510620 /* PeopleEndpoint.swift */,
+				79B22B6215A8CA2202B9B3A5 /* Person.swift */,
+				702C478582B3A4FE50FC8226 /* RandomPeopleEndpoint.swift */,
+				EFCDFC715D81A1FCB8631BC5 /* StarWarsAPI+PeopleEndpoint.swift */,
+			);
+			name = People;
+			path = People/People;
+			sourceTree = "<group>";
+		};
+		5DE9839F62019486FEBE90B4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				32534749B74EC4DDED9CB880 /* PersonCellView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		629AFB61A9D10D11A4DA13FF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9259C48EA2C8AEA4DB10D459 /* PeopleFlowController.swift */,
+				F9D5085BFDB16AB9586F9855 /* PersonCell.swift */,
+				E5B3BC0D41440FEC154CF6E1 /* PersonDetailCell.swift */,
+				8339027A460513ACF3446CA6 /* PersonDetailViewController.swift */,
+				4070EB558E1F6CC1BF7ACC74 /* PersonListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		F019FED0A88DF487CE749D40 /* Frameworks */ = {
+		9AED1BF12A5EEA185053EC7C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D74CE4FC22207F8F000CB7AD /* SwiftIconFont.framework */,
-				D724D3E722176DEE00383887 /* People.framework */,
-				D724D3E822176DEE00383887 /* Networking.framework */,
-				D78B1D55221623B700253FDB /* RxAlamofire.framework */,
-				D7ADA360220E596C0057546B /* Differentiator.framework */,
-				D7ADA35E220E57A50057546B /* RxDataSources.framework */,
-				D750042C220E350F0098FCA5 /* Action.framework */,
-				D7BA26982203837B007E88AD /* RxAtomic.framework */,
-				D7BA267022037CA5007E88AD /* Alamofire.framework */,
-				D7BA266F22037CA5007E88AD /* ObjectMapper.framework */,
-				D7BA266E22037CA5007E88AD /* RxCocoa.framework */,
-				D7BA267322037CA5007E88AD /* RxSwift.framework */,
-				D7BA266D22037CA5007E88AD /* XCoordinator.framework */,
+				E584460F2C9A31CC67D97454 /* HoloDex.app */,
+				E7CBBB24AD9680F6D961A0FB /* HoloDexUnitTests.xctest */,
 			);
-			name = Frameworks;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A71CFD170D5E5A2BECDC5835 = {
+			isa = PBXGroup;
+			children = (
+				CDC8B57C2DFE5B7CE7787C2A /* configs */,
+				348299992FD0451AFEB94307 /* HoloDex */,
+				DA79A160AB4759239FB43BA1 /* HoloDexUnitTests */,
+				2B94B8EB01886F00A892FA5C /* Networking */,
+				577581C09A1AC5FD7C202BFB /* People */,
+				524B5A4D4705A0DE9386C04E /* Frameworks */,
+				9AED1BF12A5EEA185053EC7C /* Products */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		AE84280779FF69D4685C4300 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				629AFB61A9D10D11A4DA13FF /* Controllers */,
+				339E5D78AC1016A5E358EA06 /* Models */,
+				5DE9839F62019486FEBE90B4 /* Views */,
+			);
+			path = People;
+			sourceTree = "<group>";
+		};
+		B164D5447AF2CA59EAB2409B /* StarWarsAPI */ = {
+			isa = PBXGroup;
+			children = (
+				B6A34DB82B5A7BC0F784C2B3 /* StarWarsAPI.swift */,
+				7CCD9052392FD57C780BC969 /* StarWarsAPIResponse.swift */,
+			);
+			path = StarWarsAPI;
+			sourceTree = "<group>";
+		};
+		B83908689C6E09330AE2F44C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				46A5B1300E89BB0E4D0FFCFE /* config.json */,
+				231AC33D452B2D451352908E /* Glyph.swift */,
+				25C6624B2F41EC5F30D920A1 /* holodex-glyph.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CDC8B57C2DFE5B7CE7787C2A /* configs */ = {
+			isa = PBXGroup;
+			children = (
+				2799F9A6980E258A44CEEB76 /* Beta.xcconfig */,
+				1F7C159E51F49B887F338600 /* Debug.xcconfig */,
+				8C8A35C39F0A505040B4D2E7 /* HoloDex-Beta.xcconfig */,
+				856003496320659201E26261 /* HoloDex-Debug.xcconfig */,
+				88DC76693123A969F839D972 /* HoloDex-Release.xcconfig */,
+				302CDC1E86AC9B6194AF7E59 /* HoloDexUnitTests.xcconfig */,
+				B6548EF18164DF6271B96BC9 /* Release.xcconfig */,
+			);
+			path = configs;
+			sourceTree = "<group>";
+		};
+		CE9D73FFC3D03AB91085514A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5F037E96ABB999225B6A30E6 /* HoloDex+UIColor.swift */,
+				7EE0C1E84384C601395D9B78 /* HoloDex+UIFont.swift */,
+				D996852DEC4C907B8EC83B5B /* HoloDex+UIImage.swift */,
+				1231696247897958F99B36D6 /* HoloDex+UITableViewController.swift */,
+				677B5C355431AAC372710E58 /* HoloDex+UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D9174D3E26723838A2EC1E34 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				FEB6A39158E983B5E4067426 /* AppCoordinator.swift */,
+				EEC4F8E658FE6861E02E8332 /* AppFlowController.swift */,
+				E839ECDA0A518D7F162819CE /* AppRoute.swift */,
+				138D1819653D76E451E9BB2A /* PeopleListCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		DA4AFFAA589BDAE7E08E3AA1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8FD3944D2D5065516BC79AE5 /* AppDelegate.swift */,
+				3B8FAD389C5BFDEF3A80711A /* HoloDexContainerFactory.swift */,
+				6E535143A053DB34EC78BF5C /* LaunchScreen.storyboard */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		DA79A160AB4759239FB43BA1 /* HoloDexUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				98FD8C930806FC1D539E80D3 /* Info.plist */,
+			);
+			path = HoloDexUnitTests;
+			sourceTree = "<group>";
+		};
+		EED1DB4CF74DF8D8A9CF0387 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				AE84280779FF69D4685C4300 /* People */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		FF651BEF76EFC4BF78813584 /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				1B75287AAE5EFB646140B456 /* iOS */,
+			);
+			name = Carthage;
+			path = Carthage/Build;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D7362732211CF804003F54FC /* HoloDexUnitTests */ = {
+		296BCEA101A5F510EB4B4B8E /* HoloDex */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D736273C211CF804003F54FC /* Build configuration list for PBXNativeTarget "HoloDexUnitTests" */;
+			buildConfigurationList = 5C3073ED5F913F666465DA37 /* Build configuration list for PBXNativeTarget "HoloDex" */;
 			buildPhases = (
-				D736272F211CF804003F54FC /* Sources */,
-				D7362730211CF804003F54FC /* Frameworks */,
-				D7362731211CF804003F54FC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D7362739211CF804003F54FC /* PBXTargetDependency */,
-			);
-			name = HoloDexUnitTests;
-			productName = HoloDexUnitTests;
-			productReference = D7362733211CF804003F54FC /* HoloDexUnitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		D75A340C21093428003A4C6D /* HoloDex */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D75A341F21093429003A4C6D /* Build configuration list for PBXNativeTarget "HoloDex" */;
-			buildPhases = (
-				D72D3FFA210943E50095BEE0 /* [ SwiftLint ] */,
-				D75A340921093428003A4C6D /* Sources */,
-				D75A340A21093428003A4C6D /* Frameworks */,
-				D75A340B21093428003A4C6D /* Resources */,
-				D7BA267C22037CE8007E88AD /* [ Carthage - Copy Frameworks ] */,
-				D724D3DE22176CCD00383887 /* Embed Frameworks */,
+				CAE5D2C02A3C88D3673CA0E4 /* Sources */,
+				AB804B28D57510D00B7C5FF6 /* SwiftLint */,
+				C62A900E47B8C0F2D6962221 /* Resources */,
+				FF0BE7437D2F6B896E1C6B13 /* Carthage */,
+				4BEC163BC67DF3EE360572AD /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -352,30 +436,46 @@
 			);
 			name = HoloDex;
 			productName = HoloDex;
-			productReference = D75A340D21093428003A4C6D /* HoloDex.app */;
+			productReference = E584460F2C9A31CC67D97454 /* HoloDex.app */;
 			productType = "com.apple.product-type.application";
+		};
+		6E9120AA01B2997FEDCD7176 /* HoloDexUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9E168A69D4E6FB038D7DA56 /* Build configuration list for PBXNativeTarget "HoloDexUnitTests" */;
+			buildPhases = (
+				D81A11556F593C5EB091DA3A /* Sources */,
+				EA6458341CCE0832BA2C6624 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEC2593849E929B40E8E546A /* PBXTargetDependency */,
+			);
+			name = HoloDexUnitTests;
+			productName = HoloDexUnitTests;
+			productReference = E7CBBB24AD9680F6D961A0FB /* HoloDexUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D75A340521093428003A4C6D /* Project object */ = {
+		EF7B4BBB54A5ED9B997B1D91 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = "Lewis J Morgan";
+				LastUpgradeCheck = 1020;
 				TargetAttributes = {
-					D7362732211CF804003F54FC = {
-						CreatedOnToolsVersion = 9.4.1;
-						TestTargetID = D75A340C21093428003A4C6D;
+					296BCEA101A5F510EB4B4B8E = {
+						DevelopmentTeam = J8SLW9YW9U;
+						ProvisioningStyle = Manual;
 					};
-					D75A340C21093428003A4C6D = {
-						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1020;
+					6E9120AA01B2997FEDCD7176 = {
+						DevelopmentTeam = J8SLW9YW9U;
+						ProvisioningStyle = Manual;
+						TestTargetID = 296BCEA101A5F510EB4B4B8E;
 					};
 				};
 			};
-			buildConfigurationList = D75A340821093428003A4C6D /* Build configuration list for PBXProject "HoloDex" */;
+			buildConfigurationList = CFB75FF9E09E4E66038F72CF /* Build configuration list for PBXProject "HoloDex" */;
 			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -383,54 +483,33 @@
 				en,
 				Base,
 			);
-			mainGroup = D75A340421093428003A4C6D;
-			productRefGroup = D75A340E21093428003A4C6D /* Products */;
+			mainGroup = A71CFD170D5E5A2BECDC5835;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D75A340C21093428003A4C6D /* HoloDex */,
-				D7362732211CF804003F54FC /* HoloDexUnitTests */,
+				296BCEA101A5F510EB4B4B8E /* HoloDex */,
+				6E9120AA01B2997FEDCD7176 /* HoloDexUnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D7362731211CF804003F54FC /* Resources */ = {
+		C62A900E47B8C0F2D6962221 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D75A340B21093428003A4C6D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D75A341B21093429003A4C6D /* LaunchScreen.storyboard in Resources */,
-				D75A341821093429003A4C6D /* Assets.xcassets in Resources */,
-				D7C73F47221B6FCD0048923A /* PersonCellView.xib in Resources */,
-				D7ADED45222226560027CE4F /* holodex-glyph.ttf in Resources */,
+				9A7E78D93576DCD3B6D6370C /* Assets.xcassets in Resources */,
+				18FB6D07502B4CD3E6953EC5 /* LaunchScreen.storyboard in Resources */,
+				0ECECDE1503338B7002C7CA3 /* PersonCellView.xib in Resources */,
+				A29E0555F58A913EB7AF89FA /* config.json in Resources */,
+				0528904BB7F9ED1411E0E753 /* holodex-glyph.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D72D3FFA210943E50095BEE0 /* [ SwiftLint ] */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[ SwiftLint ]";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-		D7BA267C22037CE8007E88AD /* [ Carthage - Copy Frameworks ] */ = {
+		AB804B28D57510D00B7C5FF6 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -438,93 +517,116 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxAlamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/XCoordinator.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxAtomic.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Action.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxDataSources.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Differentiator.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
 			);
-			name = "[ Carthage - Copy Frameworks ]";
+			name = SwiftLint;
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxAlamofire.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ObjectMapper.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/XCoordinator.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxAtomic.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Action.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxDataSources.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Differentiator.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Swinject.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+			shellScript = "if [ -z \"$CI\" ]; then swiftlint; fi";
+		};
+		FF0BE7437D2F6B896E1C6B13 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Differentiator.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxAlamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxAtomic.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxDataSources.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/XCoordinator.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Differentiator.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ObjectMapper.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxAlamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxAtomic.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxDataSources.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Swinject.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/XCoordinator.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D736272F211CF804003F54FC /* Sources */ = {
+		CAE5D2C02A3C88D3673CA0E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21D71E65D29FF11C1558CAFD /* AppCoordinator.swift in Sources */,
+				07C0146F7A7ED1B32EB74BAD /* AppDelegate.swift in Sources */,
+				3A2426986BE37355F9E4E725 /* AppFlowController.swift in Sources */,
+				52F69C13A2828B5818FAD77D /* AppRoute.swift in Sources */,
+				4F309150276502DF71BBF8C4 /* Endpoint.swift in Sources */,
+				7C4E324439A6CA3808E2A56B /* Extensions.swift in Sources */,
+				587659DE7CF740EB78A2BD79 /* Glyph.swift in Sources */,
+				696315EA59957973AC5DFCAC /* HoloDex+UIColor.swift in Sources */,
+				F9C3968AE7F05E09C49D4AC4 /* HoloDex+UIFont.swift in Sources */,
+				6AEE306E71485AF43463BC44 /* HoloDex+UIImage.swift in Sources */,
+				4103F58849F8DB2B66DA33F7 /* HoloDex+UITableViewController.swift in Sources */,
+				AA5037654280E0F33C5AD206 /* HoloDex+UIViewController.swift in Sources */,
+				79CB6D9BE0AF2B55B2A46C70 /* HoloDexContainerFactory.swift in Sources */,
+				26054EED9D7205C778CF8CDF /* NetworkAPIError.swift in Sources */,
+				A4748A419A2E132749AC771B /* NetworkingAPI.swift in Sources */,
+				96B12843795DFA8175A55771 /* PagedResults.swift in Sources */,
+				DF67865838643A4E116363F0 /* PeopleEndpoint.swift in Sources */,
+				DB5858A520369DA6C9007721 /* PeopleFlowController.swift in Sources */,
+				CFC39E75572D4A7747B1ABD6 /* PeopleListCoordinator.swift in Sources */,
+				E84ADF6DDB20FB9CE02C4662 /* Person.swift in Sources */,
+				062324644ABFD206E21634E3 /* PersonCell.swift in Sources */,
+				9F0ECF8F65178C9F85C8D4B5 /* PersonDetailCell.swift in Sources */,
+				B25A87704C6F07EF096352A4 /* PersonDetailViewController.swift in Sources */,
+				DE290B50CF00E55D9F5C8510 /* PersonDetailViewModel.swift in Sources */,
+				D1791DF0C63AF086697DD5E0 /* PersonDetailViewModelImpl.swift in Sources */,
+				0D94F47AC90839EAF4149482 /* PersonListViewController.swift in Sources */,
+				5E47B60BD1F03DFB99BC67DD /* PersonListViewModel.swift in Sources */,
+				ABF20B9E985A0C2480671422 /* PersonListViewModelImpl.swift in Sources */,
+				AB88AA4A02A3B998756CAEF1 /* RandomPeopleEndpoint.swift in Sources */,
+				01AFAD1DB69E5F6B996098E9 /* StarWarsAPI+PeopleEndpoint.swift in Sources */,
+				F155F3CEF087C4D53CF188DC /* StarWarsAPI.swift in Sources */,
+				31AC0B950B7D00524FC47AB4 /* StarWarsAPIResponse.swift in Sources */,
+				E148C7CD97A80B937828FCBA /* UIViewController+ViewModelBinding.swift in Sources */,
+				5C665EC1D97812F9CFE4EA1A /* ViewModelBinding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D75A340921093428003A4C6D /* Sources */ = {
+		D81A11556F593C5EB091DA3A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7C73F49221B71A30048923A /* PersonCell.swift in Sources */,
-				D77DC9DC220E441F0003453C /* ViewModelBinding.swift in Sources */,
-				D766BA2621FBDDE2007A2ED2 /* AppCoordinator.swift in Sources */,
-				D710A838224D120900836D80 /* AppFlowController.swift in Sources */,
-				D766BA2821FBDE66007A2ED2 /* AppRoute.swift in Sources */,
-				D7C857D521FFACBF00DA33A0 /* PeopleListCoordinator.swift in Sources */,
-				D7ADED3922221AA50027CE4F /* HoloDex+UIColor.swift in Sources */,
-				D7ADED42222221B30027CE4F /* Glyph.swift in Sources */,
-				D7FE7515210955C500DE1E28 /* PersonListViewController.swift in Sources */,
-				D78C536F22188DB800D5B56F /* PersonDetailViewModelImpl.swift in Sources */,
-				D75A341121093428003A4C6D /* AppDelegate.swift in Sources */,
-				D7ADED4022221FDE0027CE4F /* HoloDex+UIFont.swift in Sources */,
-				D710A83C224D134D00836D80 /* PeopleFlowController.swift in Sources */,
-				D7ADED47222241150027CE4F /* PersonDetailCell.swift in Sources */,
-				D77DC9D9220E3FFC0003453C /* PersonListViewModelImpl.swift in Sources */,
-				D78C53732218919F00D5B56F /* PersonDetailViewController.swift in Sources */,
-				D74CE5002220A435000CB7AD /* HoloDex+UITableViewController.swift in Sources */,
-				D7C73F44221B57600048923A /* HoloDexContainerFactory.swift in Sources */,
-				D77DC9DE220E44660003453C /* UIViewController+ViewModelBinding.swift in Sources */,
-				D710A83A224D12B800836D80 /* HoloDex+UIViewController.swift in Sources */,
-				D7ADED3E22221F750027CE4F /* HoloDex+UIImage.swift in Sources */,
-				D78C536D2218879000D5B56F /* PersonDetailViewModel.swift in Sources */,
-				D7A1D762220E31BF00286709 /* PersonListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D7362739211CF804003F54FC /* PBXTargetDependency */ = {
+		AEC2593849E929B40E8E546A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D75A340C21093428003A4C6D /* HoloDex */;
-			targetProxy = D7362738211CF804003F54FC /* PBXContainerItemProxy */;
+			target = 296BCEA101A5F510EB4B4B8E /* HoloDex */;
+			targetProxy = 0AB5E50B58835BD0C3D72EF6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D75A341921093429003A4C6D /* LaunchScreen.storyboard */ = {
+		6E535143A053DB34EC78BF5C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D75A341A21093429003A4C6D /* Base */,
+				E28F299D0CB52169E2696006 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -532,244 +634,133 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		D736273A211CF804003F54FC /* Debug */ = {
+		1C404A0EEA875822B8B4A6E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88DC76693123A969F839D972 /* HoloDex-Release.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = NO;
-				DEVELOPMENT_TEAM = J8SLW9YW9U;
-				INFOPLIST_FILE = HoloDexUnitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lewisjmorgan.holodex.HoloDexUnitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoloDex.app/HoloDex";
-			};
-			name = Debug;
-		};
-		D736273B211CF804003F54FC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J8SLW9YW9U;
-				INFOPLIST_FILE = HoloDexUnitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lewisjmorgan.holodex.HoloDexUnitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoloDex.app/HoloDex";
-			};
-			name = Release;
-		};
-		D75A341D21093429003A4C6D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		D75A341E21093429003A4C6D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		D75A342021093429003A4C6D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J8SLW9YW9U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(BUILT_PRODUCTS_DIR)",
 				);
-				INFOPLIST_FILE = HoloDex/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.lewismorgan.HoloDex;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development io.lewismorgan.HoloDex";
+			};
+			name = Release;
+		};
+		49E01737EB8436B6256CB8A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F7C159E51F49B887F338600 /* Debug.xcconfig */;
+			buildSettings = {
 			};
 			name = Debug;
 		};
-		D75A342121093429003A4C6D /* Release */ = {
+		58A398FF911A6106646AEFF9 /* Beta */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 302CDC1E86AC9B6194AF7E59 /* HoloDexUnitTests.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J8SLW9YW9U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(BUILT_PRODUCTS_DIR)",
 				);
-				INFOPLIST_FILE = HoloDex/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = (
+				TEST_TARGET_NAME = HoloDex;
+			};
+			name = Beta;
+		};
+		7CEE0898B724F5CA04ECAA12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 302CDC1E86AC9B6194AF7E59 /* HoloDexUnitTests.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.lewismorgan.HoloDex;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HoloDex;
+			};
+			name = Release;
+		};
+		9351527D854C03AB70724C03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 856003496320659201E26261 /* HoloDex-Debug.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+			};
+			name = Debug;
+		};
+		B1D3372753D4E2D92381D77E /* Beta */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C8A35C39F0A505040B4D2E7 /* HoloDex-Beta.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+			};
+			name = Beta;
+		};
+		E251D12BB1FD16BD52650A24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 302CDC1E86AC9B6194AF7E59 /* HoloDexUnitTests.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				TEST_TARGET_NAME = HoloDex;
+			};
+			name = Debug;
+		};
+		E2636DAA22721D4B7070B8D2 /* Beta */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2799F9A6980E258A44CEEB76 /* Beta.xcconfig */;
+			buildSettings = {
+			};
+			name = Beta;
+		};
+		EE5C0CE835A003C84EAB3785 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6548EF18164DF6271B96BC9 /* Release.xcconfig */;
+			buildSettings = {
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D736273C211CF804003F54FC /* Build configuration list for PBXNativeTarget "HoloDexUnitTests" */ = {
+		5C3073ED5F913F666465DA37 /* Build configuration list for PBXNativeTarget "HoloDex" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D736273A211CF804003F54FC /* Debug */,
-				D736273B211CF804003F54FC /* Release */,
+				B1D3372753D4E2D92381D77E /* Beta */,
+				9351527D854C03AB70724C03 /* Debug */,
+				1C404A0EEA875822B8B4A6E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "";
 		};
-		D75A340821093428003A4C6D /* Build configuration list for PBXProject "HoloDex" */ = {
+		CFB75FF9E09E4E66038F72CF /* Build configuration list for PBXProject "HoloDex" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D75A341D21093429003A4C6D /* Debug */,
-				D75A341E21093429003A4C6D /* Release */,
+				E2636DAA22721D4B7070B8D2 /* Beta */,
+				49E01737EB8436B6256CB8A8 /* Debug */,
+				EE5C0CE835A003C84EAB3785 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Beta;
 		};
-		D75A341F21093429003A4C6D /* Build configuration list for PBXNativeTarget "HoloDex" */ = {
+		E9E168A69D4E6FB038D7DA56 /* Build configuration list for PBXNativeTarget "HoloDexUnitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D75A342021093429003A4C6D /* Debug */,
-				D75A342121093429003A4C6D /* Release */,
+				58A398FF911A6106646AEFF9 /* Beta */,
+				E251D12BB1FD16BD52650A24 /* Debug */,
+				7CEE0898B724F5CA04ECAA12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "";
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D75A340521093428003A4C6D /* Project object */;
+	rootObject = EF7B4BBB54A5ED9B997B1D91 /* Project object */;
 }

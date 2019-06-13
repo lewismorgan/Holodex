@@ -1,0 +1,5 @@
+app_identifier("io.lewismorgan.HoloDex") # The bundle identifier of your app
+
+itc_team_id("5Y66ZT9ZN9") # App Store Connect Team ID
+team_id("J8SLW9YW9U") # Developer Portal Team ID
+

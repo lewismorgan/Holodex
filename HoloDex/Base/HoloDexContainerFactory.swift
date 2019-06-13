@@ -6,8 +6,6 @@
 //  Copyright © 2019 Lewis J Morgan. All rights reserved.
 //
 
-import Networking
-import People
 import Swinject
 
 /// Allows HoloDex to use specific implementations of protocols depending on a HoloDexContainer

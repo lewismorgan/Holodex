@@ -1,0 +1,80 @@
+name: HoloDex
+options:
+  xcodeVersion: 10.0
+  deploymentTarget:
+    iOS: 12.2
+  bundleIdPrefix: io.lewismorgan.HoloDex
+  usesTabs: false
+  indentWidth: 2
+  tabWidth: 2
+  groupSortPosition: top
+configs:
+  Debug: debug
+  Beta: beta
+  Release: release
+configFiles:
+  Debug: configs/Debug.xcconfig
+  Beta: configs/Beta.xcconfig
+  Release: configs/Release.xcconfig
+targets:
+  HoloDex:
+    platform: iOS
+    type: application
+    sources:
+      - HoloDex
+      - People/People
+      - Networking/Networking
+      # - path: HoloDex/R.generated.swift
+      #   optional: true
+    scheme:
+      testTargets:
+        - HoloDexUnitTests
+    configFiles:
+      Debug: configs/HoloDex-Debug.xcconfig
+      Beta: configs/HoloDex-Beta.xcconfig
+      Release: configs/HoloDex-Release.xcconfig
+    # preBuildScripts:
+    #   - script: rswift generate "$SRCROOT/HoloDex/R.generated.swift"
+    #     name: R.swift
+    #     inputFiles:
+    #       - $TEMP_DIR/rswift-lastrun
+    #     outputFiles:
+    #       - $SRCROOT/HoloDex/R.generated.swift
+    postCompileScripts:
+      - script: if [ -z "$CI" ]; then swiftlint; fi
+        name: SwiftLint
+    dependencies:
+      # - carthage: Rswift
+      - carthage: Alamofire
+      - carthage: RxSwift
+      - carthage: RxAtomic
+      - carthage: RxCocoa
+      - carthage: RxAlamofire
+      - carthage: ObjectMapper
+      - carthage: XCoordinator
+      - carthage: RxDataSources
+      - carthage: Differentiator
+      - carthage: Swinject
+  HoloDexUnitTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: HoloDexUnitTests
+    configFiles:
+      Debug: configs/HoloDexUnitTests.xcconfig
+      Beta: configs/HoloDexUnitTests.xcconfig
+      Release: configs/HoloDexUnitTests.xcconfig
+    scheme:
+      testTargets:
+        - HoloDexUnitTests
+    dependencies:
+      - target: HoloDex
+  # Networking:
+  #   platform: iOS
+  #   type: framework
+  #   sources:
+  #     - Networking/Networking
+  #     - People/People
+  #   dependencies:
+  #     - carthage: RxSwift
+  #     - carthage: RxAtomic
+  #     - carthage: ObjectMapper

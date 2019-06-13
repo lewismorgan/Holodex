@@ -1,0 +1,150 @@
+default_platform(:ios)
+
+if File.exist?('.env')
+  open('.env', 'r').readlines.each do |l|
+    kv = l.split('=')
+    ENV[kv[0]] = kv[1].chomp
+  end
+end
+
+platform :ios do
+
+  desc "Create a development build"
+  lane :develop do |options|
+    if options[:bump]
+      #ensure_git_status_clean
+      increment_version_number_in_plist(
+        bump_type: options[:type],
+        target: "HoloDex"
+      )
+      print(version)
+      #commit_version_bump
+    end
+
+    build(
+      match: "development",
+      export: "development",
+      config: "Debug",
+      publish: options[:publish]
+    )
+  end
+
+  desc "Create a beta build"
+  lane :beta do |options|
+    build(
+      match: "adhoc",
+      export: "ad-hoc",
+      config: "Beta",
+      publish: options[:publish]
+    )
+  end
+
+  desc "Create a release candidate"
+  lane :candidate do |options|
+    build(
+      config: "Release",
+      match: "adhoc",
+      export: "ad-hoc",
+      publish: options[:publish]
+    )
+  end
+
+  desc "Create a build for release"
+  lane :release do |options|
+    if options[:changelog] == true
+      ensure_git_status_clean
+      version = get_version_number_from_git_branch(pattern: 'release\/#')
+      # TODO: Create changelog from commits
+    end
+    build(
+      config: "Release",
+      export: "app-store",
+      match: "appstore",
+      publish: options[:publish]
+    )
+  end
+
+  desc "Run tests"
+  lane :tests do
+    scan(scheme: "HoloDexUnitTests")
+  end
+
+  desc "Run linting tasks"
+  lane :lint do |options|
+    swiftlint(
+      config_file: "./.swiftlint.yml",
+      strict: options[:strict]
+    )
+  end
+
+  desc "Sync keys, certificates, and provisioning"
+  lane :certs do
+    match(readonly: false, username: ENV["APPLE_USERNAME"])
+  end
+
+  # private_lane :appcenter do
+  #   appcenter_upload(
+  #     app_name: "HoloDex",
+  #     ipa: "./build/HoloDex.ipa",
+  #     dsym: "./build/HoloDex.app.dSYM.zip",
+  #     notify_testers: true
+  #   )
+  # end
+
+  private_lane :build do |options|
+    if is_ci
+      ci_build(options)
+    else
+      local_build(options)
+    end
+  end
+
+  private_lane :local_build do |options|
+    lint(strict: (options[:config] == "Release"))
+    match(type: options[:match], username: ENV["APPLE_USERNAME"])
+    gym(
+      export_method: options[:export],
+      configuration: options[:config],
+      clean: true
+    )
+    install_on_device(
+     ipa: "./build/HoloDex.ipa",
+     skip_wifi: true
+    )
+  end
+
+  private_lane :ci_build do |options|
+    is_release = (options[:config] == "Release")
+
+    lint(strict: is_release)
+    create_keychain(
+      name: "CI",
+      password: ENV["MATCH_PASSWORD"],
+      default_keychain: true,
+      unlock: true,
+      timeout: 3600,
+      add_to_search_list: true
+    )
+
+    match(
+      type: (is_release ? "appstore" : "adhoc"),
+      keychain_name: "CI",
+      keychain_password: ENV["MATCH_PASSWORD"],
+      username: ENV["APPLE_USERNAME"],
+      readonly: true
+    )
+    increment_build_number_in_plist(
+      build_number: ci_build_number
+    )
+    gym(
+      export_method: (is_release ? "app-store" : "ad-hoc"),
+      configuration: (is_release ? "Release" : "Beta"),
+      clean: true
+    )
+
+    # if options[:publish]
+    #   appcenter
+    #   # if release, send to testflight
+    # end
+  end
+end
