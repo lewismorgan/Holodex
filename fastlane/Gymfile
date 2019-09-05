@@ -7,6 +7,6 @@
 # Remove the # in front of the line to enable the option
 
 scheme("HoloDex")
-
-
 output_directory("./build")
+output_name("HoloDex")
+configuration("Beta")

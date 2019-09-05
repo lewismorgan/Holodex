@@ -15,42 +15,56 @@ Install _fastlane_ using
 or alternatively using `brew cask install fastlane`
 
 # Available Actions
-## iOS
-### ios develop
+### develop
 ```
-fastlane ios develop
+fastlane develop
 ```
-Create a development build
-### ios beta
+Create a development build, optionally installing to device
+### beta
 ```
-fastlane ios beta
+fastlane beta
 ```
 Create a beta build
-### ios candidate
+### candidate
 ```
-fastlane ios candidate
+fastlane candidate
 ```
 Create a release candidate
-### ios release
+### release
 ```
-fastlane ios release
+fastlane release
 ```
-Create a build for release
-### ios tests
+Create a build for release to app store
+### install
 ```
-fastlane ios tests
+fastlane install
 ```
-Run tests
-### ios lint
+Install to a device
+### tests
 ```
-fastlane ios lint
+fastlane tests
 ```
-Run linting tasks
-### ios certs
+Run all the tests
+### lint
 ```
-fastlane ios certs
+fastlane lint
 ```
-Sync keys, certificates, and provisioning
+Run SwiftLint
+### changelog
+```
+fastlane changelog
+```
+Changelog from commits since last tag
+### bump
+```
+fastlane bump
+```
+Bump the version in the plist
+### certs
+```
+fastlane certs
+```
+Sync keys, certificates, and provisioning and creates new ones if required
 
 ----
 

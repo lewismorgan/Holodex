@@ -8,12 +8,10 @@
 
 import Swinject
 import UIKit
-import XCoordinator
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   let window: UIWindow! = UIWindow()
-  let router: AnyRouter<AppRoute>
   var container: Swinject.Container
 
   // MARK: - Init
@@ -28,7 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       self.container = HoloDexContainerFactory.create(type: .release)
     }
     // Setup the router
-    self.router = AppCoordinator(container: self.container).anyRouter
     super.init()
   }
 
@@ -36,7 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    router.setRoot(for: window)
     return true
   }
 

@@ -1,6 +1,7 @@
 ## Build generated
 build/
 DerivedData/
+HoloDex/Resources/Fonts/holodex-glyphs.ttf
 
 ## Various settings
 *.pbxuser
@@ -23,6 +24,7 @@ xcuserdata/
 *.ipa
 *.dSYM.zip
 *.dSYM
+*.generated.swift
 
 ## Playgrounds
 timeline.xctimeline

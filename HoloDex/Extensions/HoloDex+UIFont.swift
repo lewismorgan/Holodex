@@ -10,6 +10,6 @@ import UIKit
 
 extension UIFont {
   static func glyph(ofSize size: CGFloat) -> UIFont {
-    return UIFont(name: "holodex-glyph", size: size)!
+    return UIFont(font: FontFamily.HolodexGlyphs.regular, size: size)
   }
 }

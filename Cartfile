@@ -1,10 +1,10 @@
-github "ReactiveX/RxSwift" ~> 4.0
-github "RxSwiftCommunity/Action" ~> 3.10
-github "RxSwiftCommunity/RxDataSources" ~> 3.0
-github "tristanhimmelman/ObjectMapper" ~> 3.4
-github "Alamofire/Alamofire" ~> 4.0
-github "RxSwiftCommunity/RxAlamofire" ~> 4.0
-github "quickbirdstudios/XCoordinator" ~> 1.4
-github "Swinject/Swinject" ~> 2.5
-github "Quick/Nimble" ~> 8.0
-github "Quick/Quick" ~> 2.0
+github "ReactiveX/RxSwift"
+github "RxSwiftCommunity/Action"
+github "RxSwiftCommunity/RxDataSources"
+github "tristanhimmelman/ObjectMapper"
+github "Alamofire/Alamofire"
+github "RxSwiftCommunity/RxAlamofire" 
+github "quickbirdstudios/XCoordinator"
+github "Swinject/Swinject"
+github "Quick/Nimble"
+github "Quick/Quick"

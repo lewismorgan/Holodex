@@ -28,7 +28,7 @@ extension UITableViewController {
       }
       navController.navigationBar.prefersLargeTitles = true
       navController.navigationBar.barStyle = .black
-      navController.navigationBar.view.backgroundColor = .black
+      //navController.navigationBar.view.backgroundColor = .black
       navController.navigationBar.tintColor = .tint
     }
   }

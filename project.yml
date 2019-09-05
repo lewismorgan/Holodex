@@ -2,79 +2,75 @@ name: HoloDex
 options:
   xcodeVersion: 10.0
   deploymentTarget:
-    iOS: 12.2
+    iOS: 13.0
   bundleIdPrefix: io.lewismorgan.HoloDex
   usesTabs: false
   indentWidth: 2
   tabWidth: 2
   groupSortPosition: top
 configs:
+  # Local Development | Development certs - Staging (Pull Requests)
   Debug: debug
+  # Ad Hoc Development | Ad Hoc profile w/ Distribution Certs - Staging (develop)
   Beta: beta
+  # Release builds | Archiving a production build (master)
   Release: release
 configFiles:
-  Debug: configs/Debug.xcconfig
-  Beta: configs/Beta.xcconfig
-  Release: configs/Release.xcconfig
+  Debug: Configs/Debug.xcconfig
+  Beta: Configs/Beta.xcconfig
+  Release: Configs/Release.xcconfig
 targets:
   HoloDex:
     platform: iOS
     type: application
     sources:
       - HoloDex
-      - People/People
-      - Networking/Networking
-      # - path: HoloDex/R.generated.swift
-      #   optional: true
+      - path: HoloDex/Resources/Assets.generated.swift
+        optional: true
+      - path: HoloDex/Resources/Fonts.generated.swift
+        optional: true
+      - path: HoloDex/Resources/Scenes.generated.swift
+        optional: true
     scheme:
       testTargets:
-        - HoloDexUnitTests
+        - UnitTests
     configFiles:
-      Debug: configs/HoloDex-Debug.xcconfig
-      Beta: configs/HoloDex-Beta.xcconfig
-      Release: configs/HoloDex-Release.xcconfig
-    # preBuildScripts:
-    #   - script: rswift generate "$SRCROOT/HoloDex/R.generated.swift"
-    #     name: R.swift
-    #     inputFiles:
-    #       - $TEMP_DIR/rswift-lastrun
-    #     outputFiles:
-    #       - $SRCROOT/HoloDex/R.generated.swift
+      Debug: Configs/HoloDex-Debug.xcconfig
+      Beta: Configs/HoloDex-Beta.xcconfig
+      Release: Configs/HoloDex-Release.xcconfig
+    preBuildScripts:
+      - script: swiftgen
+        name: Swiftgen
+        inputFiles:
+          - $SRCROOT/swiftgen.yml
+        outputFiles:
+          - $SRCROOT/HoloDex/Resources/Generated/Assets.swift
+          - $SRCROOT/HoloDex/Resources/Generated/Fonts.swift
+          - $SRCROOT/HoloDex/Resources/Generated/Scenes.swift
     postCompileScripts:
       - script: if [ -z "$CI" ]; then swiftlint; fi
         name: SwiftLint
     dependencies:
-      # - carthage: Rswift
       - carthage: Alamofire
       - carthage: RxSwift
-      - carthage: RxAtomic
       - carthage: RxCocoa
+      - carthage: RxRelay
+      - carthage: RxBlocking
       - carthage: RxAlamofire
       - carthage: ObjectMapper
-      - carthage: XCoordinator
       - carthage: RxDataSources
       - carthage: Differentiator
       - carthage: Swinject
-  HoloDexUnitTests:
+  UnitTests:
     type: bundle.unit-test
     platform: iOS
-    sources: HoloDexUnitTests
+    sources: UnitTests
     configFiles:
-      Debug: configs/HoloDexUnitTests.xcconfig
-      Beta: configs/HoloDexUnitTests.xcconfig
-      Release: configs/HoloDexUnitTests.xcconfig
+      Debug: Configs/UnitTests.xcconfig
+      Beta: Configs/UnitTests.xcconfig
+      Release: Configs/UnitTests.xcconfig
     scheme:
       testTargets:
-        - HoloDexUnitTests
+        - UnitTests
     dependencies:
       - target: HoloDex
-  # Networking:
-  #   platform: iOS
-  #   type: framework
-  #   sources:
-  #     - Networking/Networking
-  #     - People/People
-  #   dependencies:
-  #     - carthage: RxSwift
-  #     - carthage: RxAtomic
-  #     - carthage: ObjectMapper

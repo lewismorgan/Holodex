@@ -1,8 +1,0 @@
-// Generated using xcconfig-extractor 0.5.0 by Toshihiro Suzuki - https://github.com/toshi0383/xcconfig-extractor
-LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
-SWIFT_VERSION = 4.2
-PRODUCT_BUNDLE_IDENTIFIER = com.lewisjmorgan.holodex.HoloDexUnitTests
-BUNDLE_LOADER = $(TEST_HOST)
-INFOPLIST_FILE = HoloDexUnitTests/Info.plist
-TEST_HOST = $(BUILT_PRODUCTS_DIR)/HoloDex.app/HoloDex
-

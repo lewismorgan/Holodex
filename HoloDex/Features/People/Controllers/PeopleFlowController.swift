@@ -11,10 +11,10 @@ import UIKit
 class PeopleFlowController: UIViewController {
   private let navigation = UINavigationController()
   var model: PersonListViewModel?
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+
     guard (model != nil) else {
       fatalError("There is no view model set for the flow controller!")
     }

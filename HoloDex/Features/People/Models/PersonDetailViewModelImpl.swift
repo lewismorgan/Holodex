@@ -7,7 +7,6 @@
 //
 
 import RxSwift
-import XCoordinator
 
 class PersonDetailViewModelImpl: PersonDetailViewModel {
 
@@ -16,10 +15,9 @@ class PersonDetailViewModelImpl: PersonDetailViewModel {
   var person: Variable<Person> = Variable(Person())
 
   // MARK: - Private
-  private let router: AnyRouter<PeopleListRoute>!
+//  private let router: AnyRouter<PeopleListRoute>!
 
   // MARK: - Init
-  init(router: AnyRouter<PeopleListRoute>) {
-    self.router = router
+  init() {
   }
 }

@@ -7,7 +7,7 @@
 //
 
 import RxSwift
-import XCoordinator
+import RxCocoa
 
 class PersonListViewModelImpl: PersonListViewModel {
 
@@ -24,13 +24,11 @@ class PersonListViewModelImpl: PersonListViewModel {
 
   // MARK: - Private
   private let filteredSubject = ReplaySubject<[Person]>.create(bufferSize: 1)
-  private let router: AnyRouter<PeopleListRoute>
   private let bag = DisposeBag()
 
   // MARK: - Init
 
-  init(router: AnyRouter<PeopleListRoute>) {
-    self.router = router
+  init() {
 
     // filteredSubject
 
@@ -90,6 +88,6 @@ class PersonListViewModelImpl: PersonListViewModel {
   }
 
   func onSelected(person: Person) {
-    router.trigger(.person(person), with: .init(animated: true))
+    //router.trigger(.person(person), with: .init(animated: true))
   }
 }

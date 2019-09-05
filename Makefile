@@ -1,11 +1,21 @@
-BUILD_DIR=build
+BUILD_DIR=./build
 
-build: frameworks project app
+FONTS_DIR ?= ./HoloDex/Resources/Fonts/
+GLYPH_NAME ?= holodex-glyphs
+
+FONTELLO_HOST ?= http://fontello.com
+
+#### Build Goals ####
+
+build: frameworks fonts project ipa
 .DEFAULT_GOAL := build
 
 frameworks: Carthage/Cartfile.resolved
+fonts: ${FONTS_DIR}/${GLYPH_NAME}.ttf
 project: HoloDex.xcodeproj/project.yml
-app: $(BUILD_DIR)/HoloDex.ipa
+ipa: $(BUILD_DIR)/HoloDex.ipa
+
+### BUILD ###
 
 .PHONY := beta
 beta:
@@ -19,19 +29,37 @@ candidate:
 release:
 	bundle exec fastlane release publish:false
 
-$(BUILD_DIR)/HoloDex.ipa: frameworks project
+### Build Output ###
+
+# Local development build of HoloDex through fastlane
+$(BUILD_DIR)/HoloDex.ipa: frameworks fonts project
 	bundle exec fastlane develop
 
+### Build Dependencies ###
+
+# Creates the xcodeproj file using xcodegen
 HoloDex.xcodeproj/project.yml: project.yml
 	@xcodegen
 	@cp $< $@
 
+# Download glyphs used in the app through a Fontello config
+${FONTS_DIR}/${GLYPH_NAME}.ttf: ${FONTS_DIR}/glyphs.json
+	@curl --silent --show-error --fail --output .fontello --form "config=@${FONTS_DIR}/glyphs.json" http://fontello.com
+	@curl --show-error --fail --output .fontello.zip ${FONTELLO_HOST}/`cat .fontello`/get
+	@unzip -q .fontello.zip -d .fontello.src
+	@cp .fontello.src/fontello-*/font/${GLYPH_NAME}.ttf ${FONTS_DIR}/${GLYPH_NAME}.ttf
+	@rm -rf .fontello .fontello.src .fontello.zip
+	@echo "Downloaded glyphs"
+
+# Ensures the project is up to date with frameworks via Carthage
+# Bootstrap is run again if any changes are detected
 Carthage/Cartfile.resolved: Cartfile.resolved Cartfile
 	@rome download --platform iOS
-	@carthage bootstrap --platform iOS --cache-builds --no-use-binaries
+	@carthage bootstrap --platform iOS --cache-builds
 	@rome list --missing --platform iOS | awk '{print $$1}' | xargs rome upload --platform iOS
 	@cp $< $@
-	@cp Cartfile Carthage/Cartfile
+
+### Misc Helpers ###
 
 .PHONY := certs
 certs:
@@ -40,7 +68,11 @@ certs:
 .PHONY := clean
 clean:
 	@rm -rf $(BUILD_DIR)
+	@rm -f ${FONTS_DIR}/${GLYPH_NAME}.ttf
 
-.PHONY := cartclean
-cartclean:
-	@rm -rf Carthage
+.PHONY := bootstrap
+bootstrap:
+	@rome download --platform iOS
+	@carthage bootstrap --platform iOS --cache-builds
+	@rome list --missing --platform iOS | awk '{print $$1}' | xargs rome upload --platform iOS
+	@cp Cartfile.resolved Carthage/Cartfile.resolved
