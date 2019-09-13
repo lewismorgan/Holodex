@@ -1,7 +1,7 @@
 {
   "name": "holodex-glyphs",
   "css_prefix_text": "holodex-",
-  "css_use_suffix": false,
+  "css_use_suffix": true,
   "hinting": true,
   "units_per_em": 1000,
   "ascent": 850,

@@ -10,18 +10,16 @@ import RxSwift
 
 extension StarWarsAPI: PeopleEndpoint {
   public func getAll() -> Observable<[Person]> {
-    return self.buildStreamingPageRequest(endpoint: "people", page: 1, type: Person.self)
-      .takeUntil(.inclusive, predicate: { _, hasNext in
-        hasNext == false
+    return self.createPageRequest(endpoint: "people", from: 1, to: nil, type: Person.self).scan([Person](), accumulator: { seed, latest in
+      return seed + latest
       })
-      .map { $0.0 }
   }
 
   public func getPeople(from page: Int) -> Observable<[Person]> {
-    return self.buildPageRequest(endpoint: "people", page: page, type: Person.self).map { $0.results }
+    return self.createPageRequest(endpoint: "people", from: page, to: page, type: Person.self)
   }
 
   public func getPerson(from personId: Int) -> Observable<Person> {
-    return self.buildRequest(endpoint: "people/\(personId)", type: Person.self)
+    return self.createRequest(endpoint: "people/\(personId)", type: Person.self)
   }
 }

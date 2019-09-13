@@ -2,6 +2,6 @@ git_url("https://github.com/lewismorgan/certificates.git")
 
 storage_mode("git")
 
-type("development") # The default type, can be: appstore, adhoc, enterprise or development
+type("adhoc") # The default type, can be: appstore, adhoc, enterprise or development
 
-app_identifier(["io.lewismorgan.HoloDex"])
+app_identifier(["dev.lewismorgan.HoloDex"])

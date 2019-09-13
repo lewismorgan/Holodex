@@ -1,7 +1,9 @@
+# HoloDex
+HoloDex/Resources/Fonts/holodex-glyphs.ttf
+
 ## Build generated
 build/
 DerivedData/
-HoloDex/Resources/Fonts/holodex-glyphs.ttf
 
 ## Various settings
 *.pbxuser
@@ -31,24 +33,12 @@ timeline.xctimeline
 playground.xcworkspace
 
 # Swift Package Manager
-#
-# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
 Packages/
 Package.pins
 Package.resolved
 .build/
 
-# CocoaPods
-Pods/
-
-# Carthage
-Carthage/Cartfile.resolved
-Carthage/Checkouts
-Carthage/Build
-Romefile
-
 # fastlane
-#
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
 # screenshots whenever they are needed.
 # For more information about the recommended setup visit:
@@ -58,6 +48,53 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
-fastlane/.env
 
-**/.DS_STORE
+# Code Injection
+# After new code Injection tools there's a generated folder /iOSInjectionProject
+# https://github.com/johnno1962/injectionforxcode
+
+iOSInjectionProject/
+
+### SwiftPM ###
+Packages
+xcuserdata
+*.xcodeproj
+
+### Xcode ###
+# Xcode
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## User settings
+
+## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
+
+## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
+
+## Xcode Patch
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+
+### Xcode Patch ###
+**/xcshareddata/WorkspaceSettings.xcsettings
+
+### Ruby ###
+*.gem
+*.rbc
+/.config
+/coverage/
+/InstalledFiles
+/pkg/
+/spec/reports/
+/spec/examples.txt
+/test/tmp/
+/test/version_tmp/
+/tmp/
+
+# Used by dotenv library to load environment variables.
+.env
+/.bundle/
+/vendor/bundle
+/lib/bundler/man/

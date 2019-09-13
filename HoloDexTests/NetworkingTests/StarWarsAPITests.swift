@@ -6,67 +6,66 @@
 //  Copyright © 2019 Lewis J Morgan. All rights reserved.
 //
 //
-//import Nimble
-//import ObjectMapper
-//import Quick
-//import RxBlocking
-//import RxSwift
-//import RxTest
-//
-//// ONLY TEST PUBLIC METHODS !
-//
-//class StarWarsAPITests: QuickSpec {
-//  override func spec() {
-//    describe("a Star Wars API") {
-//      // Setup
-//      var swapi: StarWarsAPI!
-//      var endpoint: String = ""
-//
-//      beforeEach {
-//        swapi = StarWarsAPI()
-//        endpoint = "planets"
-//      }
-//
-//      // Method Tests
-//      describe("building a request") {
-//        it("creates a request to the API") {
-//          let result = try! swapi.buildRequest(endpoint: "\(endpoint)/1/", type: NamedResult.self).toBlocking().first()!
-//          expect(result.name) == "Tatooine"
-//        }
-//      }
-//      describe("building a streaming page request") {
-//        it("builds a streaming paged request that completes") {
-//          let request = swapi.buildStreamingPageRequest(endpoint: endpoint, page: 1, type: NamedResult.self).share()
-//
-//          // the last item should not have another page
-//          let last = try! request.asObservable().toBlocking().last()
-//
-//          expect(last?.1) == false
-//        }
-//      }
-//      describe("building a page request") {
-//        it("creates a request for a single page detailing the next page") {
-//          let firstPage = 1
-//          let secondPage = 2
-//          let request = swapi.buildPageRequest(endpoint: endpoint, page: firstPage, type: NamedResult.self)
-//
-//          let items = try! request.toBlocking().toArray()
-//
-//          expect(items.count) == 1
-//          expect(items[0].nextPage) == secondPage
-//        }
-//      }
-//    }
-//  }
-//}
-//
-//class NamedResult: Mappable {
-//  public var name: String! = ""
-//
-//  required init?(map: Map) {
-//  }
-//
-//  public func mapping(map: Map) {
-//    name <- map["name"]
-//  }
-//}
+@testable import HoloDex
+import Nimble
+import Quick
+import RxTest
+
+// ONLY TEST PUBLIC METHODS !
+
+class StarWarsAPITests: QuickSpec {
+  struct BadDecode: Decodable {
+    let name: String
+  }
+  struct EndpointList: Decodable, Equatable {
+    let people: String
+    let planets: String
+    let films: String
+    let species: String
+    let vehicles: String
+    let starships: String
+  }
+
+  struct EndpointItem: Decodable, Equatable {
+    let detail: String
+  }
+
+  override func spec() {
+    describe("a Star Wars API") {
+      // Setup
+      var swapi: StarWarsAPI!
+      var scheduler: TestScheduler!
+
+      beforeEach {
+        swapi = StarWarsAPI()
+        scheduler = TestScheduler(initialClock: 0)
+      }
+
+      // Method Tests
+      describe("a request") {
+        it("emits the decoded response") {
+          let request = scheduler.start { swapi.createRequest(endpoint: "", type: EndpointList.self) }
+          let baseUrl = "https://swapi.co/api/"
+          let expectedResult = Recorded.events([
+            .next(0, EndpointList(people: baseUrl + "people", planets: baseUrl + "planets", films: baseUrl + "films", species: baseUrl + "species", vehicles: baseUrl + "vehicles", starships: baseUrl + "vehicles")),
+            .completed(0)
+          ])
+
+          expect(request.events) == expectedResult
+        }
+        context("when the request is bad") {
+          it("emits null mapping") {
+            let request = scheduler.start { swapi.createRequest(endpoint: "", type: BadDecode.self) }
+            expect(request.events.count) == 2
+            // expect request.events to contain NullMapping error
+          }
+        }
+      }
+      describe("a page request") {
+        it("emits all the pages") {
+
+        }
+      }
+    }
+  }
+}

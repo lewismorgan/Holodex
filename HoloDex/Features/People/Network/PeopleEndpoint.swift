@@ -8,7 +8,7 @@
 
 import RxSwift
 
-public protocol PeopleEndpoint: Endpoint {
+protocol PeopleEndpoint: Endpoint {
   func getAll() -> Observable<[Person]>
   func getPeople(from page: Int) -> Observable<[Person]>
   func getPerson(from personId: Int) -> Observable<Person>

@@ -10,25 +10,26 @@
 		D70FF10A23208A4200E4C74E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70FF10923208A4200E4C74E /* AppDelegate.swift */; };
 		D70FF10C23208A4200E4C74E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70FF10B23208A4200E4C74E /* SceneDelegate.swift */; };
 		D70FF10E23208A4200E4C74E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70FF10D23208A4200E4C74E /* ContentView.swift */; };
-		D70FF12123208A4A00E4C74E /* HoloDexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70FF12023208A4A00E4C74E /* HoloDexTests.swift */; };
 		D70FF12C23208A4A00E4C74E /* HoloDexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70FF12B23208A4A00E4C74E /* HoloDexUITests.swift */; };
 		D70FF14A23208BCF00E4C74E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D70FF13E23208BCF00E4C74E /* LaunchScreen.storyboard */; };
 		D70FF14C23208BCF00E4C74E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D70FF14123208BCF00E4C74E /* Assets.xcassets */; };
-		D70FF14D23208BCF00E4C74E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D70FF14323208BCF00E4C74E /* Preview Assets.xcassets */; };
+		D70FF14D23208BCF00E4C74E /* PreviewAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D70FF14323208BCF00E4C74E /* PreviewAssets.xcassets */; };
 		D70FF15023208BCF00E4C74E /* Glyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70FF14723208BCF00E4C74E /* Glyph.swift */; };
 		D70FF15123208BCF00E4C74E /* glyphs.json in Resources */ = {isa = PBXBuildFile; fileRef = D70FF14823208BCF00E4C74E /* glyphs.json */; };
 		D70FF15223208BCF00E4C74E /* holodex-glyphs.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D70FF14923208BCF00E4C74E /* holodex-glyphs.ttf */; };
+		D7347535232B24B9007FF565 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125EB232095E6000488B7 /* Person.swift */; };
+		D738AB5D232B3FF40051BEF1 /* PeopleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D738AB5C232B3FF40051BEF1 /* PeopleListViewModel.swift */; };
+		D74BB1E4232349B400C9D8A8 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = D74BB1E3232349B400C9D8A8 /* Quick */; };
+		D74BB1E6232349B400C9D8A8 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = D74BB1E5232349B400C9D8A8 /* Nimble */; };
+		D7BE32AE23230DFC00C2E40B /* StarWarsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE32AD23230DFC00C2E40B /* StarWarsAPITests.swift */; };
 		D7C125B123208F92000488B7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D7C125B023208F92000488B7 /* Alamofire */; };
 		D7C125B4232090AA000488B7 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D7C125B3232090AA000488B7 /* RxSwift */; };
-		D7C125B6232090AA000488B7 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = D7C125B5232090AA000488B7 /* RxTest */; };
 		D7C125B8232090AA000488B7 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = D7C125B7232090AA000488B7 /* RxRelay */; };
 		D7C125BA232090AA000488B7 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D7C125B9232090AA000488B7 /* RxCocoa */; };
-		D7C125BC232090AA000488B7 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = D7C125BB232090AA000488B7 /* RxBlocking */; };
 		D7C125BF2320910E000488B7 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D7C125BE2320910E000488B7 /* Swinject */; };
 		D7C125C123209136000488B7 /* HoloDexContainerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125C023209136000488B7 /* HoloDexContainerFactory.swift */; };
 		D7C125D123209159000488B7 /* StarWarsAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125C423209159000488B7 /* StarWarsAPIResponse.swift */; };
 		D7C125D223209159000488B7 /* StarWarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125C523209159000488B7 /* StarWarsAPI.swift */; };
-		D7C125D323209159000488B7 /* PagedResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125C623209159000488B7 /* PagedResults.swift */; };
 		D7C125D423209159000488B7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125C723209159000488B7 /* Extensions.swift */; };
 		D7C125D523209159000488B7 /* NetworkingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125C823209159000488B7 /* NetworkingAPI.swift */; };
 		D7C125D623209159000488B7 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125C923209159000488B7 /* Endpoint.swift */; };
@@ -38,22 +39,20 @@
 		D7C125DA23209159000488B7 /* HoloDex+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125CE23209159000488B7 /* HoloDex+UIImage.swift */; };
 		D7C125DB23209159000488B7 /* HoloDex+UITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125CF23209159000488B7 /* HoloDex+UITableViewController.swift */; };
 		D7C125DC23209159000488B7 /* HoloDex+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125D023209159000488B7 /* HoloDex+UIViewController.swift */; };
-		D7C125DF232091E1000488B7 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = D7C125DE232091E1000488B7 /* ObjectMapper */; };
 		D7C125E323209562000488B7 /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125E023209562000488B7 /* Assets.generated.swift */; };
 		D7C125E423209562000488B7 /* Fonts.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125E123209562000488B7 /* Fonts.generated.swift */; };
 		D7C125E523209562000488B7 /* Scenes.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125E223209562000488B7 /* Scenes.generated.swift */; };
 		D7C125FB232095E7000488B7 /* PeopleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125E9232095E6000488B7 /* PeopleEndpoint.swift */; };
 		D7C125FC232095E7000488B7 /* RandomPeopleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125EA232095E6000488B7 /* RandomPeopleEndpoint.swift */; };
-		D7C125FD232095E7000488B7 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125EB232095E6000488B7 /* Person.swift */; };
 		D7C125FE232095E7000488B7 /* StarWarsAPI+PeopleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125EC232095E6000488B7 /* StarWarsAPI+PeopleEndpoint.swift */; };
 		D7C125FF232095E7000488B7 /* PersonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125EE232095E6000488B7 /* PersonListViewModel.swift */; };
 		D7C12600232095E7000488B7 /* PersonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125EF232095E6000488B7 /* PersonDetailViewModel.swift */; };
 		D7C12601232095E7000488B7 /* PersonListViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125F0232095E6000488B7 /* PersonListViewModelImpl.swift */; };
 		D7C12602232095E7000488B7 /* PersonDetailViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125F1232095E6000488B7 /* PersonDetailViewModelImpl.swift */; };
 		D7C12609232095E7000488B7 /* PeopleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125FA232095E6000488B7 /* PeopleListView.swift */; };
-		D7C1260C232096EB000488B7 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = D7C1260B232096EB000488B7 /* RxBlocking */; };
-		D7C1260E232096EB000488B7 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D7C1260D232096EB000488B7 /* RxCocoa */; };
-		D7C12610232096EB000488B7 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D7C1260F232096EB000488B7 /* RxSwift */; };
+		D7CB564D2323F81F0087B56B /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D7CB564C2323F81F0087B56B /* RxCocoa */; };
+		D7CB564F2323F81F0087B56B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D7CB564E2323F81F0087B56B /* RxSwift */; };
+		D7CB56512323F8280087B56B /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = D7CB56502323F8280087B56B /* RxTest */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,21 +79,21 @@
 		D70FF10D23208A4200E4C74E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D70FF11723208A4900E4C74E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D70FF11C23208A4A00E4C74E /* HoloDexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoloDexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D70FF12023208A4A00E4C74E /* HoloDexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoloDexTests.swift; sourceTree = "<group>"; };
 		D70FF12223208A4A00E4C74E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D70FF12723208A4A00E4C74E /* HoloDexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoloDexUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D70FF12B23208A4A00E4C74E /* HoloDexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoloDexUITests.swift; sourceTree = "<group>"; };
 		D70FF12D23208A4A00E4C74E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D70FF13F23208BCF00E4C74E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D70FF14123208BCF00E4C74E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D70FF14323208BCF00E4C74E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D70FF14323208BCF00E4C74E /* PreviewAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PreviewAssets.xcassets; sourceTree = "<group>"; };
 		D70FF14723208BCF00E4C74E /* Glyph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Glyph.swift; sourceTree = "<group>"; };
 		D70FF14823208BCF00E4C74E /* glyphs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = glyphs.json; sourceTree = "<group>"; };
 		D70FF14923208BCF00E4C74E /* holodex-glyphs.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "holodex-glyphs.ttf"; sourceTree = "<group>"; };
+		D738AB5C232B3FF40051BEF1 /* PeopleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListViewModel.swift; sourceTree = "<group>"; };
+		D7BE32AD23230DFC00C2E40B /* StarWarsAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarWarsAPITests.swift; sourceTree = "<group>"; };
 		D7C125C023209136000488B7 /* HoloDexContainerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoloDexContainerFactory.swift; sourceTree = "<group>"; };
 		D7C125C423209159000488B7 /* StarWarsAPIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarWarsAPIResponse.swift; sourceTree = "<group>"; };
 		D7C125C523209159000488B7 /* StarWarsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarWarsAPI.swift; sourceTree = "<group>"; };
-		D7C125C623209159000488B7 /* PagedResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedResults.swift; sourceTree = "<group>"; };
 		D7C125C723209159000488B7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D7C125C823209159000488B7 /* NetworkingAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingAPI.swift; sourceTree = "<group>"; };
 		D7C125C923209159000488B7 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -124,11 +123,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7C125B8232090AA000488B7 /* RxRelay in Frameworks */,
-				D7C125DF232091E1000488B7 /* ObjectMapper in Frameworks */,
 				D7C125B4232090AA000488B7 /* RxSwift in Frameworks */,
 				D7C125BA232090AA000488B7 /* RxCocoa in Frameworks */,
 				D7C125B123208F92000488B7 /* Alamofire in Frameworks */,
-				D7C125BC232090AA000488B7 /* RxBlocking in Frameworks */,
 				D7C125BF2320910E000488B7 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,10 +134,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7C1260E232096EB000488B7 /* RxCocoa in Frameworks */,
-				D7C125B6232090AA000488B7 /* RxTest in Frameworks */,
-				D7C12610232096EB000488B7 /* RxSwift in Frameworks */,
-				D7C1260C232096EB000488B7 /* RxBlocking in Frameworks */,
+				D7CB56512323F8280087B56B /* RxTest in Frameworks */,
+				D7CB564D2323F81F0087B56B /* RxCocoa in Frameworks */,
+				D74BB1E4232349B400C9D8A8 /* Quick in Frameworks */,
+				D7CB564F2323F81F0087B56B /* RxSwift in Frameworks */,
+				D74BB1E6232349B400C9D8A8 /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +192,7 @@
 		D70FF11F23208A4A00E4C74E /* HoloDexTests */ = {
 			isa = PBXGroup;
 			children = (
-				D70FF12023208A4A00E4C74E /* HoloDexTests.swift */,
+				D7BE32AC23230DFC00C2E40B /* NetworkingTests */,
 				D70FF12223208A4A00E4C74E /* Info.plist */,
 			);
 			path = HoloDexTests;
@@ -212,13 +210,13 @@
 		D70FF13B23208BCF00E4C74E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D7C125E023209562000488B7 /* Assets.generated.swift */,
-				D70FF14123208BCF00E4C74E /* Assets.xcassets */,
 				D70FF14623208BCF00E4C74E /* Fonts */,
-				D7C125E123209562000488B7 /* Fonts.generated.swift */,
-				D70FF14223208BCF00E4C74E /* Preview Content */,
-				D7C125E223209562000488B7 /* Scenes.generated.swift */,
+				D70FF14223208BCF00E4C74E /* Preview */,
 				D70FF13D23208BCF00E4C74E /* Storyboards */,
+				D70FF14123208BCF00E4C74E /* Assets.xcassets */,
+				D7C125E023209562000488B7 /* Assets.generated.swift */,
+				D7C125E123209562000488B7 /* Fonts.generated.swift */,
+				D7C125E223209562000488B7 /* Scenes.generated.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -231,12 +229,12 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		D70FF14223208BCF00E4C74E /* Preview Content */ = {
+		D70FF14223208BCF00E4C74E /* Preview */ = {
 			isa = PBXGroup;
 			children = (
-				D70FF14323208BCF00E4C74E /* Preview Assets.xcassets */,
+				D70FF14323208BCF00E4C74E /* PreviewAssets.xcassets */,
 			);
-			path = "Preview Content";
+			path = Preview;
 			sourceTree = "<group>";
 		};
 		D70FF14623208BCF00E4C74E /* Fonts */ = {
@@ -249,11 +247,18 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		D7BE32AC23230DFC00C2E40B /* NetworkingTests */ = {
+			isa = PBXGroup;
+			children = (
+				D7BE32AD23230DFC00C2E40B /* StarWarsAPITests.swift */,
+			);
+			path = NetworkingTests;
+			sourceTree = "<group>";
+		};
 		D7C125C223209159000488B7 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				D7C125C323209159000488B7 /* StarWarsAPI */,
-				D7C125C623209159000488B7 /* PagedResults.swift */,
 				D7C125C723209159000488B7 /* Extensions.swift */,
 				D7C125C823209159000488B7 /* NetworkingAPI.swift */,
 				D7C125C923209159000488B7 /* Endpoint.swift */,
@@ -294,6 +299,7 @@
 		D7C125E7232095E6000488B7 /* People */ = {
 			isa = PBXGroup;
 			children = (
+				D7C125EB232095E6000488B7 /* Person.swift */,
 				D7C125FA232095E6000488B7 /* PeopleListView.swift */,
 				D7C125E8232095E6000488B7 /* Network */,
 				D7C125ED232095E6000488B7 /* Models */,
@@ -306,7 +312,6 @@
 			children = (
 				D7C125E9232095E6000488B7 /* PeopleEndpoint.swift */,
 				D7C125EA232095E6000488B7 /* RandomPeopleEndpoint.swift */,
-				D7C125EB232095E6000488B7 /* Person.swift */,
 				D7C125EC232095E6000488B7 /* StarWarsAPI+PeopleEndpoint.swift */,
 			);
 			path = Network;
@@ -319,6 +324,7 @@
 				D7C125EF232095E6000488B7 /* PersonDetailViewModel.swift */,
 				D7C125F0232095E6000488B7 /* PersonListViewModelImpl.swift */,
 				D7C125F1232095E6000488B7 /* PersonDetailViewModelImpl.swift */,
+				D738AB5C232B3FF40051BEF1 /* PeopleListViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -351,9 +357,7 @@
 				D7C125B3232090AA000488B7 /* RxSwift */,
 				D7C125B7232090AA000488B7 /* RxRelay */,
 				D7C125B9232090AA000488B7 /* RxCocoa */,
-				D7C125BB232090AA000488B7 /* RxBlocking */,
 				D7C125BE2320910E000488B7 /* Swinject */,
-				D7C125DE232091E1000488B7 /* ObjectMapper */,
 			);
 			productName = HoloDex;
 			productReference = D70FF10623208A4200E4C74E /* HoloDex.app */;
@@ -374,10 +378,11 @@
 			);
 			name = HoloDexTests;
 			packageProductDependencies = (
-				D7C125B5232090AA000488B7 /* RxTest */,
-				D7C1260B232096EB000488B7 /* RxBlocking */,
-				D7C1260D232096EB000488B7 /* RxCocoa */,
-				D7C1260F232096EB000488B7 /* RxSwift */,
+				D74BB1E3232349B400C9D8A8 /* Quick */,
+				D74BB1E5232349B400C9D8A8 /* Nimble */,
+				D7CB564C2323F81F0087B56B /* RxCocoa */,
+				D7CB564E2323F81F0087B56B /* RxSwift */,
+				D7CB56502323F8280087B56B /* RxTest */,
 			);
 			productName = HoloDexTests;
 			productReference = D70FF11C23208A4A00E4C74E /* HoloDexTests.xctest */;
@@ -437,7 +442,8 @@
 				D7C125AF23208F92000488B7 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				D7C125B2232090AA000488B7 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				D7C125BD2320910E000488B7 /* XCRemoteSwiftPackageReference "Swinject" */,
-				D7C125DD232091E1000488B7 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
+				D7BE32B223230F2C00C2E40B /* XCRemoteSwiftPackageReference "Quick" */,
+				D74BB1CE2323386300C9D8A8 /* XCRemoteSwiftPackageReference "Nimble" */,
 			);
 			productRefGroup = D70FF10723208A4200E4C74E /* Products */;
 			projectDirPath = "";
@@ -456,7 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D70FF14A23208BCF00E4C74E /* LaunchScreen.storyboard in Resources */,
-				D70FF14D23208BCF00E4C74E /* Preview Assets.xcassets in Resources */,
+				D70FF14D23208BCF00E4C74E /* PreviewAssets.xcassets in Resources */,
 				D70FF15223208BCF00E4C74E /* holodex-glyphs.ttf in Resources */,
 				D70FF15123208BCF00E4C74E /* glyphs.json in Resources */,
 				D70FF14C23208BCF00E4C74E /* Assets.xcassets in Resources */,
@@ -487,7 +493,7 @@
 				D7C125FF232095E7000488B7 /* PersonListViewModel.swift in Sources */,
 				D7C125D523209159000488B7 /* NetworkingAPI.swift in Sources */,
 				D7C12602232095E7000488B7 /* PersonDetailViewModelImpl.swift in Sources */,
-				D7C125D323209159000488B7 /* PagedResults.swift in Sources */,
+				D738AB5D232B3FF40051BEF1 /* PeopleListViewModel.swift in Sources */,
 				D7C125FE232095E7000488B7 /* StarWarsAPI+PeopleEndpoint.swift in Sources */,
 				D7C125D723209159000488B7 /* NetworkAPIError.swift in Sources */,
 				D7C125D423209159000488B7 /* Extensions.swift in Sources */,
@@ -497,13 +503,13 @@
 				D70FF15023208BCF00E4C74E /* Glyph.swift in Sources */,
 				D7C125DC23209159000488B7 /* HoloDex+UIViewController.swift in Sources */,
 				D7C125DA23209159000488B7 /* HoloDex+UIImage.swift in Sources */,
-				D7C125FD232095E7000488B7 /* Person.swift in Sources */,
 				D7C12600232095E7000488B7 /* PersonDetailViewModel.swift in Sources */,
 				D7C125D223209159000488B7 /* StarWarsAPI.swift in Sources */,
 				D7C125FC232095E7000488B7 /* RandomPeopleEndpoint.swift in Sources */,
 				D70FF10A23208A4200E4C74E /* AppDelegate.swift in Sources */,
 				D7C125DB23209159000488B7 /* HoloDex+UITableViewController.swift in Sources */,
 				D7C12601232095E7000488B7 /* PersonListViewModelImpl.swift in Sources */,
+				D7347535232B24B9007FF565 /* Person.swift in Sources */,
 				D7C125E523209562000488B7 /* Scenes.generated.swift in Sources */,
 				D7C125E423209562000488B7 /* Fonts.generated.swift in Sources */,
 				D7C125E323209562000488B7 /* Assets.generated.swift in Sources */,
@@ -520,7 +526,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D70FF12123208A4A00E4C74E /* HoloDexTests.swift in Sources */,
+				D7BE32AE23230DFC00C2E40B /* StarWarsAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,6 +622,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -669,6 +676,8 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -677,8 +686,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"HoloDex/Resources/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"HoloDex/Resources/Preview\"";
 				DEVELOPMENT_TEAM = J8SLW9YW9U;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HoloDex/Info.plist;
@@ -688,6 +698,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.lewismorgan.HoloDex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -697,8 +708,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"HoloDex/Resources/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"HoloDex/Resources/Preview\"";
 				DEVELOPMENT_TEAM = J8SLW9YW9U;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HoloDex/Info.plist;
@@ -708,6 +720,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.lewismorgan.HoloDex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -720,6 +733,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J8SLW9YW9U;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = HoloDexTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -742,6 +756,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J8SLW9YW9U;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = HoloDexTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -797,6 +812,132 @@
 			};
 			name = Release;
 		};
+		D73224622320A8E30088D913 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Staging;
+		};
+		D73224632320A8E30088D913 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"HoloDex/Resources/Preview\"";
+				DEVELOPMENT_TEAM = J8SLW9YW9U;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = HoloDex/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.lewismorgan.HoloDex;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Staging;
+		};
+		D73224642320A8E30088D913 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J8SLW9YW9U;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = HoloDexTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.lewismorgan.HoloDexTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoloDex.app/HoloDex";
+			};
+			name = Staging;
+		};
+		D73224652320A8E30088D913 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J8SLW9YW9U;
+				INFOPLIST_FILE = HoloDexUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.lewismorgan.HoloDexUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HoloDex;
+			};
+			name = Staging;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -804,6 +945,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D70FF12E23208A4A00E4C74E /* Debug */,
+				D73224622320A8E30088D913 /* Staging */,
 				D70FF12F23208A4A00E4C74E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -813,6 +955,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D70FF13123208A4A00E4C74E /* Debug */,
+				D73224632320A8E30088D913 /* Staging */,
 				D70FF13223208A4A00E4C74E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -822,6 +965,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D70FF13423208A4A00E4C74E /* Debug */,
+				D73224642320A8E30088D913 /* Staging */,
 				D70FF13523208A4A00E4C74E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -831,6 +975,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D70FF13723208A4A00E4C74E /* Debug */,
+				D73224652320A8E30088D913 /* Staging */,
 				D70FF13823208A4A00E4C74E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -839,6 +984,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D74BB1CE2323386300C9D8A8 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.2;
+			};
+		};
+		D7BE32B223230F2C00C2E40B /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
 		D7C125AF23208F92000488B7 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -863,17 +1024,19 @@
 				minimumVersion = 2.7.0;
 			};
 		};
-		D7C125DD232091E1000488B7 /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/tristanhimmelman/ObjectMapper.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.5.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D74BB1E3232349B400C9D8A8 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D7BE32B223230F2C00C2E40B /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		D74BB1E5232349B400C9D8A8 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D74BB1CE2323386300C9D8A8 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
 		D7C125B023208F92000488B7 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D7C125AF23208F92000488B7 /* XCRemoteSwiftPackageReference "Alamofire" */;
@@ -883,11 +1046,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D7C125B2232090AA000488B7 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
-		};
-		D7C125B5232090AA000488B7 /* RxTest */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D7C125B2232090AA000488B7 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxTest;
 		};
 		D7C125B7232090AA000488B7 /* RxRelay */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -899,35 +1057,25 @@
 			package = D7C125B2232090AA000488B7 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
 		};
-		D7C125BB232090AA000488B7 /* RxBlocking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D7C125B2232090AA000488B7 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxBlocking;
-		};
 		D7C125BE2320910E000488B7 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D7C125BD2320910E000488B7 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
 		};
-		D7C125DE232091E1000488B7 /* ObjectMapper */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D7C125DD232091E1000488B7 /* XCRemoteSwiftPackageReference "ObjectMapper" */;
-			productName = ObjectMapper;
-		};
-		D7C1260B232096EB000488B7 /* RxBlocking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D7C125B2232090AA000488B7 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxBlocking;
-		};
-		D7C1260D232096EB000488B7 /* RxCocoa */ = {
+		D7CB564C2323F81F0087B56B /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D7C125B2232090AA000488B7 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
 		};
-		D7C1260F232096EB000488B7 /* RxSwift */ = {
+		D7CB564E2323F81F0087B56B /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D7C125B2232090AA000488B7 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		D7CB56502323F8280087B56B /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D7C125B2232090AA000488B7 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

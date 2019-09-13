@@ -9,7 +9,7 @@
 import RxSwift
 
 /// Provides randomized data in conformance with the PeopleEndpoint protocol
-public class RandomPeopleEndpoint: PeopleEndpoint {
+class RandomPeopleEndpoint: PeopleEndpoint {
   static let worlds: [String] = ["Tatooine", "Naboo", "Jakku", "Yavin IV", "Alderaan", "Hutta", "Lokath",
                                  "Lothal", "Tython", "Dromund Kaas", "Korriban"]
   static let colors: [String] = ["Red", "Green", "Blue", "Blonde", "Brown", "Black", "Purple"]
@@ -76,19 +76,19 @@ public class RandomPeopleEndpoint: PeopleEndpoint {
   }
 
   private func createPerson() -> Person {
-    var person = Person()
-
-    person.name = createName()
-    person.homeworld = RandomPeopleEndpoint.worlds[Int.random(in: 0..<RandomPeopleEndpoint.worlds.count)]
-    person.gender = (Int.random(in: 0...1) == 0 ? "male" : "female")
-    person.birthYear = "\(Int.random(in: 200...300))BBY"
-    person.mass = "\(Int.random(in: 1...100))"
-    person.height = "\(Int.random(in: 100...200))"
-    person.eyeColor = createColor()
-    person.hairColor = createColor()
-    person.films = createRandomNumbers(min: 0, max: 10)
-    person.vehicles = (Int.random(in: 0...100) >= 45 ? createRandomNumbers(min: 0, max: 3) : [])
-    person.species = createRandomNumbers(min: 0, max: 1)
+    let person = Person(name: createName())
+//
+//    person.name = createName()
+//    person.homeworld = RandomPeopleEndpoint.worlds[Int.random(in: 0..<RandomPeopleEndpoint.worlds.count)]
+//    person.gender = (Int.random(in: 0...1) == 0 ? "male" : "female")
+//    person.birthYear = "\(Int.random(in: 200...300))BBY"
+//    person.mass = "\(Int.random(in: 1...100))"
+//    person.height = "\(Int.random(in: 100...200))"
+//    person.eyeColor = createColor()
+//    person.hairColor = createColor()
+//    person.films = createRandomNumbers(min: 0, max: 10)
+//    person.vehicles = (Int.random(in: 0...100) >= 45 ? createRandomNumbers(min: 0, max: 3) : [])
+//    person.species = createRandomNumbers(min: 0, max: 1)
 
     return person
   }

@@ -7,11 +7,10 @@
 //
 
 import Alamofire
-import ObjectMapper
-import RxSwift
 import Foundation
+import RxSwift
 
-open class StarWarsAPI: NetworkingAPI {
+final class StarWarsAPI: NetworkingAPI {
   private static let baseUrl = "https://swapi.co/api/"
 
   public init() {
@@ -19,16 +18,43 @@ open class StarWarsAPI: NetworkingAPI {
 
   // MARK: - Private Functions
 
-  private func createRequest(endpoint: String, params: [String: Any]) -> Observable<Any> {
-    // TODO: Log everytime a request is created instead of printing
-    debugPrint("endpoint:", endpoint, "params:", params)
+  private func createListRequest<T: Decodable>(endpoint: String, params: [String: Any], type: T.Type) -> Observable<SWAPIListResponse<T>> {
     return Observable.create { observer in
-      // TODO: Update to use decodable
       let url = StarWarsAPI.baseUrl + endpoint
-      let request = AF.request(url).response { response in
-        observer.on(.next(response))
-        
-        observer.onCompleted()
+
+      let request = AF.request(url, parameters: params).responseDecodable { (response: DataResponse<SWAPIListResponse<T>, AFError>) in
+        switch response.result {
+        case .success(let value):
+          observer.on(.next(value))
+          observer.on(.completed)
+          break
+        case .failure(let error):
+          print(error)
+          observer.on(.error(error))
+          break
+        }
+      }
+      return Disposables.create {
+        request.cancel()
+      }
+    }.debug()
+  }
+
+  // MARK: - NetworkingAPI
+
+  public func createRequest<T: Decodable>(endpoint: String, params: [String: Any] = [:], type: T.Type = T.self) -> Observable<T> {
+    // TODO: Logging
+    return Observable.create { observer in
+      let request = AF.request(StarWarsAPI.baseUrl + endpoint, parameters: params).responseDecodable(of: T.self) { response in
+        switch response.result {
+        case .success(let value):
+          observer.on(.next(value))
+          observer.on(.completed)
+          break
+        case .failure:
+          observer.on(.error(NetworkAPIError.nullMapping))
+          break
+        }
       }
       return Disposables.create {
         request.cancel()
@@ -36,54 +62,31 @@ open class StarWarsAPI: NetworkingAPI {
     }
   }
 
-  // MARK: - NetworkingAPI
-
-  /// Creates a request to the StarWarsAPI
-  public func buildRequest<T: Mappable>(endpoint: String, params: [String: Any] = [:], type: T.Type) -> Observable<T> {
-    return createRequest(endpoint: endpoint, params: params.merging(["format": "json"]) { $1 }).map { result in
-      guard let response = Mapper<T>().map(JSONObject: result) else {
-        throw NetworkAPIError.nullMapping
+  public func createPageRequest<T: Decodable>(endpoint: String, from: Int, to: Int?, type: T.Type) -> Observable<[T]> {
+    return createListRequest(endpoint: endpoint, params: ["page": from], type: type.self).flatMap { (response: SWAPIListResponse<T>) -> Observable<[T]> in
+      if to == nil || from != to, let page = response.findNextPage() {
+        // Another page, continue the stream
+        return Observable.concat(Observable.just(response.results), self.createPageRequest(endpoint: endpoint, from: page, to: to, type: type))
+      } else {
+        // No more pages of data
+        return Observable.just(response.results)
       }
-      return response
     }
   }
+}
 
-  /// Creates a request for a specific page in the StarWarsAPI
-  public func buildPageRequest<T: Mappable>(endpoint: String, page: Int, type: T.Type) -> Observable<PagedResults<T>> {
-    return buildRequest(endpoint: endpoint, params: ["page": page], type: StarWarsAPIResponse<T>.self)
-      .flatMap { response -> Observable<PagedResults<T>> in
-        // Convert the URL page
-        let components = NSURLComponents(string: response.next)
-        guard let items = components?.queryItemsToDict(), let page = items["page"] else {
-          // There are no more pages
-          return Observable.error(NetworkAPIError.noPages)
-        }
-        if let nextPage = Int(page) {
-          return Observable.just(PagedResults(count: response.count, nextPage: nextPage, results: response.results))
-        } else {
-          return Observable.error(NetworkAPIError.noPages)
-        }
-      }
-  }
+extension SWAPIListResponse {
+  func findNextPage() -> Int? {
+    guard let next = next else {
+      return nil
+    }
 
-  // MARK: - Public Functions
+    let components = NSURLComponents(string: next)
 
-  /// Creates a request that will build a page request until there are no more pages
-  public func buildStreamingPageRequest<T: Mappable>(endpoint: String, page: Int,
-                                                     type: T.Type) -> Observable<([T], Bool)> {
-    return buildRequest(endpoint: endpoint, params: ["page": page], type: StarWarsAPIResponse<T>.self)
-      .flatMap { response -> Observable<([T], Bool)> in
-        let components = NSURLComponents(string: response.next)
-        guard let items = components?.queryItemsToDict(), let page = items["page"] else {
-          // There are no more pages
-          return Observable.just((response.results, false))
-        }
-        if let nextPage = Int(page) {
-          return Observable.concat(Observable.just((response.results, true)),
-                                   self.buildStreamingPageRequest(endpoint: endpoint, page: nextPage,
-                                                                  type: type)
-                                    .catchErrorJustReturn(([], false)))
-        } else { return Observable.just((response.results, false)) }
-      }
+    if let items = components?.queryItemsToDict(), let page = items["page"] {
+      return Int(page)
+    } else {
+      return nil
+    }
   }
 }

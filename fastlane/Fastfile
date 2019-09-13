@@ -1,24 +1,15 @@
 default_platform(:ios)
 
-# Load up any environemnt variables in the .env file
-if File.exist?('.env')
-  open('.env', 'r').readlines.each do |l|
-    kv = l.split('=')
-    ENV[kv[0]] = kv[1].chomp
-  end
-end
-
 ### Build Lanes ###
 
 desc "Create a development build, optionally installing to device"
 lane :develop do |options|
   build(
-    match: "development",
-    export: "development",
+    match: "adhoc",
+    export: "ad-hoc",
     config: "Debug",
     clean: options[:clean]
   )
-  install
 end
 
 desc "Create a beta build"
@@ -113,6 +104,9 @@ private_lane :local_build do |options|
     configuration: options[:config],
     clean: options[:clean]
   )
+  if options[:install]
+    install
+  end
 end
 
 private_lane :ci_build do |options|
@@ -136,7 +130,7 @@ private_lane :ci_build do |options|
   )
   gym(
     export_method: (is_release ? "app-store" : "ad-hoc"),
-    configuration: (is_release ? "Release" : "Beta"),
+    configuration: (is_release ? "Release" : "Staging"),
     clean: true
   )
 end
