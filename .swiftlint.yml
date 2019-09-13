@@ -48,6 +48,11 @@ file_length:
   warning: 500
   error: 800
 
+identifier_name:
+  allowed_symbols: "_"
+  excluded:
+    - id
+
 large_tuple: # warn user when using 3 values in tuple, give error if there are 4
   - 3
   - 4

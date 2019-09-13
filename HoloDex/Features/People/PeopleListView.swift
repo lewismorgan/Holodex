@@ -10,29 +10,33 @@ import RxSwift
 import SwiftUI
 
 struct PeopleListView: View {
-  @ObservedObject var viewModel: PeopleListViewModel
+  @EnvironmentObject var store: PersonStore
 
   var body: some View {
     NavigationView {
       VStack {
-        List(viewModel.people, id: \.name) { person in
-          Text(person.name)
+        List(store.people) { person in
+          PersonCellView(model: person)
         }
       }
-    .navigationBarTitle("People")
+      .navigationBarItems(trailing: ActivityIndicator())
+      .navigationBarTitle("People", displayMode: .large)
     }
   }
 }
 
 #if DEBUG
 struct PeopleListView_Previews: PreviewProvider {
-    static var previews: some View {
-      PeopleListView(viewModel: PeopleListViewModel(service: PreviewPeopleService()))
-        .colorScheme(.dark)
-    }
+  static let store = PersonStore(service: PreviewPersonService())
+  static var previews: some View {
+    store.request()
+    return PeopleListView()
+      .environmentObject(store)
+      .colorScheme(.dark)
+  }
 }
 
-class PreviewPeopleService: PersonService {
+class PreviewPersonService: PersonService {
   let people: [Person] = [
     Person(name: "Luke Skywalker"),
     Person(name: "Jyn Erso"),
@@ -52,3 +56,16 @@ class PreviewPeopleService: PersonService {
   }
 }
 #endif
+
+// TODO: Move to own class
+struct ActivityIndicator: UIViewRepresentable {
+
+  func makeUIView(context: Context) -> UIActivityIndicatorView {
+    let view = UIActivityIndicatorView()
+    return view
+  }
+
+  func updateUIView(_ activityIndicator: UIActivityIndicatorView, context: Context) {
+    // TODO: Animate the indicator
+  }
+}

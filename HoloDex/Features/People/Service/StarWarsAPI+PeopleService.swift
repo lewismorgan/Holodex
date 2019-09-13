@@ -12,9 +12,6 @@ extension StarWarsAPI: PersonService {
   public func getAll() -> Observable<[Person]> {
     return self.createPageRequest(endpoint: "people", from: 1, until: nil,
                                   type: Person.self)
-      .scan([Person](), accumulator: { seed, latest in
-        return seed + latest
-      })
   }
 
   public func getPeople(from page: Int) -> Observable<[Person]> {

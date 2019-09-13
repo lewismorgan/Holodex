@@ -18,8 +18,9 @@ class RandomPersonService: PersonService {
   static let lastNames: [String] = ["Skywalker", "Organa", "Solo", "Amadala", "Ren", "Damaran", "Erso",
                                     "Smith", "Hutt", "Hux", "Kenobi"]
 
-  public init() {
-  }
+  public init() {}
+
+  // MARK: PersonService
 
   public func getPeople(from page: Int) -> Observable<[Person]> {
     return Observable.create { [weak self] emitter in
@@ -37,23 +38,24 @@ class RandomPersonService: PersonService {
       emitter.onNext(items)
       emitter.onCompleted()
       return Disposables.create()
-    }
+    }.subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
   }
 
   public func getAll() -> Observable<[Person]> {
-    // Send out 100 pages each containing 10 random people (1000 total), delay of .5 to simulate network
-    return Observable.range(start: 1, count: 100)
-      .concatMap({ Observable.just($0).delay(0.5, scheduler: ConcurrentDispatchQueueScheduler(qos: .background)) })
+    // Send out 50 pages each containing 10 random people (100 total), delay of .25 to simulate network
+    return Observable.range(start: 1, count: 50)
+      .concatMap({ Observable.just($0).delay(0.25, scheduler: ConcurrentDispatchQueueScheduler(qos: .background)) })
       .flatMap { [weak self] page -> Observable<[Person]> in
         return self?.getPeople(from: page) ?? Observable.empty()
-      }.scan([Person](), accumulator: { seed, add in
-      return seed + add
-    }).observeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+      }
   }
 
   public func getPerson(from personId: Int) -> Observable<Person> {
     return Observable.of(createPerson())
+      .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
   }
+
+  // MARK: Private Functions
 
   private func createName() -> String {
     let addLastName = Int.random(in: 0...100) <= 75 ? true : false

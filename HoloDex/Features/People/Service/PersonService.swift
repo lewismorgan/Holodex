@@ -9,7 +9,10 @@
 import RxSwift
 
 protocol PersonService: Service {
+  /// Emits a continuing array of Person until there are no more pages left
   func getAll() -> Observable<[Person]>
+  /// Emits all the people from a page
   func getPeople(from page: Int) -> Observable<[Person]>
+  /// Emits a person with the given id
   func getPerson(from personId: Int) -> Observable<Person>
 }

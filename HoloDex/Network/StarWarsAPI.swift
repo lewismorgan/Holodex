@@ -23,9 +23,8 @@ final class StarWarsAPI: NetworkAPI {
                                                type: T.Type) -> Observable<SWAPIListResponse<T>> {
     Log.debug("Request from \(endpoint) with: \(params)")
     return Observable.create { observer in
-      let url = StarWarsAPI.baseUrl + endpoint
-
-      let request = AF.request(url, parameters: params)
+      Log.debug("Thread Is Main: \(Thread.isMainThread)")
+      let request = AF.request(StarWarsAPI.baseUrl + endpoint, parameters: params)
         .responseDecodable { (response: DataResponse<SWAPIListResponse<T>, AFError>) in
           switch response.result {
           case .success(let value):
@@ -39,7 +38,7 @@ final class StarWarsAPI: NetworkAPI {
       return Disposables.create {
         request.cancel()
       }
-    }.observeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+    }.subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
   }
 
   // MARK: - NetworkingAPI
@@ -47,6 +46,7 @@ final class StarWarsAPI: NetworkAPI {
   public func createRequest<T: Decodable>(endpoint: String, params: [String: Any] = [:], type: T.Type = T.self) -> Observable<T> {
     Log.debug("Request from \(endpoint) with: \(params)")
     return Observable.create { observer in
+      Log.debug("Thread Is Main: \(Thread.isMainThread)")
       let request = AF.request(StarWarsAPI.baseUrl + endpoint, parameters: params).responseDecodable(of: T.self) { response in
         switch response.result {
         case .success(let value):
@@ -60,7 +60,7 @@ final class StarWarsAPI: NetworkAPI {
       return Disposables.create {
         request.cancel()
       }
-    }.observeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+    }.subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
   }
 
   public func createPageRequest<T: Decodable>(endpoint: String, from: Int, until: Int?, type: T.Type) -> Observable<[T]> {

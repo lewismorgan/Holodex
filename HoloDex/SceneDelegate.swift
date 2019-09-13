@@ -24,10 +24,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // session are new (see `application:configurationForConnectingSceneSession` instead).
 
     // Create the SwiftUI view that provides the window contents.
-    
-    let viewModel = PeopleListViewModel(service: container.resolve(PersonService.self)!)
+
     // TODO: Replace with ContentView, move PeopleListView into ContentView
-    let contentView = PeopleListView(viewModel: viewModel)
+    let personStore = PersonStore(service: container.resolve(PersonService.self)!)
+    let contentView = PeopleListView()
+      .environmentObject(personStore)
 
     // Use a UIHostingController as window root view controller.
     if let windowScene = scene as? UIWindowScene {
@@ -36,8 +37,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       self.window = window
       window.makeKeyAndVisible()
     }
-
-    viewModel.request()
+    personStore.request()
   }
 
   func sceneDidDisconnect(_ scene: UIScene) {
