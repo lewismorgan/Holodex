@@ -32,7 +32,7 @@
 		D7C125D223209159000488B7 /* StarWarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125C523209159000488B7 /* StarWarsAPI.swift */; };
 		D7C125D423209159000488B7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125C723209159000488B7 /* Extensions.swift */; };
 		D7C125D523209159000488B7 /* NetworkingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125C823209159000488B7 /* NetworkingAPI.swift */; };
-		D7C125D623209159000488B7 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125C923209159000488B7 /* Endpoint.swift */; };
+		D7C125D623209159000488B7 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125C923209159000488B7 /* Service.swift */; };
 		D7C125D723209159000488B7 /* NetworkAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125CA23209159000488B7 /* NetworkAPIError.swift */; };
 		D7C125D823209159000488B7 /* HoloDex+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125CC23209159000488B7 /* HoloDex+UIColor.swift */; };
 		D7C125D923209159000488B7 /* HoloDex+UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125CD23209159000488B7 /* HoloDex+UIFont.swift */; };
@@ -42,9 +42,9 @@
 		D7C125E323209562000488B7 /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125E023209562000488B7 /* Assets.generated.swift */; };
 		D7C125E423209562000488B7 /* Fonts.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125E123209562000488B7 /* Fonts.generated.swift */; };
 		D7C125E523209562000488B7 /* Scenes.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125E223209562000488B7 /* Scenes.generated.swift */; };
-		D7C125FB232095E7000488B7 /* PeopleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125E9232095E6000488B7 /* PeopleEndpoint.swift */; };
-		D7C125FC232095E7000488B7 /* RandomPeopleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125EA232095E6000488B7 /* RandomPeopleEndpoint.swift */; };
-		D7C125FE232095E7000488B7 /* StarWarsAPI+PeopleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125EC232095E6000488B7 /* StarWarsAPI+PeopleEndpoint.swift */; };
+		D7C125FB232095E7000488B7 /* PersonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125E9232095E6000488B7 /* PersonService.swift */; };
+		D7C125FC232095E7000488B7 /* RandomPersonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125EA232095E6000488B7 /* RandomPersonService.swift */; };
+		D7C125FE232095E7000488B7 /* StarWarsAPI+PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125EC232095E6000488B7 /* StarWarsAPI+PeopleService.swift */; };
 		D7C125FF232095E7000488B7 /* PersonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125EE232095E6000488B7 /* PersonListViewModel.swift */; };
 		D7C12600232095E7000488B7 /* PersonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125EF232095E6000488B7 /* PersonDetailViewModel.swift */; };
 		D7C12601232095E7000488B7 /* PersonListViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125F0232095E6000488B7 /* PersonListViewModelImpl.swift */; };
@@ -96,7 +96,7 @@
 		D7C125C523209159000488B7 /* StarWarsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarWarsAPI.swift; sourceTree = "<group>"; };
 		D7C125C723209159000488B7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D7C125C823209159000488B7 /* NetworkingAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingAPI.swift; sourceTree = "<group>"; };
-		D7C125C923209159000488B7 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		D7C125C923209159000488B7 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		D7C125CA23209159000488B7 /* NetworkAPIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAPIError.swift; sourceTree = "<group>"; };
 		D7C125CC23209159000488B7 /* HoloDex+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HoloDex+UIColor.swift"; sourceTree = "<group>"; };
 		D7C125CD23209159000488B7 /* HoloDex+UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HoloDex+UIFont.swift"; sourceTree = "<group>"; };
@@ -106,10 +106,10 @@
 		D7C125E023209562000488B7 /* Assets.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.generated.swift; sourceTree = "<group>"; };
 		D7C125E123209562000488B7 /* Fonts.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.generated.swift; sourceTree = "<group>"; };
 		D7C125E223209562000488B7 /* Scenes.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scenes.generated.swift; sourceTree = "<group>"; };
-		D7C125E9232095E6000488B7 /* PeopleEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleEndpoint.swift; sourceTree = "<group>"; };
-		D7C125EA232095E6000488B7 /* RandomPeopleEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomPeopleEndpoint.swift; sourceTree = "<group>"; };
+		D7C125E9232095E6000488B7 /* PersonService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonService.swift; sourceTree = "<group>"; };
+		D7C125EA232095E6000488B7 /* RandomPersonService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomPersonService.swift; sourceTree = "<group>"; };
 		D7C125EB232095E6000488B7 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		D7C125EC232095E6000488B7 /* StarWarsAPI+PeopleEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StarWarsAPI+PeopleEndpoint.swift"; sourceTree = "<group>"; };
+		D7C125EC232095E6000488B7 /* StarWarsAPI+PeopleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StarWarsAPI+PeopleService.swift"; sourceTree = "<group>"; };
 		D7C125EE232095E6000488B7 /* PersonListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonListViewModel.swift; sourceTree = "<group>"; };
 		D7C125EF232095E6000488B7 /* PersonDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailViewModel.swift; sourceTree = "<group>"; };
 		D7C125F0232095E6000488B7 /* PersonListViewModelImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonListViewModelImpl.swift; sourceTree = "<group>"; };
@@ -261,7 +261,7 @@
 				D7C125C323209159000488B7 /* StarWarsAPI */,
 				D7C125C723209159000488B7 /* Extensions.swift */,
 				D7C125C823209159000488B7 /* NetworkingAPI.swift */,
-				D7C125C923209159000488B7 /* Endpoint.swift */,
+				D7C125C923209159000488B7 /* Service.swift */,
 				D7C125CA23209159000488B7 /* NetworkAPIError.swift */,
 			);
 			path = Network;
@@ -301,20 +301,21 @@
 			children = (
 				D7C125EB232095E6000488B7 /* Person.swift */,
 				D7C125FA232095E6000488B7 /* PeopleListView.swift */,
-				D7C125E8232095E6000488B7 /* Network */,
+				D738AB5C232B3FF40051BEF1 /* PeopleListViewModel.swift */,
+				D7C125E8232095E6000488B7 /* Service */,
 				D7C125ED232095E6000488B7 /* Models */,
 			);
 			path = People;
 			sourceTree = "<group>";
 		};
-		D7C125E8232095E6000488B7 /* Network */ = {
+		D7C125E8232095E6000488B7 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				D7C125E9232095E6000488B7 /* PeopleEndpoint.swift */,
-				D7C125EA232095E6000488B7 /* RandomPeopleEndpoint.swift */,
-				D7C125EC232095E6000488B7 /* StarWarsAPI+PeopleEndpoint.swift */,
+				D7C125E9232095E6000488B7 /* PersonService.swift */,
+				D7C125EA232095E6000488B7 /* RandomPersonService.swift */,
+				D7C125EC232095E6000488B7 /* StarWarsAPI+PeopleService.swift */,
 			);
-			path = Network;
+			path = Service;
 			sourceTree = "<group>";
 		};
 		D7C125ED232095E6000488B7 /* Models */ = {
@@ -324,7 +325,6 @@
 				D7C125EF232095E6000488B7 /* PersonDetailViewModel.swift */,
 				D7C125F0232095E6000488B7 /* PersonListViewModelImpl.swift */,
 				D7C125F1232095E6000488B7 /* PersonDetailViewModelImpl.swift */,
-				D738AB5C232B3FF40051BEF1 /* PeopleListViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -343,6 +343,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D70FF13023208A4A00E4C74E /* Build configuration list for PBXNativeTarget "HoloDex" */;
 			buildPhases = (
+				D738AB5E232B4E0E0051BEF1 /* SwiftLint */,
 				D70FF10223208A4200E4C74E /* Sources */,
 				D70FF10323208A4200E4C74E /* Frameworks */,
 				D70FF10423208A4200E4C74E /* Resources */,
@@ -485,6 +486,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D738AB5E232B4E0E0051BEF1 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nswiftlint\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D70FF10223208A4200E4C74E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -494,18 +516,18 @@
 				D7C125D523209159000488B7 /* NetworkingAPI.swift in Sources */,
 				D7C12602232095E7000488B7 /* PersonDetailViewModelImpl.swift in Sources */,
 				D738AB5D232B3FF40051BEF1 /* PeopleListViewModel.swift in Sources */,
-				D7C125FE232095E7000488B7 /* StarWarsAPI+PeopleEndpoint.swift in Sources */,
+				D7C125FE232095E7000488B7 /* StarWarsAPI+PeopleService.swift in Sources */,
 				D7C125D723209159000488B7 /* NetworkAPIError.swift in Sources */,
 				D7C125D423209159000488B7 /* Extensions.swift in Sources */,
 				D7C125D123209159000488B7 /* StarWarsAPIResponse.swift in Sources */,
-				D7C125FB232095E7000488B7 /* PeopleEndpoint.swift in Sources */,
+				D7C125FB232095E7000488B7 /* PersonService.swift in Sources */,
 				D7C12609232095E7000488B7 /* PeopleListView.swift in Sources */,
 				D70FF15023208BCF00E4C74E /* Glyph.swift in Sources */,
 				D7C125DC23209159000488B7 /* HoloDex+UIViewController.swift in Sources */,
 				D7C125DA23209159000488B7 /* HoloDex+UIImage.swift in Sources */,
 				D7C12600232095E7000488B7 /* PersonDetailViewModel.swift in Sources */,
 				D7C125D223209159000488B7 /* StarWarsAPI.swift in Sources */,
-				D7C125FC232095E7000488B7 /* RandomPeopleEndpoint.swift in Sources */,
+				D7C125FC232095E7000488B7 /* RandomPersonService.swift in Sources */,
 				D70FF10A23208A4200E4C74E /* AppDelegate.swift in Sources */,
 				D7C125DB23209159000488B7 /* HoloDex+UITableViewController.swift in Sources */,
 				D7C12601232095E7000488B7 /* PersonListViewModelImpl.swift in Sources */,
@@ -516,7 +538,7 @@
 				D70FF10C23208A4200E4C74E /* SceneDelegate.swift in Sources */,
 				D7C125D823209159000488B7 /* HoloDex+UIColor.swift in Sources */,
 				D70FF10E23208A4200E4C74E /* ContentView.swift in Sources */,
-				D7C125D623209159000488B7 /* Endpoint.swift in Sources */,
+				D7C125D623209159000488B7 /* Service.swift in Sources */,
 				D7C125D923209159000488B7 /* HoloDex+UIFont.swift in Sources */,
 				D7C125C123209136000488B7 /* HoloDexContainerFactory.swift in Sources */,
 			);

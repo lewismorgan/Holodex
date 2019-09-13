@@ -3,7 +3,7 @@
 //  HoloDex
 //
 //  Created by Lewis Morgan on 2/18/19.
-//  Copyright © 2019 Lewis J Morgan. All rights reserved.
+//  Copyright © 2019 Lewis Morgan. All rights reserved.
 //
 
 import Swinject
@@ -35,14 +35,15 @@ class HoloDexContainerFactory {
   // Debugging Implementations
   private static func debug() -> Container {
     let container = Container()
-    container.register(PeopleEndpoint.self) { _ in RandomPeopleEndpoint() }
+    container.register(PersonService.self) { _ in RandomPersonService() }
     return container
   }
 
   // Release Implementations
   private static func release() -> Container {
     let container = Container()
-    container.register(PeopleEndpoint.self) { _ in StarWarsAPI() }
+    let swapi = StarWarsAPI()
+    container.register(PersonService.self) { _ in swapi }
     return container
   }
 }

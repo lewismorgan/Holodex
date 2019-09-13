@@ -3,7 +3,7 @@
 //  HoloDex
 //
 //  Created by Lewis Morgan on 3/28/19.
-//  Copyright © 2019 Lewis J Morgan. All rights reserved.
+//  Copyright © 2019 Lewis Morgan. All rights reserved.
 //
 
 import UIKit

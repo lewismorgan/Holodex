@@ -1,6 +1,8 @@
 excluded:
 - Pods
 - Carthage
+- HoloDexTests
+- HoloDexUITests
 
 disabled_rules:
 - force_try
@@ -8,7 +10,6 @@ disabled_rules:
 
 opt_in_rules:
   - empty_count
-  - file_header
   - explicit_init
   - closure_spacing
   - overridden_super_call
@@ -39,7 +40,7 @@ file_header:
                     \/\/  HoloDex
                     \/\/
                     \/\/  Created by .*? on \d{1,2}\/\d{1,2}\/\d{2}\.
-                    \/\/  Copyright © 2019 Lewis J Morgan\. All rights reserved\.
+                    \/\/  Copyright © 2019 Lewis Morgan\. All rights reserved\.
                     \/\/
 line_length: 130
 

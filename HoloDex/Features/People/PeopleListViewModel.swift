@@ -13,10 +13,10 @@ import SwiftUI
 class PeopleListViewModel: ObservableObject {
   @Published var people: [Person] = []
 
-  private let endpoint: PeopleEndpoint
-
+  private let endpoint: PersonService
   private let bag = DisposeBag()
-  init(endpoint: PeopleEndpoint) {
+  
+  init(endpoint: PersonService) {
     self.endpoint = endpoint
   }
 
@@ -24,8 +24,5 @@ class PeopleListViewModel: ObservableObject {
     endpoint.getAll().subscribe(onNext: { updated in
       self.people = updated
     }).disposed(by: bag)
-  }
-  deinit {
-    print("DESTROYING")
   }
 }

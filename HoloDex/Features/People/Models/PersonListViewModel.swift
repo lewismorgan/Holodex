@@ -3,7 +3,7 @@
 //  HoloDex
 //
 //  Created by Lewis Morgan on 2/8/19.
-//  Copyright © 2019 Lewis J Morgan. All rights reserved.
+//  Copyright © 2019 Lewis Morgan. All rights reserved.
 //
 
 import Combine
@@ -18,5 +18,5 @@ protocol PersonListViewModel {
   var loading: Bool { get set }
 
   func onSelected(person: Person)
-  func requestUpdate(endpoint: PeopleEndpoint)
+  func requestUpdate(endpoint: PersonService)
 }

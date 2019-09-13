@@ -2,7 +2,7 @@
 //  PeopleListView.swift
 //  HoloDex
 //
-//  Created by Lewis Morgan on 9/1/19.
+//  Copyright © 2019 Lewis Morgan. All rights reserved.
 //
 
 import Combine
@@ -25,15 +25,14 @@ struct PeopleListView: View {
 }
 
 #if DEBUG
-// swiftlint:disable type_name
 struct PeopleListView_Previews: PreviewProvider {
     static var previews: some View {
-      PeopleListView(viewModel: PeopleListViewModel(endpoint: PreviewPeopleEndpoint()))
+      PeopleListView(viewModel: PeopleListViewModel(endpoint: PreviewPeopleService()))
         .colorScheme(.dark)
     }
 }
 
-class PreviewPeopleEndpoint: PeopleEndpoint {
+class PreviewPeopleService: PersonService {
   let people: [Person] = [
     Person(name: "Luke Skywalker"),
     Person(name: "Jyn Erso"),

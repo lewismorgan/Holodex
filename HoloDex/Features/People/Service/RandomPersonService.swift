@@ -1,15 +1,15 @@
 //
-//  RandomPeopleEndpoint.swift
+//  RandomPersonService.swift
 //  HoloDex
 //
 //  Created by Lewis Morgan on 2/14/19.
-//  Copyright © 2019 Lewis J Morgan. All rights reserved.
+//  Copyright © 2019 Lewis Morgan. All rights reserved.
 //
 
 import RxSwift
 
 /// Provides randomized data in conformance with the PeopleEndpoint protocol
-class RandomPeopleEndpoint: PeopleEndpoint {
+class RandomPersonService: PersonService {
   static let worlds: [String] = ["Tatooine", "Naboo", "Jakku", "Yavin IV", "Alderaan", "Hutta", "Lokath",
                                  "Lothal", "Tython", "Dromund Kaas", "Korriban"]
   static let colors: [String] = ["Red", "Green", "Blue", "Blonde", "Brown", "Black", "Purple"]
@@ -56,15 +56,15 @@ class RandomPeopleEndpoint: PeopleEndpoint {
     let addLastName = Int.random(in: 0...100) <= 75 ? true : false
 
     if addLastName {
-    return RandomPeopleEndpoint.firstNames[Int.random(in: 0..<RandomPeopleEndpoint.firstNames.count)] + " "
-      + RandomPeopleEndpoint.lastNames[Int.random(in: 0..<RandomPeopleEndpoint.lastNames.count)]
+    return RandomPersonService.firstNames[Int.random(in: 0..<RandomPersonService.firstNames.count)] + " "
+      + RandomPersonService.lastNames[Int.random(in: 0..<RandomPersonService.lastNames.count)]
     } else {
-      return RandomPeopleEndpoint.firstNames[Int.random(in: 0..<RandomPeopleEndpoint.firstNames.count)]
+      return RandomPersonService.firstNames[Int.random(in: 0..<RandomPersonService.firstNames.count)]
     }
   }
 
   private func createColor() -> String {
-    return RandomPeopleEndpoint.colors[Int.random(in: 0..<RandomPeopleEndpoint.colors.count)]
+    return RandomPersonService.colors[Int.random(in: 0..<RandomPersonService.colors.count)]
   }
 
   private func createRandomNumbers(min: Int, max: Int) -> [String] {
