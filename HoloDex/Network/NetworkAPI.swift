@@ -8,7 +8,7 @@
 
 import RxSwift
 
-public protocol NetworkingAPI {
+public protocol NetworkAPI {
   func createRequest<T: Decodable>(endpoint: String, params: [String: Any], type: T.Type) -> Observable<T>
   func createPageRequest<T: Decodable>(endpoint: String, from: Int, until: Int?, type: T.Type) -> Observable<[T]>
 }

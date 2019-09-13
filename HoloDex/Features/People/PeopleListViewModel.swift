@@ -12,17 +12,28 @@ import SwiftUI
 
 class PeopleListViewModel: ObservableObject {
   @Published var people: [Person] = []
+  @Published var loading: Bool
 
-  private let endpoint: PersonService
+  private let service: PersonService
   private let bag = DisposeBag()
-  
-  init(endpoint: PersonService) {
-    self.endpoint = endpoint
+
+  init(service: PersonService) {
+    self.service = service
+    self.loading = false
   }
 
   func request() {
-    endpoint.getAll().subscribe(onNext: { updated in
-      self.people = updated
-    }).disposed(by: bag)
+    loading = true
+    service.getAll().subscribe(
+      onNext: { updated in
+      DispatchQueue.main.async {
+        // TODO: When this is being added, show a loading ticker
+        self.people = updated
+      }
+      }, onDisposed: {
+      DispatchQueue.main.async {
+        self.loading = false
+      }
+      }).disposed(by: bag)
   }
 }

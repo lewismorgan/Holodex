@@ -6,13 +6,16 @@
 //  Copyright © 2019 Lewis Morgan. All rights reserved.
 //
 
+import LoggerAPI
 import SwiftUI
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
   var window: UIWindow?
-  lazy var endpoint = StarWarsAPI()
+  lazy var service = StarWarsAPI()
+
+  let container = HoloDexContainerFactory.create(type: .debug)
 
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -21,9 +24,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // session are new (see `application:configurationForConnectingSceneSession` instead).
 
     // Create the SwiftUI view that provides the window contents.
-    //let viewModel = PersonListViewModelImpl()
-    //let contentView = ContentView()
-    let viewModel = PeopleListViewModel(endpoint: endpoint)
+    
+    let viewModel = PeopleListViewModel(service: container.resolve(PersonService.self)!)
+    // TODO: Replace with ContentView, move PeopleListView into ContentView
     let contentView = PeopleListView(viewModel: viewModel)
 
     // Use a UIHostingController as window root view controller.

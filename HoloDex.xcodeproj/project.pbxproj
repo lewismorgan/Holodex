@@ -19,6 +19,8 @@
 		D70FF15223208BCF00E4C74E /* holodex-glyphs.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D70FF14923208BCF00E4C74E /* holodex-glyphs.ttf */; };
 		D7347535232B24B9007FF565 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125EB232095E6000488B7 /* Person.swift */; };
 		D738AB5D232B3FF40051BEF1 /* PeopleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D738AB5C232B3FF40051BEF1 /* PeopleListViewModel.swift */; };
+		D738AB61232B58000051BEF1 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = D738AB60232B58000051BEF1 /* Logging */; };
+		D738AB66232B59F10051BEF1 /* HeliumLogger in Frameworks */ = {isa = PBXBuildFile; productRef = D738AB65232B59F10051BEF1 /* HeliumLogger */; };
 		D74BB1E4232349B400C9D8A8 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = D74BB1E3232349B400C9D8A8 /* Quick */; };
 		D74BB1E6232349B400C9D8A8 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = D74BB1E5232349B400C9D8A8 /* Nimble */; };
 		D7BE32AE23230DFC00C2E40B /* StarWarsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE32AD23230DFC00C2E40B /* StarWarsAPITests.swift */; };
@@ -28,10 +30,9 @@
 		D7C125BA232090AA000488B7 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D7C125B9232090AA000488B7 /* RxCocoa */; };
 		D7C125BF2320910E000488B7 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D7C125BE2320910E000488B7 /* Swinject */; };
 		D7C125C123209136000488B7 /* HoloDexContainerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125C023209136000488B7 /* HoloDexContainerFactory.swift */; };
-		D7C125D123209159000488B7 /* StarWarsAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125C423209159000488B7 /* StarWarsAPIResponse.swift */; };
 		D7C125D223209159000488B7 /* StarWarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125C523209159000488B7 /* StarWarsAPI.swift */; };
 		D7C125D423209159000488B7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125C723209159000488B7 /* Extensions.swift */; };
-		D7C125D523209159000488B7 /* NetworkingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125C823209159000488B7 /* NetworkingAPI.swift */; };
+		D7C125D523209159000488B7 /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125C823209159000488B7 /* NetworkAPI.swift */; };
 		D7C125D623209159000488B7 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125C923209159000488B7 /* Service.swift */; };
 		D7C125D723209159000488B7 /* NetworkAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125CA23209159000488B7 /* NetworkAPIError.swift */; };
 		D7C125D823209159000488B7 /* HoloDex+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125CC23209159000488B7 /* HoloDex+UIColor.swift */; };
@@ -92,10 +93,9 @@
 		D738AB5C232B3FF40051BEF1 /* PeopleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListViewModel.swift; sourceTree = "<group>"; };
 		D7BE32AD23230DFC00C2E40B /* StarWarsAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarWarsAPITests.swift; sourceTree = "<group>"; };
 		D7C125C023209136000488B7 /* HoloDexContainerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoloDexContainerFactory.swift; sourceTree = "<group>"; };
-		D7C125C423209159000488B7 /* StarWarsAPIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarWarsAPIResponse.swift; sourceTree = "<group>"; };
 		D7C125C523209159000488B7 /* StarWarsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarWarsAPI.swift; sourceTree = "<group>"; };
 		D7C125C723209159000488B7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		D7C125C823209159000488B7 /* NetworkingAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingAPI.swift; sourceTree = "<group>"; };
+		D7C125C823209159000488B7 /* NetworkAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
 		D7C125C923209159000488B7 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		D7C125CA23209159000488B7 /* NetworkAPIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAPIError.swift; sourceTree = "<group>"; };
 		D7C125CC23209159000488B7 /* HoloDex+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HoloDex+UIColor.swift"; sourceTree = "<group>"; };
@@ -122,8 +122,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D738AB61232B58000051BEF1 /* Logging in Frameworks */,
 				D7C125B8232090AA000488B7 /* RxRelay in Frameworks */,
 				D7C125B4232090AA000488B7 /* RxSwift in Frameworks */,
+				D738AB66232B59F10051BEF1 /* HeliumLogger in Frameworks */,
 				D7C125BA232090AA000488B7 /* RxCocoa in Frameworks */,
 				D7C125B123208F92000488B7 /* Alamofire in Frameworks */,
 				D7C125BF2320910E000488B7 /* Swinject in Frameworks */,
@@ -258,22 +260,13 @@
 		D7C125C223209159000488B7 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				D7C125C323209159000488B7 /* StarWarsAPI */,
 				D7C125C723209159000488B7 /* Extensions.swift */,
-				D7C125C823209159000488B7 /* NetworkingAPI.swift */,
-				D7C125C923209159000488B7 /* Service.swift */,
+				D7C125C823209159000488B7 /* NetworkAPI.swift */,
 				D7C125CA23209159000488B7 /* NetworkAPIError.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		D7C125C323209159000488B7 /* StarWarsAPI */ = {
-			isa = PBXGroup;
-			children = (
-				D7C125C423209159000488B7 /* StarWarsAPIResponse.swift */,
+				D7C125C923209159000488B7 /* Service.swift */,
 				D7C125C523209159000488B7 /* StarWarsAPI.swift */,
 			);
-			path = StarWarsAPI;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		D7C125CB23209159000488B7 /* Extensions */ = {
@@ -299,11 +292,11 @@
 		D7C125E7232095E6000488B7 /* People */ = {
 			isa = PBXGroup;
 			children = (
+				D7C125E8232095E6000488B7 /* Service */,
+				D7C125ED232095E6000488B7 /* Models */,
 				D7C125EB232095E6000488B7 /* Person.swift */,
 				D7C125FA232095E6000488B7 /* PeopleListView.swift */,
 				D738AB5C232B3FF40051BEF1 /* PeopleListViewModel.swift */,
-				D7C125E8232095E6000488B7 /* Service */,
-				D7C125ED232095E6000488B7 /* Models */,
 			);
 			path = People;
 			sourceTree = "<group>";
@@ -359,6 +352,8 @@
 				D7C125B7232090AA000488B7 /* RxRelay */,
 				D7C125B9232090AA000488B7 /* RxCocoa */,
 				D7C125BE2320910E000488B7 /* Swinject */,
+				D738AB60232B58000051BEF1 /* Logging */,
+				D738AB65232B59F10051BEF1 /* HeliumLogger */,
 			);
 			productName = HoloDex;
 			productReference = D70FF10623208A4200E4C74E /* HoloDex.app */;
@@ -445,6 +440,8 @@
 				D7C125BD2320910E000488B7 /* XCRemoteSwiftPackageReference "Swinject" */,
 				D7BE32B223230F2C00C2E40B /* XCRemoteSwiftPackageReference "Quick" */,
 				D74BB1CE2323386300C9D8A8 /* XCRemoteSwiftPackageReference "Nimble" */,
+				D738AB5F232B58000051BEF1 /* XCRemoteSwiftPackageReference "swift-log" */,
+				D738AB64232B59F10051BEF1 /* XCRemoteSwiftPackageReference "HeliumLogger" */,
 			);
 			productRefGroup = D70FF10723208A4200E4C74E /* Products */;
 			projectDirPath = "";
@@ -513,13 +510,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7C125FF232095E7000488B7 /* PersonListViewModel.swift in Sources */,
-				D7C125D523209159000488B7 /* NetworkingAPI.swift in Sources */,
+				D7C125D523209159000488B7 /* NetworkAPI.swift in Sources */,
 				D7C12602232095E7000488B7 /* PersonDetailViewModelImpl.swift in Sources */,
 				D738AB5D232B3FF40051BEF1 /* PeopleListViewModel.swift in Sources */,
 				D7C125FE232095E7000488B7 /* StarWarsAPI+PeopleService.swift in Sources */,
 				D7C125D723209159000488B7 /* NetworkAPIError.swift in Sources */,
 				D7C125D423209159000488B7 /* Extensions.swift in Sources */,
-				D7C125D123209159000488B7 /* StarWarsAPIResponse.swift in Sources */,
 				D7C125FB232095E7000488B7 /* PersonService.swift in Sources */,
 				D7C12609232095E7000488B7 /* PeopleListView.swift in Sources */,
 				D70FF15023208BCF00E4C74E /* Glyph.swift in Sources */,
@@ -1006,6 +1002,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D738AB5F232B58000051BEF1 /* XCRemoteSwiftPackageReference "swift-log" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-log.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.1;
+			};
+		};
+		D738AB64232B59F10051BEF1 /* XCRemoteSwiftPackageReference "HeliumLogger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/IBM-Swift/HeliumLogger.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.0;
+			};
+		};
 		D74BB1CE2323386300C9D8A8 /* XCRemoteSwiftPackageReference "Nimble" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Quick/Nimble.git";
@@ -1049,6 +1061,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D738AB60232B58000051BEF1 /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D738AB5F232B58000051BEF1 /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+		D738AB65232B59F10051BEF1 /* HeliumLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D738AB64232B59F10051BEF1 /* XCRemoteSwiftPackageReference "HeliumLogger" */;
+			productName = HeliumLogger;
+		};
 		D74BB1E3232349B400C9D8A8 /* Quick */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D7BE32B223230F2C00C2E40B /* XCRemoteSwiftPackageReference "Quick" */;

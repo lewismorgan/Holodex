@@ -27,7 +27,7 @@ struct PeopleListView: View {
 #if DEBUG
 struct PeopleListView_Previews: PreviewProvider {
     static var previews: some View {
-      PeopleListView(viewModel: PeopleListViewModel(endpoint: PreviewPeopleService()))
+      PeopleListView(viewModel: PeopleListViewModel(service: PreviewPeopleService()))
         .colorScheme(.dark)
     }
 }
