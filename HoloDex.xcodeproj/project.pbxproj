@@ -48,10 +48,6 @@
 		D7C125FB232095E7000488B7 /* PersonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125E9232095E6000488B7 /* PersonService.swift */; };
 		D7C125FC232095E7000488B7 /* RandomPersonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125EA232095E6000488B7 /* RandomPersonService.swift */; };
 		D7C125FE232095E7000488B7 /* StarWarsAPI+PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125EC232095E6000488B7 /* StarWarsAPI+PeopleService.swift */; };
-		D7C125FF232095E7000488B7 /* PersonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125EE232095E6000488B7 /* PersonListViewModel.swift */; };
-		D7C12600232095E7000488B7 /* PersonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125EF232095E6000488B7 /* PersonDetailViewModel.swift */; };
-		D7C12601232095E7000488B7 /* PersonListViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125F0232095E6000488B7 /* PersonListViewModelImpl.swift */; };
-		D7C12602232095E7000488B7 /* PersonDetailViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125F1232095E6000488B7 /* PersonDetailViewModelImpl.swift */; };
 		D7C12609232095E7000488B7 /* PeopleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C125FA232095E6000488B7 /* PeopleListView.swift */; };
 		D7CB564D2323F81F0087B56B /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D7CB564C2323F81F0087B56B /* RxCocoa */; };
 		D7CB564F2323F81F0087B56B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D7CB564E2323F81F0087B56B /* RxSwift */; };
@@ -114,10 +110,6 @@
 		D7C125EA232095E6000488B7 /* RandomPersonService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomPersonService.swift; sourceTree = "<group>"; };
 		D7C125EB232095E6000488B7 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		D7C125EC232095E6000488B7 /* StarWarsAPI+PeopleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StarWarsAPI+PeopleService.swift"; sourceTree = "<group>"; };
-		D7C125EE232095E6000488B7 /* PersonListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonListViewModel.swift; sourceTree = "<group>"; };
-		D7C125EF232095E6000488B7 /* PersonDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailViewModel.swift; sourceTree = "<group>"; };
-		D7C125F0232095E6000488B7 /* PersonListViewModelImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonListViewModelImpl.swift; sourceTree = "<group>"; };
-		D7C125F1232095E6000488B7 /* PersonDetailViewModelImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailViewModelImpl.swift; sourceTree = "<group>"; };
 		D7C125FA232095E6000488B7 /* PeopleListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -320,10 +312,6 @@
 		D7C125ED232095E6000488B7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D7C125EE232095E6000488B7 /* PersonListViewModel.swift */,
-				D7C125EF232095E6000488B7 /* PersonDetailViewModel.swift */,
-				D7C125F0232095E6000488B7 /* PersonListViewModelImpl.swift */,
-				D7C125F1232095E6000488B7 /* PersonDetailViewModelImpl.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -515,9 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7C125FF232095E7000488B7 /* PersonListViewModel.swift in Sources */,
 				D7C125D523209159000488B7 /* NetworkAPI.swift in Sources */,
-				D7C12602232095E7000488B7 /* PersonDetailViewModelImpl.swift in Sources */,
 				D738AB5D232B3FF40051BEF1 /* PersonStore.swift in Sources */,
 				D7C125FE232095E7000488B7 /* StarWarsAPI+PeopleService.swift in Sources */,
 				D7C125D723209159000488B7 /* NetworkAPIError.swift in Sources */,
@@ -528,12 +514,10 @@
 				D70FF15023208BCF00E4C74E /* Glyph.swift in Sources */,
 				D7C125DC23209159000488B7 /* HoloDex+UIViewController.swift in Sources */,
 				D7C125DA23209159000488B7 /* HoloDex+UIImage.swift in Sources */,
-				D7C12600232095E7000488B7 /* PersonDetailViewModel.swift in Sources */,
 				D7C125D223209159000488B7 /* StarWarsAPI.swift in Sources */,
 				D7C125FC232095E7000488B7 /* RandomPersonService.swift in Sources */,
 				D70FF10A23208A4200E4C74E /* AppDelegate.swift in Sources */,
 				D7C125DB23209159000488B7 /* HoloDex+UITableViewController.swift in Sources */,
-				D7C12601232095E7000488B7 /* PersonListViewModelImpl.swift in Sources */,
 				D7347535232B24B9007FF565 /* Person.swift in Sources */,
 				D7C125E523209562000488B7 /* Scenes.generated.swift in Sources */,
 				D7C125E423209562000488B7 /* Fonts.generated.swift in Sources */,
