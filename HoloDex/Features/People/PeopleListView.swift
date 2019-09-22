@@ -11,15 +11,16 @@ import SwiftUI
 
 struct PeopleListView: View {
   @EnvironmentObject var store: PersonStore
-
+  @State var searchQuery: String
   var body: some View {
     NavigationView {
       VStack {
-        List(store.people) { person in
+        SearchBar(query: $searchQuery)
+        List(store.people.filter { $0.name.contains(searchQuery) }) { person in
           PersonCellView(model: person)
-        }
+        }.onAppear(perform: { self.store.request() })
       }
-      .navigationBarItems(trailing: ActivityIndicator())
+      .navigationBarItems(trailing: ActivityIndicator(isAnimating: $store.requested))
       .navigationBarTitle("People", displayMode: .large)
     }
   }
@@ -29,8 +30,7 @@ struct PeopleListView: View {
 struct PeopleListView_Previews: PreviewProvider {
   static let store = PersonStore(service: PreviewPersonService())
   static var previews: some View {
-    store.request()
-    return PeopleListView()
+    return PeopleListView(searchQuery: "")
       .environmentObject(store)
       .colorScheme(.dark)
   }
@@ -57,15 +57,54 @@ class PreviewPersonService: PersonService {
 }
 #endif
 
-// TODO: Move to own class
-struct ActivityIndicator: UIViewRepresentable {
+// TODO: Move these to own files
 
-  func makeUIView(context: Context) -> UIActivityIndicatorView {
+struct ActivityIndicator: UIViewRepresentable {
+  // Using a binding here instead of a publisher because view is based on state of isAnimating from another source
+  @Binding var isAnimating: Bool
+
+  func makeUIView(context: UIViewRepresentableContext<ActivityIndicator>) -> UIActivityIndicatorView {
     let view = UIActivityIndicatorView()
     return view
   }
 
   func updateUIView(_ activityIndicator: UIActivityIndicatorView, context: Context) {
-    // TODO: Animate the indicator
+    if isAnimating {
+      activityIndicator.startAnimating()
+    } else {
+      activityIndicator.stopAnimating()
+    }
+  }
+}
+
+struct SearchBar: UIViewRepresentable {
+  @Binding var query: String
+
+  // Coordinator is used to send over delegate events for the search bar
+  class Coordinator: NSObject, UISearchBarDelegate {
+    @Binding var text: String
+
+    init(text: Binding<String>) {
+        _text = text
+    }
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        text = searchText
+    }
+  }
+
+  func makeUIView(context: UIViewRepresentableContext<SearchBar>) -> SearchBar.UIViewType {
+    let view = UISearchBar()
+    view.delegate = context.coordinator
+    return view
+  }
+
+  func updateUIView(_ view: UISearchBar, context: UIViewRepresentableContext<SearchBar>) {
+    view.text = query
+  }
+
+  // Send the values over to the search bar delegate
+  func makeCoordinator() -> SearchBar.Coordinator {
+    return Coordinator(text: $query)
   }
 }

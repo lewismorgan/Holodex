@@ -28,26 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D70FF11B23208A4A00E4C74E"
-               BuildableName = "HoloDexTests.xctest"
-               BlueprintName = "HoloDexTests"
-               ReferencedContainer = "container:HoloDex.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D70FF12623208A4A00E4C74E"
-               BuildableName = "HoloDexUITests.xctest"
-               BlueprintName = "HoloDexUITests"
-               ReferencedContainer = "container:HoloDex.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

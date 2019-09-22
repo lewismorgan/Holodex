@@ -1,5 +1,31 @@
 # HoloDex
 HoloDex/Resources/Fonts/holodex-glyphs.ttf
+*.generated.swift
+# Created by https://www.gitignore.io/api/swift,xcode,swiftpm,fastlane
+# Edit at https://www.gitignore.io/?templates=swift,xcode,swiftpm,fastlane
+
+### fastlane ###
+# fastlane - A streamlined workflow tool for Cocoa deployment
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/#source-control
+
+# fastlane specific
+fastlane/report.xml
+
+# deliver temporary files
+fastlane/Preview.html
+
+# snapshot generated screenshots
+fastlane/screenshots/**/*.png
+fastlane/screenshots/screenshots.html
+
+# scan temporary files
+fastlane/test_output
+
+### Swift ###
 
 ## Build generated
 build/
@@ -15,6 +41,7 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
+!xcshareddata/
 
 ## Other
 *.moved-aside
@@ -26,22 +53,43 @@ xcuserdata/
 *.ipa
 *.dSYM.zip
 *.dSYM
-*.generated.swift
 
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
+
+# Swift Package Manager
+# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+# Packages/
+# Package.pins
+# Package.resolved
+.build/
+# Add this line if you want to avoid checking in Xcode SPM integration.
+# .swiftpm/xcode
+
+# CocoaPods
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+# Pods/
+# Add this line if you want to avoid checking in source code from the Xcode workspace
+# *.xcworkspace
+
+# Carthage
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
+
+Carthage/Build
+
+# Accio dependency management
+Dependencies/
+.accio/
 
 # fastlane
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
 # screenshots whenever they are needed.
 # For more information about the recommended setup visit:
 # https://docs.fastlane.tools/best-practices/source-control/#source-control
-
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots/**/*.png
-fastlane/test_output
 
 # Code Injection
 # After new code Injection tools there's a generated folder /iOSInjectionProject
@@ -51,6 +99,7 @@ iOSInjectionProject/
 
 ### SwiftPM ###
 Packages
+xcuserdata
 
 ### Xcode ###
 # Xcode
@@ -67,23 +116,13 @@ Packages
 !*.xcodeproj/project.pbxproj
 !*.xcodeproj/xcshareddata/
 !*.xcworkspace/contents.xcworkspacedata
+!*.xcworkspace/xcshareddata/
 /*.gcno
 
 ### Xcode Patch ###
 **/xcshareddata/WorkspaceSettings.xcsettings
 
-### Ruby ###
-*.gem
-*.rbc
-/.config
-/coverage/
-/InstalledFiles
-/pkg/
-/spec/reports/
-/spec/examples.txt
-/test/tmp/
-/test/version_tmp/
-/tmp/
+# End of https://www.gitignore.io/api/swift,xcode,swiftpm,fastlane
 
 # Used by dotenv library to load environment variables.
 .env

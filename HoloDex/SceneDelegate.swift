@@ -27,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     // TODO: Replace with ContentView, move PeopleListView into ContentView
     let personStore = PersonStore(service: container.resolve(PersonService.self)!)
-    let contentView = PeopleListView()
+    let contentView = PeopleListView(searchQuery: "")
       .environmentObject(personStore)
 
     // Use a UIHostingController as window root view controller.
@@ -37,7 +37,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       self.window = window
       window.makeKeyAndVisible()
     }
-    personStore.request()
+    //personStore.request()
   }
 
   func sceneDidDisconnect(_ scene: UIScene) {
