@@ -7,21 +7,23 @@
 //
 
 import Combine
+import Foundation
 import RxSwift
+import SwiftUI
 
 final class PersonStore: ObservableObject {
-  @Published var people: [PersonCellModel] = []
-  @Published var requested: Bool
+  let people: CurrentValueSubject<[PersonCellModel], Never> = CurrentValueSubject<[PersonCellModel], Never>([])
+  @Published var filteredPeople: [PersonCellModel] = []
+  @Published var requested: Bool = false
+  @Published var query: String = ""
 
-  private var persons: [Person]
+  private var persons: [Person] = []
   private var unfiltered: [PersonCellModel] = []
   private let service: PersonService
   private let bag = DisposeBag()
 
   init(service: PersonService) {
     self.service = service
-    self.requested = false
-    self.persons = []
   }
 
   func request() {
@@ -39,8 +41,11 @@ final class PersonStore: ObservableObject {
   }
 
   func updatePeople(new: [Person]) {
-    let models = new.map { PersonCellModel(for: $0) }
     persons.append(contentsOf: new)
-    people.append(contentsOf: models)
+    people.send(people.value + new.map { PersonCellModel(for: $0) })
+  }
+
+  func search(query: String) {
+    //$people.filter( { $0.contains(where: { $0.name == query })}).collect().
   }
 }

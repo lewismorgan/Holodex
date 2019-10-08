@@ -44,7 +44,7 @@ class RandomPersonService: PersonService {
   public func getAll() -> Observable<[Person]> {
     // Send out 50 pages each containing 10 random people (100 total), delay of .25 to simulate network
     return Observable.range(start: 1, count: 50)
-      .concatMap({ Observable.just($0).delay(0.25, scheduler: ConcurrentDispatchQueueScheduler(qos: .background)) })
+      .concatMap({ Observable.just($0).delay(.milliseconds(5), scheduler: ConcurrentDispatchQueueScheduler(qos: .background)) })
       .flatMap { [weak self] page -> Observable<[Person]> in
         return self?.getPeople(from: page) ?? Observable.empty()
       }

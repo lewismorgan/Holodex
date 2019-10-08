@@ -15,8 +15,8 @@ struct PeopleListView: View {
   var body: some View {
     NavigationView {
       VStack {
-        SearchBar(query: $searchQuery)
-        List(store.people.filter { $0.name.contains(searchQuery) }) { person in
+        SearchBar(query: $store.query)
+        List(store.people) { person in
           PersonCellView(model: person)
         }.onAppear(perform: { self.store.request() })
       }
